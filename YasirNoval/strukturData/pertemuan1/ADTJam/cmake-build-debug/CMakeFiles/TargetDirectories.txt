@@ -1,0 +1,3 @@
+E:/Documents/pemrograman/yasir/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/ADTJam.dir
+E:/Documents/pemrograman/yasir/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Documents/pemrograman/yasir/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/rebuild_cache.dir

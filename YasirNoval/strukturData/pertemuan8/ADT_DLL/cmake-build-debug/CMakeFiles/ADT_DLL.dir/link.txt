@@ -1,0 +1,3 @@
+"E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ADT_DLL.dir/objects.a
+"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\ar.exe" qc CMakeFiles\ADT_DLL.dir/objects.a @CMakeFiles\ADT_DLL.dir\objects1.rsp
+"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\ADT_DLL.dir/objects.a -Wl,--no-whole-archive -o ADT_DLL.exe -Wl,--out-implib,libADT_DLL.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ADT_DLL.dir\linkLibs.rsp

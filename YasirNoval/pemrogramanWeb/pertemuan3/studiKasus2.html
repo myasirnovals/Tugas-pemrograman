@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- CSS Style -->
+    <style>
+        div#layout {
+            padding: 10%;
+            margin-top: 5%;
+        }
+
+        input#sizeButton {
+            padding: 4px;
+            margin-top: 3%;
+            width: 100%;
+            color: white;
+        }
+    </style>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <title>Studi Kasus 2</title>
+</head>
+<body>
+<form action="studiKasus2.html" method="post">
+    <div class="container shadow" id="layout">
+        <div class="form-group">
+            <label for="nama" class="form-group">Your Name</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" id="nama" placeholder="Please enter your name" width="200px"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-group">Your Email</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Please enter your email"
+                       width="200px" required>
+            </div>
+        </div>
+        <h6>Department</h6>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Department
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Backend</a></li>
+                <li><a class="dropdown-item" href="#">Frontend</a></li>
+                <li><a class="dropdown-item" href="#">Full Stack</a></li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <input type="submit" name="submit" value="Submit" class="btn btn-primary" id="sizeButton">
+        </div>
+    </div>
+</form>
+
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/bootstrap.esm.js"></script>
+<script src="assets/js/bootstrap.bundle.js"></script>
+</body>
+</html>

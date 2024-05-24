@@ -1,0 +1,3 @@
+C:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir
+C:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/rebuild_cache.dir

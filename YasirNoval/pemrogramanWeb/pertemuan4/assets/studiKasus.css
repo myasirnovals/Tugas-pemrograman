@@ -1,0 +1,93 @@
+#Header {
+    position: relative;
+    background-color: #29bc29;
+    width: inherit;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+}
+
+#Header:hover {
+    font-family: cursive;
+    background-color: #109f10;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.navbar {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: lightgray;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.navbar:hover {
+    font-family: cursive;
+    background-color: gray;
+    color: white;
+}
+
+.paragraf {
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+td {
+    width: 500px;
+    height: 350px;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+.tb1 {
+    background-color: teal;
+    border-radius: 3px;
+}
+
+.tb2 {
+    background-color: tomato;
+    border-radius: 3px;
+}
+
+.tb3 {
+    background-color: coral;
+    border-radius: 3px;
+}
+
+.tb1:hover {
+    background: deepskyblue;
+    font-family: cursive;
+}
+
+.tb2:hover {
+    background: coral;
+    font-family: cursive;
+}
+
+.tb3:hover {
+    background: lightcoral;
+    font-family: cursive;
+}
+
+#Footer {
+    position: absolute;
+    background-color: darkgreen;
+    width: 98.7%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 3px;
+}
+
+#Footer:hover {
+    background-color: #29bc29;
+    font-family: cursive;
+}

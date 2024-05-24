@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan 6</title>
+    <style>
+      input[type="text"] select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>CSS Untuk style sebuah HTML Form</h3>
+    
+    <table>
+      <form action="Latihan 6.html"></form>
+      <tr>
+        <td><label for="fname">First Name</label></td>
+        <td>:</td>
+        <td><input type="text" id="fname" name="firstname" placeholder="Your Name" /></td>
+      </tr>
+      <tr>
+        <td><label for="lname">Last Name</label></td>
+        <td>:</td>
+        <td><input type="text" id="lname" name="lastname" placeholder="Your Last Name" /></td>
+      </tr>
+      <tr>
+        <td><label for="country">Country</label></td>
+        <td></td>
+        <td>
+          <select id="country" name="country">
+          <option value="1" selected>Country</option>
+          <option value="2">Indonesia</option>
+          <option value="3">Malaysia</option>
+          <option value="4">Vietnam</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><input type="submit" value="Submit" /></td>
+      </tr>
+      </form>
+    </table>
+  </body>
+</html>

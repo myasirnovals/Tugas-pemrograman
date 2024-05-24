@@ -1,0 +1,4 @@
+"E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=E:/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S D:\Documents\pemrograman\yasir\strukturData\pertemuan5\ADT_SRKP -B D:\Documents\pemrograman\yasir\strukturData\pertemuan5\ADT_SRKP\cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/Documents/pemrograman/yasir/strukturData/pertemuan5/ADT_SRKP/cmake-build-debug

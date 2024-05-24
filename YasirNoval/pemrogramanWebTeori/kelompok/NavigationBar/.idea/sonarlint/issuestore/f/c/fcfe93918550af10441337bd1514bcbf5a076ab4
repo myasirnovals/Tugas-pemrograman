@@ -1,0 +1,9 @@
+
+CWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(Õ¶¯M
+D	Web:S1827"/Remove this deprecated "cellpadding" attribute.(«Å€Ø
+U	php:S1131"@Remove the useless trailing whitespaces at the end of this line.(Ã¶”€
+;	php:S2003"&Replace "include" with "include_once".(Ã¦şæ
+@	php:S2003^"&Replace "include" with "include_once".(¶¦ÒÚøÿÿÿÿ
+a	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(Ã¦şæ
+f	php:S4833O"QReplace "require_once" with namespace import mechanism through the "use" keyword.(‚¡˜
+f	php:S4833^"LReplace "include" with namespace import mechanism through the "use" keyword.(¶¦ÒÚøÿÿÿÿ

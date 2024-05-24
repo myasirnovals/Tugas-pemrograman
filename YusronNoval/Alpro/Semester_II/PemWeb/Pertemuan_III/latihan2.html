@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validasi input</title>
+</head>
+<body>
+	<form action="latihan2.html" method="post">
+		<table>
+			<tr>
+				<td><label>Nama Lengkap</label></td>
+				<td>:</td>
+				<td>
+					<input type="text" name="nama" placeholder="Masukan nama anda..." required>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Username</label></td>
+				<td>:</td>
+				<td>
+					<input type="text" name="username" placeholder="Masukan username anda..." required>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Password</label></td>
+				<td>:</td>
+				<td>
+					<input type="password" name="password" placeholder="Masukan password anda..." required>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Email</label></td>
+				<td>:</td>
+				<td>
+					<input type="email" name="email" placeholder="Masukan email anda..." required>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Telepon</label></td>
+				<td>:</td>
+				<td>
+					<input type="text" name="telepon" pattern="[0-9]" placeholder="Masukan nomor anda..." required>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="tombol" value="Submit">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

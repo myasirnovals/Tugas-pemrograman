@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url("/img/unjani.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Navbar */
+.navbar {
+  font-family: "GothamRounded";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 100px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.navbar-menu a {
+  float: left;
+  font-size: 16px;
+  color: #212529;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* AKhir Navbar */
+
+/* Dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #212529;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar-menu a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgba(128, 128, 128, 0.158);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(128, 128, 128, 0.158);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Akhir Dropdown */
+
+/* Menu Home */
+.home {
+  font-size: 35px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu a {
+  position: relative;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: 0.4s;
+}
+
+.menu a:hover::before {
+  width: 100%;
+}
+
+.Unjani {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#text {
+  font-family: sans-serif;
+  position: absolute;
+  font-size: 5em;
+  color: white;
+  text-shadow: 2px 4px 5px black;
+}
+/* AKhir Menu Home */
+
+/* Menu Mahasiswa */
+.container-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 149vh;
+  color: whitesmoke;
+}
+
+.header {
+  text-align: center;
+}
+
+table {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.icon a {
+  display: flex;
+  width: 50%;
+  padding: 9px 0px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.body-tengah {
+  padding: 20px;
+}
+
+.body-bawah {
+  font-size: 17px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 90px;
+  padding-right: 220px;
+}
+/* Akhir Menu Mahasiswa */
+
+/* Menu Tugas */
+.tugas {
+  height: auto;
+  background-color: #212529;
+}
+
+.tugas p{
+  color: white;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tugas h3{
+  height: 35vh;
+}
+
+.tugas-html {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  color: white;
+  font-size: 32px;
+}
+/* Menu Form */
+.tabel-tugas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tabel-tugas {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type="text"] select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/* Akhir Menu Form */
+/* Akhir Menu Tugas */
+
+/* Menu Jadwal */
+.jadwal {
+  padding-top: 90px;
+  height: 90vh;
+  font-family: sans-serif;
+  color: white;
+}
+
+.jadwal h2 {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 8vh;
+  text-shadow: 2px 4px 5px black;
+}
+
+.jadwal .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.table {
+  font-size: 4vh;
+  align-items: center;
+}
+/* Akhir Menu Jadwal */
+
+/* Menu Contact */
+.contact {
+  height: auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.contact h2 {
+  padding-top: 109px;
+  font-size: 6vh;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 4px 5px black;
+}
+
+.contact form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box .input-field {
+  width: 48.5%;
+}
+
+.field .item {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  margin: 12px 0;
+}
+
+.field .item::placeholder {
+  color: white;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+
+form button {
+  margin-bottom: 20px;
+  padding: 12px 32px;
+  background: white;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/* Akhir Menu Contact */
+
+/* Footer */
+.footer {
+  background-color: white;
+}
+
+.containerfooter {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.sosialicons {
+  display: flex;
+  justify-content: center;
+}
+
+.sosialicons a {
+  text-decoration: none;
+  padding: 8px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.sosialicons a {
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+}
+
+.sosialicons a:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+.sosialicons a:hover i {
+  color: black;
+  transition: 0.5s;
+}
+
+.footernav {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footernav a {
+  color: black;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5;
+}
+
+.footernav a:hover {
+  opacity: 1;
+}
+
+.footerbottom {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerbottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/* Akhir Footer */

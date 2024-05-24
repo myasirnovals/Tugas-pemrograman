@@ -1,0 +1,6 @@
+
+ƒ	Web:S6848"ΒAvoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element.(ªμ©σωÿÿÿÿJ$9ffee549-ff9d-4ed5-9142-0937961ef5e4
+mWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(―‘ε¨J$2c2b829b-d261-4791-87d8-295130e34f49
+	Web:S6847"RNon-interactive elements should not be assigned mouse or keyboard event listeners.(―‘ε¨J$e3eded8b-cb42-4130-af83-130d31d3f5d3
+rWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(€μΫώÿÿÿÿJ$b4f1c1c4-e45b-4475-8ae2-700236a6796d
+’	Web:S6847"RNon-interactive elements should not be assigned mouse or keyboard event listeners.(€μΫώÿÿÿÿJ$ce0ed496-8113-4a0b-b33f-44e8eb8c5ad0

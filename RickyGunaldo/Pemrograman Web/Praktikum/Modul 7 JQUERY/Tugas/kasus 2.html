@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("#btn1").click(function () {
+          $("#test1").text("Hello world");
+        });
+
+        $("#btn2").click(function () {
+          $("#test2").html("<b>Hello world!</b>");
+        });
+
+        $("#btn3").click(function () {
+          $("#test3").val("Dolly Duck");
+        });
+      });
+    </script>
+
+    <meta charset="UTF-8" />
+    <title>Kasus 2</title>
+  </head>
+  <body>
+    <p id="test1">Hello jawa</p>
+    <p id="test2">Hello dede</p>
+    <p>Name:<input type="text" id="test3" value="Spogebob" /></p>
+
+    <button id="btn1">Lihatkan teks</button>
+    <button id="btn2">Lihatkan HTML</button>
+    <button id="btn3">Lihatkan value</button>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body style="height: 5000px;">
+<div class="container mt-5 mb-5">
+    <h4 class="text-center">Utilities Bootstrap 5</h4>
+    <h2 class="text-center">Dispaly, Float And Position</h2>
+    <hr>
+
+    <h3 class="text-primary">Display</h3>
+    <p>Bagaimana Perilaku dari Display..?</p>
+    <!-- Div & Span -> Pengelompokan -->
+
+    <span></span>
+    <div></div>
+    <!--
+    Popular Display :
+    1. Inline
+    2. Block
+    3. inline-block
+    4. flex
+    5. Grid
+    6 . etc -->
+
+
+    <!-- 1. Inline -->
+
+    <!-- Span Display = Inline -->
+    <!-- a. Inline tidak menambahkan baris ketika ditambahkan elment yang memiliki display inline di dekatnya. (Span) -->
+    <span>Agus Surugus</span>
+    <span>Gandi Sugandi</span>
+    <!-- b. lebar dan tingginya sesuai element didalamnya  -->
+    <span class="bg-primary text-white">Agus Surugus, <b>DENGAN TEXT</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus ad assumenda aut commodi cupiditate esse, et, id illo, illum iste nisi qui quisquam quod sequi tempora totam ut velit?</span>
+    <!-- c. tinggi dan lebar tidak dapat di atur -->
+    <br>
+    <span class="bg-danger text-white" style="width: 1000px; height: auto;">Gandi Sugandi</span>
+    <!-- d. margin & pading hanya mempengaruhi element secara horizontal tidak Vertical -->
+    <span class="bg-warning m-5 p-5">Gandi Sugandi</span>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi, aperiam eaque earum esse, explicabo facilis iste iure minima modi nesciunt nisi obcaecati porro provident quae quos suscipit voluptatem? Tenetur?</span>
+
+    <!-- 2. Block -->
+    <!--Div Display = Block -->
+    <hr>
+    <!-- a. menambahkan baris baru ketika ditambahkan element HTML yang memiliki display block -->
+    <div>Agus Surugus</div>
+    <div>Gandi Sugandi</div>
+    <!-- b. dapat di atur lebar dan tigginya, tapi jika tidak di atur secara default lebarnya akan memenuhi atau sesuai dengan element pembungkusnya -->
+    <div class="bg-danger text-white" style="width: 100px; height: 100px">Agus Surugus</div>
+
+    <!-- 3. Inline-Block -->
+    <hr>
+    <div class="d-inline-block bg-success text-white">Agus Surugus</div>
+    <div class="d-inline-block bg-success text-white" style="width: 50px; height: 50px;">Gandi Sugandi</div>
+    <!-- Display Inline-Block -->
+    <!-- a. Berperilaku seperti inline & Block -->
+
+    <!-- Merubah Display di bootstarp 5 -->
+    <div class="d-inline">Agus Surugus</div>
+    <div class="d-inline">Agus Surugus</div>
+    <div class="d-block">Gandi Sugandi</div>
+    <div class="d-block">Gandi Sugandi</div>
+
+    <br>
+    <br>
+    <h3 class="text-primary">Float</h3>
+    <p>Bagaimana Perilaku dari Float..?</p>
+
+    <!-- 4. Float -->
+    <!-- 1. Mangatur Posisi pada sebuah element. -->
+    <!-- 2. dipaksa berada di sebelah kanan atau kiri pada element pembungkusnya atau istilahnya mengambang. -->
+    <!-- 3. prilakunya berbeda dengan alignment. -->
+    <!-- 4. Clear fix -> membersihkan float -> collaps -->
+
+    <div style="width: 500px;" class="bg-success clearfix">
+        <div style="width: 100px; height: 100px;" class="bg-warning float-end">Element 1</div>
+        <div style="width: 100px; height: 100px;" class="bg-danger float-end">Element 2</div>
+        <div style="width: 100px; height: 100px;" class="bg-info float-end">Element 3</div>
+    </div>
+
+    <br>
+    <h3 class="text-primary">Position</h3>
+    <p>Bagaimana Perilaku dari Position..?</p>
+    <!-- 5. Position -->
+
+    <!-- a. Static -->
+    <!-- b. Retalive -->
+    <!-- c. Absolute -->
+    <!-- d. Fixed -->
+    <div class="bg-danger" style="width: 500px; height: 500px;">
+        <div style="width: 100px; height: 100px;" class="bg-success position-absolute top-100">Element 1</div>
+        <div style="width: 100px; height: 100px;" class="bg-primary position-relative top-100">Element 2</div>
+        <div style="width: 100px; height: 100px;" class="bg-secondary position-fixed top-50">Element 3</div>
+    </div>
+</div>
+
+<!-- Bootstrap Javascript -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

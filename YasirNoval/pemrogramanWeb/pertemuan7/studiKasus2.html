@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script type="text/javascript" src="JQuery 3.7.0.js"></script>
+        <script type="text/javascript">
+             $("document").ready(function(){
+                $("#btn1").click(function(){
+                    $("#test1").text("Hello World!");
+                });
+                $("#btn2").click(function(){
+                    $("#test2").html("<b>Hello World!</b>");
+                });
+                $("#btn3").click(function(){
+                    $("#test3").val("Dolly Duck");
+                });
+            });
+        </script>
+        </head>
+        <body>
+            <input type="Button" id="btn1" value="Click 1"/>
+            <p id="test1"></p>
+            <input type="Button" id="btn2" value="Click 2"/>
+            <p id="test2"></p>
+            <input type="Button" id="btn3" value="Click 3"/>
+            <input id="test3" type="text" value=""/>
+
+        </body>   
+</html>

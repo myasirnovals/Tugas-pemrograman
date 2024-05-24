@@ -1,0 +1,3 @@
+D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan6/cmake-build-debug/CMakeFiles/pertemuan6.dir
+D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan6/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan6/cmake-build-debug/CMakeFiles/rebuild_cache.dir

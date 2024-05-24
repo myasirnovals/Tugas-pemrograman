@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Studi Kasus 2</title>
+    <style>
+      @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+      input{
+        padding: 3px;
+        font-size: 18px;
+        font-family: "FontAwesome";
+      }
+      select{
+        width: 31.2vh;
+        padding: 3px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td><label for="name">Your Name</label></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="Name" id="name" placeholder="&#xf007 Please enter your name" pattern="([a-zA-Z]{1,20} [a-zA-Z]{1,20})" title="Contoh: Dean Hajikikir" required /></td>
+        </tr>
+        <tr>
+          <td>Your Email</td>
+        </tr>
+        <tr>
+          <td><input type="email" name="Email" id="email" placeholder="&#xf0e0 Please enter your email" required></td>
+        </tr>
+        <tr>
+          <td>Department</td>
+        </tr>
+        <tr>
+          <td>
+            <select name="dropdown">
+                <option value="select department" selected>Select Department</option>
+                <option value="informatika">Informatika</option>
+                <option value="farmasi">Farmasi</option>
+                <option value="gizi">Gizi</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

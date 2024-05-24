@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Studi Kasus 1</title>
+</head>
+<body>
+<form action="studiKasus1.html" method="post">
+    <table>
+        <tr>
+            <td><label for="nama">Nama</label></td>
+            <td>:</td>
+            <td>
+                <input type="text" name="nama" id="nama" pattern="[A-Z][a-z]" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="usia">Usia</label></td>
+            <td>:</td>
+            <td>
+                <input type="number" name="usia" id="usia" min="17" max="30" required> (minimal 17 - 30)
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td>:</td>
+            <td>
+                <input type="email" name="email" id="email" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="webUrl">Web</label></td>
+            <td>:</td>
+            <td>
+                <input type="url" name="webUrl" id="webUrl" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</label></td>
+            <td>:</td>
+            <td>
+                <input type="password" name="pass" id="pass"> (bonus)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="Buatkan Akun Saya">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

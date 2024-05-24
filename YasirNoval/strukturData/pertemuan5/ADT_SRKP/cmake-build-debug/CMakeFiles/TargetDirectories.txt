@@ -1,0 +1,3 @@
+D:/Documents/pemrograman/yasir/strukturData/pertemuan5/ADT_SRKP/cmake-build-debug/CMakeFiles/ADT_SRKP.dir
+D:/Documents/pemrograman/yasir/strukturData/pertemuan5/ADT_SRKP/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/pemrograman/yasir/strukturData/pertemuan5/ADT_SRKP/cmake-build-debug/CMakeFiles/rebuild_cache.dir

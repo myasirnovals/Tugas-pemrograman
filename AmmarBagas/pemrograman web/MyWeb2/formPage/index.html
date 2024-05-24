@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="../src/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-secondary text-light">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-4 link" href="../index.html">MyWeb</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tugas
+              </a>
+              <ul class="dropdown-menu bg-body-secondary">
+                <li>
+                  <a class="dropdown-item" href="index.html">Form</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../cssPage/index.html">CSS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../htmlPage/index.html"
+                    >HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href=""
+                class="nav-link dropdown-toggle disabled"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profil
+              </a>
+              <ul
+                class="dropdown-menu bg-body-secondary disabled"
+                aria-disabled="true"
+              >
+                <li><a class="dropdown-item" href="#">Mhs1</a></li>
+                <li><a class="dropdown-item" href="#">Mhs2</a></li>
+                <li><a class="dropdown-item" href="#">Mhs3</a></li>
+              </ul>
+            </li>
+            <a class="nav-link" aria-current="page" href="../aboutPage/index.html">About</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR SELESAI -->
+
+    <!-- MAIN -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Form</h5>
+              <hr />
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Pengertian Form
+              </h6>
+              <p class="card-text">
+                Berdasarkan buku Bahasa HTML oleh L. Erawan, form adalah suatu
+                bagian yang berfungsi sebagai input atau masukan dari pengguna
+                yang kemudian akan diproses atau diolah agar dapat dipakai
+                sesuai kebutuhan.
+              </p>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Fungsi Form
+              </h6>
+              <div class="card-text">
+                form digunakan untuk mengirimkan data ke server. Contohnya,
+                proses mengirimkan data, menghapus dan menyunting data,
+                menjelajah (browse), serta lain sebagainya.
+              </div>
+              <br />
+              <h6 class="card-subtitle mb-2 text-body-secondary">Sumber</h6>
+              <a
+                href="https://kumparan.com/kabar-harian/definisi-form-dan-jenis-media-inputnya-1wvimS8amia/1"
+                target="_blank"
+                class="card-link"
+                >Klik Disini</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../img/form1.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Form 1</h5>
+              <p class="card-text">
+                Pada Form 1 ini di dalam nya terdapat sebuah form formulir yang
+                dapat di isi oleh pengunjung web
+              </p>
+              <a href="form.html" target="_blank" class="btn btn-primary">Klik Untuk Melihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../img/form2.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Form 2</h5>
+              <p class="card-text">
+                Pada Form 2 ini di dalam nya terdapat sebuah form input yang
+                dapat di isi oleh pengunjung web
+              </p>
+              <a href="form2.html" target="_blank" class="btn btn-primary">Klik Untuk Melihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="../img/form3 (2).png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Form 3</h5>
+              <p class="card-text">
+                Pada Form 2 ini di dalam nya terdapat sebuah form daftar mahasiswa yang
+                dapat di isi oleh pengunjung web
+              </p>
+              <a href="WebsiteSederhanaRev/index.php" target="_blank" class="btn btn-primary">Klik Untuk Melihat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="../src/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

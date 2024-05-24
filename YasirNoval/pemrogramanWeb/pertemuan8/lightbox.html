@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kotak Melayang untuk Gambar</title>
+        <link rel="stylesheet"  href="lightbox.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="lightbox.js"></script>
+        <h1>Demonstrasi Lightbox untuk menampilkan gambar</h1>
+        <p>Dalam demo ini menampilkan gambar dalam sebuah kotak yang dibuat secara otomatis begitu gambar diklik</p>
+        <br>
+        <div id="shadowing"></div>
+        <div id="box">
+            <div id="boxcontent" onclick="closebox()"></div>
+            <div id="boxtitle"></div>
+        </div>
+
+        <p>Untuk menampilkan gambar kedalam kotak lightbox, klik thumbnail gambar dibawah ini..</p>
+        <img src="sea.jfif" widht="150" height="150" onClick="openbox('sea.jfif');">
+        <img src="goldisle.jfif" widht="150" height="150" onClick="openbox('goldisle.jfif');">
+        <img src="greenhouse.jfif" widht="150" height="150" onClick="openbox('greenhouse.jfif');">
+        <br>
+        <hr>
+        <p>(c) 2008 <a href="http://www.xul.fr/en/"target="_parent">xul.fr</a></p>
+        
+        
+    </body>
+</html>

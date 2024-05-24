@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url("/img/unjani.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.navbar {
+  font-family: "Turret Road", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 100px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.home {
+  font-size: 35px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu a {
+  position: relative;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: 0.4s;
+}
+
+.menu a:hover::before {
+  width: 100%;
+}
+
+.Unjani {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("/img/unjani.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#text {
+  font-family: sans-serif;
+  position: absolute;
+  font-size: 5em;
+  color: white;
+  text-shadow: 2px 4px 5px black;
+}
+
+.mahasiswa {
+  padding-top: 89px;
+}
+
+.mahasiswa h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 6vh;
+  color: white;
+  text-shadow: 2px 4px 5px black;
+}
+
+.mahasiswa .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.mahasiswa .container img {
+  border-radius: 50%;
+}
+
+.mahasiswa .container p {
+  font-family: sans-serif;
+  font-size: 5vh;
+  color: white;
+  text-shadow: 2px 4px 5px black;
+}
+
+.jadwal {
+  padding-top: 90px;
+  height: auto;
+  font-family: sans-serif;
+  color: white;
+}
+
+.jadwal h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 8vh;
+  text-shadow: 2px 4px 5px black;
+}
+
+.jadwal .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.table {
+  font-size: 4vh;
+  align-items: center;
+  height: 300px;
+}
+
+.contact {
+  height: auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.contact h2 {
+  padding-top: 109px;
+  font-size: 6vh;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 4px 5px black;
+}
+
+.contact form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box .input-field {
+  width: 48.5%;
+}
+
+.field .item {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  margin: 12px 0;
+}
+
+.field .item::placeholder {
+  color: white;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+
+form button {
+  padding: 12px 32px;
+  background: white;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: white;
+}
+
+.containerfooter {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.sosialicons {
+  display: flex;
+  justify-content: center;
+}
+
+.sosialicons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.sosialicons a {
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Hover Effect on sosial media icon */
+.sosialicons a:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+.sosialicons a:hover i {
+  color: black;
+  transition: 0.5s;
+}
+
+.footernav {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footernav a {
+  color: black;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5;
+}
+
+.footernav a:hover {
+  opacity: 1;
+}
+
+.footerbottom {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerbottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}

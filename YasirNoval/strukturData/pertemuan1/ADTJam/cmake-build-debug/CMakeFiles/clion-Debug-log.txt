@@ -1,0 +1,4 @@
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/program installer/JetbrainsToolbox/Programs/CLion/bin/ninja/win/x64/ninja.exe" -G Ninja -S E:\Documents\pemrograman\yasir\strukturData\pertemuan1\ADTJam -B E:\Documents\pemrograman\yasir\strukturData\pertemuan1\ADTJam\cmake-build-debug
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: E:/Documents/pemrograman/yasir/strukturData/pertemuan1/ADTJam/cmake-build-debug

@@ -1,0 +1,3 @@
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ADT_TabInt.dir/objects.a
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\ar.exe" qc CMakeFiles\ADT_TabInt.dir/objects.a @CMakeFiles\ADT_TabInt.dir\objects1.rsp
+"D:\program installer\JetbrainsToolbox\Programs\CLion\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\ADT_TabInt.dir/objects.a -Wl,--no-whole-archive -o ADT_TabInt.exe -Wl,--out-implib,libADT_TabInt.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ADT_TabInt.dir\linkLibs.rsp

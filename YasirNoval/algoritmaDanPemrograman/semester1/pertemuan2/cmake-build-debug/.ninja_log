@@ -1,0 +1,21 @@
+# ninja log v5
+1	592	7193618354608767	CMakeFiles/pertemuan2.dir/point.c.obj	8ca884024ce8971f
+92	1094	7190592146092870	CMakeFiles/pertemuan2.dir/main.c.obj	ac400109607a24bc
+0	621	7193615352287803	CMakeFiles/pertemuan2.dir/segitiga.c.obj	8a30df35dbf571b9
+0	606	7193272396420286	CMakeFiles/pertemuan2.dir/if1.c.obj	ced8b34e81dba9e9
+4	660	7193266072820308	CMakeFiles/pertemuan2.dir/garis.c.obj	deeea43b86ba4901
+594	1473	7193618363358712	pertemuan2.exe	3ffa094a9e79d5cd
+7	892	7193622950163661	build.ninja	2c523d85e4a6138a
+3	667	7193602782818349	CMakeFiles/pertemuan2.dir/gaji_pokok_3.c.obj	42b3789e8cff91bb
+0	2149	7193342933963651	CMakeFiles/pertemuan2.dir/if2.c.obj	366766707a1dd14a
+4	589	7193592892653073	CMakeFiles/pertemuan2.dir/gaji_pokok.c.obj	869b392c586b8b8
+1	605	7193595619739877	CMakeFiles/pertemuan2.dir/gaji_pokok_2.c.obj	d0349b78e8e1c9ee
+4	971	7193609909064231	CMakeFiles/pertemuan2.dir/bonus.c.obj	11a8f7168e4ffbe9
+1	614	7193623067421295	CMakeFiles/pertemuan2.dir/garis.c.obj	deeea43b86ba4901
+615	1538	7193623076571891	pertemuan2.exe	597946c21621ab37
+3	2542	7193725040542524	CMakeFiles/pertemuan2.dir/garis.c.obj	deeea43b86ba4901
+2543	4238	7193725057447519	pertemuan2.exe	597946c21621ab37
+3	551	7193726394017359	CMakeFiles/pertemuan2.dir/garis.c.obj	deeea43b86ba4901
+552	1415	7193726402561678	pertemuan2.exe	597946c21621ab37
+3	865	7193731712290538	CMakeFiles/pertemuan2.dir/garis.c.obj	deeea43b86ba4901
+866	1781	7193731721364916	pertemuan2.exe	597946c21621ab37

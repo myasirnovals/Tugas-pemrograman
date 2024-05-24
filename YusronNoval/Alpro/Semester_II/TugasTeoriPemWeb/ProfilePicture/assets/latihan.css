@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+}
+
+.sidebar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 110px;
+	height: 100vh;
+	padding: 0 1.7rem;
+	color: white;
+	overflow: hidden;
+	transition: all 0.5s linear;
+	background: rgba(113, 99, 186, 255);
+}
+
+.sidebar:hover {
+	width: 240px;
+	transition: 0.5s;
+}
+
+.logo {
+	height: 80px;
+	padding: 5px;
+}
+
+.menu {
+	height: 80%;
+	position: relative;
+	list-style: none;
+	padding: 0;
+}
+
+.menu li {
+	padding: 0.7rem;
+	margin: 8px 0;
+	border-radius: 8px;
+	transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover {
+	background: #e0e0e058;
+}
+
+.menu a {
+	color: white;
+	font-size: 14px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.menu a span {
+	overflow: hidden;
+}
+
+.menu a i {
+	font-size: 1rem;
+}
+
+/* ******************	Main Body Content	****************** */
+.main-content {
+	position: relative;
+	background: lightgray;
+	width: 100%;
+	padding: 1rem;
+}
+
+.header-wrapper img {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background: white;
+	border-radius: 10px;
+	padding: 10px 2rem;
+	margin-bottom: 1rem;
+}
+
+.header-title {
+	color: rgba(113, 99, 186, 255);
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.search-box {
+	background: rgb(237, 237, 237);
+	border-radius: 15px;
+	color: rgba(113, 99, 186, 255);
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 4px 12px;
+}
+
+.search-box input {
+	background: transparent;
+	padding: 10px;
+}
+
+.search-box i {
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+.search-box i:hover {
+	transform: scale(1.2);
+}
+
+/* ******************	Card Container	****************** */
+.card-container {
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.main-title {
+	color: rgba(113, 99, 186, 255);
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+
+.card-payment {
+	background: rgb(229, 223, 223);
+	border-radius: 10px;
+	padding: 1.2rem;
+	width: 250px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.5s ease-in-out;
+}
+
+.card-payment:hover {
+	transform: translateY(-5px);
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.amount {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	font-size: 12px;
+	font-weight: 200;
+}
+
+.amount-value {
+	font-size: 18px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 600;
+}
+
+.icon {
+	color: white;
+	padding: 1rem;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	background: royalblue;
+}
+
+/* ******************	Table Section	****************** */
+.table-wrapper {
+	background: white;
+	margin-top: 1rem;
+	border-radius: 10px;
+	padding: 2rem;
+}
+
+.table-container {
+	width: 100%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+thead {
+	background: rgb(113, 99, 255);
+	color: white;
+}
+
+th {
+	padding: 15px;
+	text-align: left;
+}
+
+tbody {
+	background: white;
+}
+
+td {
+	padding: 15px;
+	font-size: 14px;
+	color: black;
+}
+
+tr:nth-child(even) {
+	background: white;
+}
+
+tfoot {
+	background: rgba(113, 99, 186, 255);
+	font-weight: bold;
+	color: white;
+}
+
+tfoot td {
+	padding: 15px;
+	color: white;
+}
+
+/* ******************	Profile Section	****************** */
+.cardprofile-container {
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+	height: 100%;
+}
+
+.mainprofile-title {
+	color: rgba(113, 99, 186, 255);
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+
+.admin-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 700px;
+	display: flex;
+}
+
+.admin-wrapper .left {
+	width: 35%;
+	background: linear-gradient(to right);
+	padding: 30px 25px;
+	text-align: center;
+}
+
+.admin-wrapper .left img {
+	margin-bottom: 10px;
+}
+
+.admin-wrapper .left h4 {
+	margin-bottom: 10px;
+}
+
+.admin-wrapper .left p {
+	font-size: 12px;
+}
+
+.admin-wrapper .right {
+	width: 100%;
+	padding: 30px 25px;
+}
+
+.admin-wrapper .right .admin-info,
+.admin-wrapper .right .admin-project {
+	margin-bottom: 25px;
+}
+
+.admin-wrapper .right .admin-info h3,
+.admin-wrapper .right .admin-project h3 {
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid gray;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.admin-wrapper .right .admin-infodata,
+.admin-wrapper .right .admin-projectdata {
+	display: flex;
+	justify-content: space-between;
+}
+
+.admin-wrapper .right .admin-infodata .admin-data,
+.admin-wrapper .right .admin-projectdata .admin-data {
+	width: 100%;
+}
+
+.admin-wrapper .right .admin-infodata .admin-data h4,
+.admin-wrapper .right .admin-projectdata .admin-data h4 {
+	margin-bottom: 5px;
+}
+
+.admin-wrapper .right .admin-infodata .admin-data p,
+.admin-wrapper .right .admin-projectdata .admin-data p {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.admin-wrapper .social-media ul {
+	display: flex;
+	list-style: none;
+}
+
+.admin-wrapper .social-media ul li {
+	width: 75px;
+	height: 45px;
+}
+
+.uniques {
+	color: white;
+	padding: 1rem;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	border-radius: 15%;
+	font-size: 2rem;
+	background: royalblue;
+}
+
+.admin-frame img {
+	background: rgb(237, 237, 237);
+	border-radius: 15px;
+	color: rgba(113, 99, 186, 255);
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 10px 12px;
+}
+
+/* ******************	Card Data Statistic	****************** */
+.cardStat-payment {
+	background: rgb(229, 223, 223);
+	border-radius: 10px;
+	padding: 1.2rem;
+	width: 250px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.5s ease-in-out;
+}
+
+.cardStat-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.amountStat {
+	display: flex;
+	flex-direction: column;
+}
+
+.titleStat {
+	font-size: 14px;
+	font-weight: 200;
+}
+
+.amountStat-value {
+	font-size: 18px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 600;
+}
+
+/*.icon {
+	color: white;
+	padding: 1rem;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	background: royalblue;
+}*/

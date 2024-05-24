@@ -1,0 +1,7 @@
+Khusus untuk pengguna LINUX.
+
+Ketik perintah dibawah ini pada terminal anda untuk menjalankan kode berikut:
+$ gcc nama_file.c -o nama_file -lm
+$ ./nama_file
+
+ingat!!!

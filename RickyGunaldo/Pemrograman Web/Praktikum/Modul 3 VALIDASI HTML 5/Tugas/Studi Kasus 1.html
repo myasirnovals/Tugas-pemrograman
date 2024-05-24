@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Studi Kasus 1</title>
+  </head>
+  <body>
+    <form action="/Studi Kasus 1.html" method="post">
+      <h1>Studi Kasus: Validasi Input HTML 5</h1>
+      <table>
+        <tr>
+          <td><label for="nama">Nama</label></td>
+          <td>:</td>
+          <td><input type="text" name="Nama" id="nama" placeholder="Isikan Nama Anda" pattern="([a-zA-Z]{1,20} [a-zA-Z]{1,20})" title="Harus menggunakan huruf sebanyak 2 kata dan 1 spasi" required /></td>
+        </tr>
+        <tr>
+          <td><label for="usia">Usia</label></td>
+          <td>:</td>
+          <td><input type="number" name="Usia" id="usia" min="17" max="30" required /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>:</td>
+          <td><input type="email" name="Email" id="email" placeholder="Nama_email@host.com" required /></td>
+        </tr>
+        <tr>
+          <td><label for="web">Web</label></td>
+          <td>:</td>
+          <td><input type="url" name="Web" id="web" placeholder="http://" required /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password</label></td>
+          <td>:</td>
+          <td><input type="password" name="Password" id="password" placeholder="Semua Karakter, min 8" pattern=".{8}" title="Jumlah password minimal 8" required /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><input type="submit" value="Kirim" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

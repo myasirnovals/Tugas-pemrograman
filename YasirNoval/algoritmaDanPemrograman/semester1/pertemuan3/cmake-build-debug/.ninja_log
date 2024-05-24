@@ -1,0 +1,12 @@
+# ninja log v5
+4	467	7198365634130703	build.ninja	3b8c3b1e8c6644c3
+5	658	7195688299794098	CMakeFiles/pertemuan3.dir/jumcacah.c.obj	c9fab4e22e5bd67c
+1	677	7198363900465108	CMakeFiles/pertemuan3.dir/main.c.obj	113beffae02b790f
+874	1767	7198336933363632	pertemuan3.exe	1ab870b528b4b817
+4	736	7195770104338838	CMakeFiles/pertemuan3.dir/belahKetupat.c.obj	35ff34a587d609a4
+5	652	7195708537913040	CMakeFiles/pertemuan3.dir/segitigaUtuh.c.obj	435367004f74d2d9
+0	707	7195760074207123	CMakeFiles/pertemuan3.dir/segitigaUtuhTerbalik.c.obj	941c7e28a3abde6e
+3	873	7198336924491636	CMakeFiles/pertemuan3.dir/for5.c.obj	10800c52e28b40d7
+1	607	7198348824988714	CMakeFiles/pertemuan3.dir/for1.c.obj	f5150f16a0cb5bd0
+1	520	7198350258988702	CMakeFiles/pertemuan3.dir/for3.c.obj	eeb185dfb64d8041
+0	627	7198363256032236	CMakeFiles/pertemuan3.dir/loop_2.c.obj	4f875fef80b7b1d3

@@ -1,0 +1,3 @@
+D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/DoubleLinkedList.dir
+D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\tugasBesar.dir/objects.a
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\tugasBesar.dir/objects.a @CMakeFiles\tugasBesar.dir\objects1.rsp
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\tugasBesar.dir/objects.a -Wl,--no-whole-archive -o tugasBesar.exe -Wl,--out-implib,libtugasBesar.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tugasBesar.dir\linkLibs.rsp

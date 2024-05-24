@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $("#btn1").click(function () {
+          alert("Text: " + $("#test").text());
+        });
+
+        $("#btn2").click(function () {
+          alert("HTML: " + $("#test").html());
+        });
+      });
+    </script>
+
+    <meta charset="UTF-8" />
+    <title>Kasus 1</title>
+  </head>
+  <body>
+    <p id="test">Ini adalah paragraf teks <i>miring</i></p>
+
+    <button id="btn1">Lihatkan teks</button>
+    <button id="btn2">Lihatkan HTML</button>
+  </body>
+</html>

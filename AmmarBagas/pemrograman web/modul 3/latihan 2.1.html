@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Formulir</title>
+    </head>
+    <body>
+        <form action="proses.php" method="post"></form>
+    </body>
+    <body>
+        <form><h4>Formulir Pendaftaran Kursus</h4></form>
+        <table>
+        <tr>
+            <td>
+                Nama :
+            </td>
+            <td>
+                <input type="text" name="Nama"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Jenis Kelamin :
+            </td>
+            <td>
+                <input type ="radio" name="subject" value="Laki-laki">Laki-laki
+                <input type ="radio" name="subject" value="Perempuan">Perempuan
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Alamat :
+            </td>
+            <td>
+                <input type="text" name="Alamat"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Provinsi :
+            </td>
+            <td>
+                <select name="dropdown">
+                    <option value="Jawa Barat" selected>Jawa Barat</option>
+                    <option value="Jakarta" selected>Jakarta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Pilihan Kursus :
+            </td>
+            <td>
+                <input type ="checkbox" name="Bahasa Inggris" value="on">Bahasa Inggris<br>
+                <input type ="checkbox" name="Komputer" value="on">Komputer
+            </td>
+        </tr>
+        </table>
+        <input type ="submit" name="submit" value="submit"/>
+        <input type ="reset" name="reset" value="reset"/>
+                                                                               
+    </form>
+    </body>
+</html>

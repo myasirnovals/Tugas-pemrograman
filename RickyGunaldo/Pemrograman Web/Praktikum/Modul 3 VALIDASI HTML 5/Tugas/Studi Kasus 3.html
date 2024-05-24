@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Studi Kasus 3</title>
+    <style>
+      input[type="submit"] {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/Studi Kasus 3.html" method="post">
+      <table>
+        <tr>
+          <td><label for="name">Name</label></td>
+          <td>:</td>
+          <td><input type="text" id="name" name="name" required /></td>
+        </tr>
+        <tr>
+          <td><label for="company">Company</label></td>
+          <td>:</td>
+          <td><input type="text" id="name" name="name" required /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Your e-mail</label></td>
+          <td>:</td>
+          <td><input type="email" id="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td><label for="contact">Contact number</label></td>
+          <td>:</td>
+          <td><input type="tel" id="contact" name="contact" pattern="[0-9]{1,10}" title="Hanya bisa diisikan nomor" required /></td>
+        </tr>
+        <tr>
+          <td><label for="message">Message:</label></td>
+          <td>:</td>
+          <td><textarea id="message" name="message" rows="5" cols="21" required></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

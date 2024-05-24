@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi kasus validasi HTML</title>
+</head>
+<body>
+    <form><h2>Studi Kasus: Validasi input html 5</h2>
+        <table>
+        <tr>
+            <td>
+                Nama  :
+            </td>
+            <td>
+                <input type="text" name="Nama" placeholder="Masukkan Nama Anda" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Usia :
+            </td>
+            <td>
+                <input type="number" name="Usia" min="17" max="30" required/> (usia min 17-30)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email :
+            </td>
+            <td>
+                <input type="text" name="Email" placeholder="Masukkan Alamat Email Anda" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Web :
+            </td>
+            <td>
+                <input type="url" name="website" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password :
+            </td>
+            <td>
+                <input type="password" name="Password" placeholder="Masukkan Password" required/> (Bonus)
+            </td>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="submit" />
+            </td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>

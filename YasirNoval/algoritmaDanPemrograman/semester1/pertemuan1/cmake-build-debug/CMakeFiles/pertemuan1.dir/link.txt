@@ -1,0 +1,2 @@
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc libpertemuan1.a CMakeFiles/pertemuan1.dir/library.c.obj CMakeFiles/pertemuan1.dir/hello.c.obj CMakeFiles/pertemuan1.dir/hello1.c.obj CMakeFiles/pertemuan1.dir/asign.c.obj CMakeFiles/pertemuan1.dir/asgdll.c.obj CMakeFiles/pertemuan1.dir/limit.c.obj CMakeFiles/pertemuan1.dir/operator_and_ekspresi/operator.c.obj
+C:\Users\aibnu\AppData\Local\Programs\CLion\bin\mingw\bin\ranlib.exe libpertemuan1.a

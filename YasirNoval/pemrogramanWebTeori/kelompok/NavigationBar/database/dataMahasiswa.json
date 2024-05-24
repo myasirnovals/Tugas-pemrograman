@@ -1,0 +1,34 @@
+[
+  {
+    "nim": "2350081004",
+    "nama": "Muhamad Yasir Noval",
+    "kelas": "A",
+    "angkatan": "2023",
+    "image": "-",
+    "deskripsi": "Mahasiswa yang biasa saja"
+  },
+  {
+    "nim": "2350081010",
+    "nama": "Arya Wijaya",
+    "kelas": "A",
+    "angkatan": "2023",
+    "image": "66319cf31ea72.jpg",
+    "deskripsi": "aku seorang mahasiswa di universitas jenderal achmad yani Unjani Cimahi"
+  },
+  {
+    "nim": "2350081005",
+    "nama": "Syivana Nasywa Fadillah",
+    "kelas": "A",
+    "angkatan": "2023",
+    "image": "66319d9fc0a1b.jpg",
+    "deskripsi": "Saya seroang mahasiswa Unjani"
+  },
+  {
+    "nim": "2350081003",
+    "nama": "Muhamad Yusron Noval",
+    "kelas": "A",
+    "angkatan": "2023",
+    "image": "-",
+    "deskripsi": "Saya hanya mahasiswa biasa saja"
+  }
+]

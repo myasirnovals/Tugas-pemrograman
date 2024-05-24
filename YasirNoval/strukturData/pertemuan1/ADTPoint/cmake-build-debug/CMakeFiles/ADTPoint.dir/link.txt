@@ -1,0 +1,3 @@
+"D:\Program Files\JetBrains\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ADTPoint.dir/objects.a
+"D:\Program Files\JetBrains\Programs\CLion\bin\mingw\bin\ar.exe" qc CMakeFiles\ADTPoint.dir/objects.a @CMakeFiles\ADTPoint.dir\objects1.rsp
+"D:\Program Files\JetBrains\Programs\CLion\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\ADTPoint.dir/objects.a -Wl,--no-whole-archive -o ADTPoint.exe -Wl,--out-implib,libADTPoint.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ADTPoint.dir\linkLibs.rsp

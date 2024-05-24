@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="pertemuan4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pertemuan4">
+				<Option output="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/pertemuan4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pertemuan4/fast">
+				<Option output="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/pertemuan4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 pertemuan4/fast"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/main.c">
+			<Option target="pertemuan4"/>
+		</Unit>
+		<Unit filename="E:/Documents/pemrograman/yasir/algoritmaDanPemrograman/semester1/pertemuan4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

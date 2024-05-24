@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/style.css">
+    <title>Tugas Form 2</title>
+</head>
+<body>
+    <form action="form2.html" method="post">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name" size="25"></td>
+            </tr>
+            <tr>
+                <td><label>Sex</label></td>
+                <td>
+                    <input type="radio" name="gender" id="Male"><label>Male</label><br>
+                    <input type="radio" name="gender" id="Female"><label>Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Eye Color</label></td>
+                <td>
+                    <input type="checkbox" name="eye-color" id="eye1"><label>Over 6 feet tall</label><br>
+                    <input type="checkbox" name="eye-color" id="eye2"><label>Over 200 pounds</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Describe your athletic ability:</td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="ability" id="ability" cols="36" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button>Enter my information</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studi kasus validasi HTML 5</title>
+</head>
+<body>
+    <h2>Pendaftaran Ekstakulikuler</h2>
+    <form>
+        <table>
+            <tr>
+                <td>Nama Lengkap :</td>
+                <td><input type="text" name="nama"placeholder="Masukkan Nama Anda" size="25"required> </td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir :</td>
+                <td><input type="date" name="birth"required> </td>
+            </tr>
+            <tr>
+                <td>Kelas :</td>
+                <td><input type="text" name="Kelas"placeholder="Masukkan kelas" size="25 "required> </td>
+            </tr>
+            <tr>
+                <td>Jurusan :</td>
+                <td><input type="text" name="jurusan" placeholder="Masukkan nama jurusan" size="25 "required> </td>
+            </tr>
+            <tr>
+                <td>Nomor HP :</td>
+               <td><input type="text" name="no Hp" placeholder="Masukkan Nomor hp Anda" maxlength="12" required/></td>
+            </tr>
+            <tr>
+                <td>Ekstakulikuler :</td>
+                <td><input type="checkbox" name="Pramuka" value="on"> Pramuka<br>
+                    <input type="checkbox" name="Paskibra" value="on"> Paskibra<br>
+                    <input type="checkbox" name="Voli" value="on"> Voli<br>
+                    <input type="checkbox" name="Futsal" value="on"> Futsal<br>
+                    <input type="checkbox" name="PMR" value="on"> PMR<br>
+                    <input type="checkbox" name="Vocal" value="on"> Vocal<br>
+                    <input type="checkbox" name="Basket" value="on"> Basket<br>
+                    <label for="Bahasa">Bahasa</label>
+                    <select name="dropdown">
+                        <option value="Korea" selected>Korea</option>
+                        <option value="Jepang" selected>Jepang</option>
+                        <option value="Inggris" selected>Inggris</option>
+                    </select>
+                   </td>
+                </tr>
+                <tr>
+                <td></td>
+                    <td>
+                    <input type="submit" name="submit" value="submit"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

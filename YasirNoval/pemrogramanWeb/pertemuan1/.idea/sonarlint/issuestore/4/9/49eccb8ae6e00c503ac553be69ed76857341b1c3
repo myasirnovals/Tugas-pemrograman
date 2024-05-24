@@ -1,0 +1,16 @@
+
+GWeb:TableWithoutCaptionCheck	" Add a description to this table.(Ş©Îy
+=	Web:S1827	")Remove this deprecated "width" attribute.(Ş©Îy
+C	Web:S1827	"/Remove this deprecated "cellpadding" attribute.(Ş©Îy
+C	Web:S1827	"/Remove this deprecated "cellspacing" attribute.(Ş©Îy
+C	Web:S1827")Remove this deprecated "align" attribute.(ÿú€óÿÿÿÿÿ
+C	Web:S1827")Remove this deprecated "align" attribute.(‘¥›‹ùÿÿÿÿ
+C	Web:S1827")Remove this deprecated "align" attribute.(º»øÿÿÿÿ
+>	Web:S1827 ")Remove this deprecated "align" attribute.(Ëëõ¢
+C	Web:S1827$")Remove this deprecated "align" attribute.(¹ÇÙııÿÿÿÿ
+C	Web:S1827%")Remove this deprecated "align" attribute.(•Ï¢ßúÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(Øİ×ıÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ğ¢Ìîüÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(æï‡´
+l Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ßÜµ»üÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheck";Add either an 'id' or a 'scope' attribute to this <th> tag.(ŞÛ‰Ÿ

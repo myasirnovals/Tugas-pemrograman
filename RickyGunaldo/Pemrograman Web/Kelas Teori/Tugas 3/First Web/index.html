@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- requirement meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>First Web</title>
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet" />
+
+    <!-- My css -->
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar/header -->
+    <header class="navbar">
+      <a href="#home" class="home">Home</a>
+
+      <nav class="menu">
+        <a href="#mahasiswa">Mahasiswa</a>
+        <a href="#jadwal">Jadwal Kuliah</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- Akhir navbar/header -->
+
+    <!-- Jumbotron -->
+    <!-- Menu home -->
+    <section class="Unjani" id="home">
+      <h2 id="text">Univesitas Achmad Yani</h2>
+    </section>
+
+    <!-- Menu mahasiswa -->
+    <section class="mahasiswa" id="mahasiswa">
+      <h2>Mahasiswa</h2>
+      <div class="container">
+        <table>
+          <tr>
+            <th colspan="3"><img src="/img/pou.jpg" alt="Fauzy Faadillah" width="200" /></th>
+          </tr>
+          <tr>
+            <td><p>Nama</p></td>
+            <td><p>:</p></td>
+            <td><p>Fauzy Faadillah</p></td>
+          </tr>
+          <tr>
+            <td><p>NIM</p></td>
+            <td><p>:</p></td>
+            <td><p>2350081020</p></td>
+          </tr>
+          <tr>
+            <td><p>Jurusan</p></td>
+            <td><p>:</p></td>
+            <td><p>Informatika</p></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="3"><img src="/img/kok.jpg" alt="Ricky Gunaldo" width="200" /></th>
+          </tr>
+          <tr>
+            <td><p>Nama</p></td>
+            <td><p>:</p></td>
+            <td><p>Ricky Gunaldo</p></td>
+          </tr>
+          <tr>
+            <td><p>NIM</p></td>
+            <td><p>:</p></td>
+            <td><p>2350081028</p></td>
+          </tr>
+          <tr>
+            <td><p>Jurusan</p></td>
+            <td><p>:</p></td>
+            <td><p>Informatika</p></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="3"><img src="/img/koh.jpg" alt="Bagas Aulia Suryawitono" width="200" /></th>
+          </tr>
+          <tr>
+            <td><p>Nama</p></td>
+            <td><p>:</p></td>
+            <td>
+              <p>Bagas Aulia<br />Suryawitono</p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>NIM</p></td>
+            <td><p>:</p></td>
+            <td><p>2350081014</p></td>
+          </tr>
+          <tr>
+            <td><p>Jurusan</p></td>
+            <td><p>:</p></td>
+            <td><p>Informatika</p></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- Menu memory  -->
+    <section class="jadwal" id="jadwal">
+      <h2>Jadwal Kuliah</h2>
+      <div class="container">
+        <table class="table" border="2" cellspacing="2">
+          <tr>
+            <th>Senin</th>
+            <th>Selasa</th>
+            <th>Rabu</th>
+            <th>Kamis</th>
+            <th>Jum'at</th>
+          </tr>
+          <tr>
+            <td>Struktur Data</td>
+            <td>Pendidikan Kewarganegaraan</td>
+            <td>Prak.Inggris</td>
+            <td>Struktur Data</td>
+            <td>Prak.Pemrograman Web</td>
+          </tr>
+          <tr>
+            <td>Matematika Diskrit</td>
+            <td>Pendidikan Keahcmadyanian</td>
+            <td></td>
+            <td>Kalkulus 2</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Pemrograman Web</td>
+            <td>Matematika Diskrit</td>
+            <td></td>
+            <td>Prak.Struktur Data</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Bahasa Inggris 2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- Menu contact -->
+    <section class="contact" id="contact">
+      <h2>Contact Me!</h2>
+      <form action="#">
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="text" placeholder="Nama Panjang" id="nama" class="item" required />
+          </div>
+          <div class="input-field field">
+            <input type="email" placeholder="Email Address" id="email" class="item" required />
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="tel" id="phone" name="phone" class="item" placeholder="Nomor Telpon" maxlength="12" required />
+          </div>
+          <div class="input-field field">
+            <input type="text" placeholder="Subject" id="subject" class="item" required />
+          </div>
+        </div>
+
+        <div class="textarea-field field">
+          <textarea name="" id="message" cols="30" rows="10" placeholder="pesan kamu" class="item" autocomplete="off"></textarea>
+        </div>
+
+        <button type="submit">KIRIM</button>
+      </form>
+    </section>
+    <!-- Akhir jumbotron -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="containerfooter">
+        <div class="sosialicons">
+          <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="footernav">
+          <a href="#home">Home</a>
+          <a href="#mahasiswa">Mahasiswa</a>
+          <a href="#jadwal">Jadwal Kuliah</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footerbottom">
+        <p>Created &copy;by<span class="designer"></span> Ricky Gunaldo, Fauzy Faadillah dan Bagas Aulia Suryawitono</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $(".mulai").click(function () {
+          $("#kotak").animate({ left: 300 }, "slow");
+        });
+      });
+    </script>
+
+    <style type="text/css">
+      #kotak {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    </style>
+
+    <meta charset="UTF-8" />
+    <title>Animasi dengan fungsi animate</title>
+  </head>
+  <body>
+    <input type="submit" class="mulai" value="Jalankan" />
+    <div id="kotak"></div>
+  </body>
+</html>

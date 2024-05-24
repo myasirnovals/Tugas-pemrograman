@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+</head>
+<body>
+    <form><h4>Formulir Pendaftaran Kursus</h4></form>
+    <table border ="1">
+    <tr>
+        <th style="background-color: rgb(87, 87, 236);">Nama</th>
+        <th style="background-color: rgb(87, 87, 236);">Value</th>
+        <tr>
+            <td>
+                Nama 
+            </td>
+            <td>
+                <input type="text" name="Nama"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Sex
+            </td>
+            <td>
+                <input type ="radio" name="subject" value="Male">Male
+                <input type ="radio" name="subject" value="Femele">Femele
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Eye Color
+            </td>
+            <td>
+                <select name="dropdown">
+                    <option value="green" selected>green</option>
+                    <option value="red" selected>red</option>
+                    <option value="brown" selected>brown</option>
+                    <option value="blue" selected>blue</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Check All That Apply
+            </td>
+            <td>
+                <input type ="checkbox" name="over 6 feet tall" value="on">over 6 feet tall<br>
+                <input type ="checkbox" name="over 200 feet pounds" value="on">over 200 feet pounds
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Description yours athletic ability : <br/>
+                <textarea name ="description" cols="40" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+        <input type ="submit" name="entermyinformation" value="enter my information"/>
+       </td>
+       </tr>
+    </table>                                                                            
+</form>
+</body>
+</html>

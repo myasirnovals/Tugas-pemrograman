@@ -1,0 +1,21 @@
+
+<
+heading.html,c\6\c6697e9bf1eb9380c127361c0f9931c44fc60564
+=
+pargraph.html,6\c\6c22b5edd99fbce80a77584b028840b854a622c5
+9
+	link.html,2\f\2f13bb949d98b64719aa64066c48b4be4a92957d
+;
+images.html,8\b\8b86d6a7ff43525e1a51982683bb671c784b64c2
+:
+
+table.html,2\d\2df0062a9f2cf3920328c615610a4fda1d522cb3
+;
+tabel1.html,a\e\ae77c19c3bf98810baec94815baee5950f18fc65
+;
+tabel2.html,5\9\599f39374f026a36a740ef168ccd6d59d58b075a
+;
+tabel3.html,4\9\49eccb8ae6e00c503ac553be69ed76857341b1c3
+:
+
+tugas.html,0\6\0604e71824f48c2d744e797d1c4830180e0e7f3a
