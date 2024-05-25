@@ -1,13 +1,22 @@
-<html>
-    <head>
-        <script type="text/javascript" src="JQuery 3.7.0.js"></script>
-        <script type="text/javascript">
-            $("document").ready(function(){
-                alert ("selamat Datang");
-        });
-        </script>
-    </head>
-        <body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan 1</title>
+    <script src="JQuery%203.7.0.js"></script>
+</head>
+<body>
 
-        </body>
+<h1>Welcome <span id="name"></span></h1>
+
+<script>
+    $(document).ready(function () {
+        alert("Selamat Datang");
+        document.getElementById("name").innerHTML = prompt();
+    });
+</script>
+</body>
 </html>

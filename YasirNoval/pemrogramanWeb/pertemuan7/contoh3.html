@@ -5,17 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Latihan 2</title>
+    <title>Contoh 3</title>
     <script src="JQuery%203.7.0.js"></script>
 </head>
 <body>
-
-<input type="submit" value="Click Me Bung!!">
+<h2>This is a heading</h2>
+<p class="test">ini adalah paragraph</p>
+<p>this is another paragraph</p>
+<button type="button">Hilang</button>
 
 <script>
     $(document).ready(function () {
-        $("input").click(function () {
-            alert("Apa kabar Bung");
+        $("button").click(function () {
+            $(".test").hide();
         });
     });
 </script>

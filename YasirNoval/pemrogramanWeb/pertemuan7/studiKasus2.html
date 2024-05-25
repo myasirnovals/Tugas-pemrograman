@@ -1,27 +1,37 @@
-<html>
-    <head>
-        <script type="text/javascript" src="JQuery 3.7.0.js"></script>
-        <script type="text/javascript">
-             $("document").ready(function(){
-                $("#btn1").click(function(){
-                    $("#test1").text("Hello World!");
-                });
-                $("#btn2").click(function(){
-                    $("#test2").html("<b>Hello World!</b>");
-                });
-                $("#btn3").click(function(){
-                    $("#test3").val("Dolly Duck");
-                });
-            });
-        </script>
-        </head>
-        <body>
-            <input type="Button" id="btn1" value="Click 1"/>
-            <p id="test1"></p>
-            <input type="Button" id="btn2" value="Click 2"/>
-            <p id="test2"></p>
-            <input type="Button" id="btn3" value="Click 3"/>
-            <input id="test3" type="text" value=""/>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Studi kasus 1</title>
+    <script src="JQuery%203.7.0.js"></script>
+</head>
+<body>
 
-        </body>   
+<input type="submit" id="btn1" value="Click Me! (button 1)">
+<input type="submit" id="btn2" value="Click Me! (button 2)">
+<input type="submit" id="btn3" value="Click Me! (button 2)">
+
+<p>teks apa yang akan muncul <span id="test1"></span></p>
+<p>teks apa yang akan muncul <span id="test2"></span></p>
+<p>teks apa yang akan muncul : <input type="text" id="test3" value=""></p>
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#test1").text("Hello World!");
+        });
+
+        $("#btn2").click(function () {
+            $("#test2").html("<b>Hello World!</b>");
+        });
+
+        $("#btn3").click(function () {
+            $("#test3").val("Dolly Duck");
+        });
+    });
+</script>
+</body>
 </html>
