@@ -66,6 +66,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Member group in Project
-- **Muhamad Yasir Noval        2350081004
-- **Arya Wijaya                2350081010
-- **Syivana Nasywa Fadillah    2350081005
+- Muhamad Yasir Noval        2350081004
+- Arya Wijaya                2350081010
+- Syivana Nasywa Fadillah    2350081005
