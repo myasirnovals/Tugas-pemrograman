@@ -17,7 +17,7 @@
 #define Info(P) (P)->info
 #define Next(P) (P)->next
 #define Prev(P) (P)->prev
-#define First(L) ((L).First)
+#define First(L) (L).First
 
 typedef int infoType;
 typedef struct tElmList *address;

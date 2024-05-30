@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL
+# Install script for directory: D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

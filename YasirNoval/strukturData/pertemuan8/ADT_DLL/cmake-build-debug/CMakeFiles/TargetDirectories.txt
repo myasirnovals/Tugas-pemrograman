@@ -1,3 +1,3 @@
-D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/ADT_DLL.dir
-D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/ADT_DLL.dir
+D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/rebuild_cache.dir

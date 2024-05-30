@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug"
+			"value" : "D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug"
 		},
 		{
 			"name" : "ADT_DLL_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL"
+			"value" : "D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug"
+			"value" : "d:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -511,7 +511,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -583,7 +583,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Documents/pemrograman/yasir/strukturData/pertemuan8/ADT_DLL"
+			"value" : "D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan8/ADT_DLL"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
