@@ -11,42 +11,42 @@
 int main() {
     List node;
     infoType info, elemen;
-    address searchElm;
+    address Tmp;
 
     CreateList(&node);
 
-    printf("\n=========Operator Pengecekan apakah list kosong atau tidak=========\n");
+    printf("\nApakah List masih kosong?\n");
     if(ListEmpty(node)) {
         printf("List masih kosong\n");
     } else {
         printf("List tidak kosong\n");
     }
 
-    printf("\n=========Operator Add First=========\n");
-    AddFirst(&node, 25);
-    AddFirst(&node, 45);
+    printf("\n\nTambah Awal\n");
+    AddFirst(&node, 1);
+    AddFirst(&node, 2);
     CetakList(node);
 
-    printf("\n\n=========Operator Add Last=========\n");
-    AddLast(&node, 15);
-    AddLast(&node, 5);
+    printf("\n\nTambah Akhir\n");
+    AddLast(&node, 3);
+    AddLast(&node, 4);
     CetakList(node);
 
-    printf("\n\n=========Operator Delete First=========\n");
+    printf("\n\nHapus Awal\n");
     DelFirst(&node, &elemen);
     CetakList(node);
 
-    printf("\n\n=========Operator Delete Last=========\n");
+    printf("\n\nHapus Akhir\n");
     DelLast(&node, &elemen);
     CetakList(node);
 
-    printf("\n\n=========Operator Search=========\n");
+    printf("\n\nCari Elemen\n");
     printf("Masukan Elemen yang dicari: ");
     scanf("%d", &info);
 
-    searchElm = Search(node, info);
-    if (searchElm != Nil) {
-        printf("\nElemen %d ada di list dengan alamat %d", info, searchElm);
+    Tmp = Search(node, info);
+    if (Tmp != Nil) {
+        printf("\nElemen %d ada di list dengan alamat %p", info, Tmp);
     } else {
         printf("Elemen %d tidak ada di list", info);
     }
