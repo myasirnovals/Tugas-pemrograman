@@ -8,7 +8,7 @@ function openbox(url)
 
     var content=document.getElementById('boxcontent');
     content.style.padding="0";
-    content.innerHTML="<img src=" + url + "/>";
+    content.innerHTML= `<img src=${url} alt=${url} width="650" height="400">`;
     box.style.display='block';
 }
 
