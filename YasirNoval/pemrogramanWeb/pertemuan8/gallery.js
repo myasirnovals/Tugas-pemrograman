@@ -1,14 +1,14 @@
 function openbox(url)
 {
-    var box=document.getElementById('box');
+    let box=document.getElementById('box');
     document.getElementById('shadowing').style.display='block';
 
-    var title=document.getElementById('boxtitle');
+    let title=document.getElementById('boxtitle');
     title.innerHTML=url;
 
-    var content=document.getElementById('boxcontent');
+    let content=document.getElementById('boxcontent');
     content.style.padding="0";
-    content.innerHTML= `<img src=${url} alt=${url} width="650" height="400">`;
+    content.innerHTML= `<img src=${url} alt=${url} width="100%" height="100%">`;
     box.style.display='block';
 }
 

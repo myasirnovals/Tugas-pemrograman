@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Galery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
@@ -11,21 +15,51 @@
 <br>
 <div id="shadowing"></div>
 <div id="box">
-    <div id="boxcontent" onclick="closebox()"></div>
+    <span id="close-button" onclick="closebox()">X</span>
+    <div id="boxcontent"></div>
     <div id="boxtitle"></div>
 </div>
 
-<p>Untuk menampilkan gambar kedalam kotak lightbox, klik thumbnail gambar dibawah ini..</p>
-<img src="https://images2.alphacoders.com/109/thumb-1920-1094108.png" width="300" height="250"
-     onClick="openbox('https://images2.alphacoders.com/109/thumb-1920-1094108.png');">
-<img src="https://c4.wallpaperflare.com/wallpaper/602/323/666/anime-yama-no-susume-aoba-kokona-aoi-yukimura-wallpaper-preview.jpg"
-     width="300" height="250"
-     onClick="openbox('https://c4.wallpaperflare.com/wallpaper/602/323/666/anime-yama-no-susume-aoba-kokona-aoi-yukimura-wallpaper-preview.jpg');">
-<img src="https://w0.peakpx.com/wallpaper/100/523/HD-wallpaper-anime-black-bullet-rentaro-satomi-kisara-tendo-enju-aihara-tina-sprout.jpg"
-     width="300" height="250"
-     onClick="openbox('https://w0.peakpx.com/wallpaper/100/523/HD-wallpaper-anime-black-bullet-rentaro-satomi-kisara-tendo-enju-aihara-tina-sprout.jpg');">
+<p>Untuk menampilkan gambar kedalam kotak gallery, klik gambar dibawah ini..</p>
 <br>
-<hr>
+<div class="box-border">
+    <img src="https://images2.alphacoders.com/109/thumb-1920-1094108.png" width="300" height="250"
+         onClick="openbox('https://images2.alphacoders.com/109/thumb-1920-1094108.png');"
+         class="img-border"
+         alt="Watashi ni tenshi">
+    <img src="https://c4.wallpaperflare.com/wallpaper/602/323/666/anime-yama-no-susume-aoba-kokona-aoi-yukimura-wallpaper-preview.jpg"
+         width="300" height="250"
+         onClick="openbox('https://c4.wallpaperflare.com/wallpaper/602/323/666/anime-yama-no-susume-aoba-kokona-aoi-yukimura-wallpaper-preview.jpg');"
+         class="img-border"
+         alt="Yama no Susume">
+    <img src="https://w0.peakpx.com/wallpaper/100/523/HD-wallpaper-anime-black-bullet-rentaro-satomi-kisara-tendo-enju-aihara-tina-sprout.jpg"
+         width="300" height="250"
+         onClick="openbox('https://w0.peakpx.com/wallpaper/100/523/HD-wallpaper-anime-black-bullet-rentaro-satomi-kisara-tendo-enju-aihara-tina-sprout.jpg');"
+         class="img-border"
+         alt="Black Bullet">
+    <img src="https://cdn.idntimes.com/content-images/community/2021/03/mv5bzgrkogmxytutztbhys00nzi3lwezmdqtowrhmmnjnjjjmzm4xkeyxkfqcgdeqxvymtmxodk2otu-at-v1-copy-2400x1350-56965fbaa68adf470a17cc45ea5d328d-950b19303d4d2bfcdf5d01eada230487_600x400.jpg"
+         width="300" height="250"
+         onClick="openbox('https://cdn.idntimes.com/content-images/community/2021/03/mv5bzgrkogmxytutztbhys00nzi3lwezmdqtowrhmmnjnjjjmzm4xkeyxkfqcgdeqxvymtmxodk2otu-at-v1-copy-2400x1350-56965fbaa68adf470a17cc45ea5d328d-950b19303d4d2bfcdf5d01eada230487_600x400.jpg');"
+         class="img-border"
+         alt="Koe no Katachi">
+    <img src="https://m.media-amazon.com/images/M/MV5BMTY3ODMzMjM3N15BMl5BanBnXkFtZTgwNzg2MTgwMzE@._V1_.jpg"
+         width="300" height="250"
+         onClick="openbox('https://m.media-amazon.com/images/M/MV5BMTY3ODMzMjM3N15BMl5BanBnXkFtZTgwNzg2MTgwMzE@._V1_.jpg');"
+         class="img-border"
+         alt="Angel Beats">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjVjZGU5ZTktYTZiNC00N2Q1LThiZjMtMDVmZDljN2I3ZWIwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+         width="300" height="250"
+         onClick="openbox('https://m.media-amazon.com/images/M/MV5BMjVjZGU5ZTktYTZiNC00N2Q1LThiZjMtMDVmZDljN2I3ZWIwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg');"
+         class="img-border"
+         alt="Susou no Frieren">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcnb9A9GPYInTThJ-5FXHnVO8JZGubQcdtx8p3rr59iMPziM5mP5b5gqwOmOSl1P0y2NQ&usqp=CAU"
+         width="300" height="250"
+         onClick="openbox('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcnb9A9GPYInTThJ-5FXHnVO8JZGubQcdtx8p3rr59iMPziM5mP5b5gqwOmOSl1P0y2NQ&usqp=CAU');"
+         class="img-border"
+         alt="Non Non Biyori">
+</div>
+<br>
+
 <p>(c) 2024 <a href="http://www.xul.fr/en/" target="_parent">xul.fr</a></p>
 
 
