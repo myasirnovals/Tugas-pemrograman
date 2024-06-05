@@ -21,14 +21,124 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b44901e9-7096-40ae-b9a8-5d00096cebea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../pemrogramanWebTeori/individu/JavaScriptDOM/Tugas1PengenalanJS/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../pemrogramanWebTeori/individu/JavaScriptDOM/Tugas1PengenalanJS/.idea/Tugas1PengenalanJS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../pemrogramanWebTeori/individu/JavaScriptDOM/Tugas1PengenalanJS/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../pemrogramanWebTeori/individu/JavaScriptDOM/Tugas1PengenalanJS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/ADT_BTAlternatif.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/app/binaryTree.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/cache-v2-459535484cc1869d622d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-46eeb4ed78e5b6bcada4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-28bcbd4143b220880abe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-05T19-14-49-0722.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/target-ADT_BTAlternatif-Debug-05b5051b1eca3bfdf337.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-1283d49ccaa480ca52c0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/ADT_BTAlternatif.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/ADT_BTAlternatif.dir/main.c.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/lib/binaryTree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/lib/boolean.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTAlternatif/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/ADT_BTCpp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/cache-v2-c07459a83f065bc78d1c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-466cd239576a3da98ee7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2dceb5ee26e30f7f9040.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-05T20-49-00-0175.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/target-ADT_BTCpp-Debug-02478c22b2b56c601040.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-4633e9d92506ff847998.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/ADT_BTCpp.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/ADT_BTCpp.dir/main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BTCpp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1474d1cc9701f6d41413.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d9b85c9192135f03a9db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-adc7da944a0cce463a48.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-bdebf9331db27057ff6e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-233ddb24158f5fba98dc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-bedb83376f087656b7d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-10T07-49-25-0659.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-20T07-22-20-0172.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-05187c770eda2d117c85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/ADT_LLL.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/ADT_LLL.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/ADT_LLL.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan4/ADT_LLL/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BT/cmake-build-debug/ADT_BT.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BT/cmake-build-debug/ADT_BT.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BT/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../strukturData/pertemuan9/ADT_BT/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DoubleLinkedList.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DoubleLinkedList.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DoubleLinkedList.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/DoubleLinkedList.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DoubleLinkedList.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DoubleLinkedList.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,29 +170,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "CMake Application.DoubleLinkedList.executor": "Run",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Documents/pemrograman/yasir/strukturData/pertemuan7/ADTQCLinkedList",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;CMake Application.DoubleLinkedList.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan4/ADT_LLL&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DoubleLinkedList" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DoubleLinkedList" TARGET_NAME="DoubleLinkedList" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DoubleLinkedList" RUN_TARGET_NAME="DoubleLinkedList">
       <method v="2">
@@ -111,6 +221,8 @@
       <workItem from="1716424393109" duration="2745000" />
       <workItem from="1716432955649" duration="1809000" />
       <workItem from="1716444648214" duration="110000" />
+      <workItem from="1717615064266" duration="3160000" />
+      <workItem from="1717621168231" duration="772000" />
     </task>
     <servers />
   </component>
@@ -124,18 +236,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="NONE" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/app/doubleLinkedList.c</url>
-          <line>31</line>
-          <log-expression expression="oid Dealokasi(address P) {&#10;    free(P);&#10;}" language="C++" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
