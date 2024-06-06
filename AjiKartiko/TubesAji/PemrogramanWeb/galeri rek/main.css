@@ -14,6 +14,11 @@
     background-color: #c0f3c0;
 }
 
+h1 {
+    text-align: center;
+    background-color: #c0f3c0;
+}
+
 .img-card {
     width: 4rem;
     height: 480px;
