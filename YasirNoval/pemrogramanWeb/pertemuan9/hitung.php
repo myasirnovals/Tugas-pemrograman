@@ -3,7 +3,7 @@
 
 <?php
     if (isset($_POST['submit'])){ //cek apakah tombol submit telah diklik
-        $number=$_POST['number']; //ambil nilai dari input name
+        $number=$_POST['nomor']; //ambil nilai dari input name
         $number2=$_POST['number2']; //ambil nilai input email
 
         //proses data yang telah diterima
