@@ -1,5 +1,5 @@
 /**
- * Program: boolean.h
+ * Program: binaryTree.h
  * Author: (2350081004, Muhamad Yasir Noval)
  * Kelas: A
  * Deskripsi: Header file dari prototype boolean
@@ -19,6 +19,7 @@
 #define right(P) (P)->right
 
 typedef struct tNode *address;
+
 typedef struct tNode {
     int info;
     address left;

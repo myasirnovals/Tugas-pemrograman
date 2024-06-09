@@ -1,5 +1,5 @@
 /**
- * Program: boolean.h
+ * Program: binaryTree.c
  * Author: (2350081004, Muhamad Yasir Noval)
  * Kelas: A
  * Deskripsi: Header file dari prototype boolean
@@ -9,24 +9,24 @@
 #include "../lib/binaryTree.h"
 
 void createTree(Tree *T, int X, Tree L, Tree R) {
-    (*T) = Alokasi(X);
-    if ((*T) != Nil) {
-        left((*T)) = L;
-        right((*T)) = R;
+    *T = Alokasi(X);
+    if (*T != Nil) {
+        left(*T) = L;
+        right(*T) = R;
     }
 }
 
 address Alokasi(int X) {
-    address P;
+    address newNode;
 
-    P = (address) malloc(sizeof(Node));
-    if (P != Nil) {
-        info(P) = X;
-        left(P) = Nil;
-        right(P) = Nil;
+    newNode = (address) malloc(sizeof(Node));
+    if (newNode != Nil) {
+        info(newNode) = X;
+        left(newNode) = Nil;
+        right(newNode) = Nil;
     }
 
-    return (P);
+    return newNode;
 }
 
 void DeAlokasi(address P) {
@@ -52,14 +52,14 @@ int TinggiPohon(Tree T) {
     if (T != Nil) {
         tinggi = 1 + Maksimum(TinggiPohon(left(T)), TinggiPohon(right(T)));
     }
-    return (tinggi);
+    return tinggi;
 }
 
 int Maksimum(int Kiri, int Kanan) {
     if (Kiri > Kanan) {
-        return (Kiri);
+        return Kiri;
     } else {
-        return (Kanan);
+        return Kanan;
     }
 }
 
@@ -72,7 +72,7 @@ Tree inSearch(Tree T, int X) {
         right(T) = inSearch(right(T), X);
     }
 
-    return (T);
+    return T;
 }
 
 void cetakTree(Tree T) {
