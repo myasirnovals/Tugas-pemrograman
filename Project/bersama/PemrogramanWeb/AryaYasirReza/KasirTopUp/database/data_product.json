@@ -1,18 +1,1 @@
-[
-  {
-    "productId": "66656c00309af",
-    "productName": "Monthly Pyroxenes x6,600",
-    "productPrice": "50000",
-    "productBonus": "2400 Pyroxenes",
-    "productCode": "666562aed438e",
-    "image": "dataproduct66656c00309bc.jpg"
-  },
-  {
-    "productId": "66656c72366ff",
-    "productName": "Monthly Pyroxenes x6,1200",
-    "productPrice": "120000",
-    "productBonus": "2400 Pyroxenes",
-    "productCode": "666562aed438e",
-    "image": "dataproduct66656c723670d.jpg"
-  }
-]
+[{"productId":"6666180944f22","productName":"Monthly Pyroxenes x6,600","productPrice":"50000","productBonus":"2400 Pyroxenes","gameCode":"666617dccac37","image":"dataproduct6666180944f32.jpg","created_at":"Monday, 10 \/ Jun \/ 2024  04:00:57","updated_at":"Monday, 10 \/ Jun \/ 2024  04:00:57"}]

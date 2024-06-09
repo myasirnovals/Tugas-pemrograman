@@ -11,7 +11,7 @@
                     <thead>
                     <tr class="text-center">
                         <th>No</th>
-                        <th>Kode Produk</th>
+                        <th>Kode Game</th>
                         <th>Nama Produk</th>
                         <th>Game</th>
                         <th>Harga Produk</th>
@@ -24,7 +24,7 @@
                     <?php foreach ($dataProducts as $data) { ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $data['productCode']; ?></td>
+                            <td><?= $data['gameCode']; ?></td>
                             <td><?= $data['productName']; ?></td>
                             <td>-</td>
                             <td class="text-end"><?= $data['productPrice']; ?></td>

@@ -2,14 +2,15 @@
 
 require_once __DIR__ . "/UploadData.php";
 
+date_default_timezone_set('Asia/Jakarta');
+
 function AddGame()
 {
     $id = uniqid();
     $name = htmlspecialchars($_POST["nameGame"]);
-    $description = htmlspecialchars($_POST["description"]);
     $image = UploadsImage();
-    $created_at = ;
-    $update_at = ;
+    $created_at = date('l, d / M / Y  H:i:s');
+    $updated_at = date('l, d / M / Y  H:i:s');
 
     if (!$image) {
         return false;
@@ -24,8 +25,9 @@ function AddGame()
         $extra = array(
             "kodeGame" => $id,
             "nameGame" => $name,
-            "description" => $description,
             "image" => $image,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
         );
 
         $array_data[] = $extra;
@@ -35,8 +37,9 @@ function AddGame()
         $dataError[] = array(
             "kodeGame" => $id,
             "nameGame" => $name,
-            "description" => $description,
             "image" => $image,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
         );
 
         echo "File not exist <br>";
@@ -50,10 +53,10 @@ function AddGameProduct()
     $product_name = htmlspecialchars($_POST["name"]);
     $product_price = htmlspecialchars($_POST["price"]);
     $product_bonus = htmlspecialchars($_POST["bonus"]);
-    $product_code = htmlspecialchars($_POST["productCode"]);
+    $product_code = htmlspecialchars($_POST["gameCode"]);
     $image = UploadsImageProduct();
-    $created_at = ;
-    $update_at = ;
+    $created_at = date('l, d / M / Y  H:i:s');
+    $updated_at = date('l, d / M / Y  H:i:s');
 
     if (!$image) {
         return false;
@@ -70,8 +73,10 @@ function AddGameProduct()
             "productName" => $product_name,
             "productPrice" => $product_price,
             "productBonus" => $product_bonus,
-            "productCode" => $product_code,
+            "gameCode" => $product_code,
             "image" => $image,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
         );
 
         $array_data[] = $extra;
@@ -83,8 +88,10 @@ function AddGameProduct()
             "productName" => $product_name,
             "productPrice" => $product_price,
             "productBonus" => $product_bonus,
-            "productCode" => $product_code,
+            "gameCode" => $product_code,
             "image" => $image,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
         );
 
         echo "File not exist <br>";
