@@ -28,6 +28,6 @@
         <p class="mb-0">Copyright © 2024 Brand</p>
     </div>
 </footer>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
