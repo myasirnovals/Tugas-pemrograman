@@ -8,6 +8,8 @@ function AddGame()
     $name = htmlspecialchars($_POST["nameGame"]);
     $description = htmlspecialchars($_POST["description"]);
     $image = UploadsImage();
+    $created_at = ;
+    $update_at = ;
 
     if (!$image) {
         return false;
@@ -50,6 +52,8 @@ function AddGameProduct()
     $product_bonus = htmlspecialchars($_POST["bonus"]);
     $product_code = htmlspecialchars($_POST["productCode"]);
     $image = UploadsImageProduct();
+    $created_at = ;
+    $update_at = ;
 
     if (!$image) {
         return false;

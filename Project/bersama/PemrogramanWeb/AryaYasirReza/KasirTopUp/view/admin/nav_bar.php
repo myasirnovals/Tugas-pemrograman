@@ -13,8 +13,8 @@
         <div class="collapse navbar-collapse" id="navcol-3">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="users.php">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.php">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="member.php">Members</a></li>
                 <li class="nav-item">
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

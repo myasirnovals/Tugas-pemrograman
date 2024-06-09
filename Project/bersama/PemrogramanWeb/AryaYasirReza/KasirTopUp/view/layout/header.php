@@ -1,12 +1,15 @@
 <?php
 // path
 $pathDataGame = "../../database/data_game.json";
+$pathDataProduct = "../../database/data_product.json";
 
 // convert
 $dataGameString = file_get_contents($pathDataGame);
+$dataProductString = file_get_contents($pathDataProduct);
 
 // result
 $dataGames = json_decode($dataGameString, true);
+$dataProducts = json_decode($dataProductString, true);
 ?>
 
 <!DOCTYPE html>
