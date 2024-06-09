@@ -3,7 +3,7 @@
     <div class="container">
         <h4 style="margin-top: 20px;">Add Game:</h4>
         <div class="container" style="margin-top: 30px;">
-            <form action="../../routes/AdminAdd.php" method="post" enctype="multipart/form-data">
+            <form action="../../routes/add_game.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nameGame" class="form-label">Name Game</label>
                     <input type="text" class="form-control" id="nameGame" name="nameGame" aria-describedby="nameGame"

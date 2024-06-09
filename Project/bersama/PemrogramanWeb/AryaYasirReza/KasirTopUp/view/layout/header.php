@@ -1,8 +1,14 @@
 <?php
-$pathDataGame = "../../database/dataGame.json";
-$jsonString = file_get_contents($pathDataGame);
-$jsonData = json_decode($jsonString, true);
+// path
+$pathDataGame = "../../database/data_game.json";
+
+// convert
+$dataGameString = file_get_contents($pathDataGame);
+
+// result
+$dataGames = json_decode($dataGameString, true);
 ?>
+
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
 <head>
