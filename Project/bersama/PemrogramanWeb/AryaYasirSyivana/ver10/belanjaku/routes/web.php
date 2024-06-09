@@ -18,4 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [Controller::class, 'index'])->name('Home');
+Route::get('/', [Controller::class, 'index'])->name('home');
+Route::get('/product', [Controller::class, 'product'])->name('product');
+Route::get('/transaksi', [Controller::class, 'transaksi'])->name('transaksi');
+Route::get('/aboutUs', [Controller::class, 'aboutUs'])->name('aboutUs');

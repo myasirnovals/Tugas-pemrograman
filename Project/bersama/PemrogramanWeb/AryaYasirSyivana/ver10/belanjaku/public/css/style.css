@@ -1,0 +1,32 @@
+.icon-nav {
+    position: relative;
+    color: gray;
+}
+.icon-nav:hover {
+    color: white;
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    top: 10px;
+    right: 110px;
+}
+
+section {
+    min-height: 80vh;
+}
+
+/* style footer */
+footer {
+    position: static;
+    bottom: 0;
+    background-color: rgb(80, 31, 0);
+    color: white;
+}
