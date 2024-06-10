@@ -49,17 +49,17 @@ function UpdateGame()
 
 function UpdateGameProduct()
 {
-    $product_id = uniqid();
-    $product_name = htmlspecialchars($_POST["name"]);
-    $product_price = htmlspecialchars($_POST["price"]);
-    $product_bonus = htmlspecialchars($_POST["bonus"]);
-    $product_code = htmlspecialchars($_POST["gameCode"]);
-    $image = UploadsImageProduct();
-    $created_at = date('l, d / M / Y  H:i:s');
+    $id = $_POST["productId"];
+    $product_name = htmlspecialchars($_POST["productName"]);
+    $product_price = htmlspecialchars($_POST["productPrice"]);
+    $product_bonus = htmlspecialchars($_POST["productBonus"]);
+    $old_image = htmlspecialchars($_POST["old_image"]);
     $updated_at = date('l, d / M / Y  H:i:s');
 
-    if (!$image) {
-        return false;
+    if ($_FILES['image']['error'] === 4) {
+        $image = $old_image;
+    } else {
+        $image = UploadsImageProduct();
     }
 
     $file_name = "../database/data_product" . ".json";
@@ -68,29 +68,26 @@ function UpdateGameProduct()
         $current_data = file_get_contents("$file_name");
         $array_data = json_decode($current_data, true);
 
-        $extra = array(
-            "productId" => $product_id,
-            "productName" => $product_name,
-            "productPrice" => $product_price,
-            "productBonus" => $product_bonus,
-            "gameCode" => $product_code,
-            "image" => $image,
-            "created_at" => $created_at,
-            "updated_at" => $updated_at
-        );
+        foreach ($array_data as $key => $value) {
+            if ($value["productId"] == $id) {
+                $array_data[$key]["productName"] = $product_name;
+                $array_data[$key]["productPrice"] = $product_price;
+                $array_data[$key]["productBonus"] = $product_bonus;
+                $array_data[$key]["image"] = $image;
+                $array_data[$key]["updated_at"] = $updated_at;
+            }
+        }
 
-        $array_data[] = $extra;
-        return json_encode($array_data);
+        return json_encode($array_data, JSON_PRETTY_PRINT);
+
     } else {
         $dataError = array();
         $dataError[] = array(
-            "productId" => $product_id,
+            "productId" => $id,
             "productName" => $product_name,
             "productPrice" => $product_price,
             "productBonus" => $product_bonus,
-            "gameCode" => $product_code,
             "image" => $image,
-            "created_at" => $created_at,
             "updated_at" => $updated_at
         );
 
