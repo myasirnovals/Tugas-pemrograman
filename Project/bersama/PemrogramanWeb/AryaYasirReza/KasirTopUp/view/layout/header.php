@@ -2,14 +2,22 @@
 // path
 $pathDataGame = "../../database/data_game.json";
 $pathDataProduct = "../../database/data_product.json";
+$pathDataMember = "../../database/data_member.json";
 
 // convert
 $dataGameString = file_get_contents($pathDataGame);
 $dataProductString = file_get_contents($pathDataProduct);
+$dataMemberString = file_get_contents($pathDataMember);
 
 // result
 $dataGames = json_decode($dataGameString, true);
 $dataProducts = json_decode($dataProductString, true);
+$dataMembers = json_decode($dataMemberString, true);
+
+// Get data in url
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
 ?>
 
 <!DOCTYPE html>

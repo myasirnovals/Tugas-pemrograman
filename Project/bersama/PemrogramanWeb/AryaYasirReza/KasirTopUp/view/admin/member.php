@@ -3,7 +3,41 @@
     <div class="container">
         <h4 style="margin-top: 20px;">Members</h4>
         <div class="container" style="margin-top: 10px;">
-
+            <?php
+            if (!empty($dataMembers)) {
+                $no = 1;
+                ?>
+                <table class="table table-bordered mt-5">
+                    <thead>
+                    <tr class="text-center">
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nomor Kartu</th>
+                        <th>Nomor Telepon</th>
+                        <th>Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($dataMembers as $data) { ?>
+                        <tr>
+                            <td><?= $no++; ?></td>
+                            <td><?= $data['gameCode']; ?></td>
+                            <td><?= $data['productName']; ?></td>
+                            <td>-</td>
+                            <td class="text-end"><?= $data['productPrice']; ?></td>
+                            <td><?= $data['productBonus']; ?></td>
+                            <td>-</td>
+                            <td class="text-center">
+                                <a href="#" class="btn btn-primary">Edit</a>
+                                <a href="#" class="btn btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            <?php } else { ?>
+                <p class="text-center">Member belum ditambahkan</p>
+            <?php } ?>
         </div>
     </div>
 <?php include "../layout/footer.php"; ?>

@@ -45,7 +45,8 @@
                                 <td>-</td>
                                 <td><?= $data['nameGame']; ?></td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-primary">Edit</a>
+                                    <a href="update_game.php?id=<?= $data['kodeGame']; ?>"
+                                       class="btn btn-primary">Edit</a>
                                     <a href="#" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
