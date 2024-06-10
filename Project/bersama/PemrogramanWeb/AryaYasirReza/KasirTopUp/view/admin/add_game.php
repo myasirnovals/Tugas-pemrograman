@@ -42,12 +42,14 @@
                         <?php foreach ($dataGames as $data) { ?>
                             <tr>
                                 <td><?= $no++; ?></td>
-                                <td>-</td>
+                                <td class="text-center"><img src="../../assets/images/game/<?= $data['image']; ?>" alt="Games" width="250"
+                                         class="img-thumbnail"></td>
                                 <td><?= $data['nameGame']; ?></td>
                                 <td class="text-center">
                                     <a href="update_game.php?id=<?= $data['kodeGame']; ?>"
                                        class="btn btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-danger">Hapus</a>
+                                    <a href="../../routes/delete_game.php?id=<?= $data['kodeGame']; ?>"
+                                       class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>
