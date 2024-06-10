@@ -1,0 +1,73 @@
+.wrapper-content {
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  background-color: rgb(0, 40, 184);
+  padding: 24px;
+  box-sizing: border-box;
+  transition: all ease 0.3s;
+}
+
+.sidebar .header section {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.sidebar.hide .header section span {
+  display: none;
+}
+
+.main-content {
+  width: 100vw;
+}
+
+.sidebar .main .list-item {
+  /* width: 212px; */
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all ease-in 0.2s;
+
+}
+.sidebar.hide .main .list-item{
+    padding: 7px 6px;
+}
+
+.sidebar .main .list-item:hover {
+  background-color: rgb(43, 163, 163);
+  transition: all ease-in 0.2s;
+}
+
+.sidebar.hide .main .list-item span {
+  display: none;
+}
+
+.sidebar .header .list-item .icon {
+  width: 33px;
+  margin-right: 5px;
+}
+
+.sidebar .main .list-item .icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar .main .list-item a {
+  text-decoration: none;
+}
+
+.sidebar.hide {
+  width: 80px;
+  transition: all ease-in 0.3s;
+}
+
+/* sidebar */
+
+
+.f-vh{
+  height: 100vh;
+}
