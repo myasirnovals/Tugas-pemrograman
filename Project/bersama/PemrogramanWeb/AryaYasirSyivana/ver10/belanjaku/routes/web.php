@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', [Controller::class, 'index']);
 
-Route::get('/', [Controller::class, 'index'])->name('home');
-Route::get('/product', [Controller::class, 'product'])->name('product');
-Route::get('/transaksi', [Controller::class, 'transaksi'])->name('transaksi');
-Route::get('/aboutUs', [Controller::class, 'aboutUs'])->name('aboutUs');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -31,3 +26,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/product', [Controller::class, 'product']);
+
+Route::get('/transaksi', [Controller::class, 'transaksi']);
+
+Route::get('/aboutUs', [Controller::class, 'aboutUs']);
+
+Route::get('/redirect', [HomeController::class, 'redirect']);

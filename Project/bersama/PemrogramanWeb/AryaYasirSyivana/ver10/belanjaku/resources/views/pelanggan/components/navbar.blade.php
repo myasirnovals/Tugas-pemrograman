@@ -16,14 +16,21 @@
                 <li class="nav-item">
                     <a class="nav-link fs-5" href="/aboutUs">About Us</a>
                 </li>
+                @if(Route::has('login'))
+                    @auth
+                        <x-app-layout>
 
+                        </x-app-layout>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="{{ route('login') }}" id="btn-login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="{{ route('register') }}" id="btn-register">Register</a>
+                        </li>
+                    @endauth
+                @endif
             </ul>
-            <div class="d-flex gap-4 align-items-center">
-                <button class="btn btn-primary" type="button">Login | Register</button>
-                <a href="/transaksi" class="fs-5">
-                    <i class="fa-solid fa-bag-shopping text-white"></i>
-                </a>
-            </div>
         </div>
     </div>
 </nav>
