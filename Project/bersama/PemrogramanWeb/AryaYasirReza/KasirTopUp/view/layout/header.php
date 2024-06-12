@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // path
 $pathDataGame = "../../database/data_game.json";
 $pathDataProduct = "../../database/data_product.json";
@@ -28,9 +30,14 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>kasir top up game</title>
+    <title>Top Up Store</title>
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/Features-Image-images.css">
     <link rel="stylesheet" href="../../assets/css/Footer-Basic-icons.css">
+
+    <!-- jQuery -->
+    <script src="../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 </head>
 <body>

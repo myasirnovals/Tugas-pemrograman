@@ -15,7 +15,8 @@
         <div class="row mb-5">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
                 <h2>Daftar Member</h2>
-                <p class="w-lg-50 mt-4">Apa sih keuntungan nya jadi member. kalau jadi member itu ketika anda melakukan top
+                <p class="w-lg-50 mt-4">Apa sih keuntungan nya jadi member. kalau jadi member itu ketika anda melakukan
+                    top
                     up pada game yang ada di website kami, secara otomatis anda akan mendapat diskon dalam pembelian dan
                     anda juga akan mendapatkan point yang bisa digunakan untuk top up pada game yang sama atau game yang
                     lainnya.</p>
@@ -49,11 +50,6 @@
                                             <option value="platinum">Platinum</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3 hiding">
-                                        <label for="tgl_create" class="form-label">Tanggal Dibuat:</label>
-                                        <input type="date" name="tgl_create" id="tgl_create" class="form-control"
-                                               required>
-                                    </div>
                                 </div>
                                 <div class="col-6 col-sm-12">
                                     <div class="mb-3">
@@ -80,7 +76,7 @@
                                 <button class="btn btn-primary d-block w-100" type="submit">Daftar</button>
                             </div>
                             <span class="text-muted">Sudah jadi member?</span>
-                            <a href="#" class="text-decoration-none">Login now</a>
+                            <a href="login.php" class="text-decoration-none">Login now</a>
                         </form>
                     </div>
                 </div>
