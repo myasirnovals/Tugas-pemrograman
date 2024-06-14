@@ -1,6 +1,6 @@
 <div class="container-md mt-3">
     <div class="row">
-        <div class="col-md">
+        <div class="col-lg-4">
             <div class="card mb-3" style="width: 18rem;">
                 <img src="assets/images/produk-1.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md">
+        <div class="col-lg-4">
             <div class="card mb-3" style="width: 18rem;">
                 <img src="assets/images/produk-2.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md">
+        <div class="col-lg-4">
             <div class="card mb-3" style="width: 18rem;">
                 <img src="assets/images/produk-3.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md">
+        <div class="col-lg-4">
             <div class="card mb-3" style="width: 18rem;">
                 <img src="assets/images/produk-4.png" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md">
+        <div class="col-lg-4">
             <div class="card mb-3" style="width: 18rem;">
                 <img src="assets/images/produk-4.png" class="card-img-top" alt="...">
                 <div class="card-body">

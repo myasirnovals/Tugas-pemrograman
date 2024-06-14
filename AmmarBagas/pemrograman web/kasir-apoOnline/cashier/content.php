@@ -12,10 +12,6 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="1234">
                 </div>
                 <div class="col-md">
-                    <label for="exampleFormControlInput1" class="form-label">Harga</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" value="">
-                </div>
-                <div class="col-md">
                     <button type="submit" class="btn btn-primary">Masukan</button>
                 </div>
             </div>
