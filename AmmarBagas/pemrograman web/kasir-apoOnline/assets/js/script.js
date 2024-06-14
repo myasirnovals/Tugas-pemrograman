@@ -3,4 +3,6 @@ $(document).ready(function () {
         $(".sidebar").toggleClass("hide");
         
     });
+
 });
+
