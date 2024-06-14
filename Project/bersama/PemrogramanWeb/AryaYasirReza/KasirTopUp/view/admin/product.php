@@ -29,10 +29,16 @@
                             <td>-</td>
                             <td class="text-end"><?= $data['productPrice']; ?></td>
                             <td><?= $data['productBonus']; ?></td>
-                            <td>-</td>
                             <td class="text-center">
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Hapus</a>
+                                <img src="../../assets/images/product/<?= $data['image']; ?>"
+                                     alt="Games" width="250"
+                                     class="img-thumbnail">
+                            </td>
+                            <td class="text-center">
+                                <a href="update_product.php?id=<?= $data['productId'] ?>"
+                                   class="btn btn-primary">Edit</a>
+                                <a href="../../routes/delete_product.php?id=<?= $data['productId']; ?>"
+                                   class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
                     <?php } ?>

@@ -1,7 +1,7 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container mt-5">
-        <h4 style="margin-top: 20px;">Edit Game:</h4>
+        <h4 style="margin-top: 20px;">Edit Product:</h4>
         <div class="card mt-5">
             <div class="container">
                 <?php foreach ($dataGames as $data) { ?>
@@ -14,7 +14,6 @@
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <div class="container">
-                                    <!--../../routes/update_game.php-->
                                     <form action="../../routes/update_game.php" method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="kodeGame" value="<?= $data['kodeGame']; ?>">
                                         <input type="hidden" name="old_image" value="<?= $data['image']; ?>">
@@ -30,7 +29,7 @@
                                             <label for="image" class="form-label">Game Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
                                         </div>
-                                        <button type="submit" class="btn btn-primary mt-3">Update Game</button>
+                                        <button type="submit" class="btn btn-primary mt-3 mb-4">Update Product</button>
                                     </form>
                                 </div>
                             </div>
