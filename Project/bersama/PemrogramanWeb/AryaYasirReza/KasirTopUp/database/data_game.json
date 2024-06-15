@@ -1,1 +1,30 @@
-[{"kodeGame":"666b9e57976f3","nameGame":"Blue Archive","image":"datagame666b9e5797700.jpg","created_at":"Friday, 14 \/ Jun \/ 2024  08:35:19","updated_at":"Friday, 14 \/ Jun \/ 2024  08:35:19"},{"kodeGame":"666b9e6bdac53","nameGame":"Genshin Impact","image":"datagame666b9e6bdac5e.jpg","created_at":"Friday, 14 \/ Jun \/ 2024  08:35:39","updated_at":"Friday, 14 \/ Jun \/ 2024  08:35:39"},{"kodeGame":"666b9eb16b84f","nameGame":"Tower of Fantasy","image":"datagame666b9eb16b85a.jpg","created_at":"Friday, 14 \/ Jun \/ 2024  08:36:49","updated_at":"Friday, 14 \/ Jun \/ 2024  08:36:49"},{"kodeGame":"666b9ebbe5429","nameGame":"Counter Strike 2","image":"datagame666b9ebbe5435.jpg","created_at":"Friday, 14 \/ Jun \/ 2024  08:36:59","updated_at":"Friday, 14 \/ Jun \/ 2024  08:36:59"}]
+[
+  {
+    "kodeGame": "666b9e57976f3",
+    "nameGame": "Blue Archive",
+    "image": "datagame666b9e5797700.jpg",
+    "created_at": "Friday, 14 \/ Jun \/ 2024  08:35:19",
+    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:35:19"
+  },
+  {
+    "kodeGame": "666b9e6bdac53",
+    "nameGame": "Genshin Impact",
+    "image": "datagame666b9e6bdac5e.jpg",
+    "created_at": "Friday, 14 \/ Jun \/ 2024  08:35:39",
+    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:35:39"
+  },
+  {
+    "kodeGame": "666b9eb16b84f",
+    "nameGame": "Tower of Fantasy",
+    "image": "datagame666b9eb16b85a.jpg",
+    "created_at": "Friday, 14 \/ Jun \/ 2024  08:36:49",
+    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:36:49"
+  },
+  {
+    "kodeGame": "666b9ebbe5429",
+    "nameGame": "Counter Strike 2",
+    "image": "datagame666b9ebbe5435.jpg",
+    "created_at": "Friday, 14 \/ Jun \/ 2024  08:36:59",
+    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:36:59"
+  }
+]

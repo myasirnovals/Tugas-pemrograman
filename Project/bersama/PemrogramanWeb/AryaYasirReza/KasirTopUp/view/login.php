@@ -36,7 +36,7 @@
                                 <input type="text" name="card" id="card" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary d-block w-100" type="submit">Login</button>
+                                <button class="btn btn-primary d-block w-100" type="submit" name="login">Login</button>
                             </div>
                             <span class="text-muted">Belum jadi member?</span>
                             <a href="register.php" class="text-decoration-none">Register now</a>

@@ -1,1 +1,14 @@
-
+[
+  {
+    "name": "admin",
+    "address": "-",
+    "birthdate": "-",
+    "username": "admin12345",
+    "members": "admin",
+    "telp": "087564533445",
+    "email": "admin@example.com",
+    "password": "$2y$10$ve4FapNiURkZUAYnx.GkFeBadSezTUJm55HNtMkT4G2dXPgk5ddLm",
+    "created_at": "Saturday, 15 \/ Jun \/ 2024  09:01:07",
+    "updated_at": "Saturday, 15 \/ Jun \/ 2024  09:01:07"
+  }
+]

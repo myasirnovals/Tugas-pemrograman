@@ -26,9 +26,17 @@
             <div class="col-md-6 col-xl-4">
                 <div class="card mb-5">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <form action="" method="post">
+                        <form action="auth/register_user.php" method="post">
                             <div class="row">
                                 <div class="col-6 col-sm-12">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nama:</label>
+                                        <input type="text" name="name" id="name" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email:</label>
+                                        <input type="email" name="email" id="email" class="form-control" required>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Username:</label>
                                         <input type="text" name="username" id="username" class="form-control" required>
@@ -38,9 +46,11 @@
                                         <input type="password" name="password" id="password" class="form-control"
                                                required>
                                     </div>
+                                </div>
+                                <div class="col-6 col-sm-12">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama:</label>
-                                        <input type="text" name="name" id="name" class="form-control" required>
+                                        <label for="telp" class="form-label">Nomor telepon:</label>
+                                        <input type="text" name="telp" id="telp" class="form-control" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="members" class="form-label">Member Group:</label>
@@ -51,29 +61,11 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-6 col-sm-12">
-                                    <div class="mb-3">
-                                        <label for="birthdate" class="form-label">Tanggal Lahir:</label>
-                                        <input type="date" name="birthdate" id="birthdate" class="form-control"
-                                               required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="telp" class="form-label">Nomor telepon:</label>
-                                        <input type="text" name="telp" id="telp" class="form-control" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email:</label>
-                                        <input type="email" name="email" id="email" class="form-control" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="address" class="form-label">Alamat:</label>
-                                        <textarea name="address" id="address" cols="30" rows="5"
-                                                  class="form-control"></textarea>
-                                    </div>
-                                </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary d-block w-100" type="submit">Daftar</button>
+                                <button class="btn btn-primary d-block w-100" type="submit" name="register"
+                                        value="register">Daftar
+                                </button>
                             </div>
                             <span class="text-muted">Sudah jadi member?</span>
                             <a href="login.php" class="text-decoration-none">Login now</a>

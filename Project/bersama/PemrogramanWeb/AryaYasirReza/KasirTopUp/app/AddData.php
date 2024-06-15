@@ -98,3 +98,46 @@ function AddGameProduct()
         return json_encode($dataError);
     }
 }
+
+function AddDataUser($name, $address, $birthdate, $username, $email, $password, $members, $telp, $created_at, $updated_at)
+{
+    $file_name = "../database/data_member" . ".json";
+
+    if (file_exists("$file_name")) {
+        $current_data = file_get_contents("$file_name");
+        $array_data = json_decode($current_data, true);
+
+        $extra = array(
+            "name" => $name,
+            "address" => $address,
+            "birthdate" => $birthdate,
+            "username" => $username,
+            "members" => $members,
+            "telp" => $telp,
+            "email" => $email,
+            "password" => $password,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
+        );
+
+        $array_data[] = $extra;
+        return json_encode($array_data);
+    } else {
+        $dataError = array();
+        $dataError[] = array(
+            "name" => $name,
+            "address" => $address,
+            "birthdate" => $birthdate,
+            "username" => $username,
+            "members" => $members,
+            "telp" => $telp,
+            "email" => $email,
+            "password" => $password,
+            "created_at" => $created_at,
+            "updated_at" => $updated_at
+        );
+
+        echo "File not exist <br>";
+        return json_encode($dataError);
+    }
+}

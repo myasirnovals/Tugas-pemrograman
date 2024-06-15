@@ -14,7 +14,7 @@
     if (verify === true) {
         window.location.href = "login.php";
     } else {
-        window.location.href = "user/guest.php";
+        window.location.href = "user/user.php";
     }
 </script>
 </body>

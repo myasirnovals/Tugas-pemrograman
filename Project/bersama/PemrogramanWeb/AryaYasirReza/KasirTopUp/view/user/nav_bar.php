@@ -12,9 +12,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navcol-3">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Carts</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="user.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="cart.php">Carts</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
             </ul>
             <?php if ($member == "member") { ?>
                 <div class="dropdown">
