@@ -32,10 +32,6 @@
                                        required>
                             </div>
                             <div class="mb-3">
-                                <label for="card" class="form-label">Nomor Kartu Member:</label>
-                                <input type="text" name="card" id="card" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
                                 <button class="btn btn-primary d-block w-100" type="submit" name="login">Login</button>
                             </div>
                             <span class="text-muted">Belum jadi member?</span>

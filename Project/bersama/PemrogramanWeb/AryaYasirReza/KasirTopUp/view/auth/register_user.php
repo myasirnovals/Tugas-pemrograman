@@ -14,6 +14,12 @@ if (isset($_POST['register'])) {
     $members = filter_input(INPUT_POST, 'members', FILTER_SANITIZE_STRING);
     $telp = filter_input(INPUT_POST, 'telp', FILTER_SANITIZE_NUMBER_INT);
 
+    // verify telephone
+    if ($telp == null || ) {
+        echo "Data yang anda masukan bukan nomor telephone";
+        return false;
+    }
+
     // verify email
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
