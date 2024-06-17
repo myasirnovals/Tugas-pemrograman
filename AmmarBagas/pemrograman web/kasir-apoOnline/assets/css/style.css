@@ -56,6 +56,7 @@
 .sidebar .header .list-item .icon {
   width: 33px;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .sidebar .main .list-item .icon {
@@ -77,4 +78,8 @@
 
 .f-vh{
   height: 100vh;
+}
+
+.card .img-pp{
+  width: 10px;
 }
