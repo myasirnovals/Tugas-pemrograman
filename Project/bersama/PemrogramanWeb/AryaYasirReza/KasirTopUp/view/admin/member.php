@@ -12,8 +12,11 @@
                     <tr class="text-center">
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Nomor Kartu</th>
-                        <th>Nomor Telepon</th>
+                        <th>Email</th>
+                        <th>username</th>
+                        <th>member</th>
+                        <th>telephone</th>
+                        <th>address</th>
                         <th>Aksi</th>
                     </tr>
                     </thead>
@@ -21,12 +24,12 @@
                     <?php foreach ($dataMembers as $data) { ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $data['gameCode']; ?></td>
-                            <td><?= $data['productName']; ?></td>
-                            <td>-</td>
-                            <td class="text-end"><?= $data['productPrice']; ?></td>
-                            <td><?= $data['productBonus']; ?></td>
-                            <td>-</td>
+                            <td><?= $data['name']; ?></td>
+                            <td><?= $data['email']; ?></td>
+                            <td><?= $data['username']; ?></td>
+                            <td><?= $data['members']; ?></td>
+                            <td><?= $data['phone']; ?></td>
+                            <td><?= $data['address']; ?></td>
                             <td class="text-center">
                                 <a href="#" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Hapus</a>

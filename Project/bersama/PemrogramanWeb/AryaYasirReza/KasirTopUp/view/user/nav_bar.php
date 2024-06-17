@@ -16,7 +16,7 @@
                 <li class="nav-item"><a class="nav-link" href="cart.php">Carts</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
             </ul>
-            <?php if ($member == "member") { ?>
+            <?php if (!empty($_SESSION["logged"])) {?>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -24,7 +24,7 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        <li><a class="dropdown-item text-danger" href="../auth/logout.php">Logout</a></li>
                     </ul>
                 </div>
             <?php } else { ?>
@@ -41,4 +41,3 @@
         </div>
     </div>
 </nav>
-
