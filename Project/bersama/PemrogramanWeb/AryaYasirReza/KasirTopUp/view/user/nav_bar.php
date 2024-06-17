@@ -34,7 +34,7 @@
                         Guest
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../register.php">Daftar Member</a></li>
+                        <li><a class="dropdown-item" href="../auth/register.php">Daftar Member</a></li>
                     </ul>
                 </div>
             <?php } ?>

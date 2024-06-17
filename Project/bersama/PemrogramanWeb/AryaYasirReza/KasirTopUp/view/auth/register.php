@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Register</title>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/Features-Image-images.css">
-    <link rel="stylesheet" href="../assets/css/Footer-Basic-icons.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/Features-Image-images.css">
+    <link rel="stylesheet" href="../../assets/css/Footer-Basic-icons.css">
 </head>
 <body>
 <section class="position-relative py-4 py-xl-5">
@@ -26,12 +26,13 @@
             <div class="col-md-6 col-xl-4">
                 <div class="card mb-5">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <form action="auth/register_user.php" method="post">
+                        <form action="../../routes/user_register.php" method="post">
                             <div class="row">
                                 <div class="col-6 col-sm-12">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nama:</label>
-                                        <input type="text" name="name" id="name" class="form-control" required>
+                                        <input type="text" name="name" id="name" class="form-control"
+                                               pattern="[a-z A-Z]+" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email:</label>
@@ -49,8 +50,9 @@
                                 </div>
                                 <div class="col-6 col-sm-12">
                                     <div class="mb-3">
-                                        <label for="telp" class="form-label">Nomor telepon:</label>
-                                        <input type="text" name="telp" id="telp" class="form-control" required>
+                                        <label for="phone" class="form-label">Nomor telepon:</label>
+                                        <input type="text" name="phone" id="phone" class="form-control"
+                                               pattern="[0-9]+" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="members" class="form-label">Member Group:</label>
@@ -63,9 +65,7 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary d-block w-100" type="submit" name="register"
-                                        value="register">Daftar
-                                </button>
+                                <button type="submit" class="btn btn-primary d-block w-100 mt-4 mb-4">Register</button>
                             </div>
                             <span class="text-muted">Sudah jadi member?</span>
                             <a href="login.php" class="text-decoration-none">Login now</a>
@@ -76,6 +76,6 @@
         </div>
     </div>
 </section>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

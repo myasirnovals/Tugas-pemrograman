@@ -1,14 +1,50 @@
 [
   {
+    "name": "admin",
+    "address": "-",
+    "birthdate": "-",
+    "username": "admin12345",
+    "members": "admin",
+    "phone": "088234567893",
+    "email": "admin@example.com",
+    "password": "$2y$10$2w5JQoIdH7HaTJWboAAKZehLYbeTqhMIESiiN02OZuhwIED\/RMrTS",
+    "created_at": "Monday, 17 \/ Jun \/ 2024  08:49:43",
+    "updated_at": "Monday, 17 \/ Jun \/ 2024  08:49:43"
+  },
+  {
     "name": "user",
     "address": "-",
     "birthdate": "-",
     "username": "user12345",
-    "members": "silver",
-    "telp": "",
+    "members": "gold",
+    "phone": "099875763423",
     "email": "user@example.com",
-    "password": "$2y$10$4otbc5uDEJrVVxufKjAGveEHhYvDpPQ32PAbJzhIbpDuTq4U0yXS2",
-    "created_at": "Saturday, 15 \/ Jun \/ 2024  13:52:31",
-    "updated_at": "Saturday, 15 \/ Jun \/ 2024  13:52:31"
+    "password": "$2y$10$uR4JkcxIjQkulo1yDuGwlOaWWnjabPk8A3KX7sFsyvUbcUB00KIZG",
+    "created_at": "Monday, 17 \/ Jun \/ 2024  08:50:14",
+    "updated_at": "Monday, 17 \/ Jun \/ 2024  08:50:14"
+  },
+  {
+    "name": "userUser",
+    "address": "-",
+    "birthdate": "-",
+    "username": "user54321",
+    "members": "platinum",
+    "phone": "089787675432",
+    "email": "user2@example.com",
+    "password": "$2y$10$iDs269IbO6AQqYYlMawVneCeLsqaik3en43B2qJdXBmsr112xnzZ6",
+    "created_at": "Monday, 17 \/ Jun \/ 2024  08:51:20",
+    "updated_at": "Monday, 17 \/ Jun \/ 2024  08:51:20"
+  },
+  {
+    "name": "Yasir Noval",
+    "address": "-",
+    "birthdate": "-",
+    "username": "yasir12345",
+    "members": "admin",
+    "phone": "083844543213",
+    "email": "yasir@example.com",
+    "password": "$2y$10$56\/SBnmIiXMfU7z8tBjW3Owtaww19g60phLt0qgFVTr715RUw1bRG",
+    "created_at": "Monday, 17 \/ Jun \/ 2024  08:52:14",
+    "updated_at": "Monday, 17 \/ Jun \/ 2024  08:52:14"
   }
 ]

@@ -12,7 +12,7 @@
     let verify = confirm("Are you a member?");
 
     if (verify === true) {
-        window.location.href = "login.php";
+        window.location.href = "auth/login.php";
     } else {
         window.location.href = "user/user.php";
     }

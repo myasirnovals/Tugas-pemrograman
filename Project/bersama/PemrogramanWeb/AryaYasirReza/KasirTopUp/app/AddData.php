@@ -99,8 +99,27 @@ function AddGameProduct()
     }
 }
 
-function AddDataUser($name, $address, $birthdate, $username, $email, $password, $members, $telp, $created_at, $updated_at)
+function AddDataUser()
 {
+    // data exist
+    $address = "-";
+    $birthdate = "-";
+    $created_at = date('l, d / M / Y  H:i:s');
+    $updated_at = date('l, d / M / Y  H:i:s');
+
+    // filter data
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $members = filter_input(INPUT_POST, 'members', FILTER_SANITIZE_STRING);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
+
+
+    // verify email
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+    // encryption password
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+
     $file_name = "../database/data_member" . ".json";
 
     if (file_exists("$file_name")) {
@@ -113,7 +132,7 @@ function AddDataUser($name, $address, $birthdate, $username, $email, $password, 
             "birthdate" => $birthdate,
             "username" => $username,
             "members" => $members,
-            "telp" => $telp,
+            "phone" => $phone,
             "email" => $email,
             "password" => $password,
             "created_at" => $created_at,
@@ -130,7 +149,7 @@ function AddDataUser($name, $address, $birthdate, $username, $email, $password, 
             "birthdate" => $birthdate,
             "username" => $username,
             "members" => $members,
-            "telp" => $telp,
+            "phone" => $phone,
             "email" => $email,
             "password" => $password,
             "created_at" => $created_at,
