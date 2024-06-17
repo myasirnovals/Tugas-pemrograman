@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/Features-Image-images.css">
     <link rel="stylesheet" href="../../assets/css/Footer-Basic-icons.css">
@@ -21,7 +21,7 @@
             <div class="col-md-6 col-xl-4">
                 <div class="card mb-5">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <form action="" method="post">
+                        <form action="../../routes/user_login.php" method="post">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username:</label>
                                 <input type="text" name="username" id="username" class="form-control" required>
