@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . "/GetData.php";
+
 function DeleteGame()
 {
     $id = $_GET['id'];
@@ -17,12 +19,7 @@ function DeleteGame()
 
                 foreach ($array_product as $key_product => $product) {
                     if ($product["gameCode"] == $game["kodeGame"]) {
-                        /*
-                         * Perbaiki baris code ini supaya bisa menghapus data
-                         * produk secara otomatis (maksudnya ketika productnya ada
-                         * 2 maka harus terhapus kedua nya, jika hanya satu maka
-                         * satu saja yang terhapus)*/
-                        array_splice($array_product, $key_product, 2);
+                        array_splice($array_product, $key_product, GetUserAmount($game["kodeGame"]));
                     }
                 }
                 $array_product = json_encode($array_product, JSON_PRETTY_PRINT);
