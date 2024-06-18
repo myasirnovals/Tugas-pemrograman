@@ -16,7 +16,18 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">0</h2>
+                                <?php
+                                if (!empty($dataOrders)) {
+                                    $no = 0;
+
+                                    foreach ($dataOrders as $order) {
+                                        if ($order['orderStatus'] == "paid") {
+                                            $no++;
+                                        }
+                                    }
+                                    ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } ?>
                                 <p class="mb-0">Penjualan</p>
                             </div>
                         </div>
@@ -32,7 +43,16 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">0</h2>
+                                <?php
+                                if (!empty($dataMembers)) {
+                                    $no = 0;
+
+                                    foreach ($dataMembers as $member) {
+                                        $no++;
+                                    }
+                                    ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } ?>
                                 <p class="mb-0">Member</p>
                             </div>
                         </div>
@@ -47,7 +67,16 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">0</h2>
+                                <?php
+                                if (!empty($dataGames)) {
+                                    $no = 0;
+
+                                    foreach ($dataGames as $game) {
+                                        $no++;
+                                    }
+                                    ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } ?>
                                 <p class="mb-0">Game</p>
                             </div>
                         </div>
@@ -61,7 +90,16 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">0</h2>
+                                <?php
+                                if (!empty($dataProducts)) {
+                                    $no = 0;
+
+                                    foreach ($dataProducts as $product) {
+                                        $no++;
+                                    }
+                                    ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } ?>
                                 <p class="mb-0">Product</p>
                             </div>
                         </div>

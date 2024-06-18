@@ -13,7 +13,6 @@
                         <th>No</th>
                         <th>Kode Game</th>
                         <th>Nama Produk</th>
-                        <th>Game</th>
                         <th>Harga Produk</th>
                         <th>Bonus Produk</th>
                         <th>Gambar</th>
@@ -26,7 +25,6 @@
                             <td><?= $no++; ?></td>
                             <td><?= $data['gameCode']; ?></td>
                             <td><?= $data['productName']; ?></td>
-                            <td>-</td>
                             <td class="text-end"><?= $data['productPrice']; ?></td>
                             <td><?= $data['productBonus']; ?></td>
                             <td class="text-center">

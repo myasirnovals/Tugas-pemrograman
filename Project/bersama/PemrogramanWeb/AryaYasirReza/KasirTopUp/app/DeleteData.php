@@ -24,11 +24,10 @@ function DeleteGame()
 
                 foreach ($array_product as $key_product => $product) {
                     if ($product["gameCode"] == $game["kodeGame"]) {
-                        array_splice($array_product, $key_product, GetUserAmount($game["kodeGame"]));
+                        // remove all image from directory
+                        unlink("$file_image_product" . $product['image']);
+                        array_splice($array_product, $key_product, GetProductAmount($game["kodeGame"]));
                     }
-
-                    // remove all image from directory
-                    unlink("$file_image_product" . $product['image']);
                 }
                 $array_product = json_encode($array_product, JSON_PRETTY_PRINT);
                 file_put_contents($file_product, $array_product);
