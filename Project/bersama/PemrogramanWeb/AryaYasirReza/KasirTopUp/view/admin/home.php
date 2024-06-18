@@ -80,12 +80,14 @@
                             <thead>
                             <tr class="text-center">
                                 <th>No</th>
-                                <th>Kode Game</th>
+                                <th>Nama Pesanan</th>
+                                <th>Email</th>
                                 <th>Nama Produk</th>
-                                <th>Game</th>
                                 <th>Harga Produk</th>
-                                <th>Bonus Produk</th>
-                                <th>Gambar</th>
+                                <th>Jumlah Produk</th>
+                                <th>Kode Produk</th>
+                                <th>Gambar Produk</th>
+                                <th>Status Pesanan</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
@@ -93,20 +95,22 @@
                             <?php foreach ($dataOrders as $data) { ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= $data['gameCode']; ?></td>
-                                    <td><?= $data['productName']; ?></td>
-                                    <td>-</td>
-                                    <td class="text-end"><?= $data['productPrice']; ?></td>
-                                    <td><?= $data['productBonus']; ?></td>
+                                    <td><?= $data['orderPersonName']; ?></td>
+                                    <td><?= $data['orderPersonEmail']; ?></td>
+                                    <td><?= $data['orderProductName']; ?></td>
+                                    <td class="text-end"><?= $data['orderProductPrice']; ?></td>
+                                    <td><?= $data['orderProductAmount']; ?></td>
+                                    <td><?= $data['orderProductCode']; ?></td>
                                     <td class="text-center">
-                                        <img src="../../assets/images/product/<?= $data['image']; ?>"
-                                             alt="Games" width="250"
+                                        <img src="../../assets/images/product/<?= $data['orderProductImage']; ?>"
+                                             alt="order" width="250"
                                              class="img-thumbnail">
                                     </td>
+                                    <td><?= $data['orderStatus']; ?></td>
                                     <td class="text-center">
-                                        <a href="update_product.php?id=<?= $data['productId'] ?>"
+                                        <a href="update_product.php?id=<?= $data['orderId'] ?>"
                                            class="btn btn-primary">Edit</a>
-                                        <a href="../../routes/delete_product.php?id=<?= $data['productId']; ?>"
+                                        <a href="../../routes/delete_product.php?id=<?= $data['orderId']; ?>"
                                            class="btn btn-danger">Hapus</a>
                                     </td>
                                 </tr>
