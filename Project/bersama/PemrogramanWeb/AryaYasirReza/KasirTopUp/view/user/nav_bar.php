@@ -23,7 +23,7 @@
                         Member
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.php">Profile</a></li>
                         <li><a class="dropdown-item text-danger" href="../auth/logout.php">Logout</a></li>
                     </ul>
                 </div>

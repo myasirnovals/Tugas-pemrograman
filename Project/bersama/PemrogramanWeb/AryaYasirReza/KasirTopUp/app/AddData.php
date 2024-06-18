@@ -105,6 +105,7 @@ function AddDataUser()
     $memberId = uniqid();
     $address = "-";
     $birthdate = "-";
+    $image = "-";
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');
 
@@ -137,6 +138,7 @@ function AddDataUser()
             "phone" => $phone,
             "email" => $email,
             "password" => $password,
+            "image" => $image,
             "created_at" => $created_at,
             "updated_at" => $updated_at
         );
@@ -155,6 +157,7 @@ function AddDataUser()
             "phone" => $phone,
             "email" => $email,
             "password" => $password,
+            "image" => $image,
             "created_at" => $created_at,
             "updated_at" => $updated_at
         );
@@ -168,6 +171,7 @@ function AddOrder($data_email, $id_product)
 {
     // data exist
     $order_id = uniqid();
+    $image = "-";
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');
 
@@ -205,6 +209,7 @@ function AddOrder($data_email, $id_product)
                             "orderProductCode" => $product['productId'],
                             "orderProductImage" => $product['image'],
                             "orderStatus" => "not yet paid",
+                            "image" => $image,
                             "created_at" => $created_at,
                             "updated_at" => $updated_at
                         );

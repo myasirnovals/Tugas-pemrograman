@@ -31,8 +31,10 @@
                             <td><?= $data['phone']; ?></td>
                             <td><?= $data['address']; ?></td>
                             <td class="text-center">
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                <a href="#" class="btn btn-danger">Hapus</a>
+                                <a href="update_member.php?id=<?= $data['memberId'] ?>"
+                                   class="btn btn-primary">Edit</a>
+                                <a href="../../routes/delete_member.php?id=<?= $data['memberId']; ?>"
+                                   class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
                     <?php } ?>

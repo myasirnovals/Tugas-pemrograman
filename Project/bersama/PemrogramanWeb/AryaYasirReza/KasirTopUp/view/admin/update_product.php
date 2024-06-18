@@ -1,7 +1,7 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container mt-5">
-        <h4 style="margin-top: 20px;">Edit Game:</h4>
+        <h4 style="margin-top: 20px;">Edit Produk:</h4>
         <div class="card mt-5">
             <div class="container">
                 <?php foreach ($dataProducts as $data) { ?>
@@ -43,7 +43,7 @@
                                             <label for="image" class="form-label">Game Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
                                         </div>
-                                        <button type="submit" class="btn btn-primary mt-3 mb-4">Update Game</button>
+                                        <button type="submit" class="btn btn-primary mt-3 mb-4">Update Produk</button>
                                     </form>
                                 </div>
                             </div>
