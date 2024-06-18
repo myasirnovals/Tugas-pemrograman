@@ -7,11 +7,11 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="nameGame" class="form-label">Name Game</label>
-                            <input type="text" class="form-control" id="nameGame" name="nameGame"
-                                   aria-describedby="nameGame"
+                            <label for="gameName" class="form-label">Name Game</label>
+                            <input type="text" class="form-control" id="gameName" name="gameName"
+                                   aria-describedby="gameName"
                                    required>
-                            <div id="nameGame" class="form-text">For example, Blue Archive</div>
+                            <div id="gameName" class="form-text">For example, Blue Archive</div>
                         </div>
                     </div>
                     <div class="col-6">
@@ -44,11 +44,11 @@
                                 <td><?= $no++; ?></td>
                                 <td class="text-center"><img src="../../assets/images/game/<?= $data['image']; ?>" alt="Games" width="250"
                                          class="img-thumbnail"></td>
-                                <td><?= $data['nameGame']; ?></td>
+                                <td><?= $data['gameName']; ?></td>
                                 <td class="text-center">
-                                    <a href="update_game.php?id=<?= $data['kodeGame']; ?>"
+                                    <a href="update_game.php?id=<?= $data['gameId']; ?>"
                                        class="btn btn-primary">Edit</a>
-                                    <a href="../../routes/delete_game.php?id=<?= $data['kodeGame']; ?>"
+                                    <a href="../../routes/delete_game.php?id=<?= $data['gameId']; ?>"
                                        class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>

@@ -13,10 +13,10 @@
                 <div class="col-md-3">
                     <div class="card" style="margin: 10px;">
                         <div class="card-body" style="text-align: center;">
-                            <h4 class="card-title" style="font-size: 20px;"><?= $data['nameGame']; ?></h4>
+                            <h4 class="card-title" style="font-size: 20px;"><?= $data['gameName']; ?></h4>
                             <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
                             <picture><img src="../../assets/images/game/<?= $data['image']; ?>" alt="gambar game" class="img-thumbnail"></picture>
-                            <a href="detail_product.php?id=<?= $data['kodeGame']; ?>" class="btn btn-primary" type="button" style="padding: 6px 25%;margin: 15px;">Select
+                            <a href="detail_product.php?id=<?= $data['gameId']; ?>" class="btn btn-primary" type="button" style="padding: 6px 25%;margin: 15px;">Select
                             </a>
                         </div>
                     </div>

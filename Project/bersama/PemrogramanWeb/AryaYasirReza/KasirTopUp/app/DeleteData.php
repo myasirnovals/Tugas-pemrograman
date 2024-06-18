@@ -18,15 +18,15 @@ function DeleteGame()
         $array_game = json_decode($data_game, true);
 
         foreach ($array_game as $key_game => $game) {
-            if ($game["kodeGame"] == $id) {
+            if ($game["gameId"] == $id) {
                 $data_product = file_get_contents("$file_product");
                 $array_product = json_decode($data_product, true);
 
                 foreach ($array_product as $key_product => $product) {
-                    if ($product["gameCode"] == $game["kodeGame"]) {
+                    if ($product["gameCode"] == $game["gameId"]) {
                         // remove all image from directory
                         unlink("$file_image_product" . $product['image']);
-                        array_splice($array_product, $key_product, GetProductAmount($game["kodeGame"]));
+                        array_splice($array_product, $key_product, GetProductAmount($game["gameId"]));
                     }
                 }
                 $array_product = json_encode($array_product, JSON_PRETTY_PRINT);

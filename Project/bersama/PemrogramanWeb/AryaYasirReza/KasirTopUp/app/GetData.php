@@ -1,6 +1,6 @@
 <?php
 
-function GetUserAmount($data): int
+function GetProductAmount($data): int
 {
     $file_product = "../database/data_product" . ".json";
 

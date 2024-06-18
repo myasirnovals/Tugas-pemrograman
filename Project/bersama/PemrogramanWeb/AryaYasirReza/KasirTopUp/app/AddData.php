@@ -6,8 +6,8 @@ date_default_timezone_set('Asia/Jakarta');
 
 function AddGame()
 {
-    $id = uniqid();
-    $name = htmlspecialchars($_POST["nameGame"]);
+    $gameId = uniqid();
+    $name = htmlspecialchars($_POST["gameName"]);
     $image = UploadsImage();
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');
@@ -23,8 +23,8 @@ function AddGame()
         $array_data = json_decode($current_data, true);
 
         $extra = array(
-            "kodeGame" => $id,
-            "nameGame" => $name,
+            "gameId" => $gameId,
+            "gameName" => $name,
             "image" => $image,
             "created_at" => $created_at,
             "updated_at" => $updated_at
@@ -35,8 +35,8 @@ function AddGame()
     } else {
         $dataError = array();
         $dataError[] = array(
-            "kodeGame" => $id,
-            "nameGame" => $name,
+            "gameId" => $gameId,
+            "gameName" => $name,
             "image" => $image,
             "created_at" => $created_at,
             "updated_at" => $updated_at
@@ -102,6 +102,7 @@ function AddGameProduct()
 function AddDataUser()
 {
     // data exist
+    $memberId = uniqid();
     $address = "-";
     $birthdate = "-";
     $created_at = date('l, d / M / Y  H:i:s');
@@ -127,6 +128,7 @@ function AddDataUser()
         $array_data = json_decode($current_data, true);
 
         $extra = array(
+            "memberId" => $memberId,
             "name" => $name,
             "address" => $address,
             "birthdate" => $birthdate,
@@ -144,6 +146,7 @@ function AddDataUser()
     } else {
         $dataError = array();
         $dataError[] = array(
+            "memberId" => $memberId,
             "name" => $name,
             "address" => $address,
             "birthdate" => $birthdate,
@@ -163,6 +166,7 @@ function AddDataUser()
 
 function AddOrder($data_email, $id_product)
 {
+    // data exist
     $order_id = uniqid();
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');

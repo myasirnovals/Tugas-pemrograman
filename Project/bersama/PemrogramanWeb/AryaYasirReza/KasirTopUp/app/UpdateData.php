@@ -6,14 +6,19 @@ date_default_timezone_set('Asia/Jakarta');
 
 function UpdateGame()
 {
-    $id = $_POST["kodeGame"];
-    $name = htmlspecialchars($_POST["nameGame"]);
+    $gameId = $_POST["gameId"];
+    $name = htmlspecialchars($_POST["gameName"]);
     $old_image = htmlspecialchars($_POST["old_image"]);
     $updated_at = date('l, d / M / Y  H:i:s');
+
+    $file_image_game = "../assets/images/game/";
 
     if ($_FILES['image']['error'] === 4) {
         $image = $old_image;
     } else {
+        if ($old_image != "") {
+            unlink("$file_image_game" . $old_image);
+        }
         $image = UploadsImage();
     }
 
@@ -24,8 +29,8 @@ function UpdateGame()
         $array_data = json_decode($current_data, true);
 
         foreach ($array_data as $key => $value) {
-            if ($value["kodeGame"] == $id) {
-                $array_data[$key]["nameGame"] = $name;
+            if ($value["gameId"] == $gameId) {
+                $array_data[$key]["gameName"] = $name;
                 $array_data[$key]["image"] = $image;
                 $array_data[$key]["updated_at"] = $updated_at;
             }
@@ -36,8 +41,8 @@ function UpdateGame()
     } else {
         $dataError = array();
         $dataError[] = array(
-            "kodeGame" => $id,
-            "nameGame" => $name,
+            "gameId" => $gameId,
+            "gameName" => $name,
             "image" => $image,
             "updated_at" => $updated_at
         );
@@ -56,9 +61,14 @@ function UpdateGameProduct()
     $old_image = htmlspecialchars($_POST["old_image"]);
     $updated_at = date('l, d / M / Y  H:i:s');
 
+    $file_image_product = "../assets/images/product/";
+
     if ($_FILES['image']['error'] === 4) {
         $image = $old_image;
     } else {
+        if ($old_image != "") {
+            unlink("$file_image_product" . $old_image);
+        }
         $image = UploadsImageProduct();
     }
 

@@ -17,8 +17,8 @@
                             </div>
                             <div class="px-3">
                                 <?php
+                                $no = 0;
                                 if (!empty($dataOrders)) {
-                                    $no = 0;
 
                                     foreach ($dataOrders as $order) {
                                         if ($order['orderStatus'] == "paid") {
@@ -26,6 +26,8 @@
                                         }
                                     }
                                     ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } else { ?>
                                     <h2 class="fw-bold mb-0"><?= $no; ?></h2>
                                 <?php } ?>
                                 <p class="mb-0">Penjualan</p>
@@ -44,13 +46,14 @@
                             </div>
                             <div class="px-3">
                                 <?php
+                                $no = 0;
                                 if (!empty($dataMembers)) {
-                                    $no = 0;
-
                                     foreach ($dataMembers as $member) {
                                         $no++;
                                     }
                                     ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } else { ?>
                                     <h2 class="fw-bold mb-0"><?= $no; ?></h2>
                                 <?php } ?>
                                 <p class="mb-0">Member</p>
@@ -68,13 +71,14 @@
                             </div>
                             <div class="px-3">
                                 <?php
+                                $no = 0;
                                 if (!empty($dataGames)) {
-                                    $no = 0;
-
                                     foreach ($dataGames as $game) {
                                         $no++;
                                     }
                                     ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } else { ?>
                                     <h2 class="fw-bold mb-0"><?= $no; ?></h2>
                                 <?php } ?>
                                 <p class="mb-0">Game</p>
@@ -91,13 +95,14 @@
                             </div>
                             <div class="px-3">
                                 <?php
+                                $no = 0;
                                 if (!empty($dataProducts)) {
-                                    $no = 0;
-
                                     foreach ($dataProducts as $product) {
                                         $no++;
                                     }
                                     ?>
+                                    <h2 class="fw-bold mb-0"><?= $no; ?></h2>
+                                <?php } else { ?>
                                     <h2 class="fw-bold mb-0"><?= $no; ?></h2>
                                 <?php } ?>
                                 <p class="mb-0">Product</p>
