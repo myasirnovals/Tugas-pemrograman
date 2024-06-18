@@ -16,7 +16,7 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">123+</h2>
+                                <h2 class="fw-bold mb-0">0</h2>
                                 <p class="mb-0">Penjualan</p>
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">45+</h2>
+                                <h2 class="fw-bold mb-0">0</h2>
                                 <p class="mb-0">Member</p>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">67+</h2>
+                                <h2 class="fw-bold mb-0">0</h2>
                                 <p class="mb-0">Game</p>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                 </svg>
                             </div>
                             <div class="px-3">
-                                <h2 class="fw-bold mb-0">89</h2>
+                                <h2 class="fw-bold mb-0">0</h2>
                                 <p class="mb-0">Product</p>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <thead>
                             <tr class="text-center">
                                 <th>No</th>
-                                <th>Nama Pesanan</th>
+                                <th>Nama Pemesan</th>
                                 <th>Email</th>
                                 <th>Nama Produk</th>
                                 <th>Harga Produk</th>

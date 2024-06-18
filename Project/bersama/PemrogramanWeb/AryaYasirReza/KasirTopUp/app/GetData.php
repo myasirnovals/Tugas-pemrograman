@@ -1,6 +1,6 @@
 <?php
 
-function GetUserAmount($data):int
+function GetUserAmount($data): int
 {
     $file_product = "../database/data_product" . ".json";
 
@@ -18,4 +18,24 @@ function GetUserAmount($data):int
     }
 
     return $sum;
+}
+
+function GetAllUsers()
+{
+    // type your code here
+}
+
+function GetAllProducts()
+{
+    // type your code here
+}
+
+function GetAllMembers()
+{
+    // type your code here
+}
+
+function GetAllOrders()
+{
+    // type your code here
 }
