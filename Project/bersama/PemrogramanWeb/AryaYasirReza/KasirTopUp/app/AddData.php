@@ -160,3 +160,62 @@ function AddDataUser()
         return json_encode($dataError);
     }
 }
+
+function AddOrder($data_email, $id_product)
+{
+    $order_id = uniqid();
+    $created_at = date('l, d / M / Y  H:i:s');
+    $updated_at = date('l, d / M / Y  H:i:s');
+
+    // get data from database
+    $file_order = "../database/data_order" . ".json";
+    $file_member = "../database/data_member" . ".json";
+    $file_product = "../database/data_product" . ".json";
+
+    // verify all file
+    if (
+        file_exists("$file_order") &&
+        file_exists("$file_member") &&
+        file_exists("$file_product")
+    ) {
+        $data_member = file_get_contents("$file_member");
+        $array_member = json_decode($data_member, true);
+
+        foreach ($array_member as $member) {
+            if ($member['email'] == $data_email) {
+                $data_product = file_get_contents("$file_product");
+                $data_product = json_decode($data_product, true);
+
+                foreach ($data_product as $product) {
+                    if($product['productId'] == $id_product) {
+                        $data_order = file_get_contents("$file_order");
+                        $array_order = json_decode($data_order, true);
+
+                        $extra = array(
+                            "orderId" => $order_id,
+                            "orderPersonName" => $member['name'],
+                            "orderPersonEmail" => $member['email'],
+                            "orderProductName" => $product['productName'],
+                            "orderProductPrice" => $product['productPrice'],
+                            "orderProductAmount" => "1",
+                            "orderProductCode" => $product['productId'],
+                            "orderProductImage" => $product['image'],
+                            "orderStatus" => "not yet paid",
+                            "created_at" => $created_at,
+                            "updated_at" => $updated_at
+                        );
+
+                        $array_order[] = $extra;
+                        return json_encode($array_order);
+                    }
+                }
+
+                return "Product is not exist<br>";
+            }
+        }
+
+        return "Member is not exist<br>";
+    } else {
+        return "File not exist <br>";
+    }
+}

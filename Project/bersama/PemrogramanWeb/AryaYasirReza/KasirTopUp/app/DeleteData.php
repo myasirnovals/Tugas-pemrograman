@@ -5,11 +5,11 @@ function DeleteGame()
 {
     $id = $_GET['id'];
 
-    // data for database
+    // get data from database
     $file_game = "../database/data_game" . ".json";
     $file_product = "../database/data_product" . ".json";
 
-    // data for image
+    // get data from directory image
     $file_image_game = "../assets/images/game/";
     $file_image_product = "../assets/images/product/";
 
