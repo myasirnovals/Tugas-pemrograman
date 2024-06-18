@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList
+CMAKE_SOURCE_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ADTQCLinkedList.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/ADTQCLinkedList.dir/progress.make
 include CMakeFiles/ADTQCLinkedList.dir/flags.make
 
 CMakeFiles/ADTQCLinkedList.dir/main.c.obj: CMakeFiles/ADTQCLinkedList.dir/flags.make
-CMakeFiles/ADTQCLinkedList.dir/main.c.obj: D:/Documents/pemrograman/yasir/strukturData/pertemuan7/ADTQCLinkedList/main.c
+CMakeFiles/ADTQCLinkedList.dir/main.c.obj: C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan7/ADTQCLinkedList/main.c
 CMakeFiles/ADTQCLinkedList.dir/main.c.obj: CMakeFiles/ADTQCLinkedList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ADTQCLinkedList.dir/main.c.obj"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ADTQCLinkedList.dir/main.c.obj -MF CMakeFiles\ADTQCLinkedList.dir\main.c.obj.d -o CMakeFiles\ADTQCLinkedList.dir\main.c.obj -c D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ADTQCLinkedList.dir/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ADTQCLinkedList.dir/main.c.obj -MF CMakeFiles\ADTQCLinkedList.dir\main.c.obj.d -o CMakeFiles\ADTQCLinkedList.dir\main.c.obj -c C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\main.c
 
 CMakeFiles/ADTQCLinkedList.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ADTQCLinkedList.dir/main.c.i"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\main.c > CMakeFiles\ADTQCLinkedList.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\main.c > CMakeFiles\ADTQCLinkedList.dir\main.c.i
 
 CMakeFiles/ADTQCLinkedList.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ADTQCLinkedList.dir/main.c.s"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\main.c -o CMakeFiles\ADTQCLinkedList.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\main.c -o CMakeFiles\ADTQCLinkedList.dir\main.c.s
 
 # Object files for target ADTQCLinkedList
 ADTQCLinkedList_OBJECTS = \
@@ -94,7 +94,7 @@ ADTQCLinkedList.exe: CMakeFiles/ADTQCLinkedList.dir/build.make
 ADTQCLinkedList.exe: CMakeFiles/ADTQCLinkedList.dir/linkLibs.rsp
 ADTQCLinkedList.exe: CMakeFiles/ADTQCLinkedList.dir/objects1.rsp
 ADTQCLinkedList.exe: CMakeFiles/ADTQCLinkedList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ADTQCLinkedList.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ADTQCLinkedList.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ADTQCLinkedList.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/ADTQCLinkedList.dir/clean:
 .PHONY : CMakeFiles/ADTQCLinkedList.dir/clean
 
 CMakeFiles/ADTQCLinkedList.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug D:\Documents\pemrograman\yasir\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles\ADTQCLinkedList.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan7\ADTQCLinkedList\cmake-build-debug\CMakeFiles\ADTQCLinkedList.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ADTQCLinkedList.dir/depend
 

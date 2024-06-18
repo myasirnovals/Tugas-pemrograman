@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL
+CMAKE_SOURCE_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ADT_LLL.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/ADT_LLL.dir/progress.make
 include CMakeFiles/ADT_LLL.dir/flags.make
 
 CMakeFiles/ADT_LLL.dir/main.c.obj: CMakeFiles/ADT_LLL.dir/flags.make
-CMakeFiles/ADT_LLL.dir/main.c.obj: D:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan4/ADT_LLL/main.c
+CMakeFiles/ADT_LLL.dir/main.c.obj: C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan4/ADT_LLL/main.c
 CMakeFiles/ADT_LLL.dir/main.c.obj: CMakeFiles/ADT_LLL.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ADT_LLL.dir/main.c.obj"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ADT_LLL.dir/main.c.obj -MF CMakeFiles\ADT_LLL.dir\main.c.obj.d -o CMakeFiles\ADT_LLL.dir\main.c.obj -c D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ADT_LLL.dir/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ADT_LLL.dir/main.c.obj -MF CMakeFiles\ADT_LLL.dir\main.c.obj.d -o CMakeFiles\ADT_LLL.dir\main.c.obj -c C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c
 
 CMakeFiles/ADT_LLL.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ADT_LLL.dir/main.c.i"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c > CMakeFiles\ADT_LLL.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c > CMakeFiles\ADT_LLL.dir\main.c.i
 
 CMakeFiles/ADT_LLL.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ADT_LLL.dir/main.c.s"
-	"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c -o CMakeFiles\ADT_LLL.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\main.c -o CMakeFiles\ADT_LLL.dir\main.c.s
 
 # Object files for target ADT_LLL
 ADT_LLL_OBJECTS = \
@@ -94,7 +94,7 @@ ADT_LLL.exe: CMakeFiles/ADT_LLL.dir/build.make
 ADT_LLL.exe: CMakeFiles/ADT_LLL.dir/linkLibs.rsp
 ADT_LLL.exe: CMakeFiles/ADT_LLL.dir/objects1.rsp
 ADT_LLL.exe: CMakeFiles/ADT_LLL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ADT_LLL.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ADT_LLL.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ADT_LLL.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/ADT_LLL.dir/clean:
 .PHONY : CMakeFiles/ADT_LLL.dir/clean
 
 CMakeFiles/ADT_LLL.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug D:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles\ADT_LLL.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan4\ADT_LLL\cmake-build-debug\CMakeFiles\ADT_LLL.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ADT_LLL.dir/depend
 

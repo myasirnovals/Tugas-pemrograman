@@ -44,19 +44,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Documents\pemrograman\yasir\strukturDataTeori\DoubleLinkedList
+CMAKE_SOURCE_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturDataTeori\DoubleLinkedList
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Documents\pemrograman\yasir\strukturDataTeori\DoubleLinkedList\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturDataTeori\DoubleLinkedList\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -80,14 +80,14 @@ clean: CMakeFiles/DoubleLinkedList.dir/clean
 CMakeFiles/DoubleLinkedList.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoubleLinkedList.dir\build.make CMakeFiles/DoubleLinkedList.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DoubleLinkedList.dir\build.make CMakeFiles/DoubleLinkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Documents\pemrograman\yasir\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target DoubleLinkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target DoubleLinkedList"
 .PHONY : CMakeFiles/DoubleLinkedList.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DoubleLinkedList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\pemrograman\yasir\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/DoubleLinkedList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Documents\pemrograman\yasir\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturDataTeori\DoubleLinkedList\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/DoubleLinkedList.dir/rule
 
 # Convenience name for target.

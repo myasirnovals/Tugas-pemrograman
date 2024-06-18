@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/main.c" "CMakeFiles/DoubleLinkedList.dir/main.c.obj" "gcc" "CMakeFiles/DoubleLinkedList.dir/main.c.obj.d"
+  "C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/main.c" "CMakeFiles/DoubleLinkedList.dir/main.c.obj" "gcc" "CMakeFiles/DoubleLinkedList.dir/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

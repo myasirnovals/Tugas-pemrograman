@@ -1,30 +1,15 @@
-/**
- * Program: list.c
- * Author: (2350081004, Muhamad Yasir Noval)
- * Kelas: A
- * Deskripsi: Header file dari prototype queue
- * Tanggal: 10 April 2024
- */
-
 #include <stdlib.h>
-
 #include "../lib/list.h"
 
-// Prototype linear list
-// konstruktor
 void CreateList(List *L) {
     First(*L) = Nil;
 }
 
-// Destruktor/Dealokator
 address Alokasi(infoType X) {
-    // Kamus
     address NewNode;
 
-    // Alokasi memori menggunakan Malloc
     NewNode = (ElmList *) malloc(sizeof(ElmList));
 
-    // algoritma
     Info(NewNode) = X;
     Next(NewNode) = Nil;
 
@@ -32,11 +17,9 @@ address Alokasi(infoType X) {
 }
 
 void DeAlokasi(address P) {
-    // Dealokasi memori (membebaskan/menghapus alamat memori)
     free(P);
 }
 
-// {Kelompok operasi cek elemen kosong atau penuh}
 boolean ListEmpty(List L) {
     if (First(L) == Nil) {
         return true;
@@ -45,16 +28,11 @@ boolean ListEmpty(List L) {
     }
 }
 
-// {Kelompok interaksi dengan I/O device, Baca/Tulis}
-// Penambahan elemen
 void InsFirst(List *L, infoType X) {
-    // Kamus
     address NewNode;
 
-    // Alokasi memori
     NewNode = Alokasi(X);
 
-    // algoritma
     if (NewNode != Nil) {
         Info(NewNode) = X;
         Next(NewNode) = First(*L);
@@ -64,13 +42,10 @@ void InsFirst(List *L, infoType X) {
 }
 
 void InsLast(List *L, infoType X) {
-    // Kamus
     address NewNode, Current;
 
-    // Alokasi memori
     NewNode = Alokasi(X);
 
-    // algoritma
     Current = First(*L);
 
     if (NewNode != Nil) {
@@ -86,7 +61,6 @@ void InsLast(List *L, infoType X) {
 }
 
 void InsAfter(List *L, infoType X, infoType Y) {
-    // Kamus
     address NewNode, Current;
     int i;
 
@@ -97,10 +71,8 @@ void InsAfter(List *L, infoType X, infoType Y) {
         printf("Data akan ditambahkan ke bagian akhir\n");
         InsLast(L, X);
     } else {
-        // alokasi
         NewNode = Alokasi(X);
 
-        // Algoritma
         Info(NewNode) = X;
         Current = First(*L);
 
@@ -113,28 +85,21 @@ void InsAfter(List *L, infoType X, infoType Y) {
     }
 }
 
-// Penghapusan elemen
 void DelFirst(List *L, infoType *X) {
-    // kamus
     address DelNode, Tmp;
-
-    // algoritma
 
     DelNode = First(*L);
     First(*L) = Next(First(*L));
 
-    // dealokasi memori
     *X = Info(DelNode);
     Tmp = DelNode;
     DeAlokasi(Tmp);
 }
 
 void DelLast(List *L, infoType *X) {
-    // kamus
     address DelNode, Current, Before, Tmp;
     int i;
 
-    // algoritma
     i = 1;
     Current = First(*L);
 
@@ -159,11 +124,9 @@ void DelLast(List *L, infoType *X) {
 }
 
 void DelAfter(List *L, infoType *X, infoType Y) {
-    // Kamus
     address DelNode, Current, Before, Tmp;
     int i;
 
-    // Algoritma
     if (Y <= 1) {
         printf("Data akan dihapus pada bagian awal");
         DelFirst(L, X);
@@ -195,7 +158,6 @@ void DelAfter(List *L, infoType *X, infoType Y) {
     }
 }
 
-// cetak list
 void PrintInfo(List L) {
     address Current;
 
@@ -209,13 +171,10 @@ void PrintInfo(List L) {
     printf("Null");
 }
 
-// Kelompok operasi lain terhadap type
 int NbElm(List L) {
-    // kamus
     address Current;
     int i;
 
-    // algoritma
     Current = First(L);
 
     i = 0;
@@ -228,10 +187,8 @@ int NbElm(List L) {
 }
 
 address Search(List L, infoType X) {
-    // kamus
     address Current;
 
-    // algoritma
     Current = First(L);
     while (Current != Nil) {
         if (Info(Current) == X) {
@@ -260,10 +217,8 @@ void InversList(List *L) {
 }
 
 List getNewInversList(List L) {
-    // kamus
     List NewList;
 
-    // algoritma
     CreateList(&NewList);
     InversList(&L);
 
