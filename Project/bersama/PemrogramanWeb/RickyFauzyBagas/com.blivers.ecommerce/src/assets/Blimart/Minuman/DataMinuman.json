@@ -1,0 +1,106 @@
+[
+    {
+        "id" : 1, 
+        "brand" : "CASE IPONG 19", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 20000,
+        "promo" : 19000, 
+        "category" : "SMARTPHONE",
+        "image" : ["https://i.postimg.cc/0Qbcpn40/Case.jpg"]
+    }, 
+    {
+        "id" : 2, 
+        "brand" : "HEADSET GAMING", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 50000,
+        "promo" : 49900, 
+        "category" : "COMPUTER",
+        "image" : ["https://i.postimg.cc/13sBWsTt/headset.jpg"]
+    }, 
+    {
+        "id" : 3, 
+        "brand" : "HOODIE KEKINIAN ", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 99000,
+        "promo" : 50000, 
+        "category" : "FASHION",
+        "image" : ["https://i.postimg.cc/gk9NZvH3/hoodie.jpg"]
+    }, 
+    {
+        "id" : 4, 
+        "brand" : "HEADSET JBL", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 45000,
+        "promo" : 35900, 
+        "category" : "SMARTPHONE",
+        "image" : ["https://i.postimg.cc/CMnc5vkF/jbl.jpg"]
+    }, 
+    {
+        "id" : 5, 
+        "brand" : "KOLOR TIKTOK", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 25000,
+        "promo" : 20000, 
+        "category" : "FASHION",
+        "image" : ["https://i.postimg.cc/wMN2rvgt/kolor.jpg"]
+    }, 
+    {
+        "id" : 6, 
+        "brand" : "MAGIC COM ANAK KOSAN", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 10000,
+        "promo" : 9900, 
+        "category" : "ELECTRONICS",
+        "image" : ["https://i.postimg.cc/50Tppvdd/MAGIC-COM.jpg"]
+    }, 
+    {
+        "id" : 7, 
+        "brand" : "GLOWING MASKER WAJAH", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 60000,
+        "promo" : 35900, 
+        "category" : "SKIN CARE",
+        "image" : ["https://i.postimg.cc/KYYN2Qmh/Masker.jpg"]
+    }, {
+        "id" : 8, 
+        "brand" : "MIXER AJAIB", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 110000,
+        "promo" : 100000, 
+        "category" : "ELECTRONICS",
+        "image" : ["https://i.postimg.cc/P5y490sM/MIXER.jpg"]
+    }, {
+        "id" : 9, 
+        "brand" : "SANDAL BADAI ", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 60000,
+        "promo" : 25500, 
+        "category" : "SHOES",
+        "image" : ["https://i.postimg.cc/qM8QXz1S/Sandal.jpg"]
+    }, {
+        "id" : 10, 
+        "brand" : "SCARLET WHITENING", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 75000,
+        "promo" : 70000, 
+        "category" : "SKIN CARE",
+        "image" : ["https://i.postimg.cc/W3FwD3D9/scarlet.jpg"]
+    }, {
+        "id" : 11, 
+        "brand" : "SUPRIM NIH BOS ", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 200000,
+        "promo" : 175000, 
+        "category" : "SHOES",
+        "image" : ["https://i.postimg.cc/JnfcjLZR/sepatu-1.jpg"]
+    }, {
+        "id" : 12, 
+        "brand" : "HAPE VIVO V7", 
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus...", 
+        "price" : 2500000,
+        "promo" : 2499999, 
+        "category" : "SMARTPHONE",
+        "image" : ["https://i.postimg.cc/JnfcjLZR/sepatu-1.jpg"]
+    }
+    
+]
