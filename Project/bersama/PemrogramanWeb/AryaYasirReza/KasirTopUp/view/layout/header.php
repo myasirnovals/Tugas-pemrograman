@@ -40,6 +40,8 @@ if (isset($_GET['id'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/Features-Image-images.css">
     <link rel="stylesheet" href="../../assets/css/Footer-Basic-icons.css">
     <link rel="stylesheet" href="../../assets/css/Bootstrap-Payment-Form.css">
@@ -47,8 +49,9 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" href="../../assets/css/Ludens-Users---4-Edit-Profile.css">
     <link rel="stylesheet" href="../../assets/css/Profile-Edit-Form-styles.css">
     <link rel="stylesheet" href="../../assets/css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="../../assets/css/kasir.css">
 
     <!-- jQuery -->
     <script src="../../assets/bootstrap/js/jquery-3.7.1.min.js"></script>
 </head>
-<body>
+<body style="background-color: #2c2546;">

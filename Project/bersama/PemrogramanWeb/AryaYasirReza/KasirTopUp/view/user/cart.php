@@ -1,6 +1,13 @@
 <?php include "../layout/header.php"; ?>
 <?php $member = "member";
 include "nav_bar.php"; ?>
+    <header>
+        <nav class="navbar navbar-expand-lg header ">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand title fs-4" style="color: var(--green);" href="#">Keranjang Anda</a>
+            </div>
+        </nav>
+    </header>
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6">

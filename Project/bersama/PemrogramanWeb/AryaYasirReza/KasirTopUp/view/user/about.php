@@ -4,14 +4,14 @@ include "nav_bar.php"; ?>
     <div class="container py-4 py-xl-5">
         <div class="row mb-5">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Our Team</h2>
+                <h2 style="color: var(--green);">Our Team</h2>
                 <p class="w-lg-50">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc.
                     Vestibulum dui eget ultrices.</p>
             </div>
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
             <div class="col">
-                <div class="card border-0 shadow-none">
+                <div class="card text-white kartu">
                     <div class="card-body d-flex align-items-center p-0"><img
                                 class="rounded-circle flex-shrink-0 me-3 fit-cover" width="130" height="130"
                                 src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
@@ -41,7 +41,7 @@ include "nav_bar.php"; ?>
                 </div>
             </div>
             <div class="col">
-                <div class="card border-0 shadow-none">
+                <div class="card text-white kartu">
                     <div class="card-body d-flex align-items-center p-0"><img
                                 class="rounded-circle flex-shrink-0 me-3 fit-cover" width="130" height="130"
                                 src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
@@ -71,7 +71,7 @@ include "nav_bar.php"; ?>
                 </div>
             </div>
             <div class="col">
-                <div class="card border-0 shadow-none">
+                <div class="card text-white kartu">
                     <div class="card-body d-flex align-items-center p-0"><img
                                 class="rounded-circle flex-shrink-0 me-3 fit-cover" width="130" height="130"
                                 src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">

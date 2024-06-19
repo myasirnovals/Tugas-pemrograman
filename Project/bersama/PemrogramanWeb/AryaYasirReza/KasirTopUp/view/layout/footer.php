@@ -1,4 +1,4 @@
-<footer class="text-center" style="position: static;">
+<footer class="text-center" style="position: static;  color: white;">
     <div class="container text-muted py-4 py-lg-5">
         <ul class="list-inline">
             <li class="list-inline-item me-4"><a class="link-secondary" href="#">Web design</a></li>
@@ -25,7 +25,7 @@
                 </svg>
             </li>
         </ul>
-        <p class="mb-0">Copyright © 2024 Brand</p>
+        <p class="mb-0" style=" color: white;">Copyright © 2024 Brand</p>
     </div>
 </footer>
 
