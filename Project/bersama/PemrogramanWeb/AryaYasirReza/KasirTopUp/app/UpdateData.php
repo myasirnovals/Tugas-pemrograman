@@ -105,3 +105,44 @@ function UpdateGameProduct()
         return json_encode($dataError);
     }
 }
+
+function UpdateMember() {
+    $id = $_POST['memberId'];
+
+    $username = htmlspecialchars($_POST["username"]);
+    $phone = htmlspecialchars($_POST["phone"]);
+    $members = htmlspecialchars($_POST["members"]);
+
+    $updated_at = date('l, d / M / Y  H:i:s');
+
+    $file_name = "../database/data_member" . ".json";
+
+    if (file_exists("$file_name")) {
+        $current_data = file_get_contents("$file_name");
+        $array_data = json_decode($current_data, true);
+
+        foreach ($array_data as $key => $value) {
+            if ($value["memberId"] == $id) {
+                $array_data[$key]["username"] = $username;
+                $array_data[$key]["phone"] = $phone;
+                $array_data[$key]["members"] = $members;
+                $array_data[$key]["updated_at"] = $updated_at;
+            }
+        }
+
+        return json_encode($array_data, JSON_PRETTY_PRINT);
+
+    } else {
+        $dataError = array();
+        $dataError[] = array(
+            "memberId" => $id,
+            "username" => $username,
+            "phone" => $phone,
+            "members" => $members,
+            "updated_at" => $updated_at
+        );
+
+        echo "File not exist <br>";
+        return json_encode($dataError);
+    }
+}

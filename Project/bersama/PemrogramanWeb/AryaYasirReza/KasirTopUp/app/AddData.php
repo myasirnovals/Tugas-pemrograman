@@ -106,6 +106,7 @@ function AddDataUser()
     $address = "-";
     $birthdate = "-";
     $image = "-";
+    $bio = "-";
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');
 
@@ -132,6 +133,7 @@ function AddDataUser()
             "memberId" => $memberId,
             "name" => $name,
             "address" => $address,
+            "bio" => $bio,
             "birthdate" => $birthdate,
             "username" => $username,
             "members" => $members,
@@ -151,6 +153,7 @@ function AddDataUser()
             "memberId" => $memberId,
             "name" => $name,
             "address" => $address,
+            "bio" => $bio,
             "birthdate" => $birthdate,
             "username" => $username,
             "members" => $members,

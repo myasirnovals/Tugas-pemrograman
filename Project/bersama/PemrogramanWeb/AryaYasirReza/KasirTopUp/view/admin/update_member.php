@@ -9,12 +9,13 @@
                         <div class="row pt-3">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="container">
-                                    <form action="../../routes/update_product.php" method="post">
+                                    <form action="../../routes/update_member.php" method="post">
                                         <input type="hidden" name="memberId" value="<?= $data['memberId']; ?>">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nama</label>
                                             <input type="text" class="form-control" id="name" name="name"
                                                    value="<?= $data['name'] ?>"
+                                                   disabled
                                                    required>
                                         </div>
                                         <div class="mb-3">
@@ -34,12 +35,29 @@
                                         <div class="mb-3">
                                             <label for="members" class="form-label">Member Group:</label>
                                             <select name="members" id="members" class="form-control">
-                                                <option value="silver">Silver</option>
-                                                <option value="gold">Gold</option>
-                                                <option value="platinum">Platinum</option>
+                                                <?php if ($data['members'] == "admin") { ?>
+                                                    <option value="admin" selected>Admin</option>
+                                                    <option value="silver">Silver</option>
+                                                    <option value="gold">Gold</option>
+                                                    <option value="platinum">Platinum</option>
+                                                <?php } else if ($data['members'] == "silver") { ?>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="silver" selected>Silver</option>
+                                                    <option value="gold">Gold</option>
+                                                    <option value="platinum">Platinum</option>
+                                                <?php } else if ($data['members'] == "gold") { ?>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="silver">Silver</option>
+                                                    <option value="gold" selected>Gold</option>
+                                                    <option value="platinum">Platinum</option>
+                                                <?php } else if ($data['members'] == "platinum") { ?>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="silver">Silver</option>
+                                                    <option value="gold">Gold</option>
+                                                    <option value="platinum" selected>Platinum</option>
+                                                <?php } ?>
                                             </select>
                                         </div>
-
                                         <button type="submit" class="btn btn-primary mt-3 mb-4">Update Member</button>
                                     </form>
                                 </div>
