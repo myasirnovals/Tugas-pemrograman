@@ -1,3 +1,3 @@
-"E:\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\DoubleLinkedList.dir/objects.a
-"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\ar.exe" qc CMakeFiles\DoubleLinkedList.dir/objects.a @CMakeFiles\DoubleLinkedList.dir\objects1.rsp
-"E:\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\DoubleLinkedList.dir/objects.a -Wl,--no-whole-archive -o DoubleLinkedList.exe -Wl,--out-implib,libDoubleLinkedList.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DoubleLinkedList.dir\linkLibs.rsp
+"C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\DoubleLinkedList.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\DoubleLinkedList.dir/objects.a @CMakeFiles\DoubleLinkedList.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\DoubleLinkedList.dir/objects.a -Wl,--no-whole-archive -o DoubleLinkedList.exe -Wl,--out-implib,libDoubleLinkedList.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DoubleLinkedList.dir\linkLibs.rsp

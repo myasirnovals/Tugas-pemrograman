@@ -13,8 +13,8 @@
         <div class="collapse navbar-collapse" id="navcol-3">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="users.php">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.php">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="member.php">Members</a></li>
                 <li class="nav-item">
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -28,7 +28,15 @@
                     </div>
                 </li>
             </ul>
-            <button class="btn btn-primary" type="button">Account</button>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Administrator
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+                    <li><a class="dropdown-item text-danger" href="../auth/logout.php">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

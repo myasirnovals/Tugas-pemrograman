@@ -13,26 +13,28 @@ class Controller extends BaseController
     public function index()
     {
         return view('pelanggan.page.home', [
-            'title'     => 'Home',
+            'title' => 'Home',
         ]);
     }
 
     public function product()
     {
         return view('pelanggan.page.product', [
-            'title'     => 'Product',
+            'title' => 'Product',
         ]);
     }
+
     public function transaksi()
     {
         return view('pelanggan.page.transaksi', [
-            'title'     => 'transaksi',
+            'title' => 'transaksi',
         ]);
     }
+
     public function aboutUs()
     {
         return view('pelanggan.page.aboutUs', [
-            'title'     => 'aboutUs',
+            'title' => 'aboutUs',
         ]);
     }
 }

@@ -1,0 +1,85 @@
+/* sidebar */
+.wrapper-content {
+  min-height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  background-color: rgb(2, 37, 163);
+  padding: 24px 24px;
+  box-sizing: border-box;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden;
+  transition: all ease .4s;
+}
+
+.sidebar .header .list-item .sidebar-desc {
+ font-weight: 400;
+}
+
+.sidebar.hide .header .sidebar-desc{
+  display: none;
+}
+
+.main-content {
+  background-color: rgb(225, 241, 241);
+  width: 100vw;
+  margin-left: 90px;
+}
+
+.sidebar .main .list-item {
+  padding: 11px 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all ease-in 0.2s;
+
+}
+.sidebar.hide .main .list-item{
+    padding: 11px 10px;
+}
+
+.sidebar .main .list-item:hover {
+  background-color: rgb(43, 163, 163);
+  transition: all ease-in 0.2s;
+}
+
+.sidebar.hide .main .list-item span {
+  display: none;
+}
+
+.sidebar .header .list-item .icon {
+  width: 33px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.sidebar .main .list-item .icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar .main .list-item a {
+  text-decoration: none;
+}
+
+.sidebar.hide {
+  width: 90px;
+  transition: all ease-in .4s;
+}
+
+/* sidebar */
+
+
+.f-vh{
+  height: 100vh;
+}
+
+.card .img-pp{
+  width: 10px;
+}

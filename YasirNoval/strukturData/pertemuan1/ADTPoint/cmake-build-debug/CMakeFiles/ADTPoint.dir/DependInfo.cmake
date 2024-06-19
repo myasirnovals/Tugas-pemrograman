@@ -8,11 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/aibnu/Documents/Perkuliahan/pemrograman/yasir/strukturData/pertemuan1/ADTPoint/main.c" "CMakeFiles/ADTPoint.dir/main.c.obj" "gcc" "CMakeFiles/ADTPoint.dir/main.c.obj.d"
+  "C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTPoint/main.c" "CMakeFiles/ADTPoint.dir/main.c.obj" "gcc" "CMakeFiles/ADTPoint.dir/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

@@ -1,11 +1,3 @@
-/*
-    Program: line.c
-    Author: 2350081004/Muhamad Yasir Noval
-    Kelas: A
-    Deskripsi: Mengisi instruksi di dalam fungsi dan prosedur yang sudah kita buat
-    Tanggal: 15/03/2024
-*/
-
 #include <stdio.h>
 #include "../lib/line.h"
 

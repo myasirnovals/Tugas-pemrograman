@@ -8,78 +8,80 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ADTLine">
-				<Option output="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/ADTLine.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
+				<Option output="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/ADTLine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADTLine"/>
-					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADTLine"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ADTLine/fast">
-				<Option output="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/ADTLine.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
+				<Option output="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/ADTLine.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADTLine/fast"/>
-					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 ADTLine/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
+				<Option working_dir="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/program installer/JetbrainsToolbox/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/main.c">
+		<Unit filename="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/main.c">
 			<Option target="ADTLine"/>
 		</Unit>
-		<Unit filename="E:/Documents/pemrograman/yasir/strukturData/pertemuan2/ADTLine/CMakeLists.txt">
+		<Unit filename="C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

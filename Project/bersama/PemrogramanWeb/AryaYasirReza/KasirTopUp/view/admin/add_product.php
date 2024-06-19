@@ -20,10 +20,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="fromGame" class="form-label">From What Game</label>
-                    <select class="form-select" aria-label="fromGame" name="productCode" required>
+                    <select class="form-select" aria-label="fromGame" name="gameCode" required>
                         <?php if (!empty($dataGames)) { ?>
                             <?php foreach ($dataGames as $data) { ?>
-                                <option value="<?= $data['kodeGame']; ?>"><?= $data['nameGame']; ?></option>
+                                <option value="<?= $data['gameId']; ?>"><?= $data['gameName']; ?></option>
                             <?php } ?>
                         <?php } else { ?>
                             <option value="0" selected>Open this select menu</option>
