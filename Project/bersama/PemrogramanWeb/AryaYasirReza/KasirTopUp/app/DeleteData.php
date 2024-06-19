@@ -71,3 +71,30 @@ function DeleteGameProduct()
         return "Data not exist <br>";
     }
 }
+
+function DeleteMember()
+{
+    $id = $_GET['id'];
+
+    $file_name = "../database/data_member" . ".json";
+    $file_image = "../assets/images/member/";
+
+    if (file_exists("$file_name")) {
+        $current_data = file_get_contents("$file_name");
+        $array_data = json_decode($current_data, true);
+
+        foreach ($array_data as $key => $value) {
+            if ($value["memberId"] == $id) {
+                if (($value["image"] != "") && ($value["image"] != "-")) {
+                    unlink("$file_image" . $value["image"]);
+                }
+                array_splice($array_data, $key, 1);
+            }
+        }
+
+        return json_encode($array_data, JSON_PRETTY_PRINT);
+
+    } else {
+        return "Data not exist <br>";
+    }
+}
