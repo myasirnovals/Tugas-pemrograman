@@ -55,34 +55,12 @@
                 <?php foreach ($dataGames as $data) { ?>
                     <div class="col-md-2 ">
                         <div class="text-center gambar">
-                            <a href="#harga-ml">
+                            <a href="detail_product.php?id=<?= $data['gameId']; ?>">
                                 <img src="../../assets/images/gameImage/mlbb.jpg" alt="Mobile Legend"
                                      class="text-center">
-                                <div class="fs-4 text-white">Mobile Legends</div>
+                                <div class="fs-4 text-white"><?= $data['gameName']; ?></div>
                             </a>
                         </div>
-                        <div class="overlay" id="harga-ml">
-                            <div class="popup">
-                                <h2>HARGA MOBILE LEGENDS</h2>
-                                <a class="close" href="#populer">&times;</a>
-                                <br>
-                                <div class="content">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Pilih Diamonds</option>
-                                        <option value="1">400 Diamonds: 100K</option>
-                                        <option value="2">568 Diamonds: 140K</option>
-                                        <option value="3">2010 Diamonds: 475K</option>
-                                        <option value="3">4830 Diamonds: 1140K</option>
-                                    </select>
-                                    <a href="">
-                                        <button style="color: var(--green);" class="btn my-2 " type="button">Pesan
-                                            Sekarang
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 <?php } ?>
             <?php } else { ?>

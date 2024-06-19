@@ -174,7 +174,6 @@ function AddOrder($data_email, $id_product)
 {
     // data exist
     $order_id = uniqid();
-    $image = "-";
     $created_at = date('l, d / M / Y  H:i:s');
     $updated_at = date('l, d / M / Y  H:i:s');
 
@@ -212,7 +211,7 @@ function AddOrder($data_email, $id_product)
                             "orderProductCode" => $product['productId'],
                             "orderProductImage" => $product['image'],
                             "orderStatus" => "not yet paid",
-                            "image" => $image,
+                            "image" => $product['image'],
                             "created_at" => $created_at,
                             "updated_at" => $updated_at
                         );

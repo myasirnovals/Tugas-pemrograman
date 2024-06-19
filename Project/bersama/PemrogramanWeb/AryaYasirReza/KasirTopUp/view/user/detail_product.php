@@ -7,7 +7,7 @@
                 <?php foreach ($dataProducts as $data) { ?>
                     <?php if ($_GET['id'] == $data['gameCode']) { ?>
                         <div class="col-lg-3 col-md-12 col-sm-12 ">
-                            <div class="card" style="margin: 10px;">
+                            <div class="card text-white kartu-produk" style="margin: 10px;">
                                 <div class="card-body" style="text-align: center;">
                                     <h4 class="card-title" style="font-size: 20px;"><?= $data['productName']; ?></h4>
                                     <picture><img src="../../assets/images/product/<?= $data['image']; ?>"
