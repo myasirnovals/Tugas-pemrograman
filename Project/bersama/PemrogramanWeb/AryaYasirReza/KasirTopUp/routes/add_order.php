@@ -1,7 +1,13 @@
 <?php
+include "../app/AddData.php";
+
 session_start();
 
-include "../app/AddData.php";
+if (!isset($_SESSION["logged"])) {
+    echo "<script>alert('Anda harus login terlebih dahulu');</script>";
+    header("Location: ../view/auth/login.php");
+    exit();
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $data_order = "../database/data_order" . ".json";

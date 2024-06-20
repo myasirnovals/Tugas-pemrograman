@@ -19,23 +19,3 @@ function GetProductAmount($data): int
 
     return $sum;
 }
-
-function GetAllUsers()
-{
-    // type your code here
-}
-
-function GetAllProducts()
-{
-    // type your code here
-}
-
-function GetAllMembers()
-{
-    // type your code here
-}
-
-function GetAllOrders()
-{
-    // type your code here
-}
