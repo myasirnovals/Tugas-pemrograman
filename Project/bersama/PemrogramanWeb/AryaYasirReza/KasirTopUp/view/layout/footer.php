@@ -25,7 +25,7 @@
                 </svg>
             </li>
         </ul>
-        <p class="mb-0" style=" color: white;">Copyright © 2024 Brand</p>
+        <p class="mb-0" style=" color: white;">Copyright © 2024 AryaYasirReza</p>
     </div>
 </footer>
 

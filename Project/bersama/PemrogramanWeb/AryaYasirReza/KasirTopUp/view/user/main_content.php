@@ -1,10 +1,10 @@
-<header>
+<!-- <header>
     <nav class="navbar navbar-expand-lg header ">
         <div class="container-fluid justify-content-center">
             <a class="navbar-brand title fs-4" style="color: var(--green);" href="#">Kasir Game</a>
         </div>
     </nav>
-</header>
+</header> -->
 
 <!-- -----------------------------------Carousel------------------------------------ -->
 <section class="pt-5 ">
@@ -56,7 +56,7 @@
                     <div class="col-md-2 col-sm-12 mt-3">
                         <div class="text-center gambar">
                             <a href="detail_product.php?id=<?= $data['gameId']; ?>">
-                                <img src="../../assets/images/gameImage/mlbb.jpg" alt="Mobile Legend"
+                                <img src="../../assets/images/gameImage/GenshinImpact.jpg" alt="Genshin Impact"
                                      class="text-center">
                                 <div class="fs-4 text-white"><?= $data['gameName']; ?></div>
                             </a>
