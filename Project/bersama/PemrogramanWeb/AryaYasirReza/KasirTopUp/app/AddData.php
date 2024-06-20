@@ -207,7 +207,6 @@ function AddOrder($data_email, $id_product)
                             "orderPersonEmail" => $member['email'],
                             "orderProductName" => $product['productName'],
                             "orderProductPrice" => $product['productPrice'],
-                            "orderProductAmount" => "1",
                             "orderProductCode" => $product['productId'],
                             "orderProductImage" => $product['image'],
                             "orderStatus" => "not yet paid",

@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <?php foreach ($dataOrders as $data) { ?>
-                        <?php if ($data['orderPersonEmail'] == $_SESSION['email']) { ?>
+                        <?php if ($data['orderPersonEmail'] == $_SESSION['email'] && $data['orderStatus'] == 'not yet paid') { ?>
                             <div class="card mb-3">
                                 <div class="card-body shadow">
                                     <div class="row">
@@ -33,25 +33,12 @@
                                                     </p>
                                                     <div class="row">
                                                         <div class="col-12 col-sm-6">
-                                                            <form>
-                                                                <div class="form-group mb-3">
-                                                                    <label for="quantity" style="font-size: 15px;">Jumlah
-                                                                        Produk:</label>
-                                                                    <input class="form-control"
-                                                                           type="number"
-                                                                           placeholder="Qty"
-                                                                           min="1" max="10"
-                                                                           value="<?= $data['orderProductAmount']; ?>"
-                                                                           name="quantity"
-                                                                           id="quantity">
-                                                                </div>
-                                                            </form>
                                                         </div>
-                                                        <div class="col">
-                                                            <button class="btn btn-outline-dark d-block w-100"
-                                                                    type="submit">
-                                                                Buy Later
-                                                            </button>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <a href="../../routes/delete_order.php?id=<?= $data['orderId']; ?>"
+                                                               class="btn btn-danger d-block w-100">
+                                                                Batalkan
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,6 +52,31 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="card text-white kartu-produk">
+                        <?php
+                        $totalShopping = 0;
+                        $totalPurchase = 0;
+                        $totalAdmin = 0;
+                        $discount = 0;
+                        $bill = 0;
+
+                        foreach ($dataOrders as $data) {
+                            if ($data['orderPersonEmail'] == $_SESSION['email'] && $data['orderStatus'] == 'not yet paid') {
+                                $totalPurchase++;
+                                $totalShopping += $data['orderProductPrice'];
+                            }
+                        }
+
+                        if ($totalPurchase >= 5) {
+                            $discount = 10 / 100;
+                        }
+
+                        if ($totalPurchase > 0) {
+                            $totalAdmin = 1500;
+                        }
+
+                        $discount *= $totalShopping;
+                        $bill = $totalShopping + $totalAdmin - $discount;
+                        ?>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -72,7 +84,8 @@
                                 </div>
                                 <div class="col">
                                     <p class="text-end">
-                                        <i class="fa fa-euro">Rp.</i>&nbsp; 1234
+                                        <i class="fa fa-euro">Rp.</i>
+                                        &nbsp; <?= number_format($totalShopping, 0, ",", "."); ?>
                                     </p>
                                 </div>
                             </div>
@@ -83,7 +96,8 @@
                                 </div>
                                 <div class="col">
                                     <p class="text-end">
-                                        <i class="fa fa-euro">Rp.</i>&nbsp; 42
+                                        <i class="fa fa-euro">Rp.</i>
+                                        &nbsp; <?= number_format($totalAdmin, 0, ",", "."); ?>
                                     </p>
                                 </div>
                             </div>
@@ -94,7 +108,8 @@
                                 </div>
                                 <div class="col">
                                     <p class="text-end">
-                                        &nbsp;-<i class="fa fa-euro">Rp.</i>&nbsp; 32
+                                        &nbsp;-<i class="fa fa-euro">Rp.</i>
+                                        &nbsp; <?= number_format($discount, 0, ",", "."); ?>
                                     </p>
                                 </div>
                             </div>
@@ -108,33 +123,33 @@
                                 </div>
                                 <div class="col">
                                     <p class="text-end" style="font-size: 18px;">
-                                        &nbsp;<i class="fa fa-euro">Rp.</i>&nbsp;1122
+                                        &nbsp;<i class="fa fa-euro">Rp.</i>
+                                        &nbsp; <?= number_format($bill, 0, ",", "."); ?>
                                     </p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <form>
-                                        <div class="form-group mb-3">
-                                            <input class="form-control" type="text"
-                                                   placeholder="Enter your discount Code">
+                            <form action="../../routes/update_order.php" method="post">
+                                <input type="hidden" name="email" value="<?= $_SESSION['email'];?>">
+                                <input type="hidden" name="total_bill" value="<?= $bill?>">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group mb-3 mt-5">
+                                            <label for="money" class="form-label">Jumlah Bayar</label>
+                                            <input class="form-control" type="text" name="money" id="money"
+                                                   placeholder="Masukan nominal uang" pattern="[0-9]+">
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <button class="btn btn-outline-dark d-block w-100" type="button">
-                                        Apply Now
-                                    </button>
+                                <hr style="color: rgb(0,0,0);">
+                                <div class="row">
+                                    <div class="col">
+                                        <button class="btn btn-primary d-block w-100"
+                                                type="submit">
+                                            Pay now
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <hr style="color: rgb(0,0,0);">
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-primary d-block w-100" type="button">
-                                        Pay now
-                                    </button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

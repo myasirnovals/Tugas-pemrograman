@@ -127,7 +127,6 @@
                                 <th>Email</th>
                                 <th>Nama Produk</th>
                                 <th>Harga Produk</th>
-                                <th>Jumlah Produk</th>
                                 <th>Kode Produk</th>
                                 <th>Gambar Produk</th>
                                 <th>Status Pesanan</th>
@@ -142,7 +141,6 @@
                                     <td><?= $data['orderPersonEmail']; ?></td>
                                     <td><?= $data['orderProductName']; ?></td>
                                     <td class="text-end"><?= $data['orderProductPrice']; ?></td>
-                                    <td><?= $data['orderProductAmount']; ?></td>
                                     <td><?= $data['orderProductCode']; ?></td>
                                     <td class="text-center">
                                         <img src="../../assets/images/product/<?= $data['orderProductImage']; ?>"
@@ -151,10 +149,8 @@
                                     </td>
                                     <td><?= $data['orderStatus']; ?></td>
                                     <td class="text-center">
-                                        <a href="update_product.php?id=<?= $data['orderId'] ?>"
-                                           class="btn btn-primary">Edit</a>
-                                        <a href="../../routes/delete_product.php?id=<?= $data['orderId']; ?>"
-                                           class="btn btn-danger">Hapus</a>
+                                        <a href="detail_order.php?id=<?= $data['orderId'] ?>"
+                                           class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                             <?php } ?>

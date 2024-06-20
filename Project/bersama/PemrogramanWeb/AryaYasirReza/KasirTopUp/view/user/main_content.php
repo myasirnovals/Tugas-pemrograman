@@ -53,7 +53,7 @@
         <div class="row justify-content-center">
             <?php if (!empty($dataGames)) { ?>
                 <?php foreach ($dataGames as $data) { ?>
-                    <div class="col-md-2 ">
+                    <div class="col-md-2 col-sm-12 mt-3">
                         <div class="text-center gambar">
                             <a href="detail_product.php?id=<?= $data['gameId']; ?>">
                                 <img src="../../assets/images/gameImage/mlbb.jpg" alt="Mobile Legend"

@@ -220,3 +220,34 @@ function UpdateProfile()
         return json_encode($dataError);
     }
 }
+
+function UpdateOrder() {
+    $email = $_POST['email'];
+    $updated_at = date('l, d / M / Y  H:i:s');
+
+    $file_name = "../database/data_order" . ".json";
+
+    if (file_exists("$file_name")) {
+        $current_data = file_get_contents("$file_name");
+        $array_data = json_decode($current_data, true);
+
+        foreach ($array_data as $key => $value) {
+            if ($value["orderPersonEmail"] == $email) {
+                $array_data[$key]["orderStatus"] = 'paid';
+                $array_data[$key]["updated_at"] = $updated_at;
+            }
+        }
+
+        return json_encode($array_data, JSON_PRETTY_PRINT);
+
+    } else {
+        $dataError = array();
+        $dataError[] = array(
+            "orderStatus" => 'paid',
+            "updated_at" => $updated_at
+        );
+
+        echo "File not exist <br>";
+        return json_encode($dataError);
+    }
+}
