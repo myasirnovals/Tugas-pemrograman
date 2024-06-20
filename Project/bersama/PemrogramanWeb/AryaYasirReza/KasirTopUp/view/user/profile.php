@@ -3,7 +3,7 @@
     <div class="container mt-5 mb-5">
         <form action="../../routes/update_profile.php" method="post" enctype="multipart/form-data">
             <div class="row">
-                <div class="row">
+                <div class="row border text-white kartu">
                     <div class="col-md-4 col-sm-12 relative">
                         <div class="avatar">
                             <div class="avatar-bg center">
@@ -13,7 +13,8 @@
                                             <img src="../../assets/images/member/user.png" alt="gambar profile"
                                                  class="img-thumbnail rounded-circle">
                                         <?php } else { ?>
-                                            <img src="../../assets/images/member/<?= $data['image'] ?>" alt="gambar profile"
+                                            <img src="../../assets/images/member/<?= $data['image'] ?>"
+                                                 alt="gambar profile"
                                                  class="img-thumbnail rounded-circle">
                                         <?php } ?>
                                     <?php } ?>
@@ -26,10 +27,12 @@
                     <div class="col-md-8 col-sm-12">
                         <?php foreach ($dataMembers as $data) { ?>
                             <?php if ($_SESSION['email'] == $data['email']) { ?>
-                                <input type="hidden" name="old_password" id="old_password" value="<?= $data['password'] ?>">
+                                <input type="hidden" name="old_password" id="old_password"
+                                       value="<?= $data['password'] ?>">
                                 <input type="hidden" name="memberId" id="memberId" value="<?= $data['memberId'] ?>">
                                 <input type="hidden" name="old_image" id="old_image" value="<?= $data['image'] ?>">
-                                <input type="hidden" name="old_birthdate" id="old_birhtdate" value="<?= $data['birthdate'] ?>">
+                                <input type="hidden" name="old_birthdate" id="old_birhtdate"
+                                       value="<?= $data['birthdate'] ?>">
                                 <h1>Profile </h1>
                                 <hr>
                                 <div class="row">
@@ -81,7 +84,8 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-12 content-right">
-                                        <button class="btn btn-primary form-btn" type="submit" name="submit">SAVE</button>
+                                        <button class="btn btn-primary form-btn" type="submit" name="submit">SAVE
+                                        </button>
                                         <a href="home.php" class="btn btn-danger form-btn">CANCEL</a>
                                     </div>
                                 </div>
@@ -89,6 +93,7 @@
                         <?php } ?>
                     </div>
                 </div>
+            </div>
         </form>
     </div>
 <?php include "../layout/footer.php"; ?>

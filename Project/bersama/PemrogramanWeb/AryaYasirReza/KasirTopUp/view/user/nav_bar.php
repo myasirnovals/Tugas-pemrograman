@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-body py-3" style="background-color: #2c2546 !important;" >
+<nav class="navbar navbar-expand-md bg-body py-3" style="background-color: #2c2546 !important;">
     <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
                     class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg
                         xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
@@ -16,7 +16,7 @@
                 <li class="nav-item"><a class="nav-link text-white" href="cart.php">Carts</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="about.php">About</a></li>
             </ul>
-            <?php if (!empty($_SESSION["logged"])) {?>
+            <?php if (!empty($_SESSION["logged"])) { ?>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">

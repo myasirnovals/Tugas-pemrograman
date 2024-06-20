@@ -1,13 +1,13 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container">
-        <h4 style="margin-top: 20px;">Products</h4>
+        <h4 style="color: var(--green); margin-top: 20px;">Products</h4>
         <div class="container" style="margin-top: 10px;">
             <?php
             if (!empty($dataProducts)) {
                 $no = 1;
                 ?>
-                <table class="table table-bordered mt-5">
+                <table class="table table-bordered table-dark table-striped table-responsive mt-5">
                     <thead>
                     <tr class="text-center">
                         <th>No</th>

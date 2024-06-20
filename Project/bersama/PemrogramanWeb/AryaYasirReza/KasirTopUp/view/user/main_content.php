@@ -56,7 +56,7 @@
                     <div class="col-md-2 col-sm-12 mt-3">
                         <div class="text-center gambar">
                             <a href="detail_product.php?id=<?= $data['gameId']; ?>">
-                                <img src="../../assets/images/gameImage/mlbb.jpg" alt="Mobile Legend"
+                                <img src="../../assets/images/game/<?= $data['image']; ?>" alt="Mobile Legend"
                                      class="text-center">
                                 <div class="fs-4 text-white"><?= $data['gameName']; ?></div>
                             </a>

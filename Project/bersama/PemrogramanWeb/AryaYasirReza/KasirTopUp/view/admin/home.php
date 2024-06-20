@@ -119,7 +119,7 @@
                     if (!empty($dataOrders)) {
                         $no = 1;
                         ?>
-                        <table class="table table-bordered mt-5">
+                        <table class="table table-bordered table-dark table-striped table-responsive mt-5">
                             <thead>
                             <tr class="text-center">
                                 <th>No</th>
