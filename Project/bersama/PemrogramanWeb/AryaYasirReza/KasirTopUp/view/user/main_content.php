@@ -1,10 +1,4 @@
-<header>
-    <nav class="navbar navbar-expand-lg header ">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand title fs-4" style="color: var(--green);" href="#">Kasir Game</a>
-        </div>
-    </nav>
-</header>
+    
 
 <!-- -----------------------------------Carousel------------------------------------ -->
 <section class="pt-5 ">
