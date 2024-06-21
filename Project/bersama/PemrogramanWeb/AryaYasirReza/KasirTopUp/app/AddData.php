@@ -203,6 +203,7 @@ function AddOrder($data_email, $id_product)
 
                         $extra = array(
                             "orderId" => $order_id,
+                            "orderMemberId" => $member['memberId'],
                             "orderPersonName" => $member['name'],
                             "orderPersonEmail" => $member['email'],
                             "orderProductName" => $product['productName'],
