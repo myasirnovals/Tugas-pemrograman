@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-
-=======
-<header>
-    <nav class="navbar navbar-expand-lg header ">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand title fs-4" style="color: var(--green);" href="#">Kasir Game</a>
-        </div>
-    </nav>
-</header>
->>>>>>> 980af0120ed21ca6e828ca7f2f0e33f6691293a9
+    
 
 <!-- -----------------------------------Carousel------------------------------------ -->
 <section class="pt-5 ">
