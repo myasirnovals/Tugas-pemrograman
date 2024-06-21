@@ -108,12 +108,24 @@ function UpdateGameProduct()
 
 function UpdateMember() {
     $id = $_POST['memberId'];
+    $old_phone = $_POST['old_phone'];
+    $old_username = $_POST['old_username'];
 
     $username = htmlspecialchars($_POST["username"]);
     $phone = htmlspecialchars($_POST["phone"]);
     $members = htmlspecialchars($_POST["members"]);
 
     $updated_at = date('l, d / M / Y  H:i:s');
+
+    // verify phone
+    if ($phone == "") {
+        $phone = $old_phone;
+    }
+
+    // verify username
+    if($username == "") {
+        $username = $old_username;
+    }
 
     $file_name = "../database/data_member" . ".json";
 
