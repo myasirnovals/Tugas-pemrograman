@@ -10,7 +10,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671ddf7a64a2.png",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  04:08:13",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "66734fff7937c",
@@ -23,7 +23,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671de466f8ee.jpg",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  04:39:11",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673921b1197a",
@@ -36,7 +36,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671de466f8ee.jpg",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  09:21:15",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673922366ffb",
@@ -49,7 +49,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671de07214b1.png",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  09:21:23",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673afb3701c3",
@@ -62,7 +62,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671ddeadc161.png",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  11:27:31",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673d05d477b6",
@@ -75,7 +75,7 @@
         "orderStatus": "paid",
         "image": "dataproduct6671ddda45591.png",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  13:46:53",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:47:11"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673d0a851ad3",
@@ -85,10 +85,10 @@
         "orderProductPrice": "50000",
         "orderProductCode": "6671de266b3ce",
         "orderProductImage": "dataproduct6671de266b3da.jpg",
-        "orderStatus": "not yet paid",
+        "orderStatus": "paid",
         "image": "dataproduct6671de266b3da.jpg",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  13:48:08",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:48:08"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     },
     {
         "orderId": "6673d3209a4e1",
@@ -98,9 +98,9 @@
         "orderProductPrice": "99000",
         "orderProductCode": "6671de07214a5",
         "orderProductImage": "dataproduct6671de07214b1.png",
-        "orderStatus": "not yet paid",
+        "orderStatus": "paid",
         "image": "dataproduct6671de07214b1.png",
         "created_at": "Thursday, 20 \/ Jun \/ 2024  13:58:40",
-        "updated_at": "Thursday, 20 \/ Jun \/ 2024  13:58:40"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  10:54:30"
     }
 ]
