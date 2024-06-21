@@ -1,6 +1,14 @@
 <?php
 include "../app/AddData.php";
 
+session_start();
+
+if (!isset($_SESSION["logged"])) {
+    echo "<script>alert('Anda harus login terlebih dahulu');</script>";
+    header("Location: ../view/auth/login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data_product = "../database/data_product" . ".json";
 

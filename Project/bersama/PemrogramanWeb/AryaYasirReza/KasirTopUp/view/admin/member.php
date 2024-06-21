@@ -1,13 +1,13 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container">
-        <h4 style="margin-top: 20px;">Members</h4>
+        <h4 style="color: var(--green); margin-top: 20px;">Members</h4>
         <div class="container" style="margin-top: 10px;">
             <?php
             if (!empty($dataMembers)) {
                 $no = 1;
                 ?>
-                <table class="table table-bordered mt-5">
+                <table class="table table-bordered table-dark table-striped table-responsive mt-5">
                     <thead>
                     <tr class="text-center">
                         <th>No</th>
@@ -33,8 +33,14 @@
                             <td class="text-center">
                                 <a href="update_member.php?id=<?= $data['memberId'] ?>"
                                    class="btn btn-primary">Edit</a>
-                                <a href="../../routes/delete_member.php?id=<?= $data['memberId']; ?>"
-                                   class="btn btn-danger">Hapus</a>
+                                <?php if (
+                                    ($data['memberId'] != '6673d9722e552') &&
+                                    ($data['memberId'] != '6673d94bf37e4') &&
+                                    ($data['memberId'] != '6671dcad0f079')
+                                ) { ?>
+                                    <a href="../../routes/delete_member.php?id=<?= $data['memberId']; ?>"
+                                       class="btn btn-danger">Hapus</a>
+                                <?php } ?>
                             </td>
                         </tr>
                     <?php } ?>

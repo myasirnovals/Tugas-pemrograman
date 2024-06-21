@@ -1,7 +1,13 @@
 <?php
+include "../app/DeleteData.php";
+
 session_start();
 
-include "../app/DeleteData.php";
+if (!isset($_SESSION["logged"])) {
+    echo "<script>alert('Anda harus login terlebih dahulu');</script>";
+    header("Location: ../view/auth/login.php");
+    exit();
+}
 
 $data_order = "../database/data_order" . ".json";
 

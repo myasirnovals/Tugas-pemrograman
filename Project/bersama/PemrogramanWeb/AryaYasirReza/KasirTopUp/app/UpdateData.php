@@ -152,6 +152,7 @@ function UpdateProfile()
     $id = $_POST["memberId"];
     $password = $_POST["password"];
     $old_password = $_POST["old_password"];
+    $old_email = $_POST["old_email"];
 
     $name = htmlspecialchars($_POST["name"]);
     $birthdate = htmlspecialchars($_POST["birthdate"]);
@@ -172,6 +173,11 @@ function UpdateProfile()
             unlink("$file_image" . $old_image);
         }
         $image = UploadsImageMember();
+    }
+
+    // verify email
+    if ($email == "") {
+        $email = $old_email;
     }
 
     // verify password

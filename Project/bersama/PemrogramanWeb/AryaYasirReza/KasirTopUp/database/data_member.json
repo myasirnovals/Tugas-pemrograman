@@ -8,11 +8,11 @@
         "username": "admin12345",
         "members": "admin",
         "phone": "083844543213",
-        "email": "admin@example.com",
+        "email": "admin21@example.com",
         "password": "$2y$10$Cj11jF7GreMUePbWBaVFE.jl9QyMz2fVH1tHSnFODs5L\/Iw2jLYtq",
         "image": "profile667280e849378.jpg",
         "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:14:29",
-        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  13:55:36"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  04:34:51"
     },
     {
         "memberId": "6671dcad0f079",
@@ -38,11 +38,11 @@
         "username": "user12345",
         "members": "silver",
         "phone": "1234567890123",
-        "email": "user@example.com",
+        "email": "derekw@example.com",
         "password": "$2y$10$htSyDuKGsmoSqkwgN4j4A.MM6IycW0agnG58qrLZCBPNvdGMEBhsW",
         "image": "profile667284bb6a093.jpg",
         "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:17:19",
-        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  14:11:55"
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  04:29:22"
     },
     {
         "memberId": "6672268a665f5",
@@ -73,5 +73,50 @@
         "image": "-",
         "created_at": "Wednesday, 19 \/ Jun \/ 2024  07:31:54",
         "updated_at": "Wednesday, 19 \/ Jun \/ 2024  07:31:54"
+    },
+    {
+        "memberId": "6673d94bf37e4",
+        "name": "Arya Wijaya",
+        "address": "-",
+        "bio": "-",
+        "birthdate": "-",
+        "username": "arya12345",
+        "members": "admin",
+        "phone": "099875763423",
+        "email": "arya@example.com",
+        "password": "$2y$10$S8a3fQIQB2Hss5QzmYCEd.8WEarMzoWBPjmSm3h.30d\/EpPjf8aOC",
+        "image": "-",
+        "created_at": "Thursday, 20 \/ Jun \/ 2024  14:24:59",
+        "updated_at": "Thursday, 20 \/ Jun \/ 2024  14:26:31"
+    },
+    {
+        "memberId": "6673d9722e552",
+        "name": "Reza Nur Hadiyansyah",
+        "address": "-",
+        "bio": "-",
+        "birthdate": "-",
+        "username": "reza12345",
+        "members": "admin",
+        "phone": "088234567893",
+        "email": "reza@example.com",
+        "password": "$2y$10$nCDERpmyJn4gp0ExmtprVeMmcOu6pp7tm\/hlq5QpJa4\/yrskblFqi",
+        "image": "-",
+        "created_at": "Thursday, 20 \/ Jun \/ 2024  14:25:38",
+        "updated_at": "Thursday, 20 \/ Jun \/ 2024  14:26:23"
+    },
+    {
+        "memberId": "6674884c958de",
+        "name": "Double Pow",
+        "address": "-",
+        "bio": "-",
+        "birthdate": "",
+        "username": "doublep21",
+        "members": "silver",
+        "phone": "087765432321",
+        "email": "doublep21@example.com",
+        "password": "$2y$10$.fNQRoq\/cdxOZHpxrq8WW.MXNy2nvBmv0nGeChsH\/U\/Pv7biH41C6",
+        "image": "profile66749d4c2afe1.png",
+        "created_at": "Friday, 21 \/ Jun \/ 2024  02:51:40",
+        "updated_at": "Friday, 21 \/ Jun \/ 2024  04:24:02"
     }
 ]

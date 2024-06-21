@@ -1,6 +1,14 @@
 <?php
 include "../app/UpdateData.php";
 
+session_start();
+
+if (!isset($_SESSION["logged"])) {
+    echo "<script>alert('Anda harus login terlebih dahulu');</script>";
+    header("Location: ../view/auth/login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data_game = "../database/data_game" . ".json";
 

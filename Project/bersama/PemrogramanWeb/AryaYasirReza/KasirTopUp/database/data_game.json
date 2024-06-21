@@ -1,16 +1,1 @@
-[
-  {
-    "gameId": "6671ddb496e58",
-    "gameName": "Blue  Archive",
-    "image": "datagame6671ddb49a8df.jpg",
-    "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:16",
-    "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:16"
-  },
-  {
-    "gameId": "6671ddc5c7314",
-    "gameName": "Genshin Impact",
-    "image": "datagame6671ddc5c731e.jpg",
-    "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:33",
-    "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:33"
-  }
-]
+[{"gameId":"6671ddb496e58","gameName":"Blue  Archive","image":"datagame6674813b730ea.jpg","created_at":"Wednesday, 19 \/ Jun \/ 2024  02:19:16","updated_at":"Friday, 21 \/ Jun \/ 2024  02:21:31"},{"gameId":"6671ddc5c7314","gameName":"Genshin Impact","image":"datagame667481483d2a6.jpg","created_at":"Wednesday, 19 \/ Jun \/ 2024  02:19:33","updated_at":"Friday, 21 \/ Jun \/ 2024  02:21:44"},{"gameId":"6674817dd763c","gameName":"Valorant","image":"datagame6674817dd7649.jpg","created_at":"Friday, 21 \/ Jun \/ 2024  02:22:37","updated_at":"Friday, 21 \/ Jun \/ 2024  02:22:37"}]

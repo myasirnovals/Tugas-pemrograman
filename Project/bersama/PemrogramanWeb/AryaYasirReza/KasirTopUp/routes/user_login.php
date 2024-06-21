@@ -14,6 +14,7 @@ if (isset($_POST["login"])) {
             session_start();
 
             $_SESSION['logged'] = TRUE;
+            $_SESSION['memberId'] = $array['memberId'];
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $array['email'];
             $_SESSION['name'] = $array['name'];

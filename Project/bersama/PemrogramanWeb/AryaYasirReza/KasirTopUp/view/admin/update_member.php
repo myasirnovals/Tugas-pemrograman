@@ -1,8 +1,8 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container mt-5">
-        <h4 style="margin-top: 20px;">Edit user:</h4>
-        <div class="card mt-5">
+        <h4 style="color: var(--green); margin-top: 20px;">Edit user:</h4>
+        <div class="card mt-5 text-white kartu">
             <div class="container">
                 <?php foreach ($dataMembers as $data) { ?>
                     <?php if ($data['memberId'] == $id) { ?>

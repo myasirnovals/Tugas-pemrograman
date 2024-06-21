@@ -1,6 +1,14 @@
 <?php
 include "../app/UpdateData.php";
 
+session_start();
+
+if (!isset($_SESSION["logged"])) {
+    echo "<script>alert('Anda harus login terlebih dahulu');</script>";
+    header("Location: ../view/auth/login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $money = $_POST['money'];
     if ($money == "" || $_POST['total_bill'] == 0) {
@@ -14,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (file_put_contents($data_order, UpdateOrder())) {
                 $money -= $_POST['total_bill'];
                 if ($money != 0) {
-                    echo "<script>alert('Pembayaran berhasil di update, kembalian Anda $money'); document.location.href = '../view/user/cart.php';</script>";
+                    echo "<script>alert('Pembayaran berhasil di update, kembalian Anda Rp. $money'); document.location.href = '../view/user/cart.php';</script>";
                 } else {
                     echo "<script>alert('Pembayaran berhasil di update'); document.location.href = '../view/user/cart.php';</script>";
                 }
