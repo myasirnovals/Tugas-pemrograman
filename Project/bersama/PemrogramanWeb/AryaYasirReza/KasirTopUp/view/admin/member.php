@@ -34,9 +34,7 @@
                                 <a href="update_member.php?id=<?= $data['memberId'] ?>"
                                    class="btn btn-primary">Edit</a>
                                 <?php if (
-                                    ($data['memberId'] != '6673d9722e552') &&
-                                    ($data['memberId'] != '6673d94bf37e4') &&
-                                    ($data['memberId'] != '6671dcad0f079')
+                                    ($data['members'] != 'admin')
                                 ) { ?>
                                     <a href="../../routes/delete_member.php?id=<?= $data['memberId']; ?>"
                                        class="btn btn-danger">Hapus</a>
