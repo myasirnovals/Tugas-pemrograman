@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop POS</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coffee Shop</h1>
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>
+                    <span>Espresso</span>
+                    <button onclick="addToCart('Espresso', 30000)">Add to Cart</button>
+                </li>
+                <li>
+                    <span>Latte</span>
+                    <button onclick="addToCart('Latte', 35000)">Add to Cart</button>
+                </li>
+                <li>
+                    <span>Cappuccino</span>
+                    <button onclick="addToCart('Cappuccino', 40000)">Add to Cart</button>
+                </li>
+            </ul>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total:RP.<span id="totalPrice">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
