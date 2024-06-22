@@ -11,6 +11,8 @@
                                 <div class="container">
                                     <form action="../../routes/update_member.php" method="post">
                                         <input type="hidden" name="memberId" value="<?= $data['memberId']; ?>">
+                                        <input type="hidden" name="old_phone" value="<?= $data['phone']; ?>">
+                                        <input type="hidden" name="old_username" value="<?= $data['username']; ?>">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nama</label>
                                             <input type="text" class="form-control" id="name" name="name"
@@ -18,19 +20,37 @@
                                                    disabled
                                                    required>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">username</label>
-                                            <input type="text" class="form-control" id="username"
-                                                   name="username"
-                                                   value="<?= $data['username'] ?>"
-                                                   required>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12 mb-3">
+                                                <label for="ou" class="form-label">Username lama</label>
+                                                <input type="text" class="form-control" id="ou"
+                                                       name="ou"
+                                                       value="<?= $data['username'] ?>"
+                                                       disabled
+                                                >
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mb-3">
+                                                <label for="username" class="form-label">Username baru</label>
+                                                <input type="text" class="form-control" id="username"
+                                                       name="username"
+                                                >
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="phone" class="form-label">Telepon</label>
-                                            <input type="text" class="form-control" id="phone"
-                                                   name="phone"
-                                                   value="<?= $data['phone'] ?>"
-                                                   required>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12 mb-3">
+                                                <label for="op" class="form-label">Telepon lama</label>
+                                                <input type="text" class="form-control" id="op"
+                                                       name="op"
+                                                       value="<?= $data['phone'] ?>"
+                                                       disabled
+                                                >
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mb-3">
+                                                <label for="phone" class="form-label">Telepon baru</label>
+                                                <input type="text" class="form-control" id="phone"
+                                                       name="phone"
+                                                >
+                                            </div>
                                         </div>
                                         <div class="mb-3">
                                             <label for="members" class="form-label">Member Group:</label>
