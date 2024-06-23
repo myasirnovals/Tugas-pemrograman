@@ -1,0 +1,7 @@
+body {
+  background-image: url("img/Coffee.jpg");
+}
+
+.card {
+  cursor: pointer;
+}
