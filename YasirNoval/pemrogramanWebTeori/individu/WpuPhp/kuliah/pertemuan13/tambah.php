@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login'])) {
+if (!isset($_SESSION['login'])) {
     header("Location: login.php");
     exit();
 }
@@ -52,18 +52,22 @@ if (isset($_POST['tambah'])) {
                         <label for="club" class="form-label">Klub: </label>
                         <input type="text" name="club" id="club" class="form-control">
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label for="gambar" class="form-label">Foto: </label>
-                                <input type="file" name="gambar" id="gambar" class="form-control w-100">
+                                <input type="file" name="gambar" id="gambar" class="form-control w-100 gambar"
+                                       onchange="previewImage()">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="tambah" class="btn btn-outline-warning w-100 mt-5">Tambah
+                                </button>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center">
                             <div class="form-group">
-                                <br>
-                                <button type="submit" name="tambah" class="btn btn-outline-warning w-75 mt-2">Tambah
-                                </button>
+                                <img src="img/schale.jpg" alt="no photo" class="img-thumbnail w-50 img-preview">
                             </div>
                         </div>
                     </div>
@@ -77,5 +81,8 @@ if (isset($_POST['tambah'])) {
 
 <!-- Bootstrap JS -->
 <script src="../../js/bootstrap.min.js"></script>
+
+<!-- Native JS -->
+<script src="../../js/script.js"></script>
 </body>
 </html>

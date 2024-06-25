@@ -28,7 +28,7 @@ $students = getData("SELECT * FROM mahasiswa WHERE id = '$id'");
 <div class="container-fluid">
     <div class="container mt-5 mb-5">
         <h3 class="mt-5 mb-5">Detail Siswa</h3>
-        <div class="card border-4 w-50 ">
+        <div class="card border-4 w-auto ">
             <ul class="list-group">
                 <li class="list-group-item">
                     <img src="img/<?= $students['gambar']; ?>"

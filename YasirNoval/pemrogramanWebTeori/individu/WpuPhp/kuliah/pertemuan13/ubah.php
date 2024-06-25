@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['login'])) {
+if (!isset($_SESSION['login'])) {
     header("Location: login.php");
     exit();
 }
@@ -45,9 +45,10 @@ if (isset($_POST['ubah'])) {
 <div class="container-fluid">
     <div class="container mt-5 mb-5">
         <h3>Ubah Data Siswa</h3>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="gambar_lama" value="<?= $students['gambar']; ?>">
             <input type="hidden" name="id" value="<?= $students['id']; ?>">
-            <div class="card border-3 w-50">
+            <div class="card border-3 w-auto">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="nama" class="form-label">Nama: </label>
@@ -81,24 +82,23 @@ if (isset($_POST['ubah'])) {
                                class="form-control"
                                value="<?= $students['club']; ?>">
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group">
                                 <label for="gambar" class="form-label">Foto: </label>
                                 <br>
-                                <img src="img/<?= $students['gambar']; ?>" alt="gambar"
-                                     class="img-thumbnail w-50">
-                                <input type="text"
+                                <img src="img/<?= $students['gambar']; ?>" alt="no photo"
+                                     class="img-thumbnail w-50 img-preview">
+                                <input type="file"
                                        name="gambar"
                                        id="gambar"
-                                       class="form-control w-100"
-                                       value="<?= $students['gambar']; ?>">
+                                       class="form-control w-100 gambar mt-3" onchange="previewImage()">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-12 text-center">
                             <div class="form-group">
-                                <br><br><br><br><br><br>
-                                <button type="submit" name="ubah" class="btn btn-outline-warning w-75 mt-2">Ubah
+                                <button type="submit" name="ubah" class="btn btn-outline-warning w-75 mt-3">Ubah
                                 </button>
                             </div>
                         </div>
@@ -113,5 +113,8 @@ if (isset($_POST['ubah'])) {
 
 <!-- Bootstrap JS -->
 <script src="../../js/bootstrap.min.js"></script>
+
+<!-- Native JS -->
+<script src="../../js/script.js"></script>
 </body>
 </html>
