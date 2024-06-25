@@ -170,7 +170,7 @@ function AddDataUser()
     }
 }
 
-function AddOrder($data_email, $id_product)
+function AddOrder($id, $id_product)
 {
     // data exist
     $order_id = uniqid();
@@ -192,7 +192,7 @@ function AddOrder($data_email, $id_product)
         $array_member = json_decode($data_member, true);
 
         foreach ($array_member as $member) {
-            if ($member['email'] == $data_email) {
+            if ($member['memberId'] == $id) {
                 $data_product = file_get_contents("$file_product");
                 $data_product = json_decode($data_product, true);
 

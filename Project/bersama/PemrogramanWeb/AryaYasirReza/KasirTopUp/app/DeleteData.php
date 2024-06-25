@@ -110,7 +110,7 @@ function DeleteOrder($member)
         $array_data = json_decode($current_data, true);
 
         foreach ($array_data as $key => $value) {
-            if ($value["orderId"] == $id && $value['orderPersonEmail'] == $member) {
+            if ($value["orderId"] == $id && $value['orderMemberId'] == $member) {
                 array_splice($array_data, $key, 1);
             }
         }
