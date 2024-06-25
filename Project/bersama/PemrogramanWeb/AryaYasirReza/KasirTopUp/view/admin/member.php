@@ -22,6 +22,9 @@
                     </thead>
                     <tbody>
                     <?php foreach ($dataMembers as $data) { ?>
+                        <?php if ($data['memberId'] == $_SESSION['memberId']) { ?>
+                            <?php continue; ?>
+                        <?php } ?>
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?= $data['name']; ?></td>

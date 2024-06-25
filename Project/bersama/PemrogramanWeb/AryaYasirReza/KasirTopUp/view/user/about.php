@@ -6,7 +6,7 @@ include "nav_bar.php"; ?>
             <div class="col-md-8 col-xl-6 text-center mx-auto">
                 <h2 style="color: var(--green);">Our Team</h2>
                 <p class="w-lg-50">Tujuan dan maksud dari kami untuk membuat website ini adalah untuk memenuhi salah
-                    satu tugas dari mata kuliah praktikum pemrograman web.</p>
+                    satu tugas dari mata kuliah pemrograman web.</p>
             </div>
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
