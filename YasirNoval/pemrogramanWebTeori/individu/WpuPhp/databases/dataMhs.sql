@@ -23,4 +23,14 @@ insert into mahasiswa (nim, nama, email, club, gambar)
 # values ('2350081023', 'Sorasaki Hina', 'hina@example.com', 'Perfect Team', 'Sorasaki-Hina.jpg'),
 values ('2350081044', 'Asagi Mutsuki', 'mutsuki@example.com', 'Problem Solver 68', 'Asagi-Mutsuki.jpg');
 
-select * from mahasiswa;
+select *
+from mahasiswa;
+
+
+update mahasiswa
+set nama   = '',
+    nim    = '',
+    email  = '',
+    club   = '',
+    gambar = ''
+where id = '';
