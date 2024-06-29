@@ -13,15 +13,13 @@ import KeranjangPage from "./pages/KeranjangPage";
 import AkunPage from "./pages/AkunPage";
 import AlamatPage from "./pages/AlamatPage";
 import ContactPage from "./pages/ContactPage";
-import React from 'react';
 import "react-multi-carousel/lib/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./dist/css/main.css";
 
-
 function App() {
-  return(
+  return (
     <div>
       <Routes>
         <Route path="/" Component={HomePage} />

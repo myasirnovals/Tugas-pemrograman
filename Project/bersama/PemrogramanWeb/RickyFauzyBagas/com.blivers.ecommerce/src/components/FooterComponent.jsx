@@ -37,7 +37,7 @@ const FooterComponent = () => {
               belanja online dan Pembayaran Aman, 15 hari retur produk dan layanan pembayaran Cash On Delivery langsung di rumahmu.
             </p>
             <Col className="no mb-1 mt-4">
-            <h5 className="fw-bold">Customer Care</h5>
+              <h5 className="fw-bold">Customer Care</h5>
               <Link className="text-decoration-none">
                 <Icon.Whatsapp />
                 <p className="m-0">0804-2-872-872</p>
@@ -46,7 +46,7 @@ const FooterComponent = () => {
             <div className="mail">
               <Link className="text-decoration-none">
                 <Icon.Envelope />
-                <p className="m-0">customer.care@blibli.com</p>
+                <p className="m-0">customer.care@blivers.com</p>
               </Link>
             </div>
           </Col>
