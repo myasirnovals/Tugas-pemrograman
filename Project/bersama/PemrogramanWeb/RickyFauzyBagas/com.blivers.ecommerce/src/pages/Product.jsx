@@ -1,5 +1,4 @@
-import DataProduct from "../assets/DataProduct.json";
-import Banner from "../assets/Promotion banner/Banner.json";
+import DataMakanan from "../assets/Blimart/Makanan/DataMakanan.json";
 import * as Icon from "react-bootstrap-icons";
 
 const Product = () => {
@@ -26,13 +25,27 @@ const Product = () => {
     <div responsive={responsive} className="container">
       <div id="carouselExampleAutoplaying" className="promotion carousel slide my-3" data-bs-ride="carousel">
         <div className="carousel-inner">
-          {Banner.map((Banner, index) => {
-            return (
-              <div className={index == 1 ? "carousel-item active" : "carousel-item"}>
-                <img src={Banner.img} className="banner rounded-5 d-block w-100" alt="banner-promotion" />
-              </div>
-            );
-          })}
+          <div className="carousel-item active">
+            <img src="src/assets/Promotion banner/Banner 1.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 2.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 3.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 4.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 5.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 6.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
+          <div className="carousel-item">
+            <img src="src/assets/Promotion banner/Banner 7.webp" className="banner rounded-5 d-block w-100" alt="banner-promotion" />
+          </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <Icon.ArrowLeftCircle size={30} className="arrow align-middle" />
@@ -45,15 +58,15 @@ const Product = () => {
       </div>
 
       <div responsive={responsive} className="row row-cols-1 row-cols-md-4 g-4">
-        {DataProduct.map((DataProduct) => {
+        {DataMakanan.map((DataMakanan) => {
           return (
-            <div className="col-6 mt-4" key={DataProduct.id}>
-              <div className="card h-100">
-                <img src={DataProduct.imageurl} className="card-img-top" alt="Product" />
+            <div className="col-6 mt-4" key={DataMakanan.id}>
+              <div className="card">
+                <img src={DataMakanan.imageurl} className="card-img-top" alt="Product" />
                 <div className="card-body">
-                  <p className="card-title">{DataProduct.name}</p>
-                  <p className="card-text fw-bold">{DataProduct.price}</p>
-                  <p className="card-text">{DataProduct.description}</p>
+                  <p className="card-title">{DataMakanan.name}</p>
+                  <p className="card-text text-secondary">{DataMakanan.price}</p>
+                  <p className="card-text">{DataMakanan.description}</p>
                 </div>
                 <button className="btn btn-primary">
                   <Icon.CartPlus size={25} className="align-middle" />
