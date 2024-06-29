@@ -31,7 +31,7 @@ const HandphoneTabletPage = () => {
       <div responsive={responsive} className="container my-3">
         <Carousel className="bg-ht px-2 py-2 my-1" responsive={responsive}>
           <div className="card border-none h-100">
-            <img src="src/assets/Gadget-Elektronik/Handphone-Tablet/Banner.webp" class="card-img-top rounded-1" alt="Banner" height={"100%"} />
+            <img src="https://www.static-src.com/siva/asset/06_2023/Kategori-HTA-7.7-HICE.jpg?w=176" class="card-img-top rounded-1" alt="Banner" height={"100%"} />
           </div>
           {ProductBanner.map((ProductBanner) => {
             return (

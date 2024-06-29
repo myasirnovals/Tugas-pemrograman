@@ -33,7 +33,7 @@ const MakananPage = () => {
       <div responsive={responsive} className="container my-3">
         <Carousel className="px-2 py-1 my-4" responsive={responsive}>
           <div className="card border-none h-100">
-            <img src="src/assets/Blimart/Makanan/Minyak Goreng.avif" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
+            <img src="https://www.static-src.com/siva/asset/06_2024/minyakgoreng-jun24-blm-product.png?w=176" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
           </div>
           {Minyak.map((Minyak) => {
             return (
@@ -54,7 +54,7 @@ const MakananPage = () => {
 
         <Carousel className="px-2 py-1 my-4" responsive={responsive}>
           <div className="card border-none h-100">
-            <img src="src/assets/Blimart/Makanan/Mie Instan.avif" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
+            <img src="https://www.static-src.com/siva/asset/06_2024/mieinstan-jun24-blm-product.png?w=176" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
           </div>
           {MieInstan.map((MieInstan) => {
             return (
@@ -75,7 +75,7 @@ const MakananPage = () => {
 
         <Carousel className="px-2 py-1 my-4" responsive={responsive}>
           <div className="card border-none h-100">
-            <img src="src/assets/Blimart/Makanan/Snack.avif" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
+            <img src="https://www.static-src.com/siva/asset/06_2024/snack-jun24-blm-product-rev.png?w=176" class="card-img-top rounded-4" alt="Banner" height={"100%"}/>
           </div>
           {Snack.map((Snack) => {
             return (

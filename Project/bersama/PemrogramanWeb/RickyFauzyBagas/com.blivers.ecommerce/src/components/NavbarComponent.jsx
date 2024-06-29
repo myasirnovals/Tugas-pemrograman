@@ -25,8 +25,8 @@ const NavbarComponent = () => {
   return (
     <Navbar responsive={responsive} expand="xl" className="bg-body-white border">
       <Container>
-        <Navbar.Brand href="/HomePage">
-          <img alt="Blivers" src="src/assets/logo/logo-2.png" width="25" height="33" className="d-inline-block align-top" /> BliVers
+        <Navbar.Brand href="/HomePage" className="fw-bold mb-1">
+          BliVers
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -72,7 +72,7 @@ const NavbarComponent = () => {
             </Col>
             <Col>
               <Button variant="white" href="/KeranjangPage">
-                <img alt="Blivers" src="src/assets/logo/keranjang-logo.svg" width="25" height="33" className="icon d-inline-block align-middle" />
+                <Icon.Bag size={25} className="icon align-middle" />
               </Button>
             </Col>
           </Row>
