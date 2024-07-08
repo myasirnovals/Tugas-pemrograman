@@ -1,0 +1,254 @@
+[
+{
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/91/MTA-104323176/evernext_evernext_-_clutch_bag_pria_multifungsi_hand_bag_pria_sling_bag_equal_pria_tas_slempang_pria_full01_pmcdn13z.jpg?w=205",
+    "name": "CLUTCH BAG PRIA",
+    "price": "Rp149.000",
+    "description": "MULTIFUNGSI 2 IN 1 HAND BAG PRIA SLING BAG EQUAL PRIA TAS SELEMPANG DISTRO PRIA"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-97651384/vans_vans_gym_class_cross_body_-_black_-vn0002etblk-_full06_et165q1x.jpeg?w=205",
+    "name": "Vans Gym Class Cross Body",
+    "price": "Rp499.000",
+    "description": "Black"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//99/MTA-6644655/batik_arjunaweda_batik_arjunaweda_hati_baju_koko_pria_-_putih_-94295020-_full02_oojsvpz.jpg?w=205",
+    "name": "Batik ArjunaWeda Hati",
+    "price": "Rp599.000",
+    "description": "Baju Koko Pria - Putih"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/98/MTA-161441477/hadinata_batik_hadinata_kain_batik_semi_sutra_fahmi_falika_full27_p1z9xrr.jpg?w=205",
+    "name": "Hadinata Kain Batik",
+    "price": "Rp85.000",
+    "description": "Semi Sutra Fahmi Falika"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/107/MTA-124185959/hush-puppies_hush-puppies-tango-4-basic-polo-pria-01_full01.jpg?w=205",
+    "name": "Hush Puppies Tango",
+    "price": "Rp459.000",
+    "description": "4 Basic Polo Pria 01"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-9149641/dr-_martens_dr-_martens_vegan_1461_cherry_red_oxford_rub_off_sepatu_boot_pria_-14046601-_full08_lomsnyqp.jpeg?w=205",
+    "name": "Dr. Martens Vegan 1461 Cherry Red Oxford Rub Off",
+    "price": "Rp2.699.000",
+    "description": "Sepatu Boot Pria"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/94/MTA-144502491/arjuna_weda_arjuna_weda_hem_batik_body_fit_garuda_2_53292083_-_cokelat_full01_py3j1hrc.jpg?w=205",
+    "name": "Arjuna Weda Hem",
+    "price": "Rp799.000",
+    "description": "Batik Body Fit Garuda 2 - Cokelat"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//108/MTA-67531959/vans_vans_old_skool_-_one_pice_devil_fruit_true_blue_-vn0007nt7wm-_full01_r4w4vhxc.jpg?w=205",
+    "name": "Vans Old Skool",
+    "price": "Rp1.699.000",
+    "description": "One Piece Devil Fruit True Blue"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-36436819/billabong_billabong_cog_mabl3bco_sth_stealth_full02_gqwrnmpg.jpeg?w=205",
+    "name": "Billabong Cog",
+    "price": "Rp199.000",
+    "description": "Tali Pinggang MABL3BCO STH Stealth"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/102/MTA-134578046/hush-puppies_hush-puppies-walter-pria-01_full01.jpg?w=205",
+    "name": "Hush Puppies Walter",
+    "price": "Rp699.000",
+    "description": "Pria"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-95116175/blythe_blythe_celana_denim_best_seller_regular_fit_celana_panjang_pria_full05_ixrond3i.jpeg?w=205",
+    "name": "Blythe Celana Jeans Denim Best Seller Regular Fit",
+    "price": "Rp459.000",
+    "description": "Celana Panjang Pria"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-53740127/fortklass_fortklass_sweater_premium_milk_pria_lengan_panjang_-_sweatshirt_unisex_full04_ccfrsu7e.jpg?w=205",
+    "name": "FortKlass Sweater Premium MILK",
+    "price": "Rp528.000",
+    "description": "Pria Lengan Panjang / Sweatshirt unisex"
+  },
+  {
+    "id": 13,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-118471847/redcliff_redcliff_kemeja_pria_batik_panjang_biru_6tk3334h_full01_b2sndamz.jpg?w=205",
+    "name": "Redcliff Kemeja Pria",
+    "price": "Rp598.800",
+    "description": "Batik Panjang Biru"
+  },
+  {
+    "id": 14,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-120020037/billabong_billabong_dimension_abyaa00224jvg_java_grain_full04_rtpuaeg1.jpeg?w=205",
+    "name": "Billabong Dimension",
+    "price": "Rp249.000",
+    "description": "Dompet Java Grain"
+  },
+  {
+    "id": 15,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-100929382/batik_arjunaweda_batik_arjunaweda_kemeja_batik_kembang_kawung_58317122_biru_full01_reelbggu.jpg?w=205",
+    "name": "Batik Arjunaweda",
+    "price": "Rp749.000",
+    "description": "Kemeja Batik Kembang Kawung Biru"
+  },
+  {
+    "id": 16,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-124212076/vans_vans_ua_old_skool_-_black-white_-vn000d3hy28-_full01_tgeiwiwj.jpg?w=205",
+    "name": "Vans UA Old Skool",
+    "price": "Rp999.000",
+    "description": "Black/White"
+  },
+  {
+    "id": 17,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//116/MTA-95728688/jaya_hebat_piyama_baju_tidur_pria_satin_lengan_pendek_celana_panjang_hermas_full01_jnhsn080.jpg?w=205",
+    "name": "PIYAMA BAJU TIDUR PRIA",
+    "price": "Rp121.000",
+    "description": "LENGAN PENDEK CELANA PANJANG HERMAS"
+  },
+  {
+    "id": 18,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-156341814/blythe_blythe_damar_kemeja_batik_pria_lengan_pendek_grey_full01_ibmz74jt.jpg?w=205",
+    "name": "Blythe Damar Baju",
+    "price": "Rp299.000",
+    "description": "Kemeja Batik Pria Lengan Pendek Abu Grey"
+  },
+  {
+    "id": 19,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-50699492/jobb_jobb_lucido_celana_panjang_pria_slim_fit_hitam_full07_e1a45t9j.jpeg?w=205",
+    "name": "Jobb Lucido",
+    "price": "Rp499.000",
+    "description": "Celana Panjang Pria Slim Fit Hitam"
+  },
+  {
+    "id": 20,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-36437522/rip_curl_rip_curl_search_drink_bottle_700ml_bctah9_90_black_full02_im1et76m.jpg?w=205",
+    "name": "Rip Curl Search Drink Bottle",
+    "price": "Rp499.000",
+    "description": "700Ml BCTAH9 90 Black"
+  },
+  {
+    "id": 21,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//96/MTA-92125455/brd-11766_masker-assc-kkoch-mask-100-original_full01.jpg?w=205",
+    "name": "Masker ASSC KKOCH",
+    "price": "Rp500.000",
+    "description": "MASK 100% ORIGINAL"
+  },
+  {
+    "id": 22,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-124212054/vans_vans_mn_pouch_wallet_-_black_-vn0a3hzx6zc-_full02_prknz6y9.jpeg?w=205",
+    "name": "Vans MN Pouch Wallet",
+    "price": "Rp349.000",
+    "description": "Black"
+  },
+  {
+    "id": 23,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-80402207/blythe_blythe_basic_short_chinos_pants_celana_pendek_pria_-_navy_full02_i6kvftoj.jpeg?w=205",
+    "name": "Blythe Basic Short Chinos Pants",
+    "price": "Rp249.000",
+    "description": "Celana Pendek Pria - Biru Navy"
+  },
+  {
+    "id": 24,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-23125649/hush-puppies_hush-puppies_full01.jpg?w=205",
+    "name": "Hush Puppies",
+    "price": "Rp799.000",
+    "description": "Waist Bag 217"
+  },
+  {
+    "id": 25,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/102/MTA-95822166/hush-puppies_hush-puppies-borbound-2-pullover-pria-01_full01.jpg?w=205",
+    "name": "Hush Puppies",
+    "price": "Rp499.000",
+    "description": "Borbound 2 Pullover Pria 01"
+  },
+  {
+    "id": 26,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-95722059/billabong_billabong_all_day_ciclo_lt_abybs00264mil_military_full02_9mnifyy.jpeg?w=205",
+    "name": "Billabong All Day Ciclo Lt",
+    "price": "Rp699.000",
+    "description": "Celana Pendek Pria ABYBS00264MIL Military"
+  },
+  {
+    "id": 27,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-35416911/hush-puppies_hush-puppies_full01.jpg?w=205",
+    "name": "Hush Puppies",
+    "price": "Rp799.000",
+    "description": "Waist Bag 2112 Pria 02"
+  },
+  {
+    "id": 28,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/96/MTA-67320428/no_brand_celana_pendek_pria_cargo_lapangan_gunung_bahan_tebal_santai_pantai_hitam_abu_cream_hijau_army_full01_5caf7d1f.jpg?w=205",
+    "name": "Celana Pendek Pria Cargo Lapangan Gunung",
+    "price": "Rp95.000",
+    "description": "Bahan Tebal Santai Pantai Hitam Abu Cream Hijau Army"
+  },
+  {
+    "id": 29,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/95/MTA-132108565/consina_consina_topical_rompi_vest_urban_full06_vlmewfp2.jpg?w=205",
+    "name": "Consina Topical",
+    "price": "Rp245.000",
+    "description": "Rompi Vest Urban"
+  },
+  {
+    "id": 30,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/95/MTA-143445082/jim_joker_jim_joker_taka_1cr_sepatu_kulit_pria_full01_vsy597iz.jpg?w=205",
+    "name": "Jim Joker Taka 1CR",
+    "price": "Rp1.699.000",
+    "description": "Sepatu Kulit"
+  },
+  {
+    "id": 31,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/98/MTA-154953134/prodigo_footwear_prodigo_-_kacamata_hitam_pria_miangas_silver_i_kacamata_gaya_i_kacamata_wanita_anti_radiasi_i_kaca_mata_kotak_i_sunglasses_fashion_full01_qr7p2o7m.jpg?w=205",
+    "name": "Kacamata Hitam Pria Miangas Silver",
+    "price": "Rp150.000",
+    "description": "Kacamata Gaya | Kacamata Wanita Anti Radiasi | Kaca Mata Kotak | Sunglasses Fashion"
+  },
+  {
+    "id": 32,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//87/MTA-10612823/hamlin_hamlin_woreq_jas_blazer_pria_pockets_2_in_1_collar_stripe_formal_suit_material_high_twist_original__full01_ko91n79j.jpg?w=205",
+    "name": "Hamlin Woreq Jas Blazer Pria",
+    "price": "Rp2.105.000",
+    "description": "Pockets 2 IN 1 Collar Stripe Formal Suit Material High Twist ORIGINAL - Black"
+  },
+  {
+    "id": 33,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//96/MTA-90057523/rhodey_rhodey_full_face_spandex_masker_motor_-_balaclava_full07_cit2diyf.jpg?w=205",
+    "name": "Rhodey Full Face",
+    "price": "Rp25.500",
+    "description": "Spandex Masker Motor / Balaclava"
+  },
+  {
+    "id": 34,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/96/MTA-110367491/rider_t-shirt_rider_v-neck_r222bp_-1pcs-_-_putih_full01_dzhzlu6a.jpg?w=205",
+    "name": "T-Shirt Rider V-Neck",
+    "price": "Rp122.900",
+    "description": "(1pcs) - Putih"
+  },
+  {
+    "id": 35,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-125314834/prodigo_footwear_prodigo_-_celana_training_berunai_i_celana_olahraga_pria_i_celana_jogger_panjang_i_celana_panjang_i_jogger_pants_full06_c0ikyas0.jpg?w=205",
+    "name": "Celana Training Berunai",
+    "price": "Rp250.000",
+    "description": "Celana Olahraga Pria | Celana Jogger Panjang | Celana Panjang | Jogger Pants"
+  },
+  {
+    "id": 36,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//103/MTA-92600786/muscle_fit_kaos_dalam_muscle_fit_singlet_pria_-_1_pcs_full01_hgcy6gmb.jpg?w=205",
+    "name": "Kaos Dalam Muscle Fit",
+    "price": "Rp60.900",
+    "description": "Singlet Pria - 1 PCS"
+  }
+]

@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Windows - 10.0.19045 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/gcc.exe 
+      Compiler: C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/gcc.exe 
       Build flags: 
       Id flags:  
       
@@ -28,19 +28,19 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
+        C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg"
-      binary: "D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg"
+      source: "C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp"
+      binary: "C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -49,167 +49,173 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg'
+        Change Dir: 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp'
         
-        Run Build Command(s): "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 "E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe" -f Makefile cmTC_c65f3/fast
-        E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c65f3.dir\\build.make CMakeFiles/cmTC_c65f3.dir/build
-        mingw32-make[1]: Entering directory 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg'
-        Building C object CMakeFiles/cmTC_c65f3.dir/CMakeCCompilerABI.c.obj
-        "E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj -c "E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_18185/fast
+        C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_18185.dir\\build.make CMakeFiles/cmTC_18185.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp'
+        Building C object CMakeFiles/cmTC_18185.dir/CMakeCCompilerABI.c.obj
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
         Using built-in specs.
-        COLLECT_GCC=E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe
+        COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
         Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\'
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_c65f3.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\myasi\\AppData\\Local\\Temp\\ccn2YzeM.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\'
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_18185.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\aibnu\\AppData\\Local\\Temp\\ccehDJhL.s
         GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
         ignoring nonexistent directory "/win/include"
-        ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../include"
-        ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
-        ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
-        ignoring nonexistent directory "/mingw/include"
+        ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+         /mingw/include
         End of search list.
         Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\'
-         as -v -o CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj C:\\Users\\myasi\\AppData\\Local\\Temp\\ccn2YzeM.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\'
+         as -v -o CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj C:\\Users\\aibnu\\AppData\\Local\\Temp\\ccehDJhL.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
-        COMPILER_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_c65f3.exe
-        "E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c65f3.dir\\link.txt --verbose=1
-        "E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_c65f3.dir/objects.a
-        "E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\ar.exe" qc CMakeFiles\\cmTC_c65f3.dir/objects.a @CMakeFiles\\cmTC_c65f3.dir\\objects1.rsp
-        "E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe"  -v -Wl,--whole-archive CMakeFiles\\cmTC_c65f3.dir/objects.a -Wl,--no-whole-archive -o cmTC_c65f3.exe -Wl,--out-implib,libcmTC_c65f3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        COMPILER_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;/mingw/lib/../lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../;/mingw/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_18185.exe
+        "C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_18185.dir\\link.txt --verbose=1
+        "C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_18185.dir/objects.a
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_18185.dir/objects.a @CMakeFiles\\cmTC_18185.dir\\objects1.rsp
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_18185.dir/objects.a -Wl,--no-whole-archive -o cmTC_18185.exe -Wl,--out-implib,libcmTC_18185.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
-        COLLECT_GCC=E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe
-        COLLECT_LTO_WRAPPER=E:/JetBrains/CLion\\ 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
         Target: x86_64-w64-mingw32
         Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COMPILER_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c65f3.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c65f3.'
-         E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c65f3.exe E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_c65f3.dir/objects.a --no-whole-archive --out-implib libcmTC_c65f3.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c65f3.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c65f3.'
-        mingw32-make[1]: Leaving directory 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg'
+        COMPILER_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;/mingw/lib/../lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../;/mingw/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_18185.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_18185.'
+         C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_18185.exe C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -L/mingw/lib/../lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\\cmTC_18185.dir/objects.a --no-whole-archive --out-implib libcmTC_18185.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_18185.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_18185.'
+        mingw32-make[1]: Leaving directory 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-          add: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-          add: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-          add: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+          add: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+          add: [/mingw/include]
         end of search list found
-        collapse include dir [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        collapse include dir [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [E:/JetBrains/CLion 2024.1.1/bin/mingw/include]
-        collapse include dir [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        collapse include dir [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [E:/JetBrains/CLion 2024.1.1/bin/mingw/x86_64-w64-mingw32/include]
-        implicit include dirs: [E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;E:/JetBrains/CLion 2024.1.1/bin/mingw/include;E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;E:/JetBrains/CLion 2024.1.1/bin/mingw/x86_64-w64-mingw32/include]
+        collapse include dir [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/include]
+        collapse include dir [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/x86_64-w64-mingw32/include]
+        collapse include dir [/mingw/include] ==> [/MinGW/include]
+        implicit include dirs: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/include;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/x86_64-w64-mingw32/include;/MinGW/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
-      - "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg']
+        ignore line: [Change Dir: 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp']
         ignore line: []
-        ignore line: [Run Build Command(s): "E:/JetBrains/CLion 2024.1.1/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 "E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe" -f Makefile cmTC_c65f3/fast]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c65f3.dir\\build.make CMakeFiles/cmTC_c65f3.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg']
-        ignore line: [Building C object CMakeFiles/cmTC_c65f3.dir/CMakeCCompilerABI.c.obj]
-        ignore line: ["E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe"   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj -c "E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_18185/fast]
+        ignore line: [C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_18185.dir\\build.make CMakeFiles/cmTC_18185.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp']
+        ignore line: [Building C object CMakeFiles/cmTC_18185.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
         ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\']
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_c65f3.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\myasi\\AppData\\Local\\Temp\\ccn2YzeM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_18185.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\aibnu\\AppData\\Local\\Temp\\ccehDJhL.s]
         ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
         ignore line: [ignoring nonexistent directory "/win/include"]
-        ignore line: [ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../include"]
-        ignore line: [ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "E:/JetBrains/CLion 2024.1.1/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
-        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [ /mingw/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\']
-        ignore line: [ as -v -o CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj C:\\Users\\myasi\\AppData\\Local\\Temp\\ccn2YzeM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\']
+        ignore line: [ as -v -o CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj C:\\Users\\aibnu\\AppData\\Local\\Temp\\ccehDJhL.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
-        ignore line: [COMPILER_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c65f3.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_c65f3.exe]
-        ignore line: ["E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c65f3.dir\\link.txt --verbose=1]
-        ignore line: ["E:\\JetBrains\\CLion 2024.1.1\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_c65f3.dir/objects.a]
-        ignore line: ["E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\ar.exe" qc CMakeFiles\\cmTC_c65f3.dir/objects.a @CMakeFiles\\cmTC_c65f3.dir\\objects1.rsp]
-        ignore line: ["E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe"  -v -Wl --whole-archive CMakeFiles\\cmTC_c65f3.dir/objects.a -Wl --no-whole-archive -o cmTC_c65f3.exe -Wl --out-implib libcmTC_c65f3.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [/mingw/lib/../lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [/mingw/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_18185.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_18185.exe]
+        ignore line: ["C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_18185.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\JetBrains\\CLion 2024.1.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_18185.dir/objects.a]
+        ignore line: [C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_18185.dir/objects.a @CMakeFiles\\cmTC_18185.dir\\objects1.rsp]
+        ignore line: [C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_18185.dir/objects.a -Wl --no-whole-archive -o cmTC_18185.exe -Wl --out-implib libcmTC_18185.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=E:\\JetBrains\\CLion 2024.1.1\\bin\\mingw\\bin\\gcc.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=E:/JetBrains/CLion\\ 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
         ignore line: [Target: x86_64-w64-mingw32]
         ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COMPILER_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c65f3.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c65f3.']
-        ignore line: [ E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c65f3.exe E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_c65f3.dir/objects.a --no-whole-archive --out-implib libcmTC_c65f3.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c65f3.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c65f3.']
-        ignore line: [mingw32-make[1]: Leaving directory 'D:/Documents/pemrograman/yasir/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mrh0mg']
+        ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [/mingw/lib/../lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [/mingw/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_18185.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_18185.']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_18185.exe C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -L/mingw/lib/../lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\\cmTC_18185.dir/objects.a --no-whole-archive --out-implib libcmTC_18185.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_18185.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_18185.']
+        ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturDataTeori/DoubleLinkedList/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ymqrwp']
         ignore line: []
         ignore line: []
         implicit libs: []

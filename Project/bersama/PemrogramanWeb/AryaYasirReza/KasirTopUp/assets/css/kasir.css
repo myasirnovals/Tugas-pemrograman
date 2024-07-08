@@ -1,0 +1,129 @@
+:root {
+  --blue: #2c2546;
+  --dark-blue: #1b1535;
+  --green: #00eb09;
+  --white: #fff;
+  --whiteFox: #b8afaf;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-family: "Tahoma";
+}
+
+.header {
+  background-color: var(--blue);
+  font-weight: bold;
+}
+
+.title:hover {
+  border-bottom: 2px solid var(--white);
+}
+
+/* ----------------------------------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: var(--dark-blue);
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: var(--white);
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06d85f;
+}
+
+.content {
+  max-height: 30%;
+  width: 50%;
+}
+
+/* .populer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+} */
+
+.populer img {
+  border-radius: 10%;
+}
+
+.gambar:hover {
+  opacity: 80%;
+}
+
+.kartu {
+  background-color: var(--blue);
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 20px 20px black;
+}
+
+.kartu-produk {
+  background-color: var(--whiteFox);
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 20px 20px black;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  background-color: var(--blue);
+  margin-top: 10%;
+  padding: 2%;
+}
+
+#copyright {
+  text-align: center;
+  padding: 10px;
+}

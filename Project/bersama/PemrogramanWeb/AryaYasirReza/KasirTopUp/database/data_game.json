@@ -1,30 +1,23 @@
 [
   {
-    "kodeGame": "666b9e57976f3",
-    "nameGame": "Blue Archive",
-    "image": "datagame666b9e5797700.jpg",
-    "created_at": "Friday, 14 \/ Jun \/ 2024  08:35:19",
-    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:35:19"
+    "gameId": "6671ddb496e58",
+    "gameName": "Blue  Archive",
+    "image": "datagame6674813b730ea.jpg",
+    "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:16",
+    "updated_at": "Friday, 21 \/ Jun \/ 2024  02:21:31"
   },
   {
-    "kodeGame": "666b9e6bdac53",
-    "nameGame": "Genshin Impact",
-    "image": "datagame666b9e6bdac5e.jpg",
-    "created_at": "Friday, 14 \/ Jun \/ 2024  08:35:39",
-    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:35:39"
+    "gameId": "6671ddc5c7314",
+    "gameName": "Genshin Impact",
+    "image": "datagame667481483d2a6.jpg",
+    "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:33",
+    "updated_at": "Friday, 21 \/ Jun \/ 2024  02:21:44"
   },
   {
-    "kodeGame": "666b9eb16b84f",
-    "nameGame": "Tower of Fantasy",
-    "image": "datagame666b9eb16b85a.jpg",
-    "created_at": "Friday, 14 \/ Jun \/ 2024  08:36:49",
-    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:36:49"
-  },
-  {
-    "kodeGame": "666b9ebbe5429",
-    "nameGame": "Counter Strike 2",
-    "image": "datagame666b9ebbe5435.jpg",
-    "created_at": "Friday, 14 \/ Jun \/ 2024  08:36:59",
-    "updated_at": "Friday, 14 \/ Jun \/ 2024  08:36:59"
+    "gameId": "6674817dd763c",
+    "gameName": "Valorant",
+    "image": "datagame6674817dd7649.jpg",
+    "created_at": "Friday, 21 \/ Jun \/ 2024  02:22:37",
+    "updated_at": "Friday, 21 \/ Jun \/ 2024  02:22:37"
   }
 ]

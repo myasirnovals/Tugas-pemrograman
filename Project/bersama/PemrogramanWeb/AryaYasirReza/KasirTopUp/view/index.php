@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,14 +9,13 @@
     <title>Top Up Store</title>
 </head>
 <body>
-<script>
-    let verify = confirm("Are you a member?");
+<?php
+session_start();
 
-    if (verify === true) {
-        window.location.href = "login.php";
-    } else {
-        window.location.href = "user/user.php";
-    }
-</script>
+if(!isset($_SESSION["logged"])) {
+    header("Location: user/user.php");
+    exit();
+}
+?>
 </body>
 </html>

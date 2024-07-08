@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-4219130/sedaap_sedaap_mie_soto_makanan_instan_75_g_-5_pcs-__full06_mzl10h5b.png?w=176",
+    "name": "Sedaap Mie Soto",
+    "price": "Rp13.900",
+    "description": "Mie Instan Kuah 75 g [5 Pcs]"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//992/indomie_indomie-goreng-spesial--original--1-dus---40-pcs_full02.jpg?w=176",
+    "name": "Indomie Goreng",
+    "price": "Rp115.200",
+    "description": "Mie Instan Goreng 85 g [40 Pcs/ 1 Karton]"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-4219124/sedaap_sedaap_mie_goreng_makanan_instan_90_g_-5_pcs-__full07_mt5cskn5.png?w=176",
+    "name": "Sedaap Mie Goreng",
+    "price": "Rp14.650",
+    "description": "Mie Instan Goreng 90 g [5 Pcs]"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-4061248/sedaap_sedaap_mie_korean_spicy_chicken_-87_g-_40_pcs-_full04_jmqbczj2.png?w=176",
+    "name": "Sedaap Korean Spicy Chicken",
+    "price": "Rp116.400",
+    "description": "Mie Instan Goreng 87 g [40 Pcs]"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-18944905/sedaap_sedaap_mie_instant_singapore_spicy_laksa_-5_pcs_x_83_g-_full02_qishet3c.png?w=176",
+    "name": "Mie Singapore Spicy Laksa",
+    "price": "Rp13.900",
+    "description": "Mie Instan Kuah 83 g [5 Pcs]"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-59623284/indomie_indomie_mie_kari_ayam_-40_pcs_x_72_g-_full02_mlwlpjre.jpeg?w=176",
+    "name": "Indomie Mie Kari Ayam",
+    "price": "Rp117.700",
+    "description": "Mie Instan Kuah 72 g [40 Pcs]"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-12045533/sedaap_sedaap_mie_instant_white_curry_81_g_full03_n3d4g48o.png?w=176",
+    "name": "Sedaap Mie White Curry",
+    "price": "Rp2.780",
+    "description": "Mie Instan Kuah 81 g [1 Pcs]"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//98/MTA-11778182/gaga_gaga_mie_soto_segaar_-beli_3_pcs_-_free_2_pcs-_full01_r9qjg77r.jpg?w=176",
+    "name": "GAGA Mie Soto",
+    "price": "Rp11.289",
+    "description": "Mie Instan Kuah [Beli 3 Pcs + Free 2 pcs]"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-0281277/san-remo_san-remo-pasta-spaghetti--5--500-g--143857_full04.jpg?w=176",
+    "name": "San Remo Pasta Spaghetti",
+    "price": "Rp23.200",
+    "description": "Pasta Spaghetti [500 g]"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-12297225/sundoro_kering_sundoro_mie_goreng_jogja_full04_qm1unvj0.jpg?w=176",
+    "name": "Mie Goreng Jogja",
+    "price": "Rp15.750",
+    "description": "Mie Instan Goreng 95 g [1 Pcs]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-6771488/sedaap_sedaap_korean_spicy_soup_mie_instant_-77_g-_full03_p03bgi7n.png?w=176",
+    "name": "Sedaap Korean Spicy Soup",
+    "price": "Rp2.780",
+    "description": "Mie Instan Kuah"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-13862252/sedaap_sedaap_mie_goreng_cup_-3_pcs_x_85_g-_20081_full02_n45ckh1u.png?w=176",
+    "name": "Sedaap Mie Goreng Cup",
+    "price": "Rp13.650",
+    "description": "Mie Instan Goreng 85 g [3 Pcs]"
+  }
+]

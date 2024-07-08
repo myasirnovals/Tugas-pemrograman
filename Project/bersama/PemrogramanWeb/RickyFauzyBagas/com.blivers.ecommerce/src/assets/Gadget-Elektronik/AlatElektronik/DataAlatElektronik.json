@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-35552007/samsung_samsung_ww90t504dtt-se_mesin_cuci_front_loading_-9_kg-_ecobubble-_ai_control-_steam-_full01_jm94cbtq.jpg?w=176",
+    "name": "Samsung WW90T504DTT",
+    "price": "Rp7.349.000",
+    "description": "SE Mesin Cuci Front Loading [9 kg/ Ecobubble/ AI Control/ Steam]"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/86/MTA-112511047/aqua_japan_aqua_japan-aqw-77d-h-b--top_loading_mesin_cuci_with_hijab_mode_-7_kg-_full03_pe90phw8.jpg?w=176",
+    "name": "Aqua Elektronik AQW-77D-H(B)",
+    "price": "Rp2.219.000",
+    "description": "Top Loading Mesin Cuci with Hijab Mode [7 kg]"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-98671805/lg_lg_led_ultra_uhd_smart_tv_4k_-43_inch-_43ur7500psc_full01_eimyca1j.jpg?w=176",
+    "name": "LG LED",
+    "price": "Rp7.999.000",
+    "description": "Ultra UHD Smart TV 4K [43 Inch]"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//111/MTA-84383949/polytron_polytron_neuva_ice_ac_1_pk_pac_09vz_-unit_only-_full01_pw688x1m.jpg?w=176",
+    "name": "POLYTRON PAC 09VZ",
+    "price": "Rp3.509.000",
+    "description": "AC Split Standar 1 PK Neuva Pro [Unit Only]"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/100/MTA-98910144/cosmos_cosmos_air_fryer_caf-6603_full02_own78b9p.jpg?w=176",
+    "name": "COSMOS CAF-6603",
+    "price": "Rp729.000",
+    "description": "Digital Air Fryer Low Watt 2 Liter"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/112/MTA-99046848/mito_mito_air_fryer_af8_crystal_series_full02_cuqbjwkc.jpg?w=176",
+    "name": "MITO AIR FRYER",
+    "price": "Rp1.200.000",
+    "description": "AF8 / AF-8 / AF 8 CRYSTAL SERIES - GARANSI RESMI"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/112/MTA-140975949/aqua_japan_aqua_japan_fqw-105829qd_front_load_mesin_cuci_-10-5_kg-_full02_fuwzxr7o.jpg?w=176",
+    "name": "Aqua Elektronik FQW-105829QD",
+    "price": "Rp5.889.000",
+    "description": "Front Load Mesin Cuci [10.5 Kg]"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//91/MTA-72522523/sharp_sharp_microwave_oven_25_liter_stylish_designed_-__r-728-k--in_full04_g0f8u7io.jpg?w=176",
+    "name": "SHARP R-728-IN",
+    "price": "Rp1.837.000",
+    "description": "Microwave Oven Compact Grill 25 Liter"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-112608245/philips_philips_digital_rice_cooker_hd4515-30_-1-8_l-_-_10_menu_-_abu-abu_-_400_w_full09_dfi342da.jpg?w=176",
+    "name": "Philips Digital Rice Cooker / Magic Com HD4515-30",
+    "price": "Rp939.000",
+    "description": "1.8 L Lapisan Bakuhanseki Anti Lengket Anti Baret Paling Awet, Abu, 10 menu, multifungsi"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//87/MTA-35652001/panasonic_panasonic_sr-cez18dbr_rice_cooker_-1-8_l-3-in-1-_full01_lxf881qf.jpg?w=176",
+    "name": "Panasonic SR-CEZ18DBR",
+    "price": "Rp1.048.571",
+    "description": "Rice Cooker [1.8 L/3-in-1]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//106/MTA-71697319/sharp_sharp_mesin_cuci_front_loading_boomerang_series_washing_machine_6_kg_-es-fl1062b_full02_rtaetkct.jpg?w=176",
+    "name": "SHARP ES-FL1062B",
+    "price": "Rp5.292.000",
+    "description": "Mesin Cuci Front Loading Boomerang Series [6 Kg]"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-87604443/sharp_sharp_2t-c32eg1i_hd-ready_smart_google_tv_-32_inch-_full01_obqgr5gd.jpg?w=176",
+    "name": "SHARP 2T-C32EG1I",
+    "price": "Rp3.839.000",
+    "description": "HD-Ready Smart Google TV [32 Inch]"
+  },
+{
+    "id": 13,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-112632298/philips_philips_blender_3000_series_hr2042-13_-_jar_plastik_1l_-_aksesoris_serba_bisa_-_dry_mill_-problend_system_-_mudah_dibersihkan_-_merah_full01_cedg593w.jpg?w=176",
+    "name": "Blender Philips 3000 Series HR2042/13",
+    "price": "Rp555.000",
+    "description": "Kapasitas 1L - Blender Jus Paling Awet"
+  },
+{
+    "id": 14,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/91/MTA-156122416/aqua_aqua_elektronik_aqa-kcr5fqdl_ac_0-5_pk_standard_360w-_powerful_cooling_-_triple_airflow_-_anti_corrosion_-_blue_fin_-_full_copper_-_turbo_cooling_-_wi_full01_b2m5fyka.jpg?w=176",
+    "name": "Aqua Elektronik AQA-KCR5FQDL",
+    "price": "Rp2.749.000",
+    "description": "AC 0.5 PK Standard 360W- Powerful Cooling - Triple Airflow - Anti Corrosion - Blue Fin - Full Copper - Turbo Cooling - Wi"
+  },
+{
+    "id": 15,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-113325384/yong_ma_yong_ma_magic_com_smc-7047n_digital_rice_cooker_-_-2_l_-_blue_navy_-_biru-_full01_jkzvqqjd.jpg?w=176",
+    "name": "Yong Ma Magic Com SMC-7047N",
+    "price": "Rp749.000",
+    "description": "Digital Rice Cooker - [2 L / Blue Navy / Biru]"
+  },
+{
+    "id": 16,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-36641889/panasonic_panasonic_mx-e310wsr_blender_-1_l_-_275_w-_full03_cucfq3nc.jpeg?w=176",
+    "name": "Panasonic MX-E310WSR",
+    "price": "Rp800.000",
+    "description": "Blender [1 L / 275 W]"
+  },
+{
+    "id": 17,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/MTA-138504172/xiaomi_official_xiaomi_smart_tv_a_pro_43_uhd_-_4k_ultra_hd_dolby_audio-_dts-x_google_tv_full01_hqrcc7jc.jpg?w=176",
+    "name": "Official Xiaomi Smart TV A Pro 43",
+    "price": "Rp3.999.000",
+    "description": "UHD | 4K Ultra HD Dolby Audio™ DTS-X Google TV"
+  },
+{
+    "id": 18,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/106/MTA-124996470/yong_ma_yong_ma_smc_8067_-_low_carbo_rice_cooker-_full01_r8zz58tv.jpg?w=176",
+    "name": "YONG MA SMC 8067",
+    "price": "Rp899.000",
+    "description": "Low Carbo Rice Cooker"
+  }
+]

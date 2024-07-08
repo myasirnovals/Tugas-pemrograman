@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\ADTJam.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\ADTJam.dir/objects.a @CMakeFiles\ADTJam.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\ADTJam.dir/objects.a -Wl,--no-whole-archive -o ADTJam.exe -Wl,--out-implib,libADTJam.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ADTJam.dir\linkLibs.rsp

@@ -1,8 +1,8 @@
 <?php include "../layout/header.php"; ?>
 <?php include "nav_bar.php"; ?>
     <div class="container mt-5">
-        <h4 style="margin-top: 20px;">Edit Game:</h4>
-        <div class="card mt-5">
+        <h4 style="color: var(--green); margin-top: 20px;">Edit Produk:</h4>
+        <div class="card mt-5 text-white kartu">
             <div class="container">
                 <?php foreach ($dataProducts as $data) { ?>
                     <?php if ($data['productId'] == $id) { ?>
@@ -23,8 +23,7 @@
                                                    aria-describedby="productName"
                                                    value="<?= $data['productName'] ?>"
                                                    required>
-                                            <div id="productName" class="form-text">For example, Pyroxenes</div>
-                                        </div>
+                                            <div id="productName" class="form-text text-white
                                         <div class="mb-3">
                                             <label for="productPrice" class="form-label">Harga Produk</label>
                                             <input type="text" class="form-control" id="productPrice"
@@ -43,7 +42,7 @@
                                             <label for="image" class="form-label">Game Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
                                         </div>
-                                        <button type="submit" class="btn btn-primary mt-3 mb-4">Update Game</button>
+                                        <button type="submit" class="btn btn-primary mt-3 mb-4">Update Produk</button>
                                     </form>
                                 </div>
                             </div>

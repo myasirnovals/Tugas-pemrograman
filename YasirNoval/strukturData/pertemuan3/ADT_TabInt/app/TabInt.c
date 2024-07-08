@@ -1,21 +1,10 @@
-/**
- * Program: TabInt.c
- * Author: (2350081004, Muhamad Yasir Noval)
- * Kelas: A
- * Deskripsi: Header file dari prototype queue
- * Tanggal: 28 Maret 2024
- */
-
 #include <stdio.h>
-
 #include "../lib/TabInt.h"
 
-/*konstruktor*/
 void CreateTabInt(TabInt *T) {
     (*T).neff = 0;
 }
 
-/*selektor tabint*/
 int GetJumElmt(TabInt T) {
     if (IsEmpty(T)) {
         return 0;
@@ -50,7 +39,6 @@ int GetElmt(TabInt T, int index) {
     }
 }
 
-/*set nilai*/
 void SetElm(TabInt *T, int i, int v) {
     if (i <= (*T).neff) {
         (*T).Tb[i] = v;
@@ -59,7 +47,6 @@ void SetElm(TabInt *T, int i, int v) {
     }
 }
 
-/*kelompok operasi cek elemen kosong atau penuh*/
 boolean IsEmpty(TabInt T) {
     if (T.neff == 0) {
         return true;
@@ -76,7 +63,6 @@ boolean IsFull(TabInt T) {
     }
 }
 
-/*kelompok operasi input output device*/
 void BacaElm(TabInt *T) {
     int Elm;
 
@@ -105,7 +91,6 @@ void AddElm(TabInt *T, int x) {
     }
 }
 
-/*kelompok operasi aritmatika*/
 TabInt KaliTab(TabInt Tab1, TabInt Tab2) {
     TabInt NewTab;
     int i;
@@ -136,7 +121,6 @@ TabInt KaliKons(TabInt T, int c) {
     return NewTab;
 }
 
-/*kelompok operasi relasional terhadap TabInt*/
 boolean IsEQTab(TabInt Tab1, TabInt Tab2) {
     if (Tab1.neff == Tab2.neff) {
         return true;
@@ -145,7 +129,6 @@ boolean IsEQTab(TabInt Tab1, TabInt Tab2) {
     }
 }
 
-/*kelompok operasi lain terhadap type*/
 void CopyTab(TabInt Tabin, TabInt *Tabout) {
     (*Tabout) = Tabin;
 }

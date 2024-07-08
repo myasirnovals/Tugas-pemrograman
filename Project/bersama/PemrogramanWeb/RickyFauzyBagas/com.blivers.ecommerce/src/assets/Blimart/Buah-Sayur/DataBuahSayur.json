@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//100/MTA-40496418/sesa_wortel_brastagi_1_kg_full01_nabjxfww.jpg?output-format=webp",
+    "name": "Wortel Brastagi",
+    "price": "Rp19.900",
+    "description": "Netto 1 Kg"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//93/MTA-21156636/sesa_pakcoy_organik_200_g_full01_hnqgrlx3.jpg?output-format=webp",
+    "name": "Pakcoy Organik",
+    "price": "Rp14.900",
+    "description": "Netto 200 g"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42335105/simply_fresh_simply_fresh_bawang_putih_-200_g-_full02_ggj9yvns.jpeg?output-format=webp",
+    "name": "Bawang Putih",
+    "price": "Rp13.100",
+    "description": "Netto [200 g]"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42335192/simply_fresh_simply_fresh_bawang_merah_besar_-200_g-_full02_y6ba0du.jpeg?output-format=webp",
+    "name": "Bawang Merah Besar",
+    "price": "Rp18.400",
+    "description": "Netto [200 g]"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42288047/simply_fresh_baby_pakcoy_-250gr-_full02_3563i5y.jpeg?output-format=webp",
+    "name": "Baby Pakcoy",
+    "price": "Rp10.000",
+    "description": "Netto [250 g]"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-37804170/king_fruit_king_fruit_durian_lokal_super_premium_frozen_duren_medan_500_gram_full01_turpkdhc.jpg?output-format=webp",
+    "name": "King Fruit Durian Lokal",
+    "price": "Rp85.000",
+    "description": "500 Gram per-Pack"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/MTA-23470652/sesa_buah_pear_century_1_kg_full01_lqsq75eq.jpg?output-format=webp",
+    "name": "Buah Pear Century",
+    "price": "Rp37.900",
+    "description": "Netto 1 kg"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//104/MTA-42965590/brd-37528_buncis-lokal-organik-250-g_full01.jpg?output-format=webp",
+    "name": "Buncis Lokal Organik",
+    "price": "Rp12.900",
+    "description": "Netto 250 g"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//106/MTA-42289648/simply_fresh_kentang_dieng_-10_pcs-_kg-_full01_gmghrgnk.jpg?output-format=webp",
+    "name": "Kentang Dieng",
+    "price": "Rp34.400",
+    "description": "Netto [10 pcs/ kg]"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42290490/simply_fresh_wortel_import_-500gr-_full02_l50hcato.jpeg?output-format=webp",
+    "name": "Wortel Import",
+    "price": "Rp18.400",
+    "description": "Netto [500 gr]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//111/MTA-18359976/duta_buah_duta_buah_apel_fuji_rrc_-_900g-1kg_-_full01_cituj60r.jpg?output-format=webp",
+    "name": "Apel Fuji",
+    "price": "Rp40.000",
+    "description": "Netto (0.9g-1kg / 4-6buah)"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42290771/simply_fresh_daun_bawang_sedang_-250gr-_full02_c5vzdfi4.jpeg?output-format=webp",
+    "name": "Daun Bawang Sedang",
+    "price": "Rp70.000",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 13,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//97/MTA-37804280/king_fruit_2_pack_king_fruit_durian_lokal_super_premium_frozen_duren_medan_kupas_full01_q0khti4y.jpg?output-format=webp",
+    "name": "2 Pack King Fruit Durian Lokal Super Premium",
+    "price": "Rp170.000",
+    "description": "500 gram/Pack"
+  },
+  {
+    "id": 14,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//97/MTA-42287550/simply_fresh_wortel_sop_-250gr-_full01_ubpgsbz3.jpg?output-format=webp",
+    "name": "Wortel Sop",
+    "price": "Rp7.200",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 15,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42287721/simply_fresh_caisim-sawi_hijau_-250gr-__full02_xzrvgv8.jpeg?output-format=webp",
+    "name": "Caisim Sawi Hijau",
+    "price": "Rp6.600",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 16,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//85/MTA-21312814/sesa_sayur_brokoli_organik_300_g_full02_scnwb3ep.jpg?output-format=webp",
+    "name": "Sayur Brokoli Organik",
+    "price": "Rp19.900",
+    "description": "Netto 300 g"
+  },
+  {
+    "id": 17,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//91/MTA-21159072/sesa_wortel_organik_best_value_1_kg_full01_6oszpxg.jpg?output-format=webp",
+    "name": "Wortel Organik Best Value",
+    "price": "Rp19.900",
+    "description": "Netto 1 Kg"
+  },
+  {
+    "id": 18,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//80/MTA-12270020/sesa_lemon_import_1_kg_full01_hve3agfk.jpg?output-format=webp",
+    "name": "Lemon Import",
+    "price": "Rp39.900",
+    "description": "Netto 1 kg"
+  },
+  {
+    "id": 19,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//104/MTA-10662799/sesa_bayam_merah_sayur_organik_200_g_full01_plwv5r4n.jpg?output-format=webp",
+    "name": "Bayam Merah Sayur Organik",
+    "price": "Rp11.900",
+    "description": "Netto 200 g"
+  },
+  {
+    "id": 20,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//108/MTA-57732498/no_brand_kentang_dieng_natural_1_kg_full04_e66lufkn.jpg?output-format=webp",
+    "name": "Kentang Dieng Natural",
+    "price": "Rp29.900",
+    "description": "Netto 1 Kg"
+  },
+  {
+    "id": 21,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42296100/simply_fresh_nanas_madu_-1pcs-__full02_inkozcru.jpeg?output-format=webp",
+    "name": "Nanas Madu",
+    "price": "Rp8.300",
+    "description": "1 Buah / pcs"
+  },
+  {
+    "id": 22,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42334822/simply_fresh_simply_fresh_apel_fuji_rrc_-1_kg-_full02_q7crfs17.jpeg?output-format=webp",
+    "name": "Apel Fuji RRC",
+    "price": "Rp49.800",
+    "description": "Netto [1 kg]"
+  },
+  {
+    "id": 23,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//96/MTA-8657240/duta_buah_duta_buah_pear_century_super_---0-9g-1kg---3-5buah-_full01_oallxx5p.jpg?output-format=webp",
+    "name": "Pear Century Super",
+    "price": "Rp40.000",
+    "description": "Netto (0.9g-1kg / 3-5buah)"
+  },
+  {
+    "id": 24,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42288411/simply_fresh_sawi_putih_-500_gr-_full03_quntcji2.jpeg?output-format=webp",
+    "name": "Sawi Putih",
+    "price": "Rp13.000",
+    "description": "Netto [500 gr]"
+  },
+  {
+    "id": 25,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42342797/simply_fresh_tauge_-250_gr-_full02_hr8udfug.jpeg?output-format=webp",
+    "name": "Tauge",
+    "price": "Rp9.600",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 26,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//92/MTA-16624800/duta_buah_duta_buah_salak_pondoh_jumbo_---0-9g-1kg---10-13buah-_full01_s85oh7mj.jpg?output-format=webp",
+    "name": "Salak Pondoh Jumbo",
+    "price": "Rp22.275",
+    "description": "Netto (0.9g-1kg / 10-13buah)"
+  },
+  {
+    "id": 27,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//102/MTA-42288267/simply_fresh_buncis_-250gr-_full01_n00ml2v8.jpg?output-format=webp",
+    "name": "Buncis",
+    "price": "Rp11.200",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 28,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42340987/simply_fresh_jeruk_medan_-500_gr-_full02_f9pi9ytv.jpeg?output-format=webp",
+    "name": "Jeruk Medan",
+    "price": "Rp27.200",
+    "description": "Netto [500 gr]"
+  },
+  {
+    "id": 29,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42342704/simply_fresh_selada_romaine_-250_gr-_full02_tdrh5dlu.jpeg?output-format=webp",
+    "name": "Selada Romaine",
+    "price": "Rp12.300",
+    "description": "Netto [250 gr]"
+  },
+  {
+    "id": 30,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42335284/simply_fresh_simply_fresh_cabe_rawit_merah_-200_g-_full02_mmmarhfe.jpeg?output-format=webp",
+    "name": "Cabe Rawit Merah",
+    "price": "Rp17.100",
+    "description": "Netto [200 g]"
+  },
+  {
+    "id": 31,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//103/MTA-2688745/duta-buah_duta-buah-pusat-pisang-cavendish--1-kg-_full03.jpg?output-format=webp",
+    "name": "Pisang Cavendish Sunpride C3",
+    "price": "Rp29.700",
+    "description": "Netto (900g - 1kg)"
+  },
+  {
+    "id": 32,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//97/MTA-42287326/simply_fresh_timun_besar_-500gr-_full01_7o2k0t7.jpg?output-format=webp",
+    "name": "Timun Besar",
+    "price": "Rp12.600",
+    "description": "Netto [500 gr]"
+  },
+  {
+    "id": 33,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-21623697/farmers_market_jamur_enoki_100gr_full02_sc0a8thp.png?output-format=webp",
+    "name": "Jamur Enoki",
+    "price": "Rp3.500",
+    "description": "Netto 100gr"
+  },
+  {
+    "id": 34,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-16625426/duta_buah_duta_buah_sweet_pear_super_---0-9g-1kg---3-4buah-_full01_j95rpu80.jpg?output-format=webp",
+    "name": "Sweet Pear Super",
+    "price": "Rp108.000",
+    "description": "Netto (0.9g-1kg / 3-4buah)"
+  },
+  {
+    "id": 35,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42335228/simply_fresh_simply_fresh_cabe_keriting_merah_-150_g-_full02_i3wneekk.jpeg?output-format=webp",
+    "name": "Cabe Keriting Merah",
+    "price": "Rp21.100",
+    "description": "Netto [150 g]"
+  },
+  {
+    "id": 36,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//93/MTA-3723375/duta-buah_duta-buah-buah-naga-merah-premium-buah--1-kg--1-2-pcs-_full02.jpg?output-format=webp",
+    "name": "Naga Merah Premium",
+    "price": "Rp45.000",
+    "description": "Netto (500g-1kg/buah)"
+  },
+{
+    "id": 37,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-2747251/duta_buah_duta_buah_nangka_kupas_super_---350g-pack-_full03_pum3mvh5.jpg?output-format=webp",
+    "name": "Nangka Kupas Super",
+    "price": "Rp25.425",
+    "description": "Netto (350g/pack)"
+  },
+{
+    "id": 38,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//88/MTA-12433912/duta_buah_duta_buah_pusat_jeruk_wokam_rrc_---900-1kg-_full01_cxnbdpqu.jpg?output-format=webp",
+    "name": "Jeruk Wokam Super",
+    "price": "Rp59.950",
+    "description": "Netto (0.9g-1kg / 5-7buah)"
+  },
+{
+    "id": 39,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42297293/simply_fresh_tomat_tw_-8-10_pcs-kg-_full02_pwdzufcm.jpeg?output-format=webp",
+    "name": "Tomat TW",
+    "price": "Rp28.000",
+    "description": "Netto [8-10 pcs/ kg]"
+  },
+{
+    "id": 40,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-42296422/simply_fresh_baby_buncis_-250gr-_full02_m8qrf6li.jpeg?output-format=webp",
+    "name": "Baby Buncis",
+    "price": "Rp14.000",
+    "description": "Netto [250 gr]"
+  },
+{
+    "id": 41,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/100/MTA-145175653/giggly_coco_jakarta_barat_-_giggly_coco_fresh_young_coconut_1_pcs__full03_k4yjy8f9.jpg?output-format=webp",
+    "name": "Giggly Coco Fresh Young Coconut",
+    "price": "Rp47.000",
+    "description": "Promo - Beli 2 Gratis 1"
+  },
+{
+    "id": 42,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-2680512/duta-buah_duta-buah-pusat-edamame-super-sayuran--1-kg-_full06.jpg?output-format=webp",
+    "name": "Edamame Super Sayuran",
+    "price": "Rp33.900",
+    "description": "Netto [900g - 1kg]"
+  },
+{
+    "id": 43,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//113/MTA-38789267/duta_buah_duta_buah_pepaya_california_jumbo_-1kg-1-5kg-buah-_full01_koi1gxuq.jpg?output-format=webp",
+    "name": "Pepaya California Jumbo",
+    "price": "Rp30.000",
+    "description": "Netto (1Kg-1.5Kg/buah)"
+  },
+{
+    "id": 44,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/102/MTA-148317860/no_brand_mixed_vegetables_4-way_greenpick_500gr_sayuran_campur_beku_4_jenis_full02_chy5cdbo.jpg?output-format=webp",
+    "name": "Mixed Vegetables 4-Way Greenpick",
+    "price": "Rp30.000",
+    "description": "500 g Sayuran Campur Beku 4 Jenis"
+  }
+]

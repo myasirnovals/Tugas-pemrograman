@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//82/MTA-3007511/regal_biskuit-marie-regal--250-g-_full02.jpg?w=174",
+    "name": "Regal Marie Biskuit",
+    "price": "Rp23.400",
+    "description": "Biskuit 230 g"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-168237915/indofood_kitchen_festival_-_mystery_item_-_aa_full01_j3ra7155.jpg?w=174",
+    "name": "Kitchen Festival - AA",
+    "price": "Rp19.110",
+    "description": "Mystery Item"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-2649558/roma_roma_kelapa_biskuit_300_g_full08_cig9zibi.jpeg?w=174",
+    "name": "Roma Kelapa Biskuit",
+    "price": "Rp8.300",
+    "description": "Biskuit 300 g"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/UK-0057125/pocky_pocky_chocolate_stick_biscuit_-47_g-_full08_tvko6262.jpeg?w=174",
+    "name": "Pocky Chocolate Stick",
+    "price": "Rp7.800",
+    "description": "Biskuit 47 g"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-1095526/oreo_oreo_biskuit_vanilla_regular_119-6_g_full13_bizsq83u.jpeg?w=174",
+    "name": "Oreo Vanilla Regular",
+    "price": "Rp9.100",
+    "description": "Biskuit"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-30109863/nabati_nabati_coklat_wafer_-300_g-_full05_rmljyh7b.jpg?w=174",
+    "name": "Nabati Coklat Wafer",
+    "price": "Rp28.500",
+    "description": "Wafer Kaleng 287 g"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-5565886/gery_gery_salut_malkist_coklat_family_pack_-110_g-_full03_e5va9b5f.png?w=174",
+    "name": "Gery Salut Malkist Coklat",
+    "price": "Rp7.000",
+    "description": "Wafer Coklat [100 g]"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-4384016/delfi_delfi_chic_choc_cokelat_biskuit_-40_g-_2_pcs-_full04_ugwr1nk4.jpeg?w=174",
+    "name": "Delfi Chic Choc Coklate",
+    "price": "Rp15.000",
+    "description": "Biskuit 40 g [2 pcs]"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-3713332/calbee_calbee_japota_happy_honey_butter_keripik_-68_g-_full04_ctgiejnk.png?w=174",
+    "name": "Calbee Japota Happy Honey",
+    "price": "Rp9.100",
+    "description": "Butter Keripik 68 g"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-1023617/ritz_ritz_cracker_-300_g-_full06_guhhybbx.jpeg?w=174",
+    "name": "Ritz Biskuit Original Box",
+    "price": "Rp17.000",
+    "description": "Biskuit Box [300g]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-13294399/guribee_guribee_bbq_balado_-65_g-__full03_rwwuvrez.jpeg?w=174",
+    "name": "Guribee BBQ Balado",
+    "price": "Rp7.100",
+    "description": "Keripik Singkong [65 g/1 pcs]"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-2793718/kitkat_kitkat_4_fingers_wafer_cokelat_-35_g-_full12_xsvic4r.jpeg?w=174",
+    "name": "KitKat 4 Fingers Wafer Coklate",
+    "price": "Rp8.700",
+    "description": "Wafer Coklate [35 g]"
+  }
+]

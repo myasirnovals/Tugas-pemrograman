@@ -1,27 +1,14 @@
-/**
- * Program: doubleLinkedList.h
- * Author: kelompok
- * Kelas: A
- * Deskripsi: Header file dari prototype double linked list
- * Tanggal: -
- */
-
 #include "../lib/doubleLinkedList.h"
 
-// Konstruktor
 void CreateList(List *L) {
     First(*L) = Nil;
 }
 
-// Alokasi dan De-Alokasi
 address Alokasi(infoType X) {
-    // kamus
     address newNode;
 
-    // alokasi
     newNode = (ElmList *) malloc(sizeof(ElmList));
 
-    // algoritma
     Info(newNode) = X;
     Next(newNode) = Nil;
     Prev(newNode) = Nil;
@@ -33,82 +20,61 @@ void Dealokasi(address P) {
     free(P);
 }
 
-// Kelompok menu sisip
 void SisipDepan(List *L, infoType X) {
-    // kamus
     address newNode;
 
-    // alokasi
     newNode = Alokasi(X);
 
-    // algoritma
     if (newNode != Nil) {
-        // memasukan elemen x kedalam node baru
         Info(newNode) = X;
 
-        // set node baru prev dan next
         Prev(newNode) = First(*L);
         Next(newNode) = First(*L);
 
-        // pindahkan first ke node baru
         First(*L) = newNode;
     }
 }
 
 void SisipTengah(List *L, infoType X, infoType elemen) {
-    // kamus
     address newNode, current, after;
     boolean ketemu;
 
-    // alokasi
     newNode = Alokasi(X);
 
-    // algoritma
     current = First(*L);
 
     ketemu = tidak;
     while (Next(current) != Nil && !ketemu) {
         if (Info(current) == elemen) {
-            // set node after dengan next dari current
             after = Next(current);
 
-            // next daru current tunjuk ke node baru
             Next(current) = newNode;
 
-            // set node baru prev dan next
             Prev(newNode) = current;
             Next(newNode) = after;
 
-            // set node after dengan prev ke node baru
             Prev(after) = newNode;
 
-            // ubah value untuk keluar dari loop
             ketemu = ya;
         }
 
-        // increment loop
         current = Next(current);
     }
 
     if (Next(current) == Nil && Info(current) == elemen) {
-        // jika elemen yang ingin disisipkan nya ketemu di akhir node
         SisipBelakang(L, X);
 
         ketemu = ya;
     } else if (ketemu == false) {
-        // jika elemen yang ingin disisipkan nya tidak ketemu
         printf("\nError: data tidak ditemukan\n");
     }
 }
 
 void SisipBelakang(List *L, infoType X) {
-    // kamus
     address newNode, current;
 
-    // alokasi
     newNode = Alokasi(X);
 
-    // algoritma
     current = First(*L);
 
     if (newNode != Nil) {
@@ -123,10 +89,8 @@ void SisipBelakang(List *L, infoType X) {
 
 // Kelompok menu hapus
 void HapusDepan(List *L, infoType *X) {
-    // kamus
     address delNode;
 
-    // algoritma
     if (!ListEmpty(*L)) {
         delNode = First(*L);
         First(*L) = Next(First(*L));
@@ -141,11 +105,9 @@ void HapusDepan(List *L, infoType *X) {
 }
 
 void HapusTengah(List *L, infoType *X, infoType position) {
-    // kamus
     address delNode, current, after, before;
     int i;
 
-    // algoritma
     if (!ListEmpty(*L)) {
         if (position == 1) {
             HapusDepan(L, X);
@@ -188,10 +150,8 @@ void HapusTengah(List *L, infoType *X, infoType position) {
 }
 
 void HapusBelakang(List *L, infoType *X) {
-    // kamus
     address delNode, before, current;
 
-    // algoritma
     current = First(*L);
 
     if (!ListEmpty(*L)) {
@@ -215,7 +175,6 @@ void HapusBelakang(List *L, infoType *X) {
     }
 }
 
-// prosedur cetak list
 void CetakList(List L) {
     address current;
 
@@ -234,7 +193,6 @@ void CetakList(List L) {
     }
 }
 
-// operasi lain yang dapat membantu dalam pembuatan ADT Double linked list
 boolean ListEmpty(List L) {
     if (First(L) == Nil) {
         return true;
@@ -244,10 +202,8 @@ boolean ListEmpty(List L) {
 }
 
 address CariElm(List L, infoType X) {
-    // kamus
     address current;
 
-    // algoritma
     current = First(L);
     while (current != Nil) {
         if (Info(current) == X) {
@@ -261,11 +217,9 @@ address CariElm(List L, infoType X) {
 }
 
 int jumlahElemen(List L) {
-    // kamus
     address Current;
     int i;
 
-    // algoritma
     Current = First(L);
 
     i = 0;
