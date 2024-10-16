@@ -1,0 +1,46 @@
+# Project: Tugas7Sesi2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o persegi.o segitiga.o array.o array_1.o array_2.o array_count.o
+LINKOBJ  = main.o persegi.o segitiga.o array.o array_1.o array_2.o array_count.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Tugas7Sesi2.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+persegi.o: persegi.cpp
+	$(CPP) -c persegi.cpp -o persegi.o $(CXXFLAGS)
+
+segitiga.o: segitiga.c
+	$(CPP) -c segitiga.c -o segitiga.o $(CXXFLAGS)
+
+array.o: array.c
+	$(CPP) -c array.c -o array.o $(CXXFLAGS)
+
+array_1.o: array_1.c
+	$(CPP) -c array_1.c -o array_1.o $(CXXFLAGS)
+
+array_2.o: array_2.c
+	$(CPP) -c array_2.c -o array_2.o $(CXXFLAGS)
+
+array_count.o: array_count.c
+	$(CPP) -c array_count.c -o array_count.o $(CXXFLAGS)

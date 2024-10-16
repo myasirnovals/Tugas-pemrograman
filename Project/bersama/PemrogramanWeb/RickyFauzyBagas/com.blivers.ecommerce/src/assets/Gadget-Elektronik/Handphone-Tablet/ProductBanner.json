@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-159087024/samsung_samsung_galaxy_a55_5g_8-128_8-256_12-256_gb_ram_8_12_rom_256_8gb_12gb_256gb_hp_smartphone_garansi_resmi_full01_vz3pp0qp.jpeg?w=176",
+    "name": "Samsung Galaxy A55 5G",
+    "price": "Rp6.499.000",
+    "description": "8/128 8/256 12/256 GB RAM 8 12 ROM 256 8GB 12GB 256GB Garansi Resmi"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/94/MTA-133522447/vivo_vivo_v29_-8-8gb_extended_ram-256gb_rom-_-_50mp_ois_ultra-sensing_camera-_aura_light_portrait-_80w_flashcharge_full01_js1hh2wk.jpg?w=176",
+    "name": "vivo V29",
+    "price": "Rp5.999.000",
+    "description": "(8+8GB Extended RAM/256GB ROM) - 50MP OIS Ultra-Sensing Camera, Aura Light Portrait, 80W FlashCharge"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/90/MTA-154712024/xiaomi_xiaomi_redmi_13c_8-256gb_garansi_resmi_tam_full01_cc921868.jpg?w=176",
+    "name": "Xiaomi Redmi 13c",
+    "price": "Rp1.734.000",
+    "description": "8/256Gb Garansi Resmi Tam"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-161295821/huawei_huawei_watch_fit_3_smartwatch_-_ultra-slim_bezel-free_design_-_1-82-_amoled_display_-_all-round_fitness_management_-_up_to_10-days_battery_life_full05_ivbcuqgy.jpeg?w=176",
+    "name": "HUAWEI WATCH FIT 3 Smartwatch",
+    "price": "Rp2.299.000",
+    "description": "Ultra-Slim Bezel-Free Design | 1.82 AMOLED Display | All-Round Fitness Management"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-140685570/samsung_samsung_galaxy_tab_a9-_-8-128gb-_full18_d8plhhqd.jpeg?w=176",
+    "name": "Samsung Galaxy Tab A9+",
+    "price": "Rp4.499.000",
+    "description": "[8/128GB]"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-166537099/huawei_huawei_matepad_11-5-s_papermatte_edition_tablet_-8-256gb-_-_nearlink_accessories_-_gopaint_-_pc_level_wps_full08_rnizhped.jpeg?w=176",
+    "name": "HUAWEI MatePad 11.5'S PaperMatte Edition Tablet",
+    "price": "Rp8.299.000",
+    "description": "[8+256GB] | NearLink Accessories | GoPaint | PC Level WPS"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/94/MTA-160640714/tecno_tecno_spark_10_8-128gb_garansi_resmi_full01_cwd45wxi.jpg?w=176",
+    "name": "Tecno Spark 10",
+    "price": "Rp1.345.000",
+    "description": "8/128GB Garansi Resmi"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-154955800/xiaomi_official_poco_x6_-_powerful_snapdragon-_7s_gen_2_fiow_amoled_crystalres_120_hz_64mp_triple_camera_dengan_ois_full01_flqjos9.jpg?w=176",
+    "name": "Official POCO X6",
+    "price": "Rp3.999.000",
+    "description": "Powerful Snapdragon® 7s Gen 2 FIow AMOLED CrystalRes 120 Hz 64MP triple camera dengan OIS"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-154955687/xiaomi_official_poco_m6_pro_-_8-256gb_-_120hz_flow_amoled_64mp_triple_camera_dengan_ois_67w_turbo_charging_full01_t4xodj8e.jpg?w=176",
+    "name": "Official POCO M6 Pro",
+    "price": "Rp2.999.000",
+    "description": "8+256GB | 120Hz Flow AMOLED 64MP triple camera dengan OIS 67W turbo charging"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-134607074/apple_iphone_15_full03_eyvhgvsj.jpeg?w=176",
+    "name": "iPhone 15",
+    "price": "Rp16.499.000",
+    "description": "Garansi Resmi"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-150250675/samsung_samsung_galaxy_a15_lte_smartphone_-8-128gb-_-_travel_adaptor_-25w-_wo_cable_full25_srkt4qq2.jpeg?w=176",
+    "name": "Samsung Galaxy A15 LTE",
+    "price": "Rp2.899.000",
+    "description": "Smartphone [8/128GB] + Travel Adaptor (25W) WO Cable"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/101/MTA-136714484/oppo_oppo_a58_8-128gb_garansi_resmi_-_bonus_full00_511B5829-A877-4B8B-B3E9-A560A8AA57FA.jpg?w=176",
+    "name": "OPPO A58",
+    "price": "Rp2.899.000",
+    "description": "8/128GB Garansi Resmi + Bonus"
+  },
+{
+    "id": 13,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-80677074/apple_ipad_-generasi_ke-10-_full24_c04cisxc.jpeg?w=176",
+    "name": "iPad",
+    "price": "Rp11.499.000",
+    "description": "(generasi ke-10)"
+  },
+{
+    "id": 14,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-157146822/samsung_samsung_galaxy_fit3_full27_lyaiineh.jpeg?w=176",
+    "name": "Samsung Galaxy Fit3",
+    "price": "Rp998.000",
+    "description": "Accurate Health Monitoring | Workout Detection | 1.6 AMOLED Display"
+  },
+{
+    "id": 15,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/107/MTA-163526885/xiaomi_xiaomi_redmi_note_13_pro_5g_12-512_8-256_gb_garansi_resmi_full27_k7jtar0s.jpg?w=176",
+    "name": "Xiaomi Redmi Note 13 Pro 5G",
+    "price": "Rp5.010.000",
+    "description": "12/512 8/256 GB Garansi Resmi"
+  },
+{
+    "id": 16,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/88/MTA-154701411/samsung_samsung_galaxy_s24_ultra_12-1tb_-upgrade_dari_12-512gb-_handphone_ai-_smartphone-_s_pen_full02_nw7v32po.jpg?w=176",
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": "Rp23.999.000",
+    "description": "12/512GB Garansi Resmi SEIN"
+  },
+{
+    "id": 17,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-159057274/samsung_samsung_galaxy_a35_5g_8-128_8-256_gb_ram_8_rom_128_256_gb_hp_smartphone_garansi_resmi_full01_oxdpufcu.jpg?w=176",
+    "name": "Samsung Galaxy A35 5G",
+    "price": "Rp5.298.000",
+    "description": "8/128 8/256 GB RAM 8 ROM 128 256 GB HP Smartphone Garansi Resmi"
+  },
+  {
+    "id": 18,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/107/MTA-160337995/infinix_infinix_note_40_pro_8-256gb_-_up_to_16gb_extended_ram_-_helio_g99_-_6-78-_fhd-_3d_curved_amoled__-_70_watt_fast_charge_-_nfc_full09_o09113x9.jpg?w=176",
+    "name": "Infinix Note 40 PRO",
+    "price": "Rp3.499.000",
+    "description": "8/256GB - Up to 16GB Extended RAM - Helio G99 - 6.78 FHD+ 3D Curved Amoled - 70 Watt Fast Charge - NFC"
+  }
+]

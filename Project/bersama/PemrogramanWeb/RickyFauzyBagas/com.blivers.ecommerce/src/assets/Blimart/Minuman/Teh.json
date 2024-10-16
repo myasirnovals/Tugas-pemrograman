@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//100/MTA-10959092/sari_murni_medan_-_sari_murni_68143150_teh_kantong_bundar_-1-8_g-_20_pcs-_full01_mmqpcs26.jpg?output-format=webp",
+    "name": "SARI MURNI Teh Kantong Bundar",
+    "price": "Rp5.640",
+    "description": "Teh Celup [1.8 g / 20 pcs]"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-6771288/sariwangi_sariwangi_teh_hitam_asli_1-85_g_-_50_pcs_full17_mreatrly.jpeg?output-format=webp",
+    "name": "Sariwangi Teh Hitam Asli",
+    "price": "Rp13.200",
+    "description": "Teh Celup [1.85 g / 50 Pcs]"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/MTA-70032151/teh_pucuk_teh_pucuk_harum_350_ml_-_karton_-_--_khusus_gojek-grab_full01_bc5a9c43.jpg?output-format=webp",
+    "name": "TEH PUCUK HARUM",
+    "price": "Rp70.000",
+    "description": "Minuman Botol 350 ML [ 1 KARTON ]"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-101213634/a_teh_hijau_-_teh_herbal_-_mr-_detox_slimming_tea_full09_d19e1ec9.jpg?output-format=webp",
+    "name": "Teh Hijau - Teh Herbal",
+    "price": "Rp29.999",
+    "description": "Teh Celup"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//100/MTA-72337429/gopek_teh-gopek-celup-25_full01.jpg?output-format=webp",
+    "name": "Teh Gopek",
+    "price": "Rp9.900",
+    "description": "Teh Celup"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-21481152/frestea_frestea_apple_minuman_teh_rasa_apel_-500_ml-_full06_quz8qrfx.jpeg?output-format=webp",
+    "name": "Frestea Apple",
+    "price": "Rp6.100",
+    "description": "Minuman Teh Rasa Apel [500 mL]"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/106/MTA-156753934/javana_javana_teh_gula_batu_minuman_teh_-350_ml-_full03_ml6c4lx2.jpg?output-format=webp",
+    "name": "Javana Teh Gula Batu",
+    "price": "Rp3.300",
+    "description": "Minuman Teh [350 mL]"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//91/MTA-4141954/teh_cap_poci_teh_sosro_25-s_poci_vanila_bag_full02.jpg?output-format=webp",
+    "name": "Teh Cap Poci Vanila",
+    "price": "Rp6.936",
+    "description": " Teh Celup [25 Bags]"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-6792226/teh-cap-poci_teh-cap-poci-jasmine-tea-teh-celup--25-bags-_full09.jpg?output-format=webp",
+    "name": "Teh Cap Poci Jasmine Tea",
+    "price": "Rp8.670",
+    "description": "Teh Celup [25 Bags]"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-72228923/ultra_jaya_ultra_teh_kotak_jasmine_-300_ml-_full05_f7grnyrr.jpeg?output-format=webp",
+    "name": "Ultra Teh Kotak Jasmine",
+    "price": "Rp4.100",
+    "description": "Teh Kotak [300 ml]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/93/MTA-121426094/javana_javana_teh_original_melati_-350_ml-_full02_csgwjrno.jpg?output-format=webp",
+    "name": "Javana Teh Original Melati",
+    "price": "Rp3.600",
+    "description": "Minuman Teh [350 mL]"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-21481107/frestea_frestea_green_honey_minuman_teh_hijau_rasa_madu_-350_ml-_full06_uf0d6xfy.jpeg?output-format=webp",
+    "name": "Frestea Green Honey",
+    "price": "Rp4.200",
+    "description": "Minuman Teh Hijau Rasa Madu [350 mL]"
+  }
+]

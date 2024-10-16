@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/95/MTA-156411580/rose_brand_rose_brand_minyak_goreng_cup_-220_ml-_48_pcs-_full02_o0maxozx.jpg?w=174",
+    "name": "Rose Brand Minyak Goreng",
+    "price": "Rp3.900",
+    "description": "Cup [220 mL/1 Pcs]"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//87/MTA-8710051/bertolli_bertolli_extra_virgin_olive_oil_-100_ml-_full02_hubni404.jpg?w=174",
+    "name": "Bertolli Extra Virgin Olive Oil",
+    "price": "Rp40.700",
+    "description": "Bottle [100 mL]"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-0473988/sania_sania_premium_minyak_goreng_-2_liter-_pouch-_full07_plsbpa01.jpeg?w=174",
+    "name": "Sania Premium",
+    "price": "Rp33.500",
+    "description": "Pouch [2 L]"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-0474034/fortune_fortune_minyak_goreng_pouch_-1000_ml-_full03_e5ey3z7y.jpeg?w=174",
+    "name": "Fortune Minyak Goreng",
+    "price": "Rp17.300",
+    "description": "Pouch [1000 mL]"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-2997096/rose_brand_rose_brand_minyak_goreng_pouch_-2000_ml-_full03_ivh07t0x.jpeg?w=174",
+    "name": "Rose Brand Minyak Goreng",
+    "price": "Rp33.400",
+    "description": "Pouch [2000 mL]"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-0256645/mazola_mazola-canola-oil--450-ml--135093_full03.jpg?w=174",
+    "name": "Mazola Canola Oil",
+    "price": "Rp51.000",
+    "description": "Minyak Goreng [ 450 mL]"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//91/MTA-40745042/ikan_dorang_ikan_dorang_minyak_kelapa_pouch_1900_ml_full01_ldyn4cna.jpg?w=174",
+    "name": "Ikan Dorang Minyak Kelapa",
+    "price": "Rp56.000",
+    "description": "Pouch [1900 mL]"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-3007106/cap-tawon_tawon-minyak-goreng--2-l--pouch-_full03.jpg?w=174",
+    "name": "Tawon Minyak Goreng",
+    "price": "Rp33.000",
+    "description": "Pouch [2 L]"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//102/MTA-6335994/gurih_gurih_minyak_goreng_pouch_1_l_full02_kn2tmlpi.jpg?w=174",
+    "name": "Gurih Minyak Goreng ",
+    "price": "Rp16.500",
+    "description": "Pouch [1 L]"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-3761802/sovia_sovia_minyak_goreng_-1_l-_kemasan_pouch-_full04_oun1h1da.jpeg?w=174",
+    "name": "Sovia Minyak Goreng",
+    "price": "Rp15.750",
+    "description": "Pouch [1 L]"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-3656671/sania_sania_royale_minyak_goreng_-2-000_ml-_full04_nv9k9j11.jpeg?w=174",
+    "name": "Sania Royale Minyak Goreng",
+    "price": "Rp33.500",
+    "description": "Minyak Goreng [2000 mL]"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-0474029/fortune_fortune_minyak_goreng_pouch_-2000_ml-_full03_law0bcb9.jpeg?w=174",
+    "name": "Fortune Minyak Goreng",
+    "price": "Rp34.500",
+    "description": "Pouch [2000 mL]"
+  }
+]

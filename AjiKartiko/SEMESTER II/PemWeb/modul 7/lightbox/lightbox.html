@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kotak melayang untuk gambar</title>
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+
+<body>
+    <h1>Demonstrasi Lightbox untuk menampilkan gambar</h1>
+    <p>
+        Dalam demo ini akan menampilkan gambar dalam sebuah
+        kotak yang dibuat secara otomatis begitu gambar diklik
+    </p>
+
+    <br>
+
+    <div id="shadowing"></div>
+    <div id="box">
+        <div id="boxcontent" onclick="closebox()"></div>
+        <div id="boxtitle"></div>
+    </div>
+
+    <p>
+        Untuk menampilkan gambar kedalam kotak Lightbox,
+        klik thumbnail gambar dibawah ini...
+    </p>
+    <img src="/images/thumb-sea.jpg" width="150" height="150" onclick="openbox('/images/thumb-sea.jpg');">
+    <img src="/images/goldisle.jpg" width="150" height="150" onclick="openbox('/images/goldisle.jpg');">
+    <img src="/images/greenhouse.jpg" width="150" height="150" onclick="openbox('/images/greenhouse.jpg');">
+    <br>
+    <hr>
+    <p>(c) 2008 <a href="http://www.xul.fr/en/" target="_parent">xul.fr</a></p>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-166437694/xiaomi_xiaomi_a27i_monitor_27_inch_fhd_ips_hdmi_100hz_full01_ql4sbc5i.jpg?w=176",
+    "name": "Xiaomi A27i",
+    "price": "Rp1.599.000",
+    "description": "Monitor 27 inch FHD IPS HDMI 100Hz"
+  },
+  {
+    "id": 2,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//95/MTA-36034834/logitech_logitech_signature_m650_l_mouse_wireless_bluetooth_silent_full_size_graphite_full01_fjw4p2hc.jpg?w=176",
+    "name": "Logitech Signature M650 L",
+    "price": "Rp599.000",
+    "description": "Mouse Wireless Bluetooth Silent Full Size Graphite"
+  },
+  {
+    "id": 3,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-140317979/axioo_axioo_mybook_hype_5_notebook_-_grey_-_i5-1035g4_-_8gb_-_512gb_ssd_-_uma_-_14-_fhd_-_dos_-_full17_p9x524fe.jpeg?w=176",
+    "name": "Axioo Mybook Hype 5 Notebook",
+    "price": "Rp5.599.000",
+    "description": "Grey ( i5-1035G4 / 8GB / 512GB SSD / UMA / 14 FHD / dos )"
+  },
+  {
+    "id": 4,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-120340644/lenovo_lenovo_qhd_lenovo_g34w-30_full02_n1pjib53.jpeg?w=176",
+    "name": "Lenovo G34w-30",
+    "price": "Rp6.280.000",
+    "description": "34 WQHD IPS 170Hz 0.5ms Gaming Monitor"
+  },
+  {
+    "id": 5,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-17548812/mcafee_software_antivirus_mcafee_total_protection_1_device_3_year_full01_ooyco6t5.jpg?w=176",
+    "name": "Software Antivirus McAfee",
+    "price": "Rp675.000",
+    "description": "Protection 1 Device 3 Year"
+  },
+  {
+    "id": 6,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-8686666/hp_hp_682_tri-color_original_ink_advantage_cartridge_full11_dv9i0o7b.png?w=176",
+    "name": "HP 682",
+    "price": "Rp179.000",
+    "description": "Tri-color Original Ink Advantage Cartridge"
+  },
+  {
+    "id": 7,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/109/MTA-164881567/digital_alliance_keyboard_gaming_digital_alliance_mechanical_rgb_anti_ghosting_detachable_type-c_104_keys_full_size_meca_elite_x_full01_m0d65a1k.jpg?w=176",
+    "name": "Keyboard Gaming Digital Alliance",
+    "price": "Rp549.000",
+    "description": "Mechanical RGB Anti Ghosting Detachable Type-C 104 Keys Full Size Meca Elite X"
+  },
+  {
+    "id": 8,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/109/MTA-159709572/br-m036969-02809_rexus-headset-bluetooth-wireless-m2_full07-6e0cc277.jpg?w=176",
+    "name": "Rexus Headset",
+    "price": "Rp249.000",
+    "description": "Headset Bluetooth Wireless M2"
+  },
+  {
+    "id": 9,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//102/MTA-44577192/fantech_fantech_chief_ii_hg20_rgb_space_edition_gaming_headset_full01_jr955fkv.jpg?w=176",
+    "name": "Fantech CHIEF II HG20",
+    "price": "Rp349.000",
+    "description": "RGB Space Edition Gaming Headset"
+  },
+  {
+    "id": 10,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//catalog-image/104/MTA-113898218/tp-link_tp-link_tl-wn725n_wireless_n_usb_adapter_-150_mbps-_full14_nbp1fdy2.jpg?w=176",
+    "name": "TP-LINK TL-WN725N",
+    "price": "Rp99.000",
+    "description": "Wireless N USB Adapter 150Mbps"
+  },
+  {
+    "id": 11,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-158658135/sony_ps5_dualsense_wireless_controller_white_-_stick_ps5_full02_n1r4515v.jpg?w=176",
+    "name": "PS5 DualSense",
+    "price": "Rp984.000",
+    "description": "Wireless Controller / Stick PS5"
+  },
+  {
+    "id": 12,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-144681394/asus_asus_a416mao-fhd453_notebook_-_slate_grey_-_n4020_-_8gb_-_512gb_ssd_-_uma_-_14-_fhd_-_win11_-_ohs_-_full02_m914gs3b.jpeg?w=176",
+    "name": "ASUS A416MAO-FHD453 Notebook",
+    "price": "Rp5.099.000",
+    "description": "Slate Grey ( N4020 / 8GB / 512GB SSD / UMA / 14 FHD / Win11 / OHS )"
+  },
+{
+    "id": 13,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-66161344/nintendo_switch_nintendo_switch_-oled_model-_white_set_full01_ixicg5aw.jpg?w=176",
+    "name": "Nintendo Switch (OLED Model)",
+    "price": "Rp3.918.000",
+    "description": "White Set"
+  },
+{
+    "id": 14,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/111/MTA-156775944/andaseat_andaseat_luna_l_series_premium_kursi_gaming_chair_-_black-blue_full02_mybjpzyf.jpg?w=176",
+    "name": "Anda Seat Luna L Series Premium",
+    "price": "Rp2.500.000",
+    "description": "Kursi Gaming Chair - Black-Blue"
+  },
+{
+    "id": 15,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/108/MTA-165946067/teamgroup_teamgroup_memory_notebook_elite_ddr5_16gb_5200mhz_full01_sdk55iff.jpg?w=176",
+    "name": "TEAMGROUP MEMORY SODIM",
+    "price": "Rp845.000",
+    "description": "DDR5 16GB 5200Mhz"
+  },
+{
+    "id": 16,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-155984178/asus_asus_e1404ga-fhd351_notebook_-_mixed_black_-_i3-n305_-_8gb_-_512gb_ssd_-_uma_-_14-_fhd_tn_-_win11_-_ohs_-_full10_gy6a4qpd.jpeg?w=176",
+    "name": "ASUS E1404GA-FHD351 Notebook",
+    "price": "Rp6.699.000",
+    "description": "Mixed Black ( I3-N305 / 8GB / 512GB SSD / UMA / 14 FHD TN / Win11 / OHS )"
+  },
+{
+    "id": 17,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-142196045/lenovo_lenovo_ideapad_3_14iau7_82rj00d0id_notebook_-_abyss_blue_-_i3-1215u_-_8gb_-_512gb_ssd_-_uma_-_14-_fhd_-_win11_-_ohs_-_full05_q14lbopf.jpeg?w=176",
+    "name": "Lenovo IdeaPad 3 14IAU7 82RJ00D0ID Notebook",
+    "price": "Rp7.199.000",
+    "description": "Abyss Blue ( i3-1215U / 8GB / 512GB SSD / UMA / 14 FHD / Win11 / OHS )"
+  },
+{
+    "id": 18,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/MTA-4785080/western_digital_western_digital_wd_new_my_passport_2tb_harddisk_eksternal_usb_3-2_blue_sky_free_pouch_full08_p1f3na1l.jpeg?w=176",
+    "name": "Western Digital WD New My Passport",
+    "price": "Rp1.799.000",
+    "description": "2TB Harddisk Eksternal USB 3.2 Blue Sky Free Pouch"
+  },
+{
+    "id": 19,
+    "imageurl": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//96/MTA-21981228/steelseries_steelseries_qck_edge_cloth_large_-_gaming_mouse_pad_full01_debipimw.jpg?w=176",
+    "name": "Steelseries Qck EDGE Cloth Large",
+    "price": "Rp350.000",
+    "description": "Gaming Mouse Pad"
+  }
+]

@@ -1,10 +1,10 @@
 import NavbarComponent from "../components/NavbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import Carousel from "react-multi-carousel";
-import Sembako from "../assets/Blimart/Makanan/Sembako.json";
-import MieInstan from "../assets/Blimart/Makanan/MieInstan.json";
-import Snack from "../assets/Blimart/Makanan/Snack.json";
-import DataMakanan from "../assets/Blimart/Makanan/DataMakanan.json";
+import Kopi from "../assets/Blimart/Minuman/Kopi.json";
+import Teh from "../assets/Blimart/Minuman/Teh.json";
+import Susu from "../assets/Blimart/Minuman/Susu.json";
+import DataMinuman from "../assets/Blimart/Minuman/DataMinuman.json";
 import * as Icon from "react-bootstrap-icons";
 
 const MinumanPage = () => {
@@ -31,83 +31,16 @@ const MinumanPage = () => {
     <div>
       <NavbarComponent />
       <div responsive={responsive} className="container my-3">
-        <h5 className="container my-2">Sembako</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Sembako.webp" class="card-img-top rounded-1" alt="Banner" />
-          </div>
-          {Sembako.map((Sembako) => {
-            return (
-              <div className="card mx-2" key={Sembako.id}>
-                <img src={Sembako.imageurl} class="card-img-top" alt="Product" />
-                <div className="card-body">
-                  <p className="card-title">{Sembako.name}</p>
-                  <p className="card-text text-secondary">{Sembako.price}</p>
-                  <p className="card-text">{Sembako.description}</p>
-                </div>
-                <button className="btn btn-primary">
-                  <Icon.CartPlus size={25} className="align-middle" />
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
-
-        <h5 className="container my-2">Mie Instan</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Mie Instan.webp" class="card-img-top rounded-1" alt="Banner" />
-          </div>
-          {MieInstan.map((MieInstan) => {
-            return (
-              <div className="card mx-2" key={MieInstan.id}>
-                <img src={MieInstan.imageurl} class="card-img-top" alt="Product" />
-                <div className="card-body">
-                  <p className="card-title">{MieInstan.name}</p>
-                  <p className="card-text text-secondary">{MieInstan.price}</p>
-                  <p className="card-text">{MieInstan.description}</p>
-                </div>
-                <button className="btn btn-primary">
-                  <Icon.CartPlus size={25} className="align-middle" />
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
-
-        <h5 className="container my-2">Snack</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Snack.webp" class="card-img-top rounded-1" alt="Banner" />
-          </div>
-          {Snack.map((Snack) => {
-            return (
-              <div className="card mx-2" key={Snack.id}>
-                <img src={Snack.imageurl} class="card-img-top" alt="Product" />
-                <div className="card-body">
-                  <p className="card-title">{Snack.name}</p>
-                  <p className="card-text text-secondary">{Snack.price}</p>
-                  <p className="card-text">{Snack.description}</p>
-                </div>
-                <button className="btn btn-primary">
-                  <Icon.CartPlus size={25} className="align-middle" />
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
-        <br />
-
         <div responsive={responsive} className="row row-cols-1 row-cols-md-4 g-4">
-          {DataMakanan.map((DataMakanan) => {
+          {DataMinuman.map((DataMinuman) => {
             return (
-              <div className="col-6 mt-4" key={DataMakanan.id}>
-                <div className="card">
-                  <img src={DataMakanan.imageurl} className="card-img-top" alt="Product" />
+              <div className="col-6 mt-4" key={DataMinuman.id}>
+                <div className="card h-100">
+                  <img src={DataMinuman.imageurl} className="card-img-top" alt="Product" />
                   <div className="card-body">
-                    <p className="card-title">{DataMakanan.name}</p>
-                    <p className="card-text text-secondary">{DataMakanan.price}</p>
-                    <p className="card-text">{DataMakanan.description}</p>
+                    <p className="card-title">{DataMinuman.name}</p>
+                    <p className="card-text fw-bold">{DataMinuman.price}</p>
+                    <p className="card-text">{DataMinuman.description}</p>
                   </div>
                   <button className="btn btn-primary">
                     <Icon.CartPlus size={25} className="align-middle" />
@@ -116,6 +49,70 @@ const MinumanPage = () => {
               </div>
             );
           })}
+        </div>
+        <br />
+
+        <div className="card mb-4">
+          <h4 className="mx-2 my-2">Product Kopi Terbaik</h4>
+          <Carousel className="px-2 py-1 my-4" responsive={responsive}>
+            {Kopi.map((Kopi) => {
+              return (
+                <div className="card h-100 mx-2" key={Kopi.id}>
+                  <img src={Kopi.imageurl} class="card-img-top" alt="Product" />
+                  <div className="card-body">
+                    <p className="card-title">{Kopi.name}</p>
+                    <p className="card-text fw-bold">{Kopi.price}</p>
+                    <p className="card-text">{Kopi.description}</p>
+                  </div>
+                  <button className="btn btn-primary">
+                    <Icon.CartPlus size={25} className="align-middle" />
+                  </button>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+
+        <div className="card mb-4">
+          <h4 className="mx-2 my-2">Product Teh Terbaik</h4>
+          <Carousel className="px-2 py-1 my-4" responsive={responsive}>
+            {Teh.map((Teh) => {
+              return (
+                <div className="card h-100 mx-2" key={Teh.id}>
+                  <img src={Teh.imageurl} class="card-img-top" alt="Product" />
+                  <div className="card-body">
+                    <p className="card-title">{Teh.name}</p>
+                    <p className="card-text fw-bold">{Teh.price}</p>
+                    <p className="card-text">{Teh.description}</p>
+                  </div>
+                  <button className="btn btn-primary">
+                    <Icon.CartPlus size={25} className="align-middle" />
+                  </button>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+
+        <div className="card">
+          <h4 className="mx-2 my-2">Product Susu Terbaik</h4>
+          <Carousel className="px-2 py-1 my-4" responsive={responsive}>
+            {Susu.map((Susu) => {
+              return (
+                <div className="card h-100 mx-2" key={Susu.id}>
+                  <img src={Susu.imageurl} class="card-img-top" alt="Product" />
+                  <div className="card-body">
+                    <p className="card-title">{Susu.name}</p>
+                    <p className="card-text fw-bold">{Susu.price}</p>
+                    <p className="card-text">{Susu.description}</p>
+                  </div>
+                  <button className="btn btn-primary">
+                    <Icon.CartPlus size={25} className="align-middle" />
+                  </button>
+                </div>
+              );
+            })}
+          </Carousel>
         </div>
       </div>
       <FooterComponent />

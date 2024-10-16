@@ -1,10 +1,8 @@
 import NavbarComponent from "../components/NavbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import Carousel from "react-multi-carousel";
-import Sembako from "../assets/Blimart/Makanan/Sembako.json";
-import MieInstan from "../assets/Blimart/Makanan/MieInstan.json";
-import Snack from "../assets/Blimart/Makanan/Snack.json";
-import DataMakanan from "../assets/Blimart/Makanan/DataMakanan.json";
+import ProductBanner from "../assets/Gadget-Elektronik/AlatElektronik/ProductBanner.json";
+import DataAlatElektronik from "../assets/Gadget-Elektronik/AlatElektronik/DataAlatElektronik.json";
 import * as Icon from "react-bootstrap-icons";
 
 const AlatElektronikPage = () => {
@@ -31,63 +29,18 @@ const AlatElektronikPage = () => {
     <div>
       <NavbarComponent />
       <div responsive={responsive} className="container my-3">
-        <h5 className="container my-2">Sembako</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Sembako.webp" class="card-img-top rounded-1" alt="Banner" />
+        <Carousel className="bg-ht px-2 py-2 my-1" responsive={responsive}>
+          <div className="card border-none h-100">
+            <img src="https://www.static-src.com/siva/asset/06_2023/Kategori-PEL-7.7-HICE.jpg?w=176" class="card-img-top rounded-2" alt="Banner" height={"100%"} />
           </div>
-          {Sembako.map((Sembako) => {
+          {ProductBanner.map((ProductBanner) => {
             return (
-              <div className="card mx-2" key={Sembako.id}>
-                <img src={Sembako.imageurl} class="card-img-top" alt="Product" />
+              <div className="card border-none h-100 mx-2" key={ProductBanner.id}>
+                <img src={ProductBanner.imageurl} class="card-img-top" alt="Product" />
                 <div className="card-body">
-                  <p className="card-title">{Sembako.name}</p>
-                  <p className="card-text text-secondary">{Sembako.price}</p>
-                  <p className="card-text">{Sembako.description}</p>
-                </div>
-                <button className="btn btn-primary">
-                  <Icon.CartPlus size={25} className="align-middle" />
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
-
-        <h5 className="container my-2">Mie Instan</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Mie Instan.webp" class="card-img-top rounded-1" alt="Banner" />
-          </div>
-          {MieInstan.map((MieInstan) => {
-            return (
-              <div className="card mx-2" key={MieInstan.id}>
-                <img src={MieInstan.imageurl} class="card-img-top" alt="Product" />
-                <div className="card-body">
-                  <p className="card-title">{MieInstan.name}</p>
-                  <p className="card-text text-secondary">{MieInstan.price}</p>
-                  <p className="card-text">{MieInstan.description}</p>
-                </div>
-                <button className="btn btn-primary">
-                  <Icon.CartPlus size={25} className="align-middle" />
-                </button>
-              </div>
-            );
-          })}
-        </Carousel>
-
-        <h5 className="container my-2">Snack</h5>
-        <Carousel className="px-2 py-1" responsive={responsive}>
-          <div className="card">
-            <img src="src/assets/Blimart/Banner/Snack.webp" class="card-img-top rounded-1" alt="Banner" />
-          </div>
-          {Snack.map((Snack) => {
-            return (
-              <div className="card mx-2" key={Snack.id}>
-                <img src={Snack.imageurl} class="card-img-top" alt="Product" />
-                <div className="card-body">
-                  <p className="card-title">{Snack.name}</p>
-                  <p className="card-text text-secondary">{Snack.price}</p>
-                  <p className="card-text">{Snack.description}</p>
+                  <p className="card-title">{ProductBanner.name}</p>
+                  <p className="card-text fw-bold">{ProductBanner.price}</p>
+                  <p className="card-text">{ProductBanner.description}</p>
                 </div>
                 <button className="btn btn-primary">
                   <Icon.CartPlus size={25} className="align-middle" />
@@ -99,15 +52,15 @@ const AlatElektronikPage = () => {
         <br />
 
         <div responsive={responsive} className="row row-cols-1 row-cols-md-4 g-4">
-          {DataMakanan.map((DataMakanan) => {
+          {DataAlatElektronik.map((DataAlatElektronik) => {
             return (
-              <div className="col-6 mt-4" key={DataMakanan.id}>
-                <div className="card">
-                  <img src={DataMakanan.imageurl} className="card-img-top" alt="Product" />
+              <div className="col-6 mt-4" key={DataAlatElektronik.id}>
+                <div className="card h-100">
+                  <img src={DataAlatElektronik.imageurl} className="card-img-top" alt="Product" />
                   <div className="card-body">
-                    <p className="card-title">{DataMakanan.name}</p>
-                    <p className="card-text text-secondary">{DataMakanan.price}</p>
-                    <p className="card-text">{DataMakanan.description}</p>
+                    <p className="card-title">{DataAlatElektronik.name}</p>
+                    <p className="card-text fw-bold">{DataAlatElektronik.price}</p>
+                    <p className="card-text">{DataAlatElektronik.description}</p>
                   </div>
                   <button className="btn btn-primary">
                     <Icon.CartPlus size={25} className="align-middle" />
@@ -121,6 +74,6 @@ const AlatElektronikPage = () => {
       <FooterComponent />
     </div>
   );
-}
+};
 
-export default AlatElektronikPage
+export default AlatElektronikPage;
