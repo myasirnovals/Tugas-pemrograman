@@ -1,0 +1,301 @@
+# soal nomor 1
+# Multiple linked list -> struktur array
+#                      -> ada rekursif (bilangan fibonaccy) dalam linked list
+
+## jawaban
+
+function AlokasiParent(T : TabInt) -> AddressParent
+{Kamus}
+    PP: AddressParent
+
+{Algoritma}
+    pp <- pointer of AddressParent malloc(sizeof(ElmParent))
+
+    if (PP != Nil) then
+
+        InfoParent(PP) <- T
+        NextParent(PP) <- Nil
+        NextChild(PP) <- Nil
+
+    end
+
+    -> PP
+
+
+function FiboRek(N: integer) -> integer
+{kamus}
+    -
+
+{Algoritma}
+    if (N <= 0 and N = 1) then
+        -> 1
+    else
+        -> FiboRek(N - 1) + FiboRek(N - 2);
+    end
+
+
+Prosedur PrintParent(in PP: AddressParent)
+{I.S: List tidak kosong}
+{F.S: Menampilkan data parent yang ada di list}
+{Kamus}
+    -
+
+{Algoritma}
+    if (PP != Nil)
+        PrintTabInt(InfoParent(PP))
+
+        output("Child:")
+
+        if (NextChild(PP) != Nil) then
+            PrintChild(NextChild(PP))
+        end
+
+        output("\n")
+
+        PrintParent(NextParent(PP))
+    end
+    
+# soal nomor 2
+# gambar struktur komplek (soalnya) -> mendesain struktur datanya
+#                                   -> kombinasi tumpukan (stack) dan antrian (queue)
+
+# gambaran
+# tumpukan 2: 1, 2, 3, 4, 5
+# tumpukan 1: 2, 3, 4, 6, 7, 8,
+
+## jawaban
+## 3 konsep yang bisa digunakan 
+
+## 1. array nested (boros memori)
+metode queue fifo dalam penghapusan
+1. head maju: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                H                          T
+    hapus        H                       T
+
+2. Tail mundur: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                H                          T
+    hapus       H                       T
+
+type Point: < abs, ods: integer>
+
+type Queue: < 
+                TabQueue: array[nMax + 1] of Point,
+                Head: address of integer,
+                Tail: address of integer
+            >
+            
+
+type Stack: <
+                TabStack: array[nMax + 1] of Queue,
+                Top: address of integer
+>
+
+Prosedur CreateQueue(in/out Q: Queue)
+{I.S: Sudah dibuat ADT Queue/ Queue belum terdefinisi}
+{F.S: Queue sudah terdefinisi dengan nilai sembarang = Nil}
+{Kamus}
+    -
+
+{Algoritma}
+    Head(Q) <- Nil
+    Tail(Q) <- Nil
+
+
+Prosedur CreateStack(in/out S: Stack)
+{I.S: Sudah dibuat ADT Stack/ Stack belum terdefinisi}
+{F.S: Stack sudah terdefinisi dengan nilai sembarang = Nil}
+{Kamus}
+    -
+
+{Algoritma}
+    Top(S) <- Nil
+
+
+Prosedur AddQueue(in/out Q: Queue, in P: Point)
+{I.S: Queue sudah terdefinisi dengan nilai sembarang mungkin masih kosong}
+{F.S: Queue sudah menambah 1 nilai yang di input dari parameter}
+{Kamus}
+    -
+{Algoritma}
+    if (not QueueIsEmpty) then
+        // data antrian tambah 1.2
+        // [1.2, , , , , ]
+        //   H
+        //   T
+
+        Head(Q)++
+
+        // cara panjang
+        Q.TabQueue[Head(Q)] <- P
+
+        // cara pendek
+        InfoQueue(Head(Q)) <- P
+
+        Tail(Q) <- Head(Q)
+    else
+        if (not QueueIsFull) then
+            // data antrian tambah 1.5
+            // [1.2, 1.5, , , , ]
+            //   H
+            //        T
+            Tail(Q)++
+
+            // cara panjang
+            Q.TabQueue[Tail(Q)] <- P
+
+            // cara pendek
+            InfoQueue(Tail(Q)) <- P
+        end
+    end
+
+
+
+Prosedur AddStack (in/out S: Stack, in TabQ: Queue) 
+{I.S: Stack sudah terdefinisi dengan nilai sembarang mungkin masih kosong}
+{F.S: Stack sudah menambah 1 nilai yang di input dari parameter}
+{Kamus}
+    -
+{Algoritma}
+
+    if (not StackIsFull) then
+        // tumpukan ke-1 : tab[1.2, , , , , ]
+        Top(S)++
+
+        // cara panjang
+        S.TabStack[Top(S)] <- TabQ
+
+        // cara pendek
+        Info(Top(S)) <- TabQ
+    end
+
+Prosedur DeleteQueueInStack (in S: Stack, in/out TabQ: Queue, in/out P: Point, in PosStack: integer, in ElmQueue: Point) 
+{I.S: Stack sudah terdefinisi dengan nilai sembarang dan stack tidak kosong}
+{F.S: elemen queue yang berada di stack ke-n terhapus}
+
+# gambaran
+# stack
+# TOP(S) tumpukan ke-5: tabQ[1, 2, 3, 4, 5, 6,]
+#        tumpukan ke-4: tabQ[1, 2, 3,]
+#        tumpukan ke-3: tabQ[4, 5, 6,]
+#        tumpukan ke-2: tabQ[1, 2, 6,]
+#        tumpukan ke-1: tabQ[3, 4, 5, 6,]
+
+# Proses
+#           TOP(S) tumpukan ke-5: tabQ[1, 2, 4, 5, 6,]
+#                  tumpukan ke-4: tabQ[1, 2, 3,]
+# BANTU(S)         tumpukan ke-3: tabQ[4, 5, 6,]
+#                  tumpukan ke-2: tabQ[1, 2, 6,]
+#                  tumpukan ke-1: tabQ[3, 4, 5, 6,]
+
+{Kamus}
+    Bantu, i: integer
+
+{Algoritma}
+    if (not StackIsEmpty) then
+        // lakukan proses looping
+        for (Bantu <- 1 to TOP(S)) do
+            if (S.TabStack[Bantu] = PosStack) then
+                // mencari elemen yang akan dihapus
+                for (Bantu <- 1 to Tail(Q)) do
+                    if (TabQ.TabQueue[Bantu] = ElmQueue) then
+                        P <- TabQ.TabQueue[Bantu]
+
+                        // lakukan pemunduran data dalam tab Q
+                        for (i <- TabQ.TabQueue[Bantu] to Tail(Q)) do
+                            TabQ.TabQueue[i] <- TabQ.TabQueue[i + 1]
+                        end
+
+                        Tail(Q)--
+                    end
+                end
+            end
+        end
+    end
+
+
+
+
+Prosedur CetakStack(in S: Stack, in TabQ: Queue)
+{I.S: Stack harus sudah terdapat data di dalamnya}
+{F.S: Menampilkan seluruh data yang berada di dalam Stack termasuk data Queue}
+
+# gambaran hasil
+# Tumpukan ke-n: N, ... N,
+# misalnya
+# Tumpukan ke-1: 1, 2, 3, 4, 5, 6,
+
+{Kamus}
+    i, j: integer
+
+{Algoritma}
+    if (not StackIsEmpty) then
+        // for pertama untuk mengakses tumpukan-nya
+        for (i <- 1 to Top(S)) do
+            output("Tumpukan ke-%d: ", i)
+
+            // for kedua untuk mengakses antrian-nya
+            for (j <- 1 to Tail(TabQ)) do
+                output("%d, " TabQ.TabQueue[j])
+            end
+
+            output("\n")
+        end
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 2. single linked list nested (rumit dalam alokasi)
+
+
+## 3. Array dan single linked list / single linked list dan array 
+
+
+
+
+
+
+
+
+# soal nomor 3
+# implementasi pohon biner -> notasi polis (Prefiks (awal), infiks (tengah) ,postfiks (akhir))
+#                          -> pohon
+#                          -> ADT menggunakan Push & Pop
+#                             --> buat algoritma untuk memeriksa bilangan atau operator
+
+## jawaban
+
+Prosedur Prefix(in T: Tree) 
+    if (T != Nil) then
+        cetakTree(T)
+        Prefix(left(T))
+        Prefix(right(T))
+    end
+
+
+
+Prosedur Infiks(Tree T) 
+    if (T != Nil) then
+        Prefix(left(T))
+        cetakTree(T)
+        Prefix(right(T))
+    end
+
+
+
+Prosedur Postfiks(Tree T) 
+    if (T != Nil) then
+        Prefix(left(T))
+        Prefix(right(T))
+        cetakTree(T)
+    end

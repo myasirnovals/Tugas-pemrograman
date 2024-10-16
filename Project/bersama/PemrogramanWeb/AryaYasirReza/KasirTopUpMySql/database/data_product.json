@@ -1,0 +1,72 @@
+[
+    {
+        "productId": "6671ddda45586",
+        "productName": "Monthly Pyroxenes x6,600",
+        "productPrice": "50000",
+        "productBonus": "2400 Pyroxenes",
+        "gameCode": "6671ddb496e58",
+        "image": "dataproduct6671ddda45591.png",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:54",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:19:54"
+    },
+    {
+        "productId": "6671ddeadc154",
+        "productName": "Monthly Pyroxenes x6,600",
+        "productPrice": "120000",
+        "productBonus": "1200 Pyroxenes per three month",
+        "gameCode": "6671ddb496e58",
+        "image": "dataproduct6671ddeadc161.png",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:10",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:10"
+    },
+    {
+        "productId": "6671ddf7a6490",
+        "productName": "Monthly Pyroxenes x6,1200",
+        "productPrice": "79000",
+        "productBonus": "1200 Pyroxenes",
+        "gameCode": "6671ddb496e58",
+        "image": "dataproduct6671ddf7a64a2.png",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:23",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:23"
+    },
+    {
+        "productId": "6671de07214a5",
+        "productName": "Monthly Pyroxenes x6,1200",
+        "productPrice": "99000",
+        "productBonus": "2400 Pyroxenes",
+        "gameCode": "6671ddb496e58",
+        "image": "dataproduct6671de07214b1.png",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:39",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:20:39"
+    },
+    {
+        "productId": "6671de266b3ce",
+        "productName": "60 genesis crystals",
+        "productPrice": "50000",
+        "productBonus": "Bonus 300 Genesis Crystal",
+        "gameCode": "6671ddc5c7314",
+        "image": "dataproduct6671de266b3da.jpg",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:21:10",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:22:19"
+    },
+    {
+        "productId": "6671de466f8e2",
+        "productName": "120 genesis crystals",
+        "productPrice": "120000",
+        "productBonus": "Bonus 1000 Genesis Crystal",
+        "gameCode": "6671ddc5c7314",
+        "image": "dataproduct6671de466f8ee.jpg",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:21:42",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:21:42"
+    },
+    {
+        "productId": "6671de5c2864c",
+        "productName": "120 genesis crystals",
+        "productPrice": "79000",
+        "productBonus": "Bonus 300 Genesis Crystal",
+        "gameCode": "6671ddc5c7314",
+        "image": "dataproduct6671de5c28657.jpg",
+        "created_at": "Wednesday, 19 \/ Jun \/ 2024  02:22:04",
+        "updated_at": "Wednesday, 19 \/ Jun \/ 2024  02:22:04"
+    }
+]

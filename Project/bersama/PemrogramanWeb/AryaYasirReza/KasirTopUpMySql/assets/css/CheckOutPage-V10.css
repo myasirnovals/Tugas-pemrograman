@@ -1,0 +1,35 @@
+@media (max-width: 425px) {
+  .DestopView {
+    display: none;
+  }
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #cc1eb9;
+  border-color: var(--pink);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #88147b;
+  border-color: #88147b;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #cc1eb9;
+  border-color: #88147b;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: #cc1eb9;
+  border-color: #88147b;
+  box-shadow: 0 0 0 .2rem rgba(38,143,255,.5);
+}
+
