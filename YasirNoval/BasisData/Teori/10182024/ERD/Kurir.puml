@@ -1,0 +1,38 @@
+@startuml
+
+entity "Sender" as e01 {
+    * sender_code <<PK>>
+    --
+    * sender's_name
+    * phone_number
+    sender's_description
+    --
+    *sender's_address
+}
+
+entity "Recipient" as e03 {
+    * recipient_code <<PK>>
+    --
+    * recipient's_name
+    * phone_number
+    --
+    * recipient's_address
+}
+
+entity "Package" as e02 {
+    * package_number <<PK>>
+    --
+    * package_name
+    * package_type
+    package_description
+    * package_weight
+    * package_dimension
+    --
+    * sender_code <<FK>>
+    * recipient_code <<FK>>
+}
+
+e01 }|---|{ e02
+e03 }|---|{ e02
+
+@enduml
