@@ -65,7 +65,7 @@ public class Lingkaran {
         diameter = 2 * jejari;
         return diameter;
     }
-    
+
     public void setDiameter(float diameter) {
         this.diameter = diameter;
     }
