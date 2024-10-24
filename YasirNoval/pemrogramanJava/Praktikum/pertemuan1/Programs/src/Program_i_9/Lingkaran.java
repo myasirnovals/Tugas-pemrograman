@@ -8,6 +8,7 @@ package Program_i_9;
  * berupa himpunan titik-titik yang berjarak sama ke sebuah titik pusat
  * <br>Dibawah <i>field</i> yang dimilikinya adalah jejari, yang menyatakan jarak
  * titik-titik itu ke titik pusat
+ *
  * @author Muhamad Yasir Noval
  */
 public class Lingkaran {
@@ -19,12 +20,13 @@ public class Lingkaran {
     /**
      * Konstruktor ini menyebabkan jejari lingkaran secara default bernilai 1
      */
-    Lingkaran(){
+    Lingkaran() {
         jejari = 1;
     }
 
     /**
      * Konstruktor ini digunakan jika nilai jejari dikustomisasi
+     *
      * @param jejari bertipe data float
      */
     Lingkaran(float jejari) {
@@ -33,6 +35,7 @@ public class Lingkaran {
 
     /**
      * Method ini digunakan untuk mengakses nilai jejari, dengan tipe kembalian float
+     *
      * @return nilai jejari
      */
     public float getJejari() {
@@ -41,10 +44,11 @@ public class Lingkaran {
 
     /**
      * Method ini digunakan untuk mengubah nilai jejari, dengan tipe kembalian void.
+     *
      * @param jejari nilai jejari lingkaran
-     * <br> Masukan nilai <b>float</b> jejari pada parameter method ini.
-     * <br> Contoh: Lingkaran myLink = new Lingkaran();
-     * <br>         float l = mylink.setJejari(5);
+     *               <br> Masukan nilai <b>float</b> jejari pada parameter method ini.
+     *               <br> Contoh: Lingkaran myLink = new Lingkaran();
+     *               <br>         float l = mylink.setJejari(5);
      */
     public void setJejari(float jejari) {
         this.jejari = jejari;
@@ -52,6 +56,7 @@ public class Lingkaran {
 
     /**
      * Method ini digunakan untuk menghitung nilai diameter, dengan tipe kembalian float.
+     *
      * @return float diameter
      * <br> Contoh : Lingkaran myLink = new Lingkaran(5);
      * <br>          float l = mylink.getDiameter();
@@ -60,18 +65,20 @@ public class Lingkaran {
         diameter = 2 * jejari;
         return diameter;
     }
-
+    
     public void setDiameter(float diameter) {
         this.diameter = diameter;
     }
 
     /**
      * Method ini digunakan untuk menghitung nilai keliling lingkaran, dengan tipe kembalian double.
+     *
      * @return double keliling
      * <br> Contoh : Lingkaran myLink = new Lingkaran(5);
      * <br>          double l = mylink.getKeliling();
      */
     public double getKeliling() {
+        keliling = 2 * Math.PI * jejari;
         return keliling;
     }
 
@@ -81,6 +88,7 @@ public class Lingkaran {
 
     /**
      * Method ini digunakan untuk menghitung nilai luas lingkaran, dengan tipe kembalian double.
+     *
      * @return double luas
      * <br> Contoh : Lingkaran myLink = new Lingkaran(5);
      * <br>          double l = mylink.getLuas();
