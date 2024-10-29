@@ -27,4 +27,52 @@ public class PrivateElevator2 {
         berat = (int) (Math.random() * 1500);
         System.out.println("Berat: " + berat);
     }
+
+    public void naik() {
+        if (!bukaPintu) {
+            if (lantaiSkrg < LANTAI_ATAS) {
+                lantaiSkrg++;
+                System.out.println(lantaiSkrg);
+            } else {
+                System.out.println("Sudah mencapai lantai atas");
+            }
+        } else {
+            System.out.println("Pintu masih terbuka");
+        }
+    }
+
+    public void turun() {
+        if (!bukaPintu) {
+            if (lantaiSkrg > LANTAI_BAWAH) {
+                lantaiSkrg--;
+                System.out.println(lantaiSkrg);
+            } else {
+                System.out.println("Sudah mencapai lantai bawah");
+            }
+        } else {
+            System.out.println("Pintu masih terbuka");
+        }
+    }
+
+    public void setLantaiSkrg(int tujuan) {
+        if ((tujuan >= LANTAI_BAWAH) && (tujuan <= LANTAI_ATAS)) {
+            while (lantaiSkrg != tujuan) {
+                if (lantaiSkrg < tujuan) {
+                    naik();
+                } else {
+                    turun();
+                }
+            }
+        } else {
+            System.out.println("Lantai Salah");
+        }
+    }
+
+    public int getLantaiSkrg() {
+        return lantaiSkrg;
+    }
+
+    public boolean getStatusPintu(){
+        return bukaPintu;
+    }
 }
