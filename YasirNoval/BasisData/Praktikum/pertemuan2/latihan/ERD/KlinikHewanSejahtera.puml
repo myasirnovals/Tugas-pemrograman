@@ -1,0 +1,72 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+diamond memiliki
+diamond melayani
+diamond membayar
+diamond membawa
+
+entity Hewan {
+    * id_hewan <<PK>>
+    --
+    * nama
+    * jenis
+    * umur
+    --
+    * id_pemilik <<FK>>
+}
+
+entity Pemilik {
+    * id_pemilik <<PK>>
+    --
+    * nama
+    * alamat
+    * no_telp
+    * email
+}
+
+entity Janji {
+    * id_janji <<PK>>
+    --
+    * tanggal_waktu
+    * status
+    --
+    * id_hewan <<FK>>
+    * id_layanan <<FK>>
+}
+
+entity Layanan {
+    * id_layanan <<PK>>
+    --
+    * nama_layanan
+    * deskripsi
+    * harga
+}
+
+entity Pembayaran {
+    * id_pembayaran <<PK>>
+    --
+    * tanggal_pembayaran
+    * jumlah
+    * metode_pembayaran
+    __
+    * id_janji <<FK>>
+}
+
+Pemilik ||-- membawa
+membawa --|{ Hewan
+
+Hewan ||-- memiliki
+memiliki --o{ Janji
+
+Janji }o-- melayani
+melayani --|| Layanan
+
+Pembayaran ||-- membayar
+membayar --|{ Janji
+
+
+
+
+
+@enduml
