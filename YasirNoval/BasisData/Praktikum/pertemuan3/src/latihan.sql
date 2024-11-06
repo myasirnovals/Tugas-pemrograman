@@ -1,3 +1,7 @@
+show databases;
+
+use kuliah_basisdata_perpustakaan;
+
 # Tabel kategori_buku
 CREATE TABLE kategori_buku
 (
@@ -6,6 +10,7 @@ CREATE TABLE kategori_buku
     PRIMARY KEY (kategori_id)
 ) ENGINE = InnoDB;
 
+desc kategori_buku;
 
 # Tabel Buku
 CREATE TABLE buku
@@ -19,6 +24,8 @@ CREATE TABLE buku
     FOREIGN KEY (kategori_id) REFERENCES kategori_buku (kategori_id)
 ) ENGINE = InnoDB;
 
+desc buku;
+
 # Tabel Anggota
 CREATE TABLE anggota
 (
@@ -30,6 +37,8 @@ CREATE TABLE anggota
     primary key (anggota_id)
 ) ENGINE = InnoDB;
 
+desc anggota;
+
 # Tabel Petugas
 CREATE TABLE petugas
 (
@@ -40,17 +49,24 @@ CREATE TABLE petugas
     primary key (petugas_id)
 ) ENGINE = InnoDB;
 
+desc petugas;
+
 # Tabel peminjaman
 CREATE TABLE peminjaman
 (
     peminjaman_id        INT(10) AUTO_INCREMENT,
-    anggota_id           VARCHAR(10),
-    buku_id              VARCHAR(10),
+    anggota_id           INT(10),
+    buku_id              INT(10),
     petugas_id           INT(10),
     tanggal_peminjaman   DATE NOT NULL,
     tanggal_pengembalian DATE NOT NULL,
-    primary key (peminjaman_id)
+    primary key (peminjaman_id),
+    FOREIGN KEY (anggota_id) REFERENCES anggota (anggota_id),
+    FOREIGN KEY (buku_id) REFERENCES buku (buku_id),
+    FOREIGN KEY (petugas_id) REFERENCES petugas (petugas_id)
 ) ENGINE = InnoDB;
+
+desc peminjaman;
 
 # Tabel Denda
 CREATE TABLE denda
@@ -58,5 +74,10 @@ CREATE TABLE denda
     denda_id      INT(10) AUTO_INCREMENT,
     peminjaman_id INT(10),
     jumlah_denda  VARCHAR(50),
-    PRIMARY KEY (denda_id)
+    PRIMARY KEY (denda_id),
+    FOREIGN KEY (peminjaman_id) REFERENCES peminjaman (peminjaman_id)
 ) ENGINE = InnoDB;
+
+desc denda;
+
+show tables;

@@ -1,6 +1,8 @@
 show databases;
 
-use perpustakaan;
+create database kuliah_basisdata_perpustakaan;
+
+use kuliah_basisdata_perpustakaan;
 
 # INSERT
 INSERT INTO kategori_buku
