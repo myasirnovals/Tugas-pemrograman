@@ -36,19 +36,19 @@ WHERE kategori_id = 1;
 show tables;
 
 # 1. mengubah data alamat dan nomor hp 3 anggota
-desc user;
+desc anggota;
 
-UPDATE user
+UPDATE anggota
 SET alamat = 'Jl. Coba aja',
     no_hp  = '0884xxxxxxxx'
 WHERE anggota_id = 1;
 
-UPDATE user
+UPDATE anggota
 SET alamat = 'Jl. Coba lagi',
     no_hp  = '0884xxxxxxxx'
 WHERE anggota_id = 2;
 
-UPDATE user
+UPDATE anggota
 SET alamat = 'Jl. Coba itu',
     no_hp  = '0884xxxxxxxx'
 WHERE anggota_id = 3;
@@ -61,4 +61,27 @@ SET nama_kategori = 'Slice of Life'
 WHERE kategori_id = 4;
 
 # 3. mengubah 3 tanggal pengembalian buku
-show tables ;
+show tables;
+
+desc peminjaman;
+
+UPDATE peminjaman
+SET tanggal_pengembalian = CURRENT_DATE
+WHERE peminjaman_id = 1;
+
+UPDATE peminjaman
+SET tanggal_pengembalian = CURRENT_DATE
+WHERE peminjaman_id = 2;
+
+UPDATE peminjaman
+SET tanggal_pengembalian = CURRENT_DATE
+WHERE peminjaman_id = 3;
+
+# 4. menghapus denda
+show tables;
+
+desc denda;
+
+DELETE
+FROM denda
+WHERE denda_id = 1;
