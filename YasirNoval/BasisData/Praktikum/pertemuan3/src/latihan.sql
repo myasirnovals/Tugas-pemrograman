@@ -78,6 +78,9 @@ CREATE TABLE denda
     FOREIGN KEY (peminjaman_id) REFERENCES peminjaman (peminjaman_id)
 ) ENGINE = InnoDB;
 
+alter table denda
+    modify jumlah_denda int(10) not null;
+
 desc denda;
 
 show tables;
