@@ -10,7 +10,7 @@ VALUES ('1', 'Sains');
 
 # Latihan INSERT
 INSERT INTO kategori_buku
-VALUES ('2', ''),
+VALUES ('2', 'Sastra klasik'),
        ('3', 'Fantasi'),
        ('4', 'Misteri'),
        ('5', 'Sejarah'),
