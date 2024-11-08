@@ -1,5 +1,3 @@
-package Program.III_5;
-
 import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

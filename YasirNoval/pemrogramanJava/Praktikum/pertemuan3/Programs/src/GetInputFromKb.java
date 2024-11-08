@@ -1,5 +1,3 @@
-package Program.III_4;
-
 import javax.swing.*;
 
 public class GetInputFromKb {

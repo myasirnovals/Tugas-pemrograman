@@ -1,5 +1,3 @@
-package Program.III_1;
-
 import java.util.Scanner;
 
 public class Addition {

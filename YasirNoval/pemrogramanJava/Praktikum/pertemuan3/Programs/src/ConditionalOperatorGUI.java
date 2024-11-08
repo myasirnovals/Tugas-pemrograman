@@ -1,5 +1,3 @@
-package Program.III_2;
-
 import javax.swing.*;
 
 public class ConditionalOperatorGUI {

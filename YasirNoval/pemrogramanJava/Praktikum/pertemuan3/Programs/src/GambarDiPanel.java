@@ -1,5 +1,3 @@
-package Program.III_6;
-
 import java.awt.*;
 
 public class GambarDiPanel extends Panel {
