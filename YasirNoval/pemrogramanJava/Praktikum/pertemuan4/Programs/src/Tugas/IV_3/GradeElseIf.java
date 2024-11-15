@@ -1,4 +1,4 @@
-// package Program.IV_3;
+ package Tugas.IV_3;
 
 import java.util.Scanner;
 
@@ -12,10 +12,10 @@ public class GradeElseIf {
 
         if (grade >= 60) {
             System.out.println("LULUS!");
-        } else if (grade > 32){
-            System.out.println("COBA LAGI!");
-        } else {
+        } else if (grade > 33){
             System.out.println("GAGAL");
+        } else {
+            System.out.println("Anda salah jurusan");
         }
     }
 }

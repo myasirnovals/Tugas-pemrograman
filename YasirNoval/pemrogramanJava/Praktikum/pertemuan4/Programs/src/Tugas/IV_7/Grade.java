@@ -1,8 +1,14 @@
- package Program.IV_7;
+ package Tugas.IV_7;
+
+import java.util.Scanner;
 
 public class Grade {
     public static void main(String[] args) {
-        double grade = 92.0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Masukan nilai grade: ");
+        double grade = input.nextDouble();
+
         if (grade >= 90) {
             System.out.println("Excellent!");
         } else if ((grade < 90) && (grade >= 80)) {

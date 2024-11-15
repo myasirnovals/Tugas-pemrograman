@@ -1,4 +1,4 @@
-package Program.IV_6;
+// package Program.IV_6;
 
 import java.util.Scanner;
 

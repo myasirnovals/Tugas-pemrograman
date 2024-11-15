@@ -15,9 +15,11 @@ from anggota;
 
 select *
 from anggota
-where alamat = 'Cimahi';
+where alamat = 'jl. Cimahi';
 
 # menampilkan data dengan between
+select * from denda;
+
 select *
 from denda
 where jumlah_denda between 10000 and 20000;
