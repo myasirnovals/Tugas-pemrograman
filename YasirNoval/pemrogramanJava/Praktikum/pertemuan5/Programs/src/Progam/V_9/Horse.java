@@ -1,4 +1,9 @@
 package Progam.V_9;
 
-public class Horse {
+import Progam.Helper.KingdomAnimalia;
+
+public class Horse extends KingdomAnimalia {
+    public Horse(String name) {
+        super(name);
+    }
 }

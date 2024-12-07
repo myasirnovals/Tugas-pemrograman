@@ -1,4 +1,6 @@
-package Progam.V_7;
+package Tugas.V_7;
+
+import Progam.V_7.Kucing;
 
 import java.awt.*;
 

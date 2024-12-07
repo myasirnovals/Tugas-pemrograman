@@ -1,4 +1,6 @@
-package Progam.V_6.OOP;
+package Tugas.V_6;
+
+import Progam.V_6.OOP.Person;
 
 public class TestPerson {
     public static void main(String[] args) {

@@ -1,4 +1,9 @@
 package Progam.V_10;
 
-public class Kangoroo {
+import Progam.Helper.KingdomAnimalia;
+
+public class Kangoroo extends KingdomAnimalia {
+    public Kangoroo(String name) {
+        super(name);
+    }
 }
