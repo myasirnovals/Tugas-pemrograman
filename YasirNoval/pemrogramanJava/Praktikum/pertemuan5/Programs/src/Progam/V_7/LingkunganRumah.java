@@ -19,6 +19,6 @@ public class LingkunganRumah {
         garfield.usia = 3;
         garfield.bb = 4.5;
         garfield.diadopsi("Rezki Yuniarti");
-        michael.cetakInformasi();
+        garfield.cetakInformasi();
     }
 }
