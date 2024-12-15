@@ -15,7 +15,7 @@ public class PopulateMatrixs {
         // print matrix
         for (int i = 0; i < aMatrix.length; i++) {
             for (int j = 0; j < aMatrix[i].length; j++) {
-                System.out.println(aMatrix[i][j] + " ");
+                System.out.print(aMatrix[i][j] + " ");
             }
             System.out.println();
         }
