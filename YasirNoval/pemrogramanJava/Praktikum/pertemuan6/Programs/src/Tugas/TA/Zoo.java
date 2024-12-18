@@ -11,7 +11,7 @@ public class Zoo {
             kangaroos[i] = new Kangaroo(
                     "walabi",
                     "Chordata",
-                    "Mamalia",
+                    "Mama",
                     "Diprodontia",
                     "Macropodidae",
                     "Lagorchestes",
