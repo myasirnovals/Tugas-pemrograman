@@ -54,4 +54,9 @@ public class TodoListServiceImpl implements TodoListService {
             System.out.println("Fail edit todo : " + number);
         }
     }
+
+    @Override
+    public TodoList[] showTodoListForGUI() {
+        return todoListRepository.getAll();
+    }
 }

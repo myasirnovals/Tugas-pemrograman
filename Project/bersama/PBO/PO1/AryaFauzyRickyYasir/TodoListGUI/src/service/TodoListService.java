@@ -1,5 +1,7 @@
 package service;
 
+import model.TodoList;
+
 public interface TodoListService {
     void showTodoList();
 
@@ -8,4 +10,6 @@ public interface TodoListService {
     void removeTodoList(Integer number);
 
     void updateTodoList(Integer number, String todo);
+
+    TodoList[] showTodoListForGUI();
 }
