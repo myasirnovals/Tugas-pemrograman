@@ -18,5 +18,8 @@ public class ElevatorTest {
         myElevator.goDown();
         myElevator.setFloor(myElevator.TOP_FLOOR);
         myElevator.openDoor();
+        myElevator.setFloor(myElevator.BOTTOM_FLOOR);
+
+        System.out.println(myElevator.checkDoorStatus());
     }
 }

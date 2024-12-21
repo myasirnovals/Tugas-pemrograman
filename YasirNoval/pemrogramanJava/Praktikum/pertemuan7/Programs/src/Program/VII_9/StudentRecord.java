@@ -10,6 +10,10 @@ public class StudentRecord {
     private double average;
     private static int studentCount;
 
+    public StudentRecord() {
+        studentCount++;
+    }
+
     public String getName() {
         return name;
     }
@@ -74,5 +78,23 @@ public class StudentRecord {
 
     public static void setStudentCount(int studentCount) {
         StudentRecord.studentCount = studentCount;
+    }
+
+    public void infoStudent() {
+        System.out.println("Nama: " + getName());
+        System.out.println("Umur: " + getAge());
+        System.out.println("Alamat: " + getAddress());
+        System.out.println("ScienceGrade: " + getScienceGrade());
+        System.out.println("MathGrade: " + getMathGrade());
+        System.out.println("EnglishGrade: " + getEnglishGrade());
+
+        if (getScienceGrade() == 0 && getEnglishGrade() == 0 && getMathGrade() == 0) {
+            setAverage(0);
+            System.out.println("Rata-rata: " + getAverage());
+        } else {
+            System.out.println("Rata-rata: " + getAverage());
+        }
+
+        System.out.println();
     }
 }
