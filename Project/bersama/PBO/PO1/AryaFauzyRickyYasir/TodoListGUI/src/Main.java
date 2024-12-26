@@ -23,27 +23,38 @@ public class Main {
         // Frame setup
         frame = new JFrame("To-Do List Application");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 500);
+        frame.setSize(500, 600);
+        frame.setLayout(new BorderLayout());
 
         // Panel for content
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
+        panel.setBackground(new Color(240, 240, 240));
 
         // List model and JList
         listModel = new DefaultListModel<>();
         todoList = new JList<>(listModel);
+        todoList.setFont(new Font("Arial", Font.PLAIN, 16));
+        todoList.setSelectionBackground(new Color(173, 216, 230));
+        todoList.setSelectionForeground(Color.BLACK);
         JScrollPane scrollPane = new JScrollPane(todoList);
 
         // Load initial data
-        refreshTodoList(); // Muat data dari backend ke GUI
+        refreshTodoList();
 
         // Buttons
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new FlowLayout());
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 10));
+        buttonPanel.setBackground(new Color(240, 240, 240));
 
         JButton addButton = new JButton("Add");
         JButton editButton = new JButton("Edit");
         JButton deleteButton = new JButton("Delete");
+
+        // Customize buttons
+        customizeButton(addButton, new Color(60, 179, 113), Color.WHITE);
+        customizeButton(editButton, new Color(70, 130, 180), Color.WHITE);
+        customizeButton(deleteButton, new Color(220, 20, 60), Color.WHITE);
 
         // Add button actions
         addButton.addActionListener(new ActionListener() {
@@ -98,26 +109,27 @@ public class Main {
         frame.setVisible(true);
     }
 
-
-    private void loadTodoList() {
-        listModel.clear();
-        TodoList[] todos = todoListService.showTodoListForGUI();
-        for (TodoList todo : todos) {
-            if (todo != null) {
-                listModel.addElement(todo.getTodo());
-            }
-        }
+    private void customizeButton(JButton button, Color bgColor, Color fgColor) {
+        button.setBackground(bgColor);
+        button.setForeground(fgColor);
+        button.setFocusPainted(false);
+        button.setFont(new Font("Arial", Font.BOLD, 14));
+        button.setPreferredSize(new Dimension(100, 40));
     }
 
     private void refreshTodoList() {
         listModel.clear();
         TodoList[] todos = todoListService.showTodoListForGUI();
-        for (TodoList todo: todos) {
+        System.out.println("Memuat data ke GUI..."); // Log untuk debugging
+        for (TodoList todo : todos) {
             if (todo != null) {
+                System.out.println("Menambahkan ke GUI: " + todo.getTodo()); // Log untuk debugging
                 listModel.addElement(todo.getTodo());
             }
         }
+        System.out.println("Total data di GUI: " + listModel.size());
     }
+
 
     public static void main(String[] args) {
         TodoListRepository repository = new TodoListRepositoryImpl();

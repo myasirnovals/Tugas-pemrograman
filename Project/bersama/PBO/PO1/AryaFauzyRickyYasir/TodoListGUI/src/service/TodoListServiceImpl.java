@@ -57,6 +57,14 @@ public class TodoListServiceImpl implements TodoListService {
 
     @Override
     public TodoList[] showTodoListForGUI() {
-        return todoListRepository.getAll();
+        TodoList[] todos = todoListRepository.getAll();
+        System.out.println("Data diteruskan ke GUI: " + todos.length + " item(s)"); // Log untuk debugging
+        for (TodoList todo : todos) {
+            if (todo != null) {
+                System.out.println("Item: " + todo.getTodo());
+            }
+        }
+        return todos;
     }
+
 }
