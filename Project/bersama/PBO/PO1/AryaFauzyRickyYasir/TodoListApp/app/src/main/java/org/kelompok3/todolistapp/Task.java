@@ -16,7 +16,7 @@ public class Task {
     private boolean priority;
     private String status;
     private LocalDate dueDate;
-    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("E dd, LLL yyyy", Locale.UK);
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("E dd, LLL yyyy", Locale.UK);
 
     public Task() {
     }

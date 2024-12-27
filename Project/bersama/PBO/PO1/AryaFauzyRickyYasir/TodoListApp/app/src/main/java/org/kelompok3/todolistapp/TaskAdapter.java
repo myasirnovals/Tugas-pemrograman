@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder> {
-    private ArrayList<Task> tasks;
-    private Context context;
+    private final ArrayList<Task> tasks;
+    private final Context context;
 
     public TaskAdapter(Context context, ArrayList<Task> tasks) {
         this.context = context;
@@ -36,8 +36,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task task = tasks.get(position);
-
-        // Pindahkan logika dari ListAdapter.getView() ke sini
         holder.task_title.setText(task.getTitle());
 
         if (task.getDescription() != null && !task.getDescription().isEmpty()) {
@@ -49,7 +47,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             holder.date.setText(task.getDueDateToString());
         }
 
-        // Set status dan warna
         if (task.getStatus() != null && !task.getStatus().isEmpty()) {
             switch (task.getStatus()) {
                 case "Active":

@@ -8,10 +8,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.AlertDialog;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,14 +23,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.app.AlertDialog;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import androidx.core.content.ContextCompat;
-
-import com.jakewharton.threetenabp.AndroidThreeTen;
 
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.format.DateTimeFormatter;
@@ -55,26 +52,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize views (hapus line yang duplikat)
         date = findViewById(R.id.date);
         tasks_list = findViewById(R.id.tasks_list);
         tasks_list.setLayoutManager(new LinearLayoutManager(this));
         done_tasks = findViewById(R.id.done_tasks);
+
         LinearLayout add = findViewById(R.id.add);
 
-        // Initialize date formatters
         shortDate = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.UK);
         displayDate = DateTimeFormatter.ofPattern("E dd, LLL yyyy", Locale.UK);
         liveDate = LocalDate.now();
 
-        // Initialize database
         database = new Database(this);
         database.createDatabase(shortDate.format(liveDate));
 
-        // Set current date
         date.setText(liveDate.format(displayDate));
 
-        // Add button click listener
         add.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, TaskEditor.class);
             intent.putExtra("date", shortDate.format(liveDate));
@@ -82,10 +75,8 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, 1);
         });
 
-        // Switch listener for showing/hiding done tasks
         done_tasks.setOnCheckedChangeListener((buttonView, isChecked) -> loadTasks());
 
-        // Load initial tasks
         loadTasks();
     }
 
@@ -121,11 +112,9 @@ public class MainActivity extends AppCompatActivity {
             tasksList = activeTasks;
         }
 
-        // Ganti bagian ini
         adapter = new TaskAdapter(this, tasksList);
         tasks_list.setAdapter(adapter);
 
-        // Setup swipe-to-delete
         setupSwipeToDelete();
     }
 
@@ -149,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
                                 database.deleteTask(shortDate.format(liveDate), taskToDelete.getID());
                                 tasksList.remove(position);
                                 adapter.notifyItemRemoved(position);
-                                // Refresh data setelah penghapusan
                                 loadTasks();
                                 Toast.makeText(MainActivity.this, "Task berhasil dihapus", Toast.LENGTH_SHORT).show();
                             }
@@ -171,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int iconMargin = (itemView.getHeight() - deleteIcon.getIntrinsicHeight()) / 2;
 
-                background.setBounds(itemView.getRight() + (int)dX, itemView.getTop(),
+                background.setBounds(itemView.getRight() + (int) dX, itemView.getTop(),
                         itemView.getRight(), itemView.getBottom());
                 background.draw(c);
 
@@ -226,22 +214,17 @@ public class MainActivity extends AppCompatActivity {
             TextView date = v.findViewById(R.id.date);
 
             Task task = tasks.get(i);
-
-            // Set task title
             task_title.setText(task.getTitle());
 
-            // Set task description if exists
             if (task.getDescription() != null && !task.getDescription().isEmpty()) {
                 task_description.setVisibility(View.VISIBLE);
                 task_description.setText(task.getDescription());
             }
 
-            // Set due date
             if (task.getDueDate() != null) {
                 date.setText(task.getDueDateToString());
             }
 
-            // Set status and colors
             if (task.getStatus() != null && !task.getStatus().isEmpty()) {
                 switch (task.getStatus()) {
                     case "Active":
@@ -265,7 +248,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            // Set click listener for editing
             parent_layout.setOnClickListener(view1 -> {
                 Intent intent = new Intent(MainActivity.this, TaskEditor.class);
                 intent.putExtra("date", shortDate.format(liveDate));
@@ -274,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             });
 
-            // Tambahkan di akhir method
             notifyDataSetChanged();
 
             return v;
