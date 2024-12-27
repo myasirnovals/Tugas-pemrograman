@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="statusActive">#4CAF50</color>
+    <color name="statusDelayed">#F44336</color>
+    <color name="statusDone">#2196F3</color>
+
     <color name="cerulean">#00abcd</color>
     <color name="catskill_white">#f6f9f8</color>
     <color name="gray">#707070</color>
