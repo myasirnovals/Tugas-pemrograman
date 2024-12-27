@@ -133,6 +133,7 @@ public class TaskEditor extends AppCompatActivity {
                     .setMessage("Are you sure you want to delete this task?")
                     .setPositiveButton("Yes", (dialog, which) -> {
                         database.deleteTask(currentDate, taskId);
+                        setResult(RESULT_OK); // Tambahkan ini
                         finish();
                     })
                     .setNegativeButton("No", null)

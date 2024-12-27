@@ -165,38 +165,77 @@ public class Database {
         }
     }
 
+    // Tambahkan method untuk memastikan file ada
+    private void ensureFileExists(String date) {
+        File file = new File(context.getFilesDir(), getFileName(date));
+        if (!file.exists()) {
+            createDatabase(date);
+        }
+    }
 
     public void deleteTask(String date, int ID) {
         try {
+            // Pastikan file ada sebelum membaca
+            ensureFileExists(date);
+
             JSONObject jsonData = readJsonFile(date);
             JSONArray tasks = jsonData.getJSONArray("tasks");
             JSONArray newTasks = new JSONArray();
+            boolean found = false;
 
+            // Salin semua task kecuali yang akan dihapus
             for (int i = 0; i < tasks.length(); i++) {
                 JSONObject taskJson = tasks.getJSONObject(i);
                 if (taskJson.getInt("id") != ID) {
                     newTasks.put(taskJson);
+                } else {
+                    found = true;
                 }
             }
 
-            jsonData.put("tasks", newTasks);
-            writeJsonFile(date, jsonData);
+            // Hanya tulis ulang file jika task ditemukan dan dihapus
+            if (found) {
+                jsonData.put("tasks", newTasks);
+                writeJsonFile(date, jsonData);
+            }
         } catch (Exception e) {
+            Log.e("Database", "Error deleting task: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
     private JSONObject readJsonFile(String date) throws IOException, JSONException {
-        FileInputStream fis = context.openFileInput(getFileName(date));
-        byte[] data = new byte[fis.available()];
-        fis.read(data);
-        fis.close();
-        return new JSONObject(new String(data));
+        FileInputStream fis = null;
+        try {
+            fis = context.openFileInput(getFileName(date));
+            byte[] data = new byte[fis.available()];
+            fis.read(data);
+            return new JSONObject(new String(data));
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     private void writeJsonFile(String date, JSONObject jsonData) throws IOException {
-        FileOutputStream fos = context.openFileOutput(getFileName(date), Context.MODE_PRIVATE);
-        fos.write(jsonData.toString().getBytes());
-        fos.close();
+        FileOutputStream fos = null;
+        try {
+            fos = context.openFileOutput(getFileName(date), Context.MODE_PRIVATE);
+            fos.write(jsonData.toString().getBytes());
+            fos.flush(); // Tambahkan flush untuk memastikan data tertulis
+        } finally {
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

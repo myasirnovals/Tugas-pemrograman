@@ -147,10 +147,12 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton("Ya", (dialog, which) -> {
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                 database.deleteTask(shortDate.format(liveDate), taskToDelete.getID());
+                                tasksList.remove(position);
+                                adapter.notifyItemRemoved(position);
+                                // Refresh data setelah penghapusan
+                                loadTasks();
+                                Toast.makeText(MainActivity.this, "Task berhasil dihapus", Toast.LENGTH_SHORT).show();
                             }
-                            tasksList.remove(position);
-                            adapter.notifyItemRemoved(position);
-                            Toast.makeText(MainActivity.this, "Task berhasil dihapus", Toast.LENGTH_SHORT).show();
                         })
                         .setNegativeButton("Tidak", (dialog, which) -> {
                             adapter.notifyItemChanged(position);
