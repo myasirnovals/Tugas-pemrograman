@@ -1,387 +1,320 @@
---------- beginning of main
---------- beginning of system
-2024-12-26 06:29:40.470 22638-22638 aas.deviceadmin         pid-22638                            E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:29:40.609  1569-5207  ActivityManager         system_server                        E  Unable to freeze binder for 22638: -11
-2024-12-26 06:29:40.885 22678-22678 aas.deviceadmin         pid-22678                            E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:29:41.144  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.google.android.dialer
-2024-12-26 06:29:41.145  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.google.android.dialer
-2024-12-26 06:29:41.149  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:read_sms:  (fixing)
-2024-12-26 06:29:41.150  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:write_sms:  (fixing)
-2024-12-26 06:29:41.150  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:receive_sms:  (fixing)
-2024-12-26 06:29:41.151  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:send_sms:  (fixing)
-2024-12-26 06:29:41.159  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:29:41.165  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.android.cts.ctsshim
-2024-12-26 06:29:41.165  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.android.cts.ctsshim
-2024-12-26 06:29:41.173  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:read_sms:  (fixing)
-2024-12-26 06:29:41.174  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:write_sms:  (fixing)
-2024-12-26 06:29:41.175  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:receive_sms:  (fixing)
-2024-12-26 06:29:41.175  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:send_sms:  (fixing)
-2024-12-26 06:29:41.188  1569-3338  ActivityManager         system_server                        E  Unable to freeze binder for 22678: -11
-2024-12-26 06:29:41.203  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.android.cts.priv.ctsshim
-2024-12-26 06:29:41.203  1569-3183  PermissionMonitor       system_server                        E  NameNotFoundException com.android.cts.priv.ctsshim
-2024-12-26 06:29:41.205  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.205  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.205  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.205  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.206  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.206  1569-2078  JobScheduler.JobStatus  system_server                        E  App com.google.android.inputmethod.latin became active but still in NEVER bucket
-2024-12-26 06:29:41.206  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:29:41.234  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:read_sms:  (fixing)
-2024-12-26 06:29:41.238  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:29:41.242 22705-22705 ndroid.keychain         com.android.keychain                 E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:29:41.261  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:write_sms:  (fixing)
-2024-12-26 06:29:41.261  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:receive_sms:  (fixing)
-2024-12-26 06:29:41.262  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:send_sms:  (fixing)
-2024-12-26 06:29:41.354  1569-3338  AtomicFile              system_server                        E  Failed to rename /data/system/cachequota.xml.new to /data/system/cachequota.xml
-2024-12-26 06:29:41.726 14788-15195 WorkSourceUtil          com.google.android.gms               E  Could not find package: com.google.android.dialer
-2024-12-26 06:29:41.754 14788-15195 WorkSourceUtil          com.google.android.gms               E  Could not find package: com.android.cts.ctsshim
-2024-12-26 06:29:41.765 14788-15195 WorkSourceUtil          com.google.android.gms               E  Could not find package: com.android.cts.priv.ctsshim
-2024-12-26 06:29:41.890  4778-5338  hhjb                    com....android.googlequicksearchbox  E  (REDACTED) SodaResourceManager session terminated.  Returned resources: %s. Missing resources: %s
-2024-12-26 06:29:44.957 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.063 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.074 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.083 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.086 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.091 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.120 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.124 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.125 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.130 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.131 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.144 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.157 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.191 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.194 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.227 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.246 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.286 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.294 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.312 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.337 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:45.348 22834-22834 Parcel                  pid-22834                            E  Reading a NULL string not supported here.
-2024-12-26 06:29:46.915  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:29:51.166  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.177  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.197  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.200  4778-5351  hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.OnOpNotedCallback#onAsyncNoted(Started After:0)
-2024-12-26 06:29:51.204  4778-5338  hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s (Ask Gemini)
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextService/ObserveInvalidations-response(Started After:17)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 0 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 4 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 4 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 5 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 62 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 63 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 63 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 64 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 64 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 65 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 73 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 76 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 76 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 78 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 78 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 78 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 76 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 80 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 80 ms(Unknown Source:0)
-2024-12-26 06:29:51.204  4778-5338  hsso                    com....android.googlequicksearchbox  E  		at tk_trace.RootServicegetContext 82 ms(Unknown Source:0) (Ask Gemini)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 82 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 82 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 0 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 32 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 32 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 33 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 33 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 50 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 4 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 4 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 20 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 0 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 2 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 2 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-2024-12-26 06:29:51.205  4778-5338  hsso                    com....android.googlequicksearchbox  E  		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0) (Ask Gemini)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 0 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 5 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 5 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 6 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 6 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 7 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.SourceServicefromSyncCache(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.SourceServicegetContext 0 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.context.api.proto.ApaContextServiceGetContext 2 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicecallSourceService 2 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.RootServicegetContext 2 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessioncallRootService 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.AccessSessionfetchContext 3 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.java.com.google.android.libraries.search.assistant.speechbiasingcontext.service.proto.SbcpInternalServiceRegisterSpeechBiasingContextSession 74 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.com.google.android.libraries.search.assistant.readiness.service.proto.ReadinessConnectorServiceConnect(unfinished)(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceAssistantPinnedClientonCreate 306 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaPinningonCreate 552 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.VoiceInteractionServiceLifecycleCallbacksonReady 1 ms(Unknown Source:0)
-                                                                                                    		at tk_trace.ApaVoiceInteractionServiceonReady 0 ms(Unknown Source:0)
-                                                                                                    	Suppressed: hsub:
-                                                                                                    		at tk_trace.Suppressed exceptions exceeds the limit 10, additional unfinished spans will not be reported(Unknown Source:0)
-2024-12-26 06:29:51.209  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.445  1569-3343  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.494  1569-4836  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.518  1569-5206  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:51.905 12509-12573 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.LocalSubscription onLoaded()(Started After:0)
-2024-12-26 06:29:51.905 12509-12581 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.java.com.google.android.apps.search.fedora.entrypoints.proto.CorrectionReaderService/GetAllCorrections(Started After:0)
-2024-12-26 06:29:51.906 12509-12720 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.Read com.google.android.apps.search.assistant.device#com.google.android.googlequicksearchbox(Started After:0)
-2024-12-26 06:29:51.906 12509-12636 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.Write com.google.android.libraries.search.googleapp.device#com.google.android.googlequicksearchbox(Started After:0)
-2024-12-26 06:29:51.906 12509-12573 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.RecyclerViewContentManager(Started After:0)
-2024-12-26 06:29:51.906 12509-12635 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.LocalSubscription onLoaded()(Started After:0)
-2024-12-26 06:29:51.906 12509-12573 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.GsaEventLogSender#sendEvent(Started After:0)
-2024-12-26 06:29:51.906 12509-12636 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.com.google.android.libraries.search.soda.services.AccountScopedSodaResourceManagerService/Session-server(Started After:0)
-2024-12-26 06:29:51.906 12509-12723 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.OnOpNotedCallback#onAsyncNoted(Started After:0)
-2024-12-26 06:29:51.907 12509-12720 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.Read LocationPermissionNotificationShown(Started After:0)
-2024-12-26 06:29:51.907 12509-12721 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.GIL:ClearcutTransmitter(Started After:0)
-2024-12-26 06:29:51.907 12509-12581 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.OverlayBinder.setActivityState(Started After:0)
-2024-12-26 06:29:51.907 12509-12573 hsso                    com....android.googlequicksearchbox  E  (REDACTED) Trace %s timed out after %d ms. Complete trace: %s
-                                                                                                    hsuc:
-                                                                                                    	at tk_trace.SubscriptionCallbacks.onNewData(Started After:0)
-2024-12-26 06:29:54.126  1569-5206  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.128  1569-4836  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.129  1569-4836  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.130  1569-3343  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.132  1569-4836  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.133  1569-3343  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.134  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.500  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:54.521  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:29:56.343  3682-3720  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:30:08.219  1183-9846  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  In GetWakeReasonCountCommand::handleResponse
-2024-12-26 06:30:08.232  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 42, size = 4
-2024-12-26 06:30:08.232  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 43, size = 4
-2024-12-26 06:30:08.232  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 44, size = 4
-2024-12-26 06:30:09.708  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:read_sms:  (fixing)
-2024-12-26 06:30:09.712  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:write_sms:  (fixing)
-2024-12-26 06:30:09.713  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:receive_sms:  (fixing)
-2024-12-26 06:30:09.724  1569-2062  AtomicFile              system_server                        E  Failed to rename /data/system/install_sessions.xml.new to /data/system/install_sessions.xml
-2024-12-26 06:30:09.735  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:send_sms:  (fixing)
-2024-12-26 06:30:09.740  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:30:09.768 23030-23030 ackageinstaller         com.google.android.packageinstaller  E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:09.824  3682-3682  VvmPkgInstalledRcvr     com.android.phone                    E  cannot create TelephonyManager from ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, E, UserHandle{0}
-2024-12-26 06:30:09.866  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:read_sms:  (fixing)
-2024-12-26 06:30:09.867  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:30:09.867  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:write_sms:  (fixing)
-2024-12-26 06:30:09.868  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:receive_sms:  (fixing)
-2024-12-26 06:30:09.869  3682-3682  SmsApplication          com.android.phone                    E  com.google.android.apps.messaging lost android:send_sms:  (fixing)
-2024-12-26 06:30:09.892 23056-23056 android.vending         com.android.vending                  E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:09.906 18684-23054 RoleContro...erviceImpl com....android.permissioncontroller  E  Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
-2024-12-26 06:30:10.055 23098-23098 ding:background         com.android.vending                  E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:10.071  4821-4821  ApduServiceInfo         com.android.nfc                      E  Not adding <aid-group> with empty or invalid AIDs
-2024-12-26 06:30:10.443  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{a2b35c9 #u0a216/4 com.google.android.videos/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10216 TIME=-2h19m21s413ms:none NET READY}
-2024-12-26 06:30:10.444  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{3e0ae52 #u0a216/8 com.google.android.videos/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10216 TIME=-2h19m21s314ms:none READY}
-2024-12-26 06:30:10.446  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{1e81a3 #u0a143/20 com.google.android.apps.gcs/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10143 TIME=-3h16m56s934ms:none NET READY}
-2024-12-26 06:30:10.448  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{fc009ea #u0a143/22 com.google.android.apps.gcs/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10143 TIME=-2h8m56s370ms:none NET READY}
-2024-12-26 06:30:10.453  4778-5338  hhjb                    com....android.googlequicksearchbox  E  (REDACTED) SodaResourceManager session terminated.  Returned resources: %s. Missing resources: %s
-2024-12-26 06:30:10.730  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{a2b35c9 #u0a216/4 com.google.android.videos/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10216 TIME=-2h19m21s700ms:none NET READY}
-2024-12-26 06:30:10.731  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{3e0ae52 #u0a216/8 com.google.android.videos/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10216 TIME=-2h19m21s601ms:none READY}
-2024-12-26 06:30:10.734  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{1e81a3 #u0a143/20 com.google.android.apps.gcs/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10143 TIME=-3h16m57s222ms:none NET READY}
-2024-12-26 06:30:10.736  1569-2078  JobSchedul...oncurrency system_server                        E  Error executing JobStatus{fc009ea #u0a143/22 com.google.android.apps.gcs/androidx.work.impl.background.systemjob.SystemJobService u=0 s=10143 TIME=-2h8m56s659ms:none NET READY}
-2024-12-26 06:30:14.031  1569-5221  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:17.076  1569-5220  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:18.286  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:30:20.318 23304-23304 id.gms.unstable         com.google.android.gms.unstable      E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:21.349  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:30:23.524  1569-3338  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:24.059  1569-3338  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:24.508  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:30:26.073 23393-23393 .android.gms.ui         com.google.android.gms.ui            E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:26.088 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.088 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.088 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.089 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.089 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.089 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.089 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.090 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.090 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.090 12574-12574 PropertyBackgroundShape com...gle.android.inputmethod.latin  E  PropertyBackgroundShape$Factory.extractAvailableStateSpecs():598 Multiple state is not supported: [16843623, 16842919]
-2024-12-26 06:30:26.165 12574-12879 native                  com...gle.android.inputmethod.latin  E  E0000 00:00:1735169426.165121   12879 scoped-file.cc:106] open() failed for /data/user/0/com.google.android.inputmethod.latin/files/personal/adapt_state.en.dat: No such file or directory [2]
-2024-12-26 06:30:26.165 12574-12879 native                  com...gle.android.inputmethod.latin  E  E0000 00:00:1735169426.165713   12879 scoped-file.cc:106] open() failed for /data/user/0/com.google.android.inputmethod.latin/files/personal/blacklist.en_us.list: No such file or directory [2]
-2024-12-26 06:30:26.165 12574-12879 native                  com...gle.android.inputmethod.latin  E  E0000 00:00:1735169426.165731   12879 android-decoder-jni.cc:483] Failed to load dynamic LM from /data/user/0/com.google.android.inputmethod.latin/files/personal/blacklist.en_us.list
-2024-12-26 06:30:26.838  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.839  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.850  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.851  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.856  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.857  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.862  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.862  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.866  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.866  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.870  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.871  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:26.876  4733-5050  AiAiSpeechRecognition   com.google.android.as                E  CheckRecognitionSupport duplicate end event, ignore to log information.
-2024-12-26 06:30:26.917 11777-11848 UsageReportingOptionsSt com.google.android.gms.persistent    E  INTERNAL_ERROR: setOptInOption should not be called while user is locked. [CONTEXT service_id=41 ]
-2024-12-26 06:30:27.122  1569-5212  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:29.650 14788-14813 DowngradeHelper         com.google.android.gms               E  isModuleDowngradeRequired false
-2024-12-26 06:30:29.682 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.finder_shared#com.google.android.gms [CONTEXT service_id=231 ]
-2024-12-26 06:30:29.682 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.gms.maps#com.google.android.gms [CONTEXT service_id=231 ]
-2024-12-26 06:30:29.682 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.gms.mobile_data_plan [CONTEXT service_id=231 ]
-2024-12-26 06:30:29.683 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.libraries.spot#com.google.android.gms [CONTEXT service_id=231 ]
-2024-12-26 06:30:29.683 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.gms.udc [CONTEXT service_id=231 ]
-2024-12-26 06:30:29.683 14788-23480 PhenotypeRegOp          com.google.android.gms               E  Attempting to overwrite config package for com.google.android.gms.vision [CONTEXT service_id=231 ]
-2024-12-26 06:30:30.744  3682-3720  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:30:34.260 12574-12879 native                  com...gle.android.inputmethod.latin  E  E0000 00:00:1735169434.260273   12879 scoped-file.cc:106] open() failed for /data/user/0/com.google.android.inputmethod.latin/files/personal/adapt_state.en.dat: No such file or directory [2]
-2024-12-26 06:30:34.299  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.300  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.316  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.316  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.320  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.321  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.357 23519-23519 d.process.acore         android.process.acore                E  Not starting debugger since process cannot load the jdwp agent.
-2024-12-26 06:30:34.359  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.360  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.368  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.368  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.372  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:34.372  4733-5194  VoiceSearchConfigProtoU com.google.android.as                E  Unrecognized domain ID for [en-US, 3054]: 11. Ignoring this domain and its associated features.
-2024-12-26 06:30:38.237  1569-4852  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:40.395  1569-5221  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:43.469  1569-5218  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:43.940  1569-1927  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:45.802  1569-5211  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:48.674  1569-5211  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:50.515  1569-5211  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:52.050  1569-5211  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:30:55.115  1569-5211  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:31:14.444  1183-9846  IPCThreadState          ven...oogle.wifi_ext-service-vendor  E  binder thread pool (1 threads) starved for 106 ms
-2024-12-26 06:31:14.549  3682-4884  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:31:27.099  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:31:30.265  3682-4884  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:31:33.382  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:31:38.206  1183-9846  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  In GetWakeReasonCountCommand::handleResponse
-2024-12-26 06:31:38.222  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 42, size = 4
-2024-12-26 06:31:38.222  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 43, size = 4
-2024-12-26 06:31:38.222  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 44, size = 4
-2024-12-26 06:32:01.643  3682-4884  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:32:02.259  1183-1183  IPCThreadState          ven...oogle.wifi_ext-service-vendor  E  binder thread pool (1 threads) starved for 103 ms
-2024-12-26 06:32:07.919  3682-4222  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:32:39.285  3682-4222  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:33:08.231  1183-1183  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  In GetWakeReasonCountCommand::handleResponse
-2024-12-26 06:33:08.242  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 42, size = 4
-2024-12-26 06:33:08.242  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 43, size = 4
-2024-12-26 06:33:08.242  1183-9937  WifiHAL                 ven...oogle.wifi_ext-service-vendor  E  Ignoring invalid attribute type = 44, size = 4
-2024-12-26 06:33:16.893  3682-4222  PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:33:23.159  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:33:38.882  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:34:10.253  3682-10310 PhoneInterfaceManager   com.android.phone                    E  getCarrierPrivilegeStatusForUid: Invalid subId
-2024-12-26 06:34:20.919  1569-4852  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
-2024-12-26 06:34:23.966  1569-5221  AppOps                  system_server                        E  Operation not found: uid=1041 pkg=audioserver(null) op=WAKE_LOCK
+2024-12-27 06:14:47.556  3948-3948  art                     org.kelompok3.todolistapp            I  Not late-enabling -Xcheck:jni (already on)
+2024-12-27 06:14:47.685  3948-3963  art                     org.kelompok3.todolistapp            I  Background partial concurrent mark sweep GC freed 155(32KB) AllocSpace objects, 0(0B) LOS objects, 44% free, 1283KB/2MB, paused 7.629ms total 31.726ms
+2024-12-27 06:14:47.734  3948-3948  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:14:47.758  3948-3948  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:14:48.097  3948-3948  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:14:48.099  3948-3948  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 3948
+                                                                                                    java.lang.NoClassDefFoundError: Failed resolution of: Ljava/time/format/DateTimeFormatter;
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassNotFoundException: Didn't find class "java.time.format.DateTimeFormatter" on path: DexPathList[[zip file "/data/app/org.kelompok3.todolistapp-1/base.apk"],nativeLibraryDirectories=[/vendor/lib64, /system/lib64]]
+                                                                                                    	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:511)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:469)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47) 
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937) 
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105) 
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251) 
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+                                                                                                    	Suppressed: java.lang.ClassNotFoundException: java.time.format.DateTimeFormatter
+                                                                                                    		at java.lang.Class.classForName(Native Method)
+                                                                                                    		at java.lang.BootClassLoader.findClass(ClassLoader.java:781)
+                                                                                                    		at java.lang.BootClassLoader.loadClass(ClassLoader.java:841)
+                                                                                                    		at java.lang.ClassLoader.loadClass(ClassLoader.java:504)
+                                                                                                    		... 15 more
+                                                                                                    	Caused by: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack available
+2024-12-27 06:15:02.581  3948-3956  art                     org.kelompok3.todolistapp            I  Debugger is no longer active
+2024-12-27 06:19:48.194  3948-3948  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 3948 SIG: 9
+2024-12-27 06:23:22.033  4125-4125  art                     org.kelompok3.todolistapp            I  Not late-enabling -Xcheck:jni (already on)
+2024-12-27 06:23:22.194  4125-4125  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:23:22.214  4125-4125  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:23:22.504  4125-4125  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:23:22.504  4125-4125  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4125
+                                                                                                    java.lang.NoClassDefFoundError: Failed resolution of: Ljava/time/format/DateTimeFormatter;
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassNotFoundException: Didn't find class "java.time.format.DateTimeFormatter" on path: DexPathList[[zip file "/data/app/org.kelompok3.todolistapp-1/base.apk"],nativeLibraryDirectories=[/vendor/lib64, /system/lib64]]
+                                                                                                    	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:511)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:469)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47) 
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937) 
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105) 
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251) 
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+                                                                                                    	Suppressed: java.lang.ClassNotFoundException: java.time.format.DateTimeFormatter
+                                                                                                    		at java.lang.Class.classForName(Native Method)
+                                                                                                    		at java.lang.BootClassLoader.findClass(ClassLoader.java:781)
+                                                                                                    		at java.lang.BootClassLoader.loadClass(ClassLoader.java:841)
+                                                                                                    		at java.lang.ClassLoader.loadClass(ClassLoader.java:504)
+                                                                                                    		... 15 more
+                                                                                                    	Caused by: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack available
+2024-12-27 06:23:24.793  4125-4125  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 4125 SIG: 9
+2024-12-27 06:37:43.644  4324-4339  art                     org.kelompok3.todolistapp            I  Background partial concurrent mark sweep GC freed 206(40KB) AllocSpace objects, 0(0B) LOS objects, 44% free, 1279KB/2MB, paused 6.802ms total 24.821ms
+2024-12-27 06:37:43.698  4324-4324  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:37:43.722  4324-4324  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:37:43.780  4324-4339  art                     org.kelompok3.todolistapp            W  Suspending all threads took: 10.269ms
+2024-12-27 06:37:43.785  4324-4339  art                     org.kelompok3.todolistapp            I  Background sticky concurrent mark sweep GC freed 3331(342KB) AllocSpace objects, 0(0B) LOS objects, 10% free, 2MB/2MB, paused 12.467ms total 28.107ms
+2024-12-27 06:37:44.034  4324-4324  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:37:44.034  4324-4324  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4324
+                                                                                                    java.lang.NoClassDefFoundError: Failed resolution of: Ljava/time/format/DateTimeFormatter;
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassNotFoundException: Didn't find class "java.time.format.DateTimeFormatter" on path: DexPathList[[zip file "/data/app/org.kelompok3.todolistapp-2/base.apk"],nativeLibraryDirectories=[/vendor/lib64, /system/lib64]]
+                                                                                                    	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:511)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:469)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:47) 
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937) 
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105) 
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251) 
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+                                                                                                    	Suppressed: java.lang.ClassNotFoundException: java.time.format.DateTimeFormatter
+                                                                                                    		at java.lang.Class.classForName(Native Method)
+                                                                                                    		at java.lang.BootClassLoader.findClass(ClassLoader.java:781)
+                                                                                                    		at java.lang.BootClassLoader.loadClass(ClassLoader.java:841)
+                                                                                                    		at java.lang.ClassLoader.loadClass(ClassLoader.java:504)
+                                                                                                    		... 15 more
+                                                                                                    	Caused by: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack available
+2024-12-27 06:37:58.498  4324-4331  art                     org.kelompok3.todolistapp            I  Debugger is no longer active
+2024-12-27 06:42:44.107  4324-4324  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 4324 SIG: 9
+2024-12-27 06:48:08.605  4486-4498  art                     org.kelompok3.todolistapp            I  Background sticky concurrent mark sweep GC freed 1559(76KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 1178KB/1178KB, paused 7.775ms total 50.160ms
+2024-12-27 06:48:08.631  4486-4498  art                     org.kelompok3.todolistapp            W  Suspending all threads took: 10.630ms
+2024-12-27 06:48:08.640  4486-4498  art                     org.kelompok3.todolistapp            I  Background partial concurrent mark sweep GC freed 143(33KB) AllocSpace objects, 0(0B) LOS objects, 44% free, 1267KB/2MB, paused 13.570ms total 32.296ms
+2024-12-27 06:48:08.718  4486-4486  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:48:08.769  4486-4486  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:48:09.393  4486-4486  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:48:09.394  4486-4486  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4486
+                                                                                                    java.lang.RuntimeException: Unable to start activity ComponentInfo{org.kelompok3.todolistapp/org.kelompok3.todolistapp.MainActivity}: org.threeten.bp.zone.ZoneRulesException: No time-zone data files registered
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: org.threeten.bp.zone.ZoneRulesException: No time-zone data files registered
+                                                                                                    	at org.threeten.bp.zone.ZoneRulesProvider.getProvider(ZoneRulesProvider.java:165)
+                                                                                                    	at org.threeten.bp.zone.ZoneRulesProvider.getRules(ZoneRulesProvider.java:122)
+                                                                                                    	at org.threeten.bp.ZoneRegion.ofId(ZoneRegion.java:143)
+                                                                                                    	at org.threeten.bp.ZoneId.of(ZoneId.java:358)
+                                                                                                    	at org.threeten.bp.ZoneId.of(ZoneId.java:286)
+                                                                                                    	at org.threeten.bp.ZoneId.systemDefault(ZoneId.java:245)
+                                                                                                    	at org.threeten.bp.Clock.systemDefaultZone(Clock.java:137)
+                                                                                                    	at org.threeten.bp.LocalDate.now(LocalDate.java:165)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:50)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+2024-12-27 06:48:12.128  4486-4486  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 4486 SIG: 9
+2024-12-27 06:49:04.191  4645-4660  art                     org.kelompok3.todolistapp            I  Background sticky concurrent mark sweep GC freed 1559(75KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 1214KB/1214KB, paused 5.004ms total 34.733ms
+2024-12-27 06:49:04.265  4645-4645  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:49:04.286  4645-4645  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:49:04.409  4645-4660  art                     org.kelompok3.todolistapp            I  Background sticky concurrent mark sweep GC freed 154(16KB) AllocSpace objects, 0(0B) LOS objects, 6% free, 2MB/2MB, paused 5.136ms total 19.012ms
+2024-12-27 06:49:04.631  4645-4645  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:49:04.632  4645-4645  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4645
+                                                                                                    java.lang.NoClassDefFoundError: Failed resolution of: Ljava/time/format/DateTimeFormatter;
+                                                                                                    	at org.kelompok3.todolistapp.Database.<init>(Database.java:25)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:56)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassNotFoundException: Didn't find class "java.time.format.DateTimeFormatter" on path: DexPathList[[zip file "/data/app/org.kelompok3.todolistapp-2/base.apk"],nativeLibraryDirectories=[/vendor/lib64, /system/lib64]]
+                                                                                                    	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:511)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:469)
+                                                                                                    	at org.kelompok3.todolistapp.Database.<init>(Database.java:25) 
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:56) 
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937) 
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105) 
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251) 
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+                                                                                                    	Suppressed: java.lang.ClassNotFoundException: java.time.format.DateTimeFormatter
+                                                                                                    		at java.lang.Class.classForName(Native Method)
+                                                                                                    		at java.lang.BootClassLoader.findClass(ClassLoader.java:781)
+                                                                                                    		at java.lang.BootClassLoader.loadClass(ClassLoader.java:841)
+                                                                                                    		at java.lang.ClassLoader.loadClass(ClassLoader.java:504)
+                                                                                                    		... 16 more
+                                                                                                    	Caused by: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack available
+2024-12-27 06:49:11.585  4645-4645  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 4645 SIG: 9
+2024-12-27 06:49:27.406  4796-4811  art                     org.kelompok3.todolistapp            I  Background partial concurrent mark sweep GC freed 196(39KB) AllocSpace objects, 0(0B) LOS objects, 44% free, 1300KB/2MB, paused 5.114ms total 27.843ms
+2024-12-27 06:49:27.463  4796-4796  AppCompatDelegate       org.kelompok3.todolistapp            D  Checking for metadata for AppLocalesMetadataHolderService : Service not found
+2024-12-27 06:49:27.486  4796-4796  art                     org.kelompok3.todolistapp            W  Before Android 4.1, method android.graphics.PorterDuffColorFilter androidx.vectordrawable.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+2024-12-27 06:49:27.827  4796-4796  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:49:27.828  4796-4796  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4796
+                                                                                                    java.lang.NoClassDefFoundError: Failed resolution of: Ljava/time/format/DateTimeFormatter;
+                                                                                                    	at org.kelompok3.todolistapp.Database.<init>(Database.java:25)
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:56)
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937)
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105)
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251)
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassNotFoundException: Didn't find class "java.time.format.DateTimeFormatter" on path: DexPathList[[zip file "/data/app/org.kelompok3.todolistapp-1/base.apk"],nativeLibraryDirectories=[/vendor/lib64, /system/lib64]]
+                                                                                                    	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:511)
+                                                                                                    	at java.lang.ClassLoader.loadClass(ClassLoader.java:469)
+                                                                                                    	at org.kelompok3.todolistapp.Database.<init>(Database.java:25) 
+                                                                                                    	at org.kelompok3.todolistapp.MainActivity.onCreate(MainActivity.java:56) 
+                                                                                                    	at android.app.Activity.performCreate(Activity.java:5937) 
+                                                                                                    	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1105) 
+                                                                                                    	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2251) 
+                                                                                                    	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360) 
+                                                                                                    	at android.app.ActivityThread.access$800(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+                                                                                                    	Suppressed: java.lang.ClassNotFoundException: java.time.format.DateTimeFormatter
+                                                                                                    		at java.lang.Class.classForName(Native Method)
+                                                                                                    		at java.lang.BootClassLoader.findClass(ClassLoader.java:781)
+                                                                                                    		at java.lang.BootClassLoader.loadClass(ClassLoader.java:841)
+                                                                                                    		at java.lang.ClassLoader.loadClass(ClassLoader.java:504)
+                                                                                                    		... 16 more
+                                                                                                    	Caused by: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack available
+2024-12-27 06:49:42.308  4796-4806  art                     org.kelompok3.todolistapp            I  Debugger is no longer active
+2024-12-27 06:54:27.885  4796-4796  Process                 org.kelompok3.todolistapp            I  Sending signal. PID: 4796 SIG: 9
+2024-12-27 06:57:49.061  4949-4949  AndroidRuntime          org.kelompok3.todolistapp            D  Shutting down VM
+2024-12-27 06:57:49.061  4949-4949  AndroidRuntime          org.kelompok3.todolistapp            E  FATAL EXCEPTION: main (Ask Gemini)
+                                                                                                    Process: org.kelompok3.todolistapp, PID: 4949
+                                                                                                    java.lang.RuntimeException: Unable to instantiate application org.kelompok3.todolistapp.TodoApp: java.lang.ClassCastException: org.kelompok3.todolistapp.TodoApp cannot be cast to android.app.Application
+                                                                                                    	at android.app.LoadedApk.makeApplication(LoadedApk.java:563)
+                                                                                                    	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4491)
+                                                                                                    	at android.app.ActivityThread.access$1500(ActivityThread.java:144)
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1339)
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                                    	at android.os.Looper.loop(Looper.java:135)
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221)
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method)
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372)
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+                                                                                                    Caused by: java.lang.ClassCastException: org.kelompok3.todolistapp.TodoApp cannot be cast to android.app.Application
+                                                                                                    	at android.app.Instrumentation.newApplication(Instrumentation.java:994)
+                                                                                                    	at android.app.Instrumentation.newApplication(Instrumentation.java:979)
+                                                                                                    	at android.app.LoadedApk.makeApplication(LoadedApk.java:558)
+                                                                                                    	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4491) 
+                                                                                                    	at android.app.ActivityThread.access$1500(ActivityThread.java:144) 
+                                                                                                    	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1339) 
+                                                                                                    	at android.os.Handler.dispatchMessage(Handler.java:102) 
+                                                                                                    	at android.os.Looper.loop(Looper.java:135) 
+                                                                                                    	at android.app.ActivityThread.main(ActivityThread.java:5221) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Native Method) 
+                                                                                                    	at java.lang.reflect.Method.invoke(Method.java:372) 
+                                                                                                    	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899) 
+                                                                                                    	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694) 
+2024-12-27 06:58:04.036  4949-4959  art                     org.kelompok3.todolistapp            I  Debugger is no longer active

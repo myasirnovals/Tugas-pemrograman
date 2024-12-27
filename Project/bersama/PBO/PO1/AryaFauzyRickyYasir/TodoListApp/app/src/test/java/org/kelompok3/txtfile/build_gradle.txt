@@ -35,10 +35,10 @@ dependencies {
     implementation libs.activity
     implementation libs.constraintlayout
     implementation libs.gson
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation libs.jackson.databind
 
     // used to make ui scalable for different screen sizes using special unit called sdp
-    implementation libs.intuit.sdp.android
+    implementation libs.sdp.android
 
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
