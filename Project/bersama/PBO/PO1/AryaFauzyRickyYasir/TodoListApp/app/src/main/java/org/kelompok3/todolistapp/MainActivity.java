@@ -15,6 +15,16 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import android.app.AlertDialog;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import androidx.core.content.ContextCompat;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
@@ -26,13 +36,18 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private TextView date;
-    private ListView tasks_list;
+    private RecyclerView tasks_list;
     private Switch done_tasks;
     private LocalDate liveDate;
     private DateTimeFormatter shortDate;
     private DateTimeFormatter displayDate;
     private Database database;
     private ArrayList<Task> tasksList;
+    private TaskAdapter adapter;
+
+    public String getCurrentDate() {
+        return shortDate.format(liveDate);
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -40,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize views
+        // Initialize views (hapus line yang duplikat)
         date = findViewById(R.id.date);
         tasks_list = findViewById(R.id.tasks_list);
+        tasks_list.setLayoutManager(new LinearLayoutManager(this));
         done_tasks = findViewById(R.id.done_tasks);
         LinearLayout add = findViewById(R.id.add);
 
@@ -104,8 +120,74 @@ public class MainActivity extends AppCompatActivity {
             }
             tasksList = activeTasks;
         }
-        tasks_list.setAdapter(new ListAdapter(tasksList));
+
+        // Ganti bagian ini
+        adapter = new TaskAdapter(this, tasksList);
+        tasks_list.setAdapter(adapter);
+
+        // Setup swipe-to-delete
+        setupSwipeToDelete();
     }
+
+    private void setupSwipeToDelete() {
+        ItemTouchHelper.SimpleCallback swipeCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                int position = viewHolder.getAdapterPosition();
+                Task taskToDelete = tasksList.get(position);
+
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Hapus Task")
+                        .setMessage("Apakah Anda yakin ingin menghapus task ini?")
+                        .setPositiveButton("Ya", (dialog, which) -> {
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                database.deleteTask(shortDate.format(liveDate), taskToDelete.getID());
+                            }
+                            tasksList.remove(position);
+                            adapter.notifyItemRemoved(position);
+                            Toast.makeText(MainActivity.this, "Task berhasil dihapus", Toast.LENGTH_SHORT).show();
+                        })
+                        .setNegativeButton("Tidak", (dialog, which) -> {
+                            adapter.notifyItemChanged(position);
+                        })
+                        .setCancelable(false)
+                        .show();
+            }
+
+            @Override
+            public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView,
+                                    @NonNull RecyclerView.ViewHolder viewHolder,
+                                    float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                View itemView = viewHolder.itemView;
+                ColorDrawable background = new ColorDrawable(Color.RED);
+                Drawable deleteIcon = ContextCompat.getDrawable(MainActivity.this, R.drawable.ic_delete);
+
+                int iconMargin = (itemView.getHeight() - deleteIcon.getIntrinsicHeight()) / 2;
+
+                background.setBounds(itemView.getRight() + (int)dX, itemView.getTop(),
+                        itemView.getRight(), itemView.getBottom());
+                background.draw(c);
+
+                if (dX < 0) {
+                    deleteIcon.setBounds(itemView.getRight() - iconMargin - deleteIcon.getIntrinsicWidth(),
+                            itemView.getTop() + iconMargin,
+                            itemView.getRight() - iconMargin,
+                            itemView.getBottom() - iconMargin);
+                    deleteIcon.draw(c);
+                }
+
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+            }
+        };
+
+        new ItemTouchHelper(swipeCallback).attachToRecyclerView(tasks_list);
+    }
+
 
     public class ListAdapter extends BaseAdapter {
         private final ArrayList<Task> tasks;

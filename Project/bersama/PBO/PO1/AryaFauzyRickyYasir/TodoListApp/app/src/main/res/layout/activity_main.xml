@@ -59,15 +59,10 @@
 
         </LinearLayout>
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasks_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="@color/transparent"
-            android:listSelector="@color/transparent"
-            android:dividerHeight="@dimen/_12sdp"
-            android:paddingHorizontal="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
