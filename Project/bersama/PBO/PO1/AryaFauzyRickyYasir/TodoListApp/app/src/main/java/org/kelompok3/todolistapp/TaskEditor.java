@@ -156,24 +156,33 @@ public class TaskEditor extends AppCompatActivity {
         task.setPriority(priorityCheck.isChecked());
         task.setDueDate(selectedDueDate);
 
+        // Pastikan status selalu diset
         int selectedId = statusGroup.getCheckedRadioButtonId();
+        String status = "Active"; // Default status
         if (selectedId == R.id.active) {
-            task.setStatus("Active");
+            status = "Active";
         } else if (selectedId == R.id.done) {
-            task.setStatus("Done");
+            status = "Done";
         } else if (selectedId == R.id.delayed) {
-            task.setStatus("Delayed");
+            status = "Delayed";
         }
+        task.setStatus(status);
 
+        boolean success;
         if (mode.equals("add")) {
-            database.insertTask(currentDate, task);
+            success = database.insertTask(currentDate, task);
         } else {
-            database.updateTask(currentDate, task);
+            success = database.updateTask(currentDate, task);
         }
 
-        setResult(RESULT_OK);
-        finish();
+        if (success) {
+            setResult(RESULT_OK);
+            finish();
+        } else {
+            Toast.makeText(this, "Failed to save task", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
 
     private boolean validateInput() {
@@ -197,7 +206,9 @@ public class TaskEditor extends AppCompatActivity {
                 .setTitle("Save Task")
                 .setMessage("Are you sure you want to save this task?")
                 .setPositiveButton("Yes", (dialog, which) -> {
-                    saveTask();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        saveTask();
+                    }
                 })
                 .setNegativeButton("No", null)
                 .show();

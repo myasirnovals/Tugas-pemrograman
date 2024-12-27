@@ -57,23 +57,25 @@ public class Database {
             int newId = tasks.length() + 1;
             task.setID(newId);
 
+            // Pastikan status tidak null
+            if (task.getStatus() == null) {
+                task.setStatus("Active"); // Set default status
+            }
+
             // Convert task to JSON
             JSONObject taskJson = new JSONObject();
             taskJson.put("id", task.getID());
             taskJson.put("title", task.getTitle());
             taskJson.put("description", task.getDescription());
             taskJson.put("priority", task.isPriority());
-            taskJson.put("status", task.getStatus());
+            taskJson.put("status", task.getStatus()); // Pastikan status selalu ada
             taskJson.put("dueDate", task.getDueDate().format(dateFormatter));
 
             tasks.put(taskJson);
             writeJsonFile(date, jsonData);
             return true;
-        } catch (IOException e) {
+        } catch (Exception e) {
             Log.e("Database", "Error writing to file: " + e.getMessage());
-            return false;
-        } catch (JSONException e) {
-            Log.e("Database", "Error parsing JSON: " + e.getMessage());
             return false;
         }
     }
@@ -90,13 +92,19 @@ public class Database {
                 Task task = new Task();
                 task.setID(taskJson.getInt("id"));
                 task.setTitle(taskJson.getString("title"));
-                task.setDescription(taskJson.getString("description"));
-                task.setPriority(taskJson.getBoolean("priority"));
-                task.setStatus(taskJson.getString("status"));
-                task.setDueDate(LocalDate.parse(taskJson.getString("dueDate"), dateFormatter));
+                task.setDescription(taskJson.optString("description", "")); // Using optString for optional fields
+                task.setPriority(taskJson.optBoolean("priority", false));
+                task.setStatus(taskJson.optString("status", "Active")); // Default to Active if not present
+
+                String dueDateStr = taskJson.optString("dueDate", null);
+                if (dueDateStr != null) {
+                    task.setDueDate(LocalDate.parse(dueDateStr, dateFormatter));
+                }
+
                 taskList.add(task);
             }
         } catch (Exception e) {
+            Log.e("Database", "Error reading tasks: " + e.getMessage());
             e.printStackTrace();
         }
         return taskList;
@@ -128,27 +136,35 @@ public class Database {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void updateTask(String date, Task task) {
+    public boolean updateTask(String date, Task task) {
         try {
             JSONObject jsonData = readJsonFile(date);
             JSONArray tasks = jsonData.getJSONArray("tasks");
 
+            // Find and update the task
             for (int i = 0; i < tasks.length(); i++) {
                 JSONObject taskJson = tasks.getJSONObject(i);
                 if (taskJson.getInt("id") == task.getID()) {
+                    // Update task data
                     taskJson.put("title", task.getTitle());
                     taskJson.put("description", task.getDescription());
                     taskJson.put("priority", task.isPriority());
                     taskJson.put("status", task.getStatus());
                     taskJson.put("dueDate", task.getDueDate().format(dateFormatter));
-                    break;
+
+                    // Write back to file
+                    writeJsonFile(date, jsonData);
+                    return true;
                 }
             }
-            writeJsonFile(date, jsonData);
+            return false; // Task not found
         } catch (Exception e) {
+            Log.e("Database", "Error updating task: " + e.getMessage());
             e.printStackTrace();
+            return false;
         }
     }
+
 
     public void deleteTask(String date, int ID) {
         try {
