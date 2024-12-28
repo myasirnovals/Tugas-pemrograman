@@ -2,28 +2,27 @@ package Program.XI_3;
 
 public class Pakaian {
     // Default ID untuk semua Pakaian
-    private static int ID = 0;
+    private int ID = 0;
 
     // default
-    private static String keterangan = "-keterangan diperlukan-";
+    private String keterangan = "-keterangan diperlukan-";
 
-    private static double harga = 0.0;     // Harga default untuk semua pakaian
-    private static int jmlStok = 0;    // jumlah default untuk semua Pakaian
+    private double harga = 0.0;     // Harga default untuk semua pakaian
+    private int jmlStok = 0;    // jumlah default untuk semua Pakaian
 
     // Static member ditambahkan dalam
     // constructor
     // untuk mengahasilkan ID yang unik
-
     private static int UNIQUE_ID = 0;
     public Pakaian() {
-        ID = UNIQUE_ID;
+        ID = UNIQUE_ID++;
     }
 
-    public static int getID() {
+    public int getID() {
         return ID;
     }
 
-    public static String getKeterangan() {
+    public String getKeterangan() {
         return keterangan;
     }
 
@@ -31,7 +30,7 @@ public class Pakaian {
         this.keterangan = keterangan;
     }
 
-    public static double getHarga() {
+    public double getHarga() {
         return harga;
     }
 
@@ -39,7 +38,7 @@ public class Pakaian {
         this.harga = harga;
     }
 
-    public static int getJmlStok() {
+    public int getJmlStok() {
         return jmlStok;
     }
 

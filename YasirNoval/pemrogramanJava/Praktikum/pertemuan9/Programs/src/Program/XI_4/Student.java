@@ -6,8 +6,8 @@ public class Student extends Person{
         // di overload. Pakai super bergantian
         // amati hasilnya dan analisa
 //        super("SomeName", "SomeAddress");
-//        super();
-//        super.name = "name";
+        super();
+        super.name = "name";
         System.out.println("Inside Student:Constructor");
     }
 

@@ -5,8 +5,6 @@ import Program.VIII_3.StudentRecord;
 public class StudentRecordExample {
     public static void main(String[] args) {
         // membuat 3 object StudentRecord
-
-
         StudentRecord dayu = new StudentRecord();
         StudentRecord lani = new StudentRecord();
         StudentRecord bambang = new StudentRecord();
