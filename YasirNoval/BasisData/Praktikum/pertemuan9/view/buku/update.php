@@ -62,25 +62,25 @@ if (isset($_POST['submit'])) {
     <title>Update buku</title>
 </head>
 <body>
-<h2>Update Anggota</h2>
+<h2>Update Buku</h2>
 <form action="" method="post">
-    <label for="judul_buku">Nama Anggota: </label><br>
+    <label for="judul_buku">Nama Buku: </label><br>
     <input type="text" name="judul_buku" id="judul_buku" value="<?= $judul_buku ?>" required><br><br>
 
-    <label for="pengarang">Alamat: </label><br>
-    <textarea name="pengarang" id="pengarang" cols="30" rows="10" required><?= $pengarang ?></textarea><br><br>
+    <label for="pengarang">Pengarang: </label><br>
+    <input type="text" name="pengarang" id="pengarang" value="<?= $pengarang ?>" required><br><br>
 
     <label for="kategori_id">Kategori Buku:</label>
     <select name="kategori_id" id="kategori_id">
         <?php while ($row = mysqli_fetch_assoc($result_kategori)) { ?>
-            <option value="<?= $row['kategori_id'] ?>"><?= $row['nama_kategori'] ?></option>
+            <option value="<?= $row['kategori_id'] ?>" <?php if ($kategori_id == $row['kategori_id']) echo 'selected'; ?>><?= $row['nama_kategori'] ?></option>
         <?php } ?>
     </select><br><br>
 
-    <label for="kategori_id">No Telepon: </label>
-    <input type="text" name="kategori_id" id="kategori_id" value="<?= $kategori_id ?>" required><br><br>
+    <label for="tahun_terbit">Tahun Terbit: </label>
+    <input type="date" name="tahun_terbit" id="tahun_terbit" value="<?= $tahun_terbit ?>" required><br><br>
 
-    <input type="submit" value="Update Anggota" name="submit">
+    <input type="submit" value="Update Buku" name="submit">
 </form>
 </body>
 </html>
