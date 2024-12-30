@@ -4,19 +4,16 @@ include '../../config/koneksi.php';
 
 // cek apakah data ID yang dikirimkan melalui URL
 if (isset($_GET['id'])) {
-    $anggota_id = $_GET['id'];
+    $kategori_id = $_GET['id'];
 
-    // query untuk mendapatkan data anggota berdasarkan ID
-    $sql = "SELECT * FROM anggota WHERE anggota_id = '$anggota_id'";
+    // query untuk mendapatkan data kategori berdasarkan ID
+    $sql = "SELECT * FROM kategori_buku WHERE kategori_id = '$kategori_id'";
     $result = mysqli_query($koneksi, $sql);
 
     // jika data ditemukan, tampilkan di form
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
-        $nama_anggota = $row['nama_anggota'];
-        $alamat = $row['alamat'];
-        $jenis_kelamin = $row['jenis_kelamin'];
-        $no_hp = $row['no_hp'];
+        $nama_kategori = $row['nama_kategori'];
     } else {
         echo "Data tidak ditemukan.";
         exit();
@@ -28,22 +25,14 @@ if (isset($_GET['id'])) {
 
 // proses update data ketika form disubmit
 if (isset($_POST['submit'])) {
-    $nama_anggota = $_POST['nama_anggota'];
-    $alamat = $_POST['alamat'];
-    $jenis_kelamin = $_POST['jenis_kelamin'];
-    $no_hp = $_POST['no_hp'];
+    $nama_kategori = $_POST['nama_kategori'];
 
-    // query update data anggota
-    $sql_update = "UPDATE anggota SET 
-                   nama_anggota = '$nama_anggota',
-                   alamat = '$alamat',
-                   jenis_kelamin = '$jenis_kelamin$',
-                   no_hp = '$no_hp'
-                   WHERE anggota_id = '$anggota_id'";
+    // query update data kategori
+    $sql_update = "UPDATE kategori_buku SET nama_kategori = '$nama_kategori' WHERE kategori_id = '$kategori_id'";
 
     if (mysqli_query($koneksi, $sql_update)) { ?>
-        <p>Data anggota berhasil diperbarui!</p>
-        <a href="index.php">Kembali ke daftar anggota</a>
+        <p>Data kategori berhasil diperbarui!</p>
+        <a href="index.php">Kembali ke daftar kategori</a>
     <?php } else { ?>
         <p>Terjadi kesalahan: <?php mysqli_error($koneksi); ?></p>
     <?php }
@@ -56,27 +45,14 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Update anggota</title>
+    <title>Update kategori</title>
 </head>
 <body>
-<h2>Update Anggota</h2>
+<h2>Update Kategori</h2>
 <form action="" method="post">
-    <label for="nama_anggota">Nama Anggota: </label><br>
-    <input type="text" name="nama_anggota" id="nama_anggota" value="<?= $nama_anggota ?>" required><br><br>
-
-    <label for="alamat">Alamat: </label><br>
-    <textarea name="alamat" id="alamat" cols="30" rows="10" required><?= $alamat ?></textarea><br><br>
-
-    <label for="jenis_kelamin">Jenis Kelamin: </label><br>
-    <select name="jenis_kelamin" id="jenis_kelamin">
-        <option value="L" <?php if ($jenis_kelamin == 'L') echo 'selected'; ?>>Laki-laki</option>
-        <option value="P" <?php if ($jenis_kelamin == 'P') echo 'selected'; ?>>Perempuan</option>
-    </select><br><br>
-
-    <label for="no_hp">No Telepon: </label>
-    <input type="text" name="no_hp" id="no_hp" value="<?= $no_hp ?>" required><br><br>
-
-    <input type="submit" value="Update Anggota" name="submit">
+    <label for="nama_kategori">Nama Kategori: </label><br>
+    <input type="text" name="nama_kategori" id="nama_kategori" value="<?= $nama_kategori ?>" required><br><br>
+    <input type="submit" value="Update Kategori" name="submit">
 </form>
 </body>
 </html>
