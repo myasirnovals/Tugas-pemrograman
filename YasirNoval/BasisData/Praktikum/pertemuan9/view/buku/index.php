@@ -22,12 +22,12 @@ $result_kategori = mysqli_query($koneksi, $sql_kategori); ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Anggota Dengan Filter</title>
+    <title>Data Buku Dengan Filter</title>
 </head>
 <body>
-<h2>Data Anggota</h2>
+<h2>Data Buku</h2>
 
-<!-- form untuk filter jenis kelamin -->
+<!-- form untuk filter kategori buku -->
 <form action="index.php" method="get">
     Filter Kategori Buku:
     <select name="filter" id="">
