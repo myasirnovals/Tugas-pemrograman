@@ -3,28 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Anggota Dengan Filter</title>
+    <title>Data Peminjaman Dengan Filter</title>
 </head>
 <body>
-<h2>Data Anggota</h2>
+<h2>Data Peminjaman</h2>
 
-<!-- form untuk filter jenis kelamin -->
 <form action="index.php" method="get">
-    Filter Jenis Kelamin:
-    <select name="filter" id="">
-        <option value="">Semua</option>
-        <option value="L" <?php if (isset($_GET['filter']) && $_GET['filter'] == 'L') echo 'selected'; ?> >
-            Laki-laki
-        </option>
-        <option value="P" <?php if (isset($_GET['filter']) && $_GET['filter'] == 'P') echo 'selected'; ?> >
-            Perempuan
-        </option>
-    </select>
+    <label for="filter">Filter Tanggal Peminjaman:</label>
+    <input type="date" name="filter" id="filter">
     <input type="submit" value="Terapkan Filter">
 </form>
-<!-- Tombol tambah anggota -->
+<!-- Tombol tambah peminjaman -->
 <a href="tambah.php">
-    <button>Tambah Anggota</button>
+    <button>Tambah Peminjaman</button>
 </a>
 <br><br>
 <?php
@@ -34,12 +25,12 @@ include '../../config/koneksi.php';
 // mengambil nilai filter dari form
 $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
 
-// query untuk menampilkan data anggota
-$sql = "SELECT * FROM anggota";
+// query untuk menampilkan data peminjaman
+$sql = "SELECT * FROM peminjaman";
 
 // menambahkan filter jenis kelamin jika ada
 if ($filter != '') {
-    $sql .= " WHERE jenis_kelamin = '$filter'";
+    $sql .= " WHERE tanggal_peminjaman = '$filter'";
 }
 
 // menjalankan query
@@ -49,30 +40,32 @@ $result = mysqli_query($koneksi, $sql);
 if (mysqli_num_rows($result) > 0) { ?>
     <table border="1">
         <tr>
+            <th>ID Peminjaman</th>
             <th>ID Anggota</th>
-            <th>Nama Anggota</th>
-            <th>Alamat</th>
-            <th>Jenis Kelamin</th>
-            <th>No Telepon</th>
+            <th>ID Buku</th>
+            <th>ID Petugas</th>
+            <th>Tanggal Peminjaman</th>
+            <th>Tanggal Pengembalian</th>
             <th>Action</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
+                <td><?= $row['peminjaman_id'] ?></td>
                 <td><?= $row['anggota_id'] ?></td>
-                <td><?= $row['nama_anggota'] ?></td>
-                <td><?= $row['alamat'] ?></td>
-                <td><?= $row['jenis_kelamin'] ?></td>
-                <td><?= $row['no_hp'] ?></td>
+                <td><?= $row['buku_id'] ?></td>
+                <td><?= $row['petugas_id'] ?></td>
+                <td><?= $row['tanggal_peminjaman'] ?></td>
+                <td><?= $row['tanggal_pengembalian'] ?></td>
                 <td>
-                    <a href="update.php?id=<?= $row['anggota_id'] ?>">Update</a> |
-                    <a href="delete.php?id=<?= $row['anggota_id'] ?>"
-                       onclick="return confirm('Apakah anda yakin ingin menghapus anggota ini?')">Hapus</a>
+                    <a href="update.php?id=<?= $row['peminjaman_id'] ?>">Update</a> |
+                    <a href="delete.php?id=<?= $row['peminjaman_id'] ?>"
+                       onclick="return confirm('Apakah anda yakin ingin menghapus peminjaman ini?')">Hapus</a>
                 </td>
             </tr>
         <?php } ?>
     </table>
 <?php } else { ?>
-    <p>Tidak ada data anggota yang ditemukan.</p>
+    <p>Tidak ada data peminjaman yang ditemukan.</p>
 <?php } ?>
 <?php
 // menutup koneksi
