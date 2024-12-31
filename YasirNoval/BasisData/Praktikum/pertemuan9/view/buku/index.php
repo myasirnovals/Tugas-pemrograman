@@ -6,7 +6,7 @@ include '../../config/koneksi.php';
 $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
 
 // query untuk menampilkan data buku
-$sql_buku = "SELECT buku.buku_id, buku.judul_buku, buku.pengarang, buku.tahun_terbit, kategori_buku.nama_kategori as kategori FROM buku INNER JOIN kategori_buku WHERE buku.kategori_id = kategori_buku.kategori_id";
+$sql_buku = "SELECT buku.buku_id, buku.judul_buku, buku.pengarang, buku.tahun_terbit, kategori_buku.nama_kategori as kategori FROM buku INNER JOIN kategori_buku ON buku.kategori_id = kategori_buku.kategori_id";
 $sql_kategori = "SELECT * FROM kategori_buku";
 
 // menambahkan filter jenis kelamin jika ada

@@ -26,11 +26,20 @@ include '../../config/koneksi.php';
 $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
 
 // query untuk menampilkan data peminjaman
-$sql = "SELECT * FROM peminjaman";
+$sql = "SELECT peminjaman.peminjaman_id, 
+               anggota.nama_anggota, 
+               buku.judul_buku, 
+               petugas.nama_petugas, 
+               peminjaman.tanggal_peminjaman, 
+               peminjaman.tanggal_pengembalian 
+        FROM peminjaman 
+            INNER JOIN anggota ON peminjaman.peminjaman_id = anggota.anggota_id
+            INNER JOIN buku ON peminjaman.buku_id = buku.buku_id
+            INNER JOIN petugas ON peminjaman.petugas_id = petugas.petugas_id";
 
 // menambahkan filter jenis kelamin jika ada
 if ($filter != '') {
-    $sql .= " WHERE tanggal_peminjaman = '$filter'";
+    $sql .= " AND peminjaman.tanggal_peminjaman = '$filter'";
 }
 
 // menjalankan query
@@ -41,9 +50,9 @@ if (mysqli_num_rows($result) > 0) { ?>
     <table border="1">
         <tr>
             <th>ID Peminjaman</th>
-            <th>ID Anggota</th>
-            <th>ID Buku</th>
-            <th>ID Petugas</th>
+            <th>Nama Anggota</th>
+            <th>Judul Buku</th>
+            <th>Nama Petugas</th>
             <th>Tanggal Peminjaman</th>
             <th>Tanggal Pengembalian</th>
             <th>Action</th>
@@ -51,9 +60,9 @@ if (mysqli_num_rows($result) > 0) { ?>
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <tr>
                 <td><?= $row['peminjaman_id'] ?></td>
-                <td><?= $row['anggota_id'] ?></td>
-                <td><?= $row['buku_id'] ?></td>
-                <td><?= $row['petugas_id'] ?></td>
+                <td><?= $row['nama_anggota'] ?></td>
+                <td><?= $row['judul_buku'] ?></td>
+                <td><?= $row['nama_petugas'] ?></td>
                 <td><?= $row['tanggal_peminjaman'] ?></td>
                 <td><?= $row['tanggal_pengembalian'] ?></td>
                 <td>
