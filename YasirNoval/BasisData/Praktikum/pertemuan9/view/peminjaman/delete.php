@@ -2,15 +2,15 @@
 // koneksi ke database
 include '../../config/koneksi.php';
 
-// cek apakah ID anggota ada di URL
+// cek apakah ID peminjaman ada di URL
 if (isset($_GET['id'])) {
-    $anggota_id = $_GET['id'];
+    $peminjaman_id = $_GET['id'];
 
-    // query untuk menghapus data anggota
-    $sql = "DELETE FROM anggota WHERE anggota_id = '$anggota_id'";
+    // query untuk menghapus data peminjaman
+    $sql = "DELETE FROM peminjaman WHERE peminjaman_id = '$peminjaman_id'";
 
     if (mysqli_query($koneksi, $sql)) {
-        echo "Data anggota berhasil dihapus!";
+        echo "Data peminjaman berhasil dihapus!";
     } else {
         echo "Terjadi kesalahan: " . mysqli_error($koneksi);
     }
@@ -22,5 +22,5 @@ if (isset($_GET['id'])) {
     header("Location: index.php");
     exit();
 } else {
-    echo "ID anggota tidak ditemukan.";
+    echo "ID peminjaman tidak ditemukan.";
 }
