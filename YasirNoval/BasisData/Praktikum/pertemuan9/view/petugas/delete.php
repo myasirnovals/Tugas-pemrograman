@@ -2,15 +2,15 @@
 // koneksi ke database
 include '../../config/koneksi.php';
 
-// cek apakah ID anggota ada di URL
+// cek apakah ID petugas ada di URL
 if (isset($_GET['id'])) {
-    $anggota_id = $_GET['id'];
+    $petugas_id = $_GET['id'];
 
-    // query untuk menghapus data anggota
-    $sql = "DELETE FROM anggota WHERE anggota_id = '$anggota_id'";
+    // query untuk menghapus data petugas
+    $sql = "DELETE FROM petugas WHERE petugas_id = '$petugas_id'";
 
     if (mysqli_query($koneksi, $sql)) {
-        echo "Data anggota berhasil dihapus!";
+        echo "Data petugas berhasil dihapus!";
     } else {
         echo "Terjadi kesalahan: " . mysqli_error($koneksi);
     }
@@ -22,5 +22,5 @@ if (isset($_GET['id'])) {
     header("Location: index.php");
     exit();
 } else {
-    echo "ID anggota tidak ditemukan.";
+    echo "ID petugas tidak ditemukan.";
 }
