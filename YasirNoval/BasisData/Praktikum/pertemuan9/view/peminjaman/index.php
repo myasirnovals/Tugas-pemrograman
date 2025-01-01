@@ -26,21 +26,17 @@ include '../../config/koneksi.php';
 $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
 
 // query untuk menampilkan data peminjaman
-$sql = "SELECT peminjaman.peminjaman_id, 
-               anggota.nama_anggota, 
-               buku.judul_buku, 
-               petugas.nama_petugas, 
-               peminjaman.tanggal_peminjaman, 
-               peminjaman.tanggal_pengembalian 
-        FROM peminjaman 
-            INNER JOIN anggota ON peminjaman.peminjaman_id = anggota.anggota_id
+$sql = "SELECT peminjaman.*, anggota.nama_anggota, buku.judul_buku, petugas.nama_petugas FROM peminjaman 
+            INNER JOIN anggota ON peminjaman.anggota_id = anggota.anggota_id
             INNER JOIN buku ON peminjaman.buku_id = buku.buku_id
             INNER JOIN petugas ON peminjaman.petugas_id = petugas.petugas_id";
 
 // menambahkan filter jenis kelamin jika ada
 if ($filter != '') {
-    $sql .= " AND peminjaman.tanggal_peminjaman = '$filter'";
+    $sql .= " WHERE peminjaman.tanggal_peminjaman = '$filter'";
 }
+
+$sql .= " ORDER BY peminjaman.peminjaman_id ASC";
 
 // menjalankan query
 $result = mysqli_query($koneksi, $sql);
