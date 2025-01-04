@@ -1,0 +1,28 @@
+.sidebar {
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+  color: #333;
+  transition: all 0.3s;
+}
+.nav-link:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+.nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+.content {
+  padding: 20px;
+}
+.table-hover tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+.payment-card {
+  transition: transform 0.3s;
+}
+.payment-card:hover {
+  transform: translateY(-5px);
+}
