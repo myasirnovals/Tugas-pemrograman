@@ -23,7 +23,7 @@
 <div class="container">
     <div class="login-container">
         <div class="logo">
-            <h2>Hotel Reservasi Basdat</h2>
+            <h2>Hotel Reservasi</h2>
         </div>
         <form >
             <div class="mb-3">
@@ -32,7 +32,7 @@
             </div>
             <div class="mb-3">
                 <label for="inputEmail4" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" />
+                <input type="email" class="form-control" id="inputEmail4" name="inputEmail4" required />
             </div>
             <div class="mb-3">
                 <div class="mb-3">
@@ -44,10 +44,10 @@
                     <input type="password" class="form-control" id="password" name="password" required />
                 </div>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="remember" />
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember" />
                     <label class="form-check-label" for="remember">Ingat Saya</label>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Daftar</button>
+                <button type="submit" name="submit" class="btn btn-primary w-100">Daftar</button>
             </div>
         </form>
     </div>

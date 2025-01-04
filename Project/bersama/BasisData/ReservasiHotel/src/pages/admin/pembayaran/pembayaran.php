@@ -45,7 +45,7 @@
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="pembayaran.html" class="nav-link active">
+                <a href="pembayaran.php" class="nav-link active">
                   <i class="bi bi-credit-card me-2"></i>
                   Pembayaran
                 </a>

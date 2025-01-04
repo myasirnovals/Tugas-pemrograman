@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>About Us - Grand Hotel Indonesia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="aboutUs.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="aboutUs.css"/>
 </head>
 
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="../../index.php">Reservasi Hotel Basdat</a>
+        <a class="navbar-brand" href="../../index.php">Reservasi Hotel</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +38,7 @@
 <section class="hero-section">
     <div class="container">
         <h1 class="display-4">Tim Pengembang</h1>
-        <p class="lead">Kenali Tim di Balik Website Reservasi Hotel Basdat</p>
+        <p class="lead">Kenali Tim di Balik Website Reservasi Hotel</p>
     </div>
 </section>
 
@@ -49,12 +49,13 @@
             <!-- Arya  -->
             <div class="col-md-4">
                 <div class="card team-card text-center h-100">
-                    <img src="../../assets/arya.jpg" class="team-img" alt="Arya Wijaya" />
+                    <img src="../../assets/arya.jpg" class="team-img" alt="Arya Wijaya"/>
                     <div class="card-body">
                         <h5 class="card-title">Arya Wijaya</h5>
-                        <p class="card-text text-muted">Developer</p>
+                        <p class="card-text text-muted">UI / UX Designer</p>
                         <p class="card-text">NIM: 2350081010</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, obcaecati.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
+                            obcaecati.</p>
                         <div class="social-links">
                             <a href="#"><i class="bi bi-github"></i></a>
                             <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -67,12 +68,13 @@
             <!-- Ricky  -->
             <div class="col-md-4">
                 <div class="card team-card text-center h-100">
-                    <img src="../../assets/arya.jpg" class="team-img" alt="Ricky Gunaldo" />
+                    <img src="../../assets/arya.jpg" class="team-img" alt="Ricky Gunaldo"/>
                     <div class="card-body">
                         <h5 class="card-title">Ricky Gunaldo</h5>
-                        <p class="card-text text-muted">Developer</p>
+                        <p class="card-text text-muted">Database Administrator</p>
                         <p class="card-text">NIM: 2350081028</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, obcaecati.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
+                            obcaecati.</p>
                         <div class="social-links">
                             <a href="#"><i class="bi bi-github"></i></a>
                             <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -85,12 +87,13 @@
             <!--  Yasir  -->
             <div class="col-md-4">
                 <div class="card team-card text-center h-100">
-                    <img src="../../assets/arya.jpg" class="team-img" alt="Muhamad Yasir Noval" />
+                    <img src="../../assets/arya.jpg" class="team-img" alt="Muhamad Yasir Noval"/>
                     <div class="card-body">
                         <h5 class="card-title">Muhamad Yasir Noval</h5>
-                        <p class="card-text text-muted">Developer</p>
+                        <p class="card-text text-muted">Backend Engineer</p>
                         <p class="card-text">NIM: 2350081004</p>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, obcaecati.</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
+                            obcaecati.</p>
                         <div class="social-links">
                             <a href="#"><i class="bi bi-github"></i></a>
                             <a href="#"><i class="bi bi-linkedin"></i></a>
@@ -126,13 +129,13 @@
                 </div>
             </div>
         </div>
-        <hr class="mt-4" />
+        <hr class="mt-4"/>
         <div class="text-center">
-            <p>&copy; 2024 Reservasi Hotel Basdat</p>
+            <p>&copy; 2024 Reservasi Hotel</p>
         </div>
     </div>
 </footer>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </body>
 </html>

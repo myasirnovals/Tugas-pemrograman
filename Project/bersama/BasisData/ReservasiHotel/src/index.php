@@ -115,11 +115,13 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_in">Tanggal Check-in</label>
-                                    <input type="date" class="form-control" name="tanggal_check_in" id="tanggal_check_in" required/>
+                                    <input type="date" class="form-control" name="tanggal_check_in"
+                                           id="tanggal_check_in" required/>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_out">Tanggal Check-out</label>
-                                    <input type="date" class="form-control" name="tanggal_check_out" id="tanggal_check_out" required/>
+                                    <input type="date" class="form-control" name="tanggal_check_out"
+                                           id="tanggal_check_out" required/>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -133,7 +135,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="jumlah_kamar">Jumlah Kamar</label>
-                                <input type="number" class="form-control" min="1" name="jumlah_kamar" id="jumlah_kamar" required/>
+                                <input type="number" class="form-control" min="1" name="jumlah_kamar" id="jumlah_kamar"
+                                       required/>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="metode_pembayaran">Metode Pembayaran</label>
@@ -158,7 +161,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <h5>Reservasi Hotel Basdat</h5>
+                <h5>Reservasi Hotel</h5>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
             <div class="col-md-4 mb-4">
@@ -178,7 +181,7 @@
         </div>
         <hr class="mt-4"/>
         <div class="text-center">
-            <p>&copy; 2024 Reservasi Hotel Basdat</p>
+            <p>&copy; 2024 Reservasi Hotel</p>
         </div>
     </div>
 </footer>

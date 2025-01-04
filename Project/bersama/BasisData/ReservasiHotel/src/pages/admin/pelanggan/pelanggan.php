@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="pelanggan.html" class="nav-link active">
+                            <a href="pelanggan.php" class="nav-link active">
                                 <i class="bi bi-people me-2"></i>
                                 Pelanggan
                             </a>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Dashboard Admin - Hotel Reservation</title>
     <!-- Bootstrap 5.3.2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="dashboard.css"/>
 </head>
 <body>
 <div class="container-fluid">
@@ -17,34 +17,34 @@
         <div class="col-md-3 col-lg-2 p-0 bg-white sidebar">
             <div class="d-flex flex-column p-3">
                 <h2 class="fs-4 mb-4 text-center">Admin</h2>
-                <hr />
+                <hr/>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item mb-2">
-                        <a href="dashboard.html" class="nav-link active">
+                        <a href="dashboard.php" class="nav-link active">
                             <i class="bi bi-speedometer2 me-2"></i>
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="../pelanggan/pelanggan.html" class="nav-link">
+                        <a href="../pelanggan/pelanggan.php" class="nav-link">
                             <i class="bi bi-people me-2"></i>
                             Pelanggan
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="../reservasi/reservasi.html" class="nav-link">
+                        <a href="../reservasi/reservasi.php" class="nav-link">
                             <i class="bi bi-calendar-check me-2"></i>
                             Reservasi
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="../kamar/kamar.html" class="nav-link">
+                        <a href="../kamar/kamar.php" class="nav-link">
                             <i class="bi bi-house-door me-2"></i>
                             Kamar
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="../pembayaran/pembayaran.html" class="nav-link">
+                        <a href="../pembayaran/pembayaran.php" class="nav-link">
                             <i class="bi bi-credit-card me-2"></i>
                             Pembayaran
                         </a>
@@ -148,6 +148,6 @@
 </div>
 
 <!-- Bootstrap Bundle JS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet"/>
 </body>
 </html>

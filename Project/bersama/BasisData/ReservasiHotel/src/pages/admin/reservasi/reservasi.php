@@ -32,7 +32,7 @@
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="reservasi.html" class="nav-link active">
+                <a href="reservasi.php" class="nav-link active">
                   <i class="bi bi-calendar-check me-2"></i>
                   Reservasi
                 </a>
