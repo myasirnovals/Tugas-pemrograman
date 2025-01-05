@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:fontFamily="@font/segoe_ui_bold"
         android:gravity="center"
-        android:text="Task Editor"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="@dimen/_18sdp" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_21sdp"
-        android:hint="Title" />
+        android:hint="@string/judul" />
 
     <EditText
         android:id="@+id/description"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_11sdp"
-        android:hint="Description (Optional)" />
+        android:hint="@string/deskripsi" />
 
     <TextView
         android:id="@+id/due_date"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_11sdp"
-        android:hint="Due Date" />
+        android:hint="@string/tanggal" />
 
     <CheckBox
         android:id="@+id/priority"
@@ -53,7 +53,7 @@
         android:layout_marginHorizontal="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_11sdp"
         android:buttonTint="@color/black"
-        android:hint="Priority" />
+        android:hint="@string/prioritas" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/segoe_ui_bold"
-            android:text="Status: "
+            android:text="@string/status"
             android:textColor="@color/black"
             android:textSize="@dimen/_14sdp" />
 
@@ -80,22 +80,22 @@
             <RadioButton
                 android:id="@+id/active"
                 style="@style/radio_button"
-                android:text="Active" />
+                android:text="@string/aktif" />
 
             <RadioButton
                 android:id="@+id/done"
                 style="@style/radio_button"
-                android:text="Done" />
+                android:text="@string/selesai" />
 
             <RadioButton
                 android:id="@+id/delayed"
                 style="@style/radio_button"
-                android:text="Delayed" />
+                android:text="@string/tunda" />
 
             <RadioButton
                 android:id="@+id/none"
                 style="@style/radio_button"
-                android:text="None" />
+                android:text="@string/none" />
 
         </RadioGroup>
     </LinearLayout>
@@ -108,7 +108,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:backgroundTint="@color/cerulean"
         android:minWidth="@dimen/_163sdp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/_14sdp"
@@ -120,6 +120,6 @@
         style="@style/button"
         android:layout_width="@dimen/_163sdp"
         android:layout_height="wrap_content"
-        android:text="Delete" />
+        android:text="@string/delete" />
 
 </LinearLayout>

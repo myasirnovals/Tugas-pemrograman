@@ -133,7 +133,7 @@ public class TaskEditor extends AppCompatActivity {
                     .setMessage("Are you sure you want to delete this task?")
                     .setPositiveButton("Yes", (dialog, which) -> {
                         database.deleteTask(currentDate, taskId);
-                        setResult(RESULT_OK); // Tambahkan ini
+                        setResult(RESULT_OK);
                         finish();
                     })
                     .setNegativeButton("No", null)
@@ -159,13 +159,15 @@ public class TaskEditor extends AppCompatActivity {
 
         // Pastikan status selalu diset
         int selectedId = statusGroup.getCheckedRadioButtonId();
-        String status = "Active"; // Default status
+        String status = "None"; // Default status
         if (selectedId == R.id.active) {
             status = "Active";
         } else if (selectedId == R.id.done) {
             status = "Done";
         } else if (selectedId == R.id.delayed) {
             status = "Delayed";
+        } else if (selectedId == R.id.none) {
+            status = "None";
         }
         task.setStatus(status);
 
@@ -183,8 +185,6 @@ public class TaskEditor extends AppCompatActivity {
             Toast.makeText(this, "Failed to save task", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 
     private boolean validateInput() {
         if (titleEdit.getText().toString().trim().isEmpty()) {

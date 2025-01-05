@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfamart E-Commerce Prototype</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .product-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .product-details p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .add-to-cart {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alfamart E-Commerce</h1>
+        <p>Belanja Mudah dan Cepat!</p>
+    </header>
+    <nav>
+        <a href="#products">Produk</a>
+        <a href="#promotions">Promosi</a>
+        <a href="#cart">Keranjang</a>
+        <a href="#contact">Hubungi Kami</a>
+    </nav>
+    <div class="container" id="products">
+        <h2>Produk Terbaru</h2>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Product Image">
+            <div class="product-details">
+                <h3>Nama Produk</h3>
+                <p>Deskripsi singkat produk.</p>
+                <p><strong>Rp 20.000</strong></p>
+            </div>
+            <button class="add-to-cart">Tambah ke Keranjang</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Product Image">
+            <div class="product-details">
+                <h3>Nama Produk</h3>
+                <p>Deskripsi singkat produk.</p>
+                <p><strong>Rp 15.000</strong></p>
+            </div>
+            <button class="add-to-cart">Tambah ke Keranjang</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Alfamart E-Commerce. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>

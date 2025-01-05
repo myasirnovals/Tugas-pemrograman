@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TodoFusion</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="deskripsi">Deskripsi (Opsional)</string>
+    <string name="judul">Judul</string>
+    <string name="tugas">Task Editor</string>
+    <string name="prioritas">Prioritas</string>
+    <string name="aktif">Aktif</string>
+    <string name="selesai">Selesai</string>
+    <string name="tunda">Tunda</string>
+    <string name="none">Tidak Ada</string>
+    <string name="submit">Kirim</string>
+    <string name="delete">Hapus</string>
+    <string name="status">Status: </string>
 </resources>

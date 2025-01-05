@@ -230,20 +230,26 @@ public class MainActivity extends AppCompatActivity {
                     case "Active":
                         circle.setImageResource(R.drawable.green_circle);
                         status.setBackgroundResource(R.drawable.green_box);
-                        status.setText("Active");
+                        status.setText(R.string.aktif);
                         status.setTextColor(getResources().getColor(R.color.green_dark));
                         break;
                     case "Done":
                         circle.setImageResource(R.drawable.blue_circle);
                         status.setBackgroundResource(R.drawable.blue_box);
-                        status.setText("Done");
+                        status.setText(R.string.selesai);
                         status.setTextColor(getResources().getColor(R.color.blue_dark));
                         break;
                     case "Delayed":
                         circle.setImageResource(R.drawable.red_circle);
                         status.setBackgroundResource(R.drawable.red_box);
-                        status.setText("Delayed");
+                        status.setText(R.string.tunda);
                         status.setTextColor(getResources().getColor(R.color.red_dark));
+                        break;
+                    case "None":
+                        circle.setImageResource(R.drawable.gray_circle);
+                        status.setBackgroundResource(R.drawable.gray_box);
+                        status.setText(R.string.none);
+                        status.setTextColor(getResources().getColor(R.color.black));
                         break;
                 }
             }

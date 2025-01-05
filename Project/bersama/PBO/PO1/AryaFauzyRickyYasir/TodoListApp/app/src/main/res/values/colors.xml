@@ -10,6 +10,7 @@
     <color name="cerulean">#00abcd</color>
     <color name="catskill_white">#f6f9f8</color>
     <color name="gray">#707070</color>
+    <color name="grayLight">#d3d3d3</color>
     <color name="priority">#f2f9ef</color>
     <color name="task">#f1f1f1</color>
 

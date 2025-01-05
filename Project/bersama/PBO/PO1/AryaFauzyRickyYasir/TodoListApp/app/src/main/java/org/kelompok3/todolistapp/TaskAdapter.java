@@ -52,20 +52,26 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                 case "Active":
                     holder.circle.setImageResource(R.drawable.green_circle);
                     holder.status.setBackgroundResource(R.drawable.green_box);
-                    holder.status.setText("Active");
+                    holder.status.setText(R.string.aktif);
                     holder.status.setTextColor(context.getResources().getColor(R.color.green_dark));
                     break;
                 case "Done":
                     holder.circle.setImageResource(R.drawable.blue_circle);
                     holder.status.setBackgroundResource(R.drawable.blue_box);
-                    holder.status.setText("Done");
+                    holder.status.setText(R.string.selesai);
                     holder.status.setTextColor(context.getResources().getColor(R.color.blue_dark));
                     break;
                 case "Delayed":
                     holder.circle.setImageResource(R.drawable.red_circle);
                     holder.status.setBackgroundResource(R.drawable.red_box);
-                    holder.status.setText("Delayed");
+                    holder.status.setText(R.string.tunda);
                     holder.status.setTextColor(context.getResources().getColor(R.color.red_dark));
+                    break;
+                case "None":
+                    holder.circle.setImageResource(R.drawable.gray_circle);
+                    holder.status.setBackgroundResource(R.drawable.gray_box);
+                    holder.status.setText(R.string.none);
+                    holder.status.setTextColor(context.getResources().getColor(R.color.black));
                     break;
             }
         }
