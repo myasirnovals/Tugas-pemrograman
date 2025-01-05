@@ -10,5 +10,3 @@ $connect = new mysqli($server, $username, $password, $database);
 if ($connect->connect_error) {
     die("Koneksi gagal: " . $connect->connect_error);
 }
-
-echo "koneksi berhasil";
