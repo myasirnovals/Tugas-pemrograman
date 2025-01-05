@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:fontFamily="@font/segoe_ui_bold"
         android:gravity="center"
-        android:text=""
+        android:text="@string/tugas"
         android:textColor="@color/black"
         android:textSize="@dimen/_18sdp" />
 

@@ -3,7 +3,7 @@
     <string name="tanggal">Tanggal</string>
     <string name="deskripsi">Deskripsi (Opsional)</string>
     <string name="judul">Judul</string>
-    <string name="tugas">Task Editor</string>
+    <string name="tugas">To Do List</string>
     <string name="prioritas">Prioritas</string>
     <string name="aktif">Aktif</string>
     <string name="selesai">Selesai</string>
