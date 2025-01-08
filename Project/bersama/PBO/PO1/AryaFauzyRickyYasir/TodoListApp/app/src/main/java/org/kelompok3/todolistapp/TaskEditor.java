@@ -88,13 +88,30 @@ public class TaskEditor extends AppCompatActivity {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     TaskEditor.this,
                     (view, year, month, dayOfMonth) -> {
-                        selectedDueDate = LocalDate.of(year, month + 1, dayOfMonth);
+                        // Membuat LocalDate untuk tanggal yang dipilih
+                        LocalDate selectedDate = LocalDate.of(year, month + 1, dayOfMonth);
+                        LocalDate today = LocalDate.now();
+
+                        // Validasi tanggal
+                        if (selectedDate.isBefore(today)) {
+                            Toast.makeText(TaskEditor.this,
+                                    "Cannot select past dates",
+                                    Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        // Jika valid, set tanggal
+                        selectedDueDate = selectedDate;
                         dueDateText.setText(selectedDueDate.format(dateFormatter));
                     },
                     calendar.get(Calendar.YEAR),
                     calendar.get(Calendar.MONTH),
                     calendar.get(Calendar.DAY_OF_MONTH)
             );
+
+            // Set tanggal minimal ke hari ini
+            datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+
             datePickerDialog.show();
         });
     }
