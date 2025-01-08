@@ -29,7 +29,9 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.format.DateTimeFormatter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     private TextView date;
@@ -101,21 +103,31 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadTasks() {
-        tasksList = database.getTasks(shortDate.format(liveDate));
-        if (!done_tasks.isChecked()) {
-            ArrayList<Task> activeTasks = new ArrayList<>();
-            for (Task task : tasksList) {
-                if (!task.getStatus().equals("Done")) {
-                    activeTasks.add(task);
+        try {
+            tasksList = database.getTasks(shortDate.format(liveDate));
+            if (!done_tasks.isChecked()) {
+                ArrayList<Task> activeTasks = new ArrayList<>();
+                for (Task task : tasksList) {
+                    if (task != null && task.getStatus() != null && !task.getStatus().equals("Done")) {
+                        activeTasks.add(task);
+                    }
                 }
+                tasksList = activeTasks;
             }
-            tasksList = activeTasks;
+
+            // Pastikan tasksList tidak null
+            if (tasksList == null) {
+                tasksList = new ArrayList<>();
+            }
+
+            adapter = new TaskAdapter(this, tasksList);
+            tasks_list.setAdapter(adapter);
+
+            setupSwipeToDelete();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Terjadi kesalahan saat memuat data", Toast.LENGTH_SHORT).show();
         }
-
-        adapter = new TaskAdapter(this, tasksList);
-        tasks_list.setAdapter(adapter);
-
-        setupSwipeToDelete();
     }
 
     private void setupSwipeToDelete() {
@@ -177,7 +189,6 @@ public class MainActivity extends AppCompatActivity {
 
         new ItemTouchHelper(swipeCallback).attachToRecyclerView(tasks_list);
     }
-
 
     public class ListAdapter extends BaseAdapter {
         private final ArrayList<Task> tasks;
@@ -267,4 +278,24 @@ public class MainActivity extends AppCompatActivity {
             return v;
         }
     }
+
+    // Di MainActivity.java, tambahkan fungsi ini:
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void sortTasksByStatus() {
+        tasksList.sort((task1, task2) -> {
+            // Definisikan prioritas status
+            Map<String, Integer> statusPriority = new HashMap<>();
+            statusPriority.put("Active", 1);    // Aktif
+            statusPriority.put("Delayed", 2);   // Tunda
+            statusPriority.put("Done", 3);      // Selesai
+            statusPriority.put("None", 4);      // Tidak Ada
+
+            String status1 = task1.getStatus();
+            String status2 = task2.getStatus();
+
+            return statusPriority.getOrDefault(status1, 5)
+                    - statusPriority.getOrDefault(status2, 5);
+        });
+    }
+
 }

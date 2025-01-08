@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -35,55 +36,71 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        Task task = tasks.get(position);
-        holder.task_title.setText(task.getTitle());
+        try {
+            Task task = tasks.get(position);
+            if (task == null) return;
 
-        if (task.getDescription() != null && !task.getDescription().isEmpty()) {
-            holder.task_description.setVisibility(View.VISIBLE);
-            holder.task_description.setText(task.getDescription());
-        }
+            holder.task_title.setText(task.getTitle() != null ? task.getTitle() : "");
 
-        if (task.getDueDate() != null) {
-            holder.date.setText(task.getDueDateToString());
-        }
-
-        if (task.getStatus() != null && !task.getStatus().isEmpty()) {
-            switch (task.getStatus()) {
-                case "Active":
-                    holder.circle.setImageResource(R.drawable.green_circle);
-                    holder.status.setBackgroundResource(R.drawable.green_box);
-                    holder.status.setText(R.string.aktif);
-                    holder.status.setTextColor(context.getResources().getColor(R.color.green_dark));
-                    break;
-                case "Done":
-                    holder.circle.setImageResource(R.drawable.blue_circle);
-                    holder.status.setBackgroundResource(R.drawable.blue_box);
-                    holder.status.setText(R.string.selesai);
-                    holder.status.setTextColor(context.getResources().getColor(R.color.blue_dark));
-                    break;
-                case "Delayed":
-                    holder.circle.setImageResource(R.drawable.red_circle);
-                    holder.status.setBackgroundResource(R.drawable.red_box);
-                    holder.status.setText(R.string.tunda);
-                    holder.status.setTextColor(context.getResources().getColor(R.color.red_dark));
-                    break;
-                case "None":
-                    holder.circle.setImageResource(R.drawable.gray_circle);
-                    holder.status.setBackgroundResource(R.drawable.gray_box);
-                    holder.status.setText(R.string.none);
-                    holder.status.setTextColor(context.getResources().getColor(R.color.black));
-                    break;
+            if (task.getDescription() != null && !task.getDescription().isEmpty()) {
+                holder.task_description.setVisibility(View.VISIBLE);
+                holder.task_description.setText(task.getDescription());
+            } else {
+                holder.task_description.setVisibility(View.GONE);
             }
-        }
 
-        holder.parent_layout.setOnClickListener(v -> {
-            Intent intent = new Intent(context, TaskEditor.class);
-            intent.putExtra("date", ((MainActivity)context).getCurrentDate());
-            intent.putExtra("mode", "edit");
-            intent.putExtra("taskId", task.getID());
-            context.startActivity(intent);
-        });
+            if (task.getDueDate() != null) {
+                holder.date.setText(task.getDueDateToString());
+            } else {
+                holder.date.setText("");
+            }
+
+            if (task.getStatus() != null && !task.getStatus().isEmpty()) {
+                switch (task.getStatus()) {
+                    case "Active":
+                        holder.circle.setImageResource(R.drawable.green_circle);
+                        holder.status.setBackgroundResource(R.drawable.green_box);
+                        holder.status.setText(R.string.aktif);
+                        holder.status.setTextColor(context.getResources().getColor(R.color.green_dark));
+                        break;
+                    case "Done":
+                        holder.circle.setImageResource(R.drawable.blue_circle);
+                        holder.status.setBackgroundResource(R.drawable.blue_box);
+                        holder.status.setText(R.string.selesai);
+                        holder.status.setTextColor(context.getResources().getColor(R.color.blue_dark));
+                        break;
+                    case "Delayed":
+                        holder.circle.setImageResource(R.drawable.red_circle);
+                        holder.status.setBackgroundResource(R.drawable.red_box);
+                        holder.status.setText(R.string.tunda);
+                        holder.status.setTextColor(context.getResources().getColor(R.color.red_dark));
+                        break;
+                    case "None":
+                        holder.circle.setImageResource(R.drawable.gray_circle);
+                        holder.status.setBackgroundResource(R.drawable.gray_box);
+                        holder.status.setText(R.string.none);
+                        holder.status.setTextColor(context.getResources().getColor(R.color.black));
+                        break;
+                }
+            }
+
+            holder.parent_layout.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(context, TaskEditor.class);
+                    intent.putExtra("date", ((MainActivity)context).getCurrentDate());
+                    intent.putExtra("mode", "edit");
+                    intent.putExtra("taskId", task.getID());
+                    context.startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context, "Gagal membuka task", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
 
     @Override
     public int getItemCount() {
