@@ -45,16 +45,6 @@
         android:layout_marginTop="@dimen/_11sdp"
         android:hint="@string/tanggal" />
 
-    <CheckBox
-        android:id="@+id/priority"
-        style="@style/edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_17sdp"
-        android:layout_marginTop="@dimen/_11sdp"
-        android:buttonTint="@color/black"
-        android:hint="@string/prioritas" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

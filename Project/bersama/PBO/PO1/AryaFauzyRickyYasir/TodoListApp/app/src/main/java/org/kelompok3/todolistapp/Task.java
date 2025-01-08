@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi;
 
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.format.DateTimeFormatter;
+
 import java.util.Locale;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -13,7 +14,6 @@ public class Task {
     private int ID;
     private String title;
     private String description;
-    private boolean priority;
     private String status;
     private LocalDate dueDate;
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("E dd, LLL yyyy", Locale.UK);
@@ -43,14 +43,6 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public boolean isPriority() {
-        return priority;
-    }
-
-    public void setPriority(boolean priority) {
-        this.priority = priority;
     }
 
     public LocalDate getDueDate() {

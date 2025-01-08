@@ -5,7 +5,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,7 +23,6 @@ import java.util.Locale;
 public class TaskEditor extends AppCompatActivity {
     private EditText titleEdit, descriptionEdit;
     private TextView dueDateText;
-    private CheckBox priorityCheck;
     private RadioGroup statusGroup;
     private RadioButton activeRadio, doneRadio, delayedRadio;
     private Button saveButton, deleteButton;
@@ -72,7 +70,6 @@ public class TaskEditor extends AppCompatActivity {
         titleEdit = findViewById(R.id.title);
         descriptionEdit = findViewById(R.id.description);
         dueDateText = findViewById(R.id.due_date);
-        priorityCheck = findViewById(R.id.priority);
         statusGroup = findViewById(R.id.status);
         activeRadio = findViewById(R.id.active);
         doneRadio = findViewById(R.id.done);
@@ -122,7 +119,6 @@ public class TaskEditor extends AppCompatActivity {
         if (task != null) {
             titleEdit.setText(task.getTitle());
             descriptionEdit.setText(task.getDescription());
-            priorityCheck.setChecked(task.isPriority());
             selectedDueDate = task.getDueDate();
             dueDateText.setText(task.getDueDateToString());
 
@@ -171,7 +167,6 @@ public class TaskEditor extends AppCompatActivity {
 
         task.setTitle(titleEdit.getText().toString().trim());
         task.setDescription(descriptionEdit.getText().toString().trim());
-        task.setPriority(priorityCheck.isChecked());
         task.setDueDate(selectedDueDate);
 
         // Pastikan status selalu diset
