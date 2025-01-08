@@ -66,7 +66,6 @@ public class Database {
             taskJson.put("id", task.getID());
             taskJson.put("title", task.getTitle());
             taskJson.put("description", task.getDescription());
-            taskJson.put("priority", task.isPriority());
             taskJson.put("status", task.getStatus());
             taskJson.put("dueDate", task.getDueDate().format(dateFormatter));
 
@@ -96,7 +95,6 @@ public class Database {
                 task.setID(taskJson.getInt("id"));
                 task.setTitle(taskJson.getString("title"));
                 task.setDescription(taskJson.optString("description", ""));
-                task.setPriority(taskJson.optBoolean("priority", false));
                 task.setStatus(taskJson.optString("status", "Active"));
 
                 String dueDateStr = taskJson.optString("dueDate", null);
@@ -129,7 +127,6 @@ public class Database {
                     task.setID(taskJson.getInt("id"));
                     task.setTitle(taskJson.getString("title"));
                     task.setDescription(taskJson.getString("description"));
-                    task.setPriority(taskJson.getBoolean("priority"));
                     task.setStatus(taskJson.getString("status"));
                     task.setDueDate(LocalDate.parse(
                             taskJson.getString("dueDate"), dateFormatter)
@@ -157,7 +154,6 @@ public class Database {
                 if (taskJson.getInt("id") == task.getID()) {
                     taskJson.put("title", task.getTitle());
                     taskJson.put("description", task.getDescription());
-                    taskJson.put("priority", task.isPriority());
                     taskJson.put("status", task.getStatus());
                     taskJson.put("dueDate", task.getDueDate().format(dateFormatter));
 
