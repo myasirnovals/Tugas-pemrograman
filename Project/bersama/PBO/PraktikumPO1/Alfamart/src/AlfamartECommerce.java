@@ -1,11 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class AlfamartECommerce extends JFrame {
+public class AlfamartECommerce extends JPanel {
     public AlfamartECommerce() {
-        setTitle("Alfamart E-Commerce");
-        setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Header Panel
@@ -34,6 +31,7 @@ public class AlfamartECommerce extends JFrame {
         navPanel.setPreferredSize(new Dimension(800, 40));
         navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
 
+        // Ubah bagian Navigation Panel (sekitar baris ke-31):
         String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
         for (String item : navItems) {
             JButton navButton = new JButton(item);
@@ -42,6 +40,16 @@ public class AlfamartECommerce extends JFrame {
             navButton.setBorderPainted(false);
             navButton.setFocusPainted(false);
             navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            // Tambahkan ActionListener untuk navigasi
+            navButton.addActionListener(e -> {
+                Component comp = this;
+                while (!(comp instanceof Main) && comp != null) {
+                    comp = comp.getParent();
+                }
+                if (comp instanceof Main) {
+                    ((Main) comp).showCard(item);
+                }
+            });
             navPanel.add(navButton);
         }
 

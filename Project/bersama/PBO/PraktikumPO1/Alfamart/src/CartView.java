@@ -4,16 +4,13 @@ import java.awt.event.*;
 import javax.swing.table.*;
 import java.util.ArrayList;
 
-public class CartView extends JFrame {
+public class CartView extends JPanel {
     private ArrayList<CartItem> cartItems;
     private JLabel totalLabel;
     private double totalPrice = 0.0;
 
     public CartView() {
         cartItems = new ArrayList<>();
-        setTitle("Alfamart - Keranjang");
-        setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Header Panel
@@ -59,6 +56,39 @@ public class CartView extends JFrame {
         headerPanel.add(cartButton, BorderLayout.EAST);
 
         add(headerPanel, BorderLayout.NORTH);
+
+        // Tambahkan Navigation Panel
+        JPanel navPanel = new JPanel(new GridLayout(1, 4));
+        navPanel.setPreferredSize(new Dimension(800, 40));
+        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
+
+        String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
+        for (String item : navItems) {
+            JButton navButton = new JButton(item);
+            navButton.setForeground(Color.BLACK);
+            navButton.setBackground(Color.WHITE);
+            navButton.setBorderPainted(false);
+            navButton.setFocusPainted(false);
+            navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            // Tambahkan ActionListener untuk navigasi
+            navButton.addActionListener(e -> {
+                Component comp = this;
+                while (!(comp instanceof Main) && comp != null) {
+                    comp = comp.getParent();
+                }
+                if (comp instanceof Main) {
+                    ((Main) comp).showCard(item);
+                }
+            });
+            navPanel.add(navButton);
+        }
+
+        // Buat panel untuk menampung header dan navigasi
+        JPanel headerWithNav = new JPanel(new BorderLayout());
+        headerWithNav.add(headerPanel, BorderLayout.NORTH);
+        headerWithNav.add(navPanel, BorderLayout.SOUTH);
+
+        add(headerWithNav, BorderLayout.NORTH);
     }
 
     private void createMainContent() {

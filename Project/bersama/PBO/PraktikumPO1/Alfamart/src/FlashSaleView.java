@@ -2,15 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class FlashSaleView extends JFrame {
+public class FlashSaleView extends JPanel {
     private ArrayList<Product> products;
     private JPanel productsPanel;
 
     public FlashSaleView() {
         products = new ArrayList<>();
-        setTitle("Alfamart - Flash Sale");
-        setSize(1000, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Initialize sample products
@@ -35,16 +32,69 @@ public class FlashSaleView extends JFrame {
     }
 
     private void createHeader() {
-        JPanel headerPanel = new JPanel();
+        // Header Panel
+        JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(Color.RED);
-        headerPanel.setPreferredSize(new Dimension(getWidth(), 50));
+        headerPanel.setPreferredSize(new Dimension(800, 60));
 
-        JLabel flashSaleLabel = new JLabel("Flash Sale Hari Ini !!");
-        flashSaleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        flashSaleLabel.setForeground(Color.WHITE);
-        headerPanel.add(flashSaleLabel);
+        // Logo
+        JLabel logoLabel = new JLabel("ALFAMART");
+        logoLabel.setForeground(Color.WHITE);
+        logoLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        logoLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 
-        add(headerPanel, BorderLayout.NORTH);
+        // Search Panel
+        JPanel searchPanel = new JPanel(new BorderLayout());
+        searchPanel.setBackground(Color.RED);
+        searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
+
+        JTextField searchField = new JTextField("cari produk....");
+        JButton searchButton = new JButton("Q");
+
+        searchPanel.add(searchField, BorderLayout.CENTER);
+        searchPanel.add(searchButton, BorderLayout.EAST);
+
+        // Cart Button
+        JButton cartButton = new JButton("🛒");
+        cartButton.setBackground(Color.RED);
+        cartButton.setForeground(Color.WHITE);
+        cartButton.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 20));
+
+        headerPanel.add(logoLabel, BorderLayout.WEST);
+        headerPanel.add(searchPanel, BorderLayout.CENTER);
+        headerPanel.add(cartButton, BorderLayout.EAST);
+
+        // Navigation Panel
+        JPanel navPanel = new JPanel(new GridLayout(1, 4));
+        navPanel.setPreferredSize(new Dimension(800, 40));
+        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
+
+        String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
+        for (String item : navItems) {
+            JButton navButton = new JButton(item);
+            navButton.setForeground(Color.BLACK);
+            navButton.setBackground(Color.WHITE);
+            navButton.setBorderPainted(false);
+            navButton.setFocusPainted(false);
+            navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            navButton.addActionListener(e -> {
+                Component comp = this;
+                while (!(comp instanceof Main) && comp != null) {
+                    comp = comp.getParent();
+                }
+                if (comp instanceof Main) {
+                    ((Main) comp).showCard(item);
+                }
+            });
+            navPanel.add(navButton);
+        }
+
+        // Panel untuk menampung header dan navigasi
+        JPanel headerWithNav = new JPanel(new BorderLayout());
+        headerWithNav.add(headerPanel, BorderLayout.NORTH);
+        headerWithNav.add(navPanel, BorderLayout.SOUTH);
+
+        add(headerWithNav, BorderLayout.NORTH);
     }
 
     private void createCategoryTabs() {

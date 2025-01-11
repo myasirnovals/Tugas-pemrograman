@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ContactForm extends JFrame {
+public class ContactForm extends JPanel {
     private JTextField namaField;
     private JTextField noHpField;
     private JTextField emailField;
@@ -10,9 +10,6 @@ public class ContactForm extends JFrame {
     private JButton kirimButton;
 
     public ContactForm() {
-        setTitle("Alfamart");
-        setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         // Header Panel (Red)
@@ -52,6 +49,36 @@ public class ContactForm extends JFrame {
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         mainPanel.setBackground(Color.WHITE);
+
+        // Tambahkan Navigation Panel
+        JPanel navPanel = new JPanel(new GridLayout(1, 4));
+        navPanel.setPreferredSize(new Dimension(800, 40));
+        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
+
+        String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
+        for (String item : navItems) {
+            JButton navButton = new JButton(item);
+            navButton.setForeground(Color.BLACK);
+            navButton.setBackground(Color.WHITE);
+            navButton.setBorderPainted(false);
+            navButton.setFocusPainted(false);
+            navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            navButton.addActionListener(e -> {
+                Component comp = this;
+                while (!(comp instanceof Main) && comp != null) {
+                    comp = comp.getParent();
+                }
+                if (comp instanceof Main) {
+                    ((Main) comp).showCard(item);
+                }
+            });
+            navPanel.add(navButton);
+        }
+
+        // Buat panel untuk menampung header dan navigasi
+        JPanel headerWithNav = new JPanel(new BorderLayout());
+        headerWithNav.add(headerPanel, BorderLayout.NORTH);
+        headerWithNav.add(navPanel, BorderLayout.SOUTH);
 
         // Title
         JLabel titleLabel = new JLabel("Hubungi Kami");
@@ -100,7 +127,7 @@ public class ContactForm extends JFrame {
         mainPanel.add(kirimButton);
 
         // Add panels to frame
-        add(headerPanel, BorderLayout.NORTH);
+        add(headerWithNav, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
 
         // Add action listener for Kirim button
