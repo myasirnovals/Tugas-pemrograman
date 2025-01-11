@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class FlashSaleView extends JPanel {
     private ArrayList<Product> products;
     private JPanel productsPanel;
+    private int currentPage = 0;
+    private final int PRODUCTS_PER_PAGE = 20; // 4 kolom x 5 baris
+    private final int COLUMNS = 4;
 
     public FlashSaleView() {
         products = new ArrayList<>();
@@ -13,15 +16,21 @@ public class FlashSaleView extends JPanel {
         // Initialize sample products
         initializeProducts();
 
+        // Buat panel utama untuk menampung semua konten
+        JPanel mainContentPanel = new JPanel(new BorderLayout());
+
         // Create main components
         createHeader();
-        createCategoryTabs();
-        createProductsGrid();
+        createCategoryTabs(mainContentPanel);
+        createProductsGrid(mainContentPanel);
+
+        // Tambahkan mainContentPanel ke panel utama
+        add(mainContentPanel, BorderLayout.CENTER);
     }
 
     private void initializeProducts() {
         // Add sample products
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 40; i++) { // Menambah 40 produk untuk contoh
             products.add(new Product(
                     "Product Name " + i,
                     "consectetur adipiscing elit duis tristique sollicitudin nisi sit amet commodo.",
@@ -97,7 +106,7 @@ public class FlashSaleView extends JPanel {
         add(headerWithNav, BorderLayout.NORTH);
     }
 
-    private void createCategoryTabs() {
+    private void createCategoryTabs(JPanel mainContentPanel) {
         JPanel tabsPanel = new JPanel();
         tabsPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
         tabsPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
@@ -115,28 +124,90 @@ public class FlashSaleView extends JPanel {
             tabsPanel.add(tabButton);
         }
 
-        add(tabsPanel, BorderLayout.CENTER);
+        mainContentPanel.add(tabsPanel, BorderLayout.NORTH);
     }
 
-    private void createProductsGrid() {
+    private void createProductsGrid(JPanel mainContentPanel) {
         JPanel mainScrollPanel = new JPanel();
         mainScrollPanel.setLayout(new BorderLayout());
 
+        // Panel untuk produk
         productsPanel = new JPanel();
-        productsPanel.setLayout(new GridLayout(0, 5, 10, 10));
+        productsPanel.setLayout(new GridLayout(5, 4, 10, 10)); // 5 baris, 4 kolom
         productsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // Add product cards
-        for (Product product : products) {
-            productsPanel.add(createProductCard(product));
-        }
+        // Tampilkan produk untuk halaman saat ini
+        updateProductsDisplay();
 
         JScrollPane scrollPane = new JScrollPane(productsPanel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setBorder(null);
 
         mainScrollPanel.add(scrollPane, BorderLayout.CENTER);
-        add(mainScrollPanel, BorderLayout.SOUTH);
+
+        // Panel untuk pagination
+        JPanel paginationPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JButton prevButton = new JButton("Previous");
+        JButton nextButton = new JButton("Next");
+
+        // Styling tombol
+        prevButton.setBackground(Color.WHITE);
+        nextButton.setBackground(Color.WHITE);
+        prevButton.setFocusPainted(false);
+        nextButton.setFocusPainted(false);
+
+        // Action listeners
+        prevButton.addActionListener(e -> {
+            if (currentPage > 0) {
+                currentPage--;
+                updateProductsDisplay();
+                updatePaginationButtons(prevButton, nextButton);
+            }
+        });
+
+        nextButton.addActionListener(e -> {
+            if ((currentPage + 1) * PRODUCTS_PER_PAGE < products.size()) {
+                currentPage++;
+                updateProductsDisplay();
+                updatePaginationButtons(prevButton, nextButton);
+            }
+        });
+
+        paginationPanel.add(prevButton);
+        paginationPanel.add(nextButton);
+
+        // Update status tombol pagination
+        updatePaginationButtons(prevButton, nextButton);
+
+        mainScrollPanel.add(paginationPanel, BorderLayout.SOUTH);
+        mainContentPanel.add(mainScrollPanel, BorderLayout.CENTER);
+    }
+
+    private void updateProductsDisplay() {
+        productsPanel.removeAll();
+
+        int start = currentPage * PRODUCTS_PER_PAGE;
+        int end = Math.min(start + PRODUCTS_PER_PAGE, products.size());
+
+        // Tambahkan produk untuk halaman saat ini
+        for (int i = start; i < end; i++) {
+            productsPanel.add(createProductCard(products.get(i)));
+        }
+
+        // Jika jumlah produk kurang dari PRODUCTS_PER_PAGE, tambahkan panel kosong
+        for (int i = end - start; i < PRODUCTS_PER_PAGE; i++) {
+            JPanel emptyPanel = new JPanel();
+            emptyPanel.setBackground(Color.WHITE);
+            productsPanel.add(emptyPanel);
+        }
+
+        productsPanel.revalidate();
+        productsPanel.repaint();
+    }
+
+    private void updatePaginationButtons(JButton prevButton, JButton nextButton) {
+        prevButton.setEnabled(currentPage > 0);
+        nextButton.setEnabled((currentPage + 1) * PRODUCTS_PER_PAGE < products.size());
     }
 
     private JPanel createProductCard(Product product) {
