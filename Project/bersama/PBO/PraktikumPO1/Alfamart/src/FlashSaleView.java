@@ -133,8 +133,8 @@ public class FlashSaleView extends JPanel {
 
         // Panel untuk produk
         productsPanel = new JPanel();
-        productsPanel.setLayout(new GridLayout(5, 4, 10, 10)); // 5 baris, 4 kolom
-        productsPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        productsPanel.setLayout(new GridLayout(5, 4, 15, 15)); // Menambah spacing antar card
+        productsPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
         // Tampilkan produk untuk halaman saat ini
         updateProductsDisplay();
