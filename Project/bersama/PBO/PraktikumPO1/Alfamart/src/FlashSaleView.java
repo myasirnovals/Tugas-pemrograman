@@ -153,11 +153,4 @@ public class FlashSaleView extends JFrame {
         public String getDiscount() { return discount; }
         public String getCategory() { return category; }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            FlashSaleView frame = new FlashSaleView();
-            frame.setVisible(true);
-        });
-    }
 }

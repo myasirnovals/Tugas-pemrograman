@@ -174,11 +174,4 @@ public class CartView extends JFrame {
         public double getPrice() { return price; }
         public int getQuantity() { return quantity; }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            CartView frame = new CartView();
-            frame.setVisible(true);
-        });
-    }
 }
