@@ -8,82 +8,40 @@ public class CartView extends JPanel {
     private ArrayList<CartItem> cartItems;
     private JLabel totalLabel;
     private double totalPrice = 0.0;
+    private static final int PADDING = 20;
+    private static final Color PRIMARY_COLOR = Color.RED;
+    private static final Font HEADER_FONT = new Font("Arial", Font.BOLD, 20);
+    private static final Font PRICE_FONT = new Font("Arial", Font.BOLD, 16);
 
     public CartView() {
         cartItems = new ArrayList<>();
+        initializeLayout();
+        createComponents();
+    }
+
+    private void initializeLayout() {
         setLayout(new BorderLayout());
+    }
 
-        // Header Panel
+    private void createComponents() {
         createHeaderPanel();
-
-        // Main Content
         createMainContent();
-
-        // Footer with Checkout Button
         createFooterPanel();
     }
 
     private void createHeaderPanel() {
-        JPanel headerPanel = new JPanel(new BorderLayout());
-        headerPanel.setBackground(Color.RED);
-        headerPanel.setPreferredSize(new Dimension(800, 60));
+        // Header Panel
+        JPanel headerPanel = createBaseHeaderPanel();
 
-        // Logo
-        JLabel logoLabel = new JLabel("ALFAMART");
-        logoLabel.setForeground(Color.WHITE);
-        logoLabel.setFont(new Font("Arial", Font.BOLD, 20));
-        logoLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+        // Logo, Search, Cart sections
+        headerPanel.add(createLogoSection(), BorderLayout.WEST);
+        headerPanel.add(createSearchSection(), BorderLayout.CENTER);
+        headerPanel.add(createCartButton(), BorderLayout.EAST);
 
-        // Search Panel
-        JPanel searchPanel = new JPanel(new BorderLayout());
-        searchPanel.setBackground(Color.RED);
-        searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
+        // Navigation Panel
+        JPanel navPanel = createNavigationPanel();
 
-        JTextField searchField = new JTextField("cari produk....");
-        JButton searchButton = new JButton("Q");
-
-        searchPanel.add(searchField, BorderLayout.CENTER);
-        searchPanel.add(searchButton, BorderLayout.EAST);
-
-        // Cart Button
-        JButton cartButton = new JButton("🛒");
-        cartButton.setBackground(Color.RED);
-        cartButton.setForeground(Color.WHITE);
-        cartButton.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 20));
-
-        headerPanel.add(logoLabel, BorderLayout.WEST);
-        headerPanel.add(searchPanel, BorderLayout.CENTER);
-        headerPanel.add(cartButton, BorderLayout.EAST);
-
-        add(headerPanel, BorderLayout.NORTH);
-
-        // Tambahkan Navigation Panel
-        JPanel navPanel = new JPanel(new GridLayout(1, 4));
-        navPanel.setPreferredSize(new Dimension(800, 40));
-        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
-
-        String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
-        for (String item : navItems) {
-            JButton navButton = new JButton(item);
-            navButton.setForeground(Color.BLACK);
-            navButton.setBackground(Color.WHITE);
-            navButton.setBorderPainted(false);
-            navButton.setFocusPainted(false);
-            navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-            // Tambahkan ActionListener untuk navigasi
-            navButton.addActionListener(e -> {
-                Component comp = this;
-                while (!(comp instanceof Main) && comp != null) {
-                    comp = comp.getParent();
-                }
-                if (comp instanceof Main) {
-                    ((Main) comp).showCard(item);
-                }
-            });
-            navPanel.add(navButton);
-        }
-
-        // Buat panel untuk menampung header dan navigasi
+        // Combine header and nav
         JPanel headerWithNav = new JPanel(new BorderLayout());
         headerWithNav.add(headerPanel, BorderLayout.NORTH);
         headerWithNav.add(navPanel, BorderLayout.SOUTH);
@@ -91,37 +49,128 @@ public class CartView extends JPanel {
         add(headerWithNav, BorderLayout.NORTH);
     }
 
+    private JPanel createBaseHeaderPanel() {
+        JPanel headerPanel = new JPanel(new BorderLayout());
+        headerPanel.setBackground(PRIMARY_COLOR);
+        headerPanel.setPreferredSize(new Dimension(800, 60));
+        return headerPanel;
+    }
+
+    private JLabel createLogoSection() {
+        JLabel logoLabel = new JLabel("ALFAMART");
+        logoLabel.setForeground(Color.WHITE);
+        logoLabel.setFont(HEADER_FONT);
+        logoLabel.setBorder(BorderFactory.createEmptyBorder(0, PADDING, 0, 0));
+        return logoLabel;
+    }
+
+    private JPanel createSearchSection() {
+        JPanel searchPanel = new JPanel(new BorderLayout());
+        searchPanel.setBackground(PRIMARY_COLOR);
+        searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
+
+        JTextField searchField = new JTextField("cari produk....");
+        JButton searchButton = new JButton("Q");
+
+        searchPanel.add(searchField, BorderLayout.CENTER);
+        searchPanel.add(searchButton, BorderLayout.EAST);
+        return searchPanel;
+    }
+
+    private JButton createCartButton() {
+        JButton cartButton = new JButton("\uD83D\uDED2");
+        cartButton.setBackground(PRIMARY_COLOR);
+        cartButton.setForeground(Color.WHITE);
+        cartButton.setBorder(BorderFactory.createEmptyBorder(0, PADDING, 0, PADDING));
+        return cartButton;
+    }
+
+    private JPanel createNavigationPanel() {
+        JPanel navPanel = new JPanel(new GridLayout(1, 4));
+        navPanel.setPreferredSize(new Dimension(800, 40));
+        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
+
+        String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
+        for (String item : navItems) {
+            navPanel.add(createNavButton(item));
+        }
+        return navPanel;
+    }
+
+    private JButton createNavButton(String text) {
+        JButton navButton = new JButton(text);
+        navButton.setForeground(Color.BLACK);
+        navButton.setBackground(Color.WHITE);
+        navButton.setBorderPainted(false);
+        navButton.setFocusPainted(false);
+        navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        navButton.addActionListener(e -> handleNavigation(text));
+        return navButton;
+    }
+
+    private void handleNavigation(String destination) {
+        Component comp = this;
+        while (!(comp instanceof Main) && comp != null) {
+            comp = comp.getParent();
+        }
+        if (comp instanceof Main) {
+            ((Main) comp).showCard(destination);
+        }
+    }
+
     private void createMainContent() {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-        mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(PADDING, PADDING, PADDING, PADDING));
 
-        // Add sample items
-        cartItems.add(new CartItem("Indomie Goreng", 4000, 1));
-        cartItems.add(new CartItem("Indomie Soto", 4000, 1));
+        // Initialize sample data
+        initializeSampleData();
 
-        // Create cart items panel
+        // Create and add cart items panel
         JPanel cartItemsPanel = new JPanel();
         cartItemsPanel.setLayout(new BoxLayout(cartItemsPanel, BoxLayout.Y_AXIS));
 
-        // Header
+        // Add header and items
+        cartItemsPanel.add(createCartHeader());
+        addCartItems(cartItemsPanel);
+
+        mainPanel.add(cartItemsPanel);
+        add(new JScrollPane(mainPanel), BorderLayout.CENTER);
+    }
+
+    private void initializeSampleData() {
+        cartItems.add(new CartItem("Indomie Goreng", 4000, 1));
+        cartItems.add(new CartItem("Indomie Soto", 4000, 1));
+    }
+
+    // Tambahkan method ini setelah initializeSampleData()
+
+    private JPanel createCartHeader() {
         JPanel headerRow = new JPanel(new GridLayout(1, 5));
         headerRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
-        headerRow.add(new JLabel("Produk"));
-        headerRow.add(new JLabel("Harga Satuan"));
-        headerRow.add(new JLabel("Kuantitas"));
-        headerRow.add(new JLabel("Total Harga"));
-        headerRow.add(new JLabel("Aksi"));
-        cartItemsPanel.add(headerRow);
 
-        // Add items
+        String[] headers = {"Produk", "Harga Satuan", "Kuantitas", "Total Harga", "Aksi"};
+        for (String header : headers) {
+            JLabel headerLabel = new JLabel(header);
+            headerLabel.setFont(new Font("Arial", Font.BOLD, 14));
+            headerRow.add(headerLabel);
+        }
+
+        return headerRow;
+    }
+
+    private void addCartItems(JPanel cartItemsPanel) {
+        totalPrice = 0.0; // Reset total price
+
         for (CartItem item : cartItems) {
             cartItemsPanel.add(createCartItemPanel(item));
             totalPrice += item.getPrice() * item.getQuantity();
         }
 
-        mainPanel.add(cartItemsPanel);
-        add(new JScrollPane(mainPanel), BorderLayout.CENTER);
+        // Update total label if it exists
+        if (totalLabel != null) {
+            totalLabel.setText("Total: RP " + String.format("%,d", (int)totalPrice));
+        }
     }
 
     private JPanel createCartItemPanel(CartItem item) {
