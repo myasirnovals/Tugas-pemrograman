@@ -212,45 +212,83 @@ public class FlashSaleView extends JPanel {
 
     private JPanel createProductCard(Product product) {
         JPanel card = new JPanel();
-        card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
-        card.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        card.setLayout(new BorderLayout(5, 5));
+        card.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1),
+                BorderFactory.createEmptyBorder(8, 8, 8, 8)
+        ));
         card.setBackground(Color.WHITE);
+
+        // Panel untuk konten utama (gambar dan teks)
+        JPanel contentPanel = new JPanel();
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+        contentPanel.setBackground(Color.WHITE);
 
         // Product Image (placeholder)
         JPanel imagePanel = new JPanel();
-        imagePanel.setPreferredSize(new Dimension(180, 180));
+        imagePanel.setPreferredSize(new Dimension(150, 150));
+        imagePanel.setMinimumSize(new Dimension(150, 150));
+        imagePanel.setMaximumSize(new Dimension(150, 150));
         imagePanel.setBackground(Color.LIGHT_GRAY);
-        imagePanel.setMaximumSize(new Dimension(180, 180));
-        card.add(imagePanel);
+        contentPanel.add(imagePanel);
+        contentPanel.add(Box.createVerticalStrut(8)); // Spacing
+
+        // Panel untuk informasi produk
+        JPanel infoPanel = new JPanel();
+        infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
+        infoPanel.setBackground(Color.WHITE);
 
         // Category
         JLabel categoryLabel = new JLabel(product.getCategory());
         categoryLabel.setForeground(Color.GRAY);
+        categoryLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         categoryLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        card.add(categoryLabel);
+        infoPanel.add(categoryLabel);
+        infoPanel.add(Box.createVerticalStrut(4));
 
         // Product Name
-        JLabel nameLabel = new JLabel(product.getName());
+        JLabel nameLabel = new JLabel("<html><body style='width: 140px'>" +
+                product.getName() + "</body></html>");
         nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
         nameLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        card.add(nameLabel);
+        infoPanel.add(nameLabel);
+        infoPanel.add(Box.createVerticalStrut(4));
 
         // Description
-        JTextArea descArea = new JTextArea(product.getDescription());
-        descArea.setWrapStyleWord(true);
-        descArea.setLineWrap(true);
-        descArea.setOpaque(false);
-        descArea.setEditable(false);
-        descArea.setForeground(Color.GRAY);
-        descArea.setFont(new Font("Arial", Font.PLAIN, 12));
-        descArea.setAlignmentX(Component.LEFT_ALIGNMENT);
-        card.add(descArea);
+        JLabel descLabel = new JLabel("<html><body style='width: 140px'>" +
+                product.getDescription() + "</body></html>");
+        descLabel.setForeground(Color.GRAY);
+        descLabel.setFont(new Font("Arial", Font.PLAIN, 12));
+        descLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        infoPanel.add(descLabel);
+        infoPanel.add(Box.createVerticalStrut(8));
 
         // Discount
         JLabel discountLabel = new JLabel(product.getDiscount());
         discountLabel.setForeground(Color.RED);
+        discountLabel.setFont(new Font("Arial", Font.BOLD, 14));
         discountLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        card.add(discountLabel);
+        infoPanel.add(discountLabel);
+
+        contentPanel.add(infoPanel);
+        card.add(contentPanel, BorderLayout.CENTER);
+
+        // Tambahkan hover effect
+        card.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                card.setBorder(BorderFactory.createCompoundBorder(
+                        BorderFactory.createLineBorder(Color.RED, 1),
+                        BorderFactory.createEmptyBorder(8, 8, 8, 8)
+                ));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                card.setBorder(BorderFactory.createCompoundBorder(
+                        BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1),
+                        BorderFactory.createEmptyBorder(8, 8, 8, 8)
+                ));
+            }
+        });
 
         return card;
     }
