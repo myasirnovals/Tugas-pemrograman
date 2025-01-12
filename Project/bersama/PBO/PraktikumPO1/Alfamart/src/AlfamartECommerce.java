@@ -1,4 +1,6 @@
+import dao.CartDAO;
 import database.DBConnection;
+import model.CartItem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,8 +11,10 @@ public class AlfamartECommerce extends JPanel {
     private JPanel paginationPanel;
     private int currentPage = 1;
     private final int PRODUCTS_PER_PAGE = 10;
+    private CartDAO cartDAO;
 
     public AlfamartECommerce() {
+        cartDAO = new CartDAO();
         setLayout(new BorderLayout());
 
         // Header Panel
@@ -229,10 +233,41 @@ public class AlfamartECommerce extends JPanel {
         addButton.setBackground(Color.RED);
         addButton.setForeground(Color.WHITE);
         addButton.setFocusPainted(false);
-        addButton.setBorderPainted(false);
-        addButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        panel.add(addButton, BorderLayout.EAST);
 
+        // Tambahkan action listener
+        addButton.addActionListener(e -> {
+            try {
+                // Ambil harga (hilangkan "Rp " dan tanda koma)
+                String priceStr = price.replace("Rp ", "").replace(",", "");
+                int priceValue = Integer.parseInt(priceStr);
+
+                // Buat objek CartItem
+                CartItem item = new CartItem();
+                item.setProductName(name);
+                item.setPrice(priceValue);
+                item.setQuantity(1); // Default quantity 1
+
+                // Simpan ke database
+                if (cartDAO.addToCart(item)) {
+                    JOptionPane.showMessageDialog(this,
+                            "Produk berhasil ditambahkan ke keranjang!",
+                            "Sukses",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Error menambahkan ke keranjang: " + ex.getMessage(),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Error format harga",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        panel.add(addButton, BorderLayout.EAST);
         return panel;
     }
 }
