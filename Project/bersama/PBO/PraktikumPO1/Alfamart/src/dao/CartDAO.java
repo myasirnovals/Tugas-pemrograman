@@ -62,4 +62,16 @@ public class CartDAO {
         }
     }
 
+    // Tambahkan di CartDAO.java
+    public void addToCart(CartItem item) throws SQLException {
+        String query = "INSERT INTO cart_items (product_id, quantity) VALUES (?, ?)";
+
+        try (Connection connection = DBConnection.getConnection();
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setInt(1, item.getProduct().getProductId());
+            stmt.setInt(2, item.getQuantity());
+            stmt.executeUpdate();
+        }
+    }
 }

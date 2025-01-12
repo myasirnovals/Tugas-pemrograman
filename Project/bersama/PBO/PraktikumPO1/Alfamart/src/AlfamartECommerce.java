@@ -1,4 +1,8 @@
+import dao.CartDAO;
+import dao.ProductDAO;
 import database.DBConnection;
+import model.CartItem;
+import model.Product;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,8 +13,10 @@ public class AlfamartECommerce extends JPanel {
     private JPanel paginationPanel;
     private int currentPage = 1;
     private final int PRODUCTS_PER_PAGE = 10;
+    private CartDAO cartDAO;
 
     public AlfamartECommerce() {
+        this.cartDAO = new CartDAO();
         setLayout(new BorderLayout());
 
         // Header Panel
@@ -103,19 +109,16 @@ public class AlfamartECommerce extends JPanel {
         contentPanel.removeAll();
 
         try (Connection conn = DBConnection.getConnection()) {
-            // Hitung offset
             int offset = (page - 1) * PRODUCTS_PER_PAGE;
-
-            // Ambil produk untuk halaman saat ini
             String query = "SELECT * FROM products LIMIT ? OFFSET ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, PRODUCTS_PER_PAGE);
             ps.setInt(2, offset);
 
             ResultSet rs = ps.executeQuery();
-
             while (rs.next()) {
                 JPanel productPanel = createProductPanel(
+                        rs.getInt("product_id"),          // Tambahkan productId
                         rs.getString("name"),
                         rs.getString("description"),
                         "Rp " + String.format("%,d", rs.getInt("price"))
@@ -125,7 +128,6 @@ public class AlfamartECommerce extends JPanel {
             }
 
             updatePaginationControls(conn);
-
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this,
                     "Error loading products: " + e.getMessage(),
@@ -189,13 +191,14 @@ public class AlfamartECommerce extends JPanel {
         paginationPanel.repaint();
     }
 
-    private JPanel createProductPanel(String name, String description, String price) {
+    // Update method createProductPanel
+    private JPanel createProductPanel(int productId, String name, String description, String price) {
         JPanel panel = new JPanel(new BorderLayout(10, 0));
         panel.setMaximumSize(new Dimension(750, 100));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         panel.setBackground(Color.WHITE);
 
-        // Image Panel
+        // Image Panel (kode tetap sama)
         JPanel imagePanel = new JPanel();
         imagePanel.setPreferredSize(new Dimension(100, 100));
         imagePanel.setBackground(Color.LIGHT_GRAY);
@@ -204,7 +207,7 @@ public class AlfamartECommerce extends JPanel {
         imagePanel.add(imageLabel);
         panel.add(imagePanel, BorderLayout.WEST);
 
-        // Info Panel
+        // Info Panel (kode tetap sama)
         JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
         infoPanel.setBackground(Color.WHITE);
@@ -224,15 +227,40 @@ public class AlfamartECommerce extends JPanel {
 
         panel.add(infoPanel, BorderLayout.CENTER);
 
-        // Button Panel
+        // Button Panel dengan implementasi baru
         JButton addButton = new JButton("Tambah ke Keranjang");
         addButton.setBackground(Color.RED);
         addButton.setForeground(Color.WHITE);
         addButton.setFocusPainted(false);
-        addButton.setBorderPainted(false);
-        addButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        panel.add(addButton, BorderLayout.EAST);
 
+        addButton.addActionListener(e -> {
+            try {
+                // Dapatkan product dari ProductDAO
+                ProductDAO productDAO = new ProductDAO();
+                Product product = productDAO.getProductById(productId);
+
+                if (product != null) {
+                    // Buat CartItem baru
+                    CartItem cartItem = new CartItem(0, product, 1); // cartItemId akan di-generate oleh database
+
+                    // Simpan ke database
+                    cartDAO.addToCart(cartItem);
+
+                    JOptionPane.showMessageDialog(this,
+                            "Produk berhasil ditambahkan ke keranjang!",
+                            "Sukses",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Error menambahkan ke keranjang: " + ex.getMessage(),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+                ex.printStackTrace();
+            }
+        });
+
+        panel.add(addButton, BorderLayout.EAST);
         return panel;
     }
 }
