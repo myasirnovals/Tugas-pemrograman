@@ -18,6 +18,8 @@ public class CartView extends JPanel {
     private static final Color PRIMARY_COLOR = Color.RED;
     private static final Font HEADER_FONT = new Font("Arial", Font.BOLD, 20);
     private static final Font PRICE_FONT = new Font("Arial", Font.BOLD, 16);
+    private static final Color SECONDARY_COLOR = new Color(51, 51, 51);
+    private static final Color BACKGROUND_COLOR = Color.WHITE;
 
     public CartView() {
         cartDAO = new CartDAO();
@@ -44,18 +46,29 @@ public class CartView extends JPanel {
 
     private void createComponents() {
         createHeaderPanel();
-        createMainContent();
 
-        // Buat tombol refresh
+        // Pindahkan tombol refresh ke dalam panel utama
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        // Panel untuk tombol refresh dengan padding
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 20));
+
+        // Styling tombol refresh
         refreshButton = new JButton("Refresh");
+        refreshButton.setBackground(Color.WHITE);
+        refreshButton.setForeground(PRIMARY_COLOR);
+        refreshButton.setFocusPainted(false);
+        refreshButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         refreshButton.addActionListener(e -> refreshCart());
 
-        // Panel untuk tombol
-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttonPanel.add(refreshButton);
 
-        // Tambahkan ke layout utama (asumsikan menggunakan BorderLayout)
-        add(buttonPanel, BorderLayout.NORTH);
+        // Tambahkan main content dan button panel
+        mainPanel.add(buttonPanel, BorderLayout.NORTH);
+        mainPanel.add(createMainContent(), BorderLayout.CENTER);
+
+        add(mainPanel, BorderLayout.CENTER);
         createFooterPanel();
     }
 
@@ -114,12 +127,24 @@ public class CartView extends JPanel {
     }
 
     private JPanel createSearchSection() {
-        JPanel searchPanel = new JPanel(new BorderLayout());
+        JPanel searchPanel = new JPanel(new BorderLayout(10, 0)); // Tambah gap
         searchPanel.setBackground(PRIMARY_COLOR);
         searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
 
-        JTextField searchField = new JTextField("cari produk....");
-        JButton searchButton = new JButton("Q");
+        // Styling search field
+        JTextField searchField = new JTextField("Cari produk...");
+        searchField.setPreferredSize(new Dimension(200, 30));
+        searchField.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(Color.WHITE),
+                BorderFactory.createEmptyBorder(5, 10, 5, 10)
+        ));
+
+        // Styling search button
+        JButton searchButton = new JButton("🔍");
+        searchButton.setBackground(Color.WHITE);
+        searchButton.setForeground(PRIMARY_COLOR);
+        searchButton.setFocusPainted(false);
+        searchButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         searchPanel.add(searchField, BorderLayout.CENTER);
         searchPanel.add(searchButton, BorderLayout.EAST);
@@ -135,13 +160,23 @@ public class CartView extends JPanel {
     }
 
     private JPanel createNavigationPanel() {
-        JPanel navPanel = new JPanel(new GridLayout(1, 4));
+        JPanel navPanel = new JPanel(new GridLayout(1, 4, 2, 0)); // Tambah gap horizontal
         navPanel.setPreferredSize(new Dimension(800, 40));
-        navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
+        navPanel.setBackground(Color.WHITE);
+        navPanel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createMatteBorder(1, 0, 1, 0, Color.LIGHT_GRAY),
+                BorderFactory.createEmptyBorder(0, PADDING, 0, PADDING)
+        ));
 
         String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
         for (String item : navItems) {
-            navPanel.add(createNavButton(item));
+            JButton navButton = createNavButton(item);
+            // Highlight current page
+            if (item.equals("Keranjang")) {
+                navButton.setForeground(PRIMARY_COLOR);
+                navButton.setFont(navButton.getFont().deriveFont(Font.BOLD));
+            }
+            navPanel.add(navButton);
         }
         return navPanel;
     }
@@ -167,7 +202,7 @@ public class CartView extends JPanel {
         }
     }
 
-    private void createMainContent() {
+    private JPanel createMainContent() {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(PADDING, PADDING, PADDING, PADDING));
@@ -184,7 +219,7 @@ public class CartView extends JPanel {
         addCartItems(cartItemsPanel);
 
         mainPanel.add(cartItemsPanel);
-        add(new JScrollPane(mainPanel), BorderLayout.CENTER);
+        return mainPanel; // Tambahkan return statement
     }
 
     private void initializeSampleData() {
