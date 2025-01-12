@@ -1,5 +1,8 @@
+import model.Product;
+
 import javax.swing.*;
 import java.awt.*;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class FlashSaleView extends JPanel {
@@ -29,14 +32,45 @@ public class FlashSaleView extends JPanel {
     }
 
     private void initializeProducts() {
-        // Add sample products
-        for (int i = 1; i <= 40; i++) { // Menambah 40 produk untuk contoh
-            products.add(new Product(
-                    "Product Name " + i,
-                    "consectetur adipiscing elit duis tristique sollicitudin nisi sit amet commodo.",
-                    "25%",
-                    "Category"
-            ));
+        products.clear();
+        try {
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/kuliah_basisdata_alfamart_ecommerce",
+                    "root", "");
+
+            // Query untuk mengambil produk yang memiliki diskon
+            String query = "SELECT p.*, c.name as category_name " +
+                    "FROM products p " +
+                    "JOIN categories c ON p.category_id = c.category_id " +
+                    "WHERE p.discount_percentage > 0 " +
+                    "ORDER BY p.discount_percentage DESC";
+
+            PreparedStatement stmt = conn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Product product = new Product(
+                        rs.getInt("product_id"),
+                        rs.getInt("category_id"),
+                        rs.getString("name"),
+                        rs.getString("description"),
+                        rs.getDouble("price"),
+                        rs.getDouble("discount_percentage"),
+                        rs.getString("image_url"),
+                        rs.getInt("stock")
+                );
+                products.add(product);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this,
+                    "Error loading products: " + e.getMessage(),
+                    "Database Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -219,27 +253,27 @@ public class FlashSaleView extends JPanel {
         ));
         card.setBackground(Color.WHITE);
 
-        // Panel untuk konten utama (gambar dan teks)
+        // Panel untuk konten utama
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setBackground(Color.WHITE);
 
-        // Product Image (placeholder)
+        // Product Image
         JPanel imagePanel = new JPanel();
         imagePanel.setPreferredSize(new Dimension(150, 150));
         imagePanel.setMinimumSize(new Dimension(150, 150));
         imagePanel.setMaximumSize(new Dimension(150, 150));
         imagePanel.setBackground(Color.LIGHT_GRAY);
         contentPanel.add(imagePanel);
-        contentPanel.add(Box.createVerticalStrut(8)); // Spacing
+        contentPanel.add(Box.createVerticalStrut(8));
 
-        // Panel untuk informasi produk
+        // Info Panel
         JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
         infoPanel.setBackground(Color.WHITE);
 
         // Category
-        JLabel categoryLabel = new JLabel(product.getCategory());
+        JLabel categoryLabel = new JLabel(getCategoryName(product.getCategoryId()));
         categoryLabel.setForeground(Color.GRAY);
         categoryLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         categoryLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -254,26 +288,69 @@ public class FlashSaleView extends JPanel {
         infoPanel.add(nameLabel);
         infoPanel.add(Box.createVerticalStrut(4));
 
-        // Description
-        JLabel descLabel = new JLabel("<html><body style='width: 140px'>" +
-                product.getDescription() + "</body></html>");
-        descLabel.setForeground(Color.GRAY);
-        descLabel.setFont(new Font("Arial", Font.PLAIN, 12));
-        descLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        infoPanel.add(descLabel);
+        // Price Panel
+        JPanel pricePanel = new JPanel();
+        pricePanel.setLayout(new BoxLayout(pricePanel, BoxLayout.Y_AXIS));
+        pricePanel.setBackground(Color.WHITE);
+        pricePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        // Original Price (dicoret)
+        JLabel originalPriceLabel = new JLabel("<html><strike>Rp " +
+                String.format("%,d", (int)product.getPrice()) + "</strike></html>");
+        originalPriceLabel.setForeground(Color.GRAY);
+        originalPriceLabel.setFont(new Font("Arial", Font.PLAIN, 12));
+        pricePanel.add(originalPriceLabel);
+
+        // Discounted Price
+        double discountedPrice = product.getPrice() *
+                (1 - product.getDiscountPercentage() / 100.0);
+        JLabel priceLabel = new JLabel("Rp " +
+                String.format("%,d", (int)discountedPrice));
+        priceLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        priceLabel.setForeground(Color.RED);
+        pricePanel.add(priceLabel);
+
+        // Discount Badge
+        JLabel discountLabel = new JLabel("-" +
+                (int)product.getDiscountPercentage() + "%");
+        discountLabel.setForeground(Color.RED);
+        discountLabel.setFont(new Font("Arial", Font.BOLD, 12));
+        pricePanel.add(discountLabel);
+
+        infoPanel.add(pricePanel);
         infoPanel.add(Box.createVerticalStrut(8));
 
-        // Discount
-        JLabel discountLabel = new JLabel(product.getDiscount());
-        discountLabel.setForeground(Color.RED);
-        discountLabel.setFont(new Font("Arial", Font.BOLD, 14));
-        discountLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-        infoPanel.add(discountLabel);
+        // Tambah ke Keranjang Button
+        JButton addToCartButton = new JButton("Tambah ke Keranjang");
+        addToCartButton.setBackground(Color.RED);
+        addToCartButton.setForeground(Color.WHITE);
+        addToCartButton.setFocusPainted(false);
+        addToCartButton.setBorderPainted(false);
+        addToCartButton.setAlignmentX(Component.LEFT_ALIGNMENT);
+        addToCartButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        // Tambahkan action listener untuk tombol
+        addToCartButton.addActionListener(e -> {
+            try {
+                addToCart(product.getProductId(), 1); // Menambahkan 1 item ke keranjang
+                JOptionPane.showMessageDialog(this,
+                        "Produk berhasil ditambahkan ke keranjang!",
+                        "Sukses",
+                        JOptionPane.INFORMATION_MESSAGE);
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Gagal menambahkan produk ke keranjang: " + ex.getMessage(),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        infoPanel.add(addToCartButton);
 
         contentPanel.add(infoPanel);
         card.add(contentPanel, BorderLayout.CENTER);
 
-        // Tambahkan hover effect
+        // Hover effect pada card
         card.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 card.setBorder(BorderFactory.createCompoundBorder(
@@ -293,23 +370,42 @@ public class FlashSaleView extends JPanel {
         return card;
     }
 
-    // Product class to store product details
-    private class Product {
-        private String name;
-        private String description;
-        private String discount;
-        private String category;
+    // Tambahkan method untuk menangani penambahan ke keranjang
+    private void addToCart(int productId, int quantity) throws SQLException {
+        Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/kuliah_basisdata_alfamart_ecommerce",
+                "root", "");
 
-        public Product(String name, String description, String discount, String category) {
-            this.name = name;
-            this.description = description;
-            this.discount = discount;
-            this.category = category;
+        String query = "INSERT INTO cart_items (product_id, quantity) VALUES (?, ?)";
+        PreparedStatement stmt = conn.prepareStatement(query);
+        stmt.setInt(1, productId);
+        stmt.setInt(2, quantity);
+        stmt.executeUpdate();
+
+        stmt.close();
+        conn.close();
+    }
+
+    private String getCategoryName(int categoryId) {
+        try {
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/kuliah_basisdata_alfamart_ecommerce",
+                    "root", "");
+            String query = "SELECT name FROM categories WHERE category_id = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1, categoryId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getString("name");
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        public String getName() { return name; }
-        public String getDescription() { return description; }
-        public String getDiscount() { return discount; }
-        public String getCategory() { return category; }
+        return "Unknown Category";
     }
 }
