@@ -1,6 +1,10 @@
+import model.ContactMessage;
+import dao.ContactMessageDAO;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
 
 public class ContactForm extends JPanel {
     private JTextField namaField;
@@ -8,8 +12,10 @@ public class ContactForm extends JPanel {
     private JTextField emailField;
     private JTextArea pesanArea;
     private JButton kirimButton;
+    private ContactMessageDAO messageDAO;
 
     public ContactForm() {
+        messageDAO = new ContactMessageDAO();
         setLayout(new BorderLayout());
 
         // Header Panel (Red)
@@ -131,11 +137,51 @@ public class ContactForm extends JPanel {
         add(mainPanel, BorderLayout.CENTER);
 
         // Add action listener for Kirim button
+        // Ganti bagian ini:
         kirimButton.addActionListener(e -> {
-            // Add your submission logic here
-            JOptionPane.showMessageDialog(this, "Pesan telah terkirim!");
-            clearForm();
+            if (validateInput()) {
+                try {
+                    ContactMessage message = new ContactMessage(
+                            namaField.getText().trim(),
+                            noHpField.getText().trim(),
+                            emailField.getText().trim(),
+                            pesanArea.getText().trim()
+                    );
+
+                    if (messageDAO.save(message)) {
+                        JOptionPane.showMessageDialog(this,
+                                "Pesan berhasil dikirim!",
+                                "Sukses",
+                                JOptionPane.INFORMATION_MESSAGE);
+                        clearForm();
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this,
+                            "Error: " + ex.getMessage(),
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
         });
+    }
+
+    private boolean validateInput() {
+        if (namaField.getText().trim().isEmpty()) {
+            showError("Nama tidak boleh kosong!");
+            return false;
+        }
+        if (pesanArea.getText().trim().isEmpty()) {
+            showError("Pesan tidak boleh kosong!");
+            return false;
+        }
+        return true;
+    }
+
+    private void showError(String message) {
+        JOptionPane.showMessageDialog(this,
+                message,
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
     }
 
     private JTextField createTextField(String placeholder) {
