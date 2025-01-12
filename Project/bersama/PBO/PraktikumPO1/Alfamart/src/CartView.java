@@ -1,12 +1,18 @@
+import dao.CartDAO;
+import model.CartItem;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.table.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CartView extends JPanel {
+    private CartDAO cartDAO;
     private ArrayList<CartItem> cartItems;
     private JLabel totalLabel;
+    private JButton refreshButton;
     private double totalPrice = 0.0;
     private static final int PADDING = 20;
     private static final Color PRIMARY_COLOR = Color.RED;
@@ -14,9 +20,22 @@ public class CartView extends JPanel {
     private static final Font PRICE_FONT = new Font("Arial", Font.BOLD, 16);
 
     public CartView() {
+        cartDAO = new CartDAO();
         cartItems = new ArrayList<>();
         initializeLayout();
+        loadCartItems(); // Tambahkan method ini untuk load data
         createComponents();
+    }
+
+    private void loadCartItems() {
+        try {
+            cartItems = cartDAO.getAllCartItems();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this,
+                    "Error loading cart items: " + e.getMessage(),
+                    "Database Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void initializeLayout() {
@@ -26,7 +45,37 @@ public class CartView extends JPanel {
     private void createComponents() {
         createHeaderPanel();
         createMainContent();
+
+        // Buat tombol refresh
+        refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(e -> refreshCart());
+
+        // Panel untuk tombol
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        buttonPanel.add(refreshButton);
+
+        // Tambahkan ke layout utama (asumsikan menggunakan BorderLayout)
+        add(buttonPanel, BorderLayout.NORTH);
         createFooterPanel();
+    }
+
+    private void refreshCart() {
+        try {
+            setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); // Ubah cursor jadi loading
+            loadCartItems(); // Muat ulang data cart
+            refreshView();   // Refresh tampilan
+            JOptionPane.showMessageDialog(this,
+                    "Cart refreshed successfully!",
+                    "Success",
+                    JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                    "Error refreshing cart: " + e.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        } finally {
+            setCursor(Cursor.getDefaultCursor()); // Kembalikan cursor ke normal
+        }
     }
 
     private void createHeaderPanel() {
@@ -139,8 +188,6 @@ public class CartView extends JPanel {
     }
 
     private void initializeSampleData() {
-        cartItems.add(new CartItem("Indomie Goreng", 4000, 1));
-        cartItems.add(new CartItem("Indomie Soto", 4000, 1));
     }
 
     // Tambahkan method ini setelah initializeSampleData()
@@ -164,7 +211,8 @@ public class CartView extends JPanel {
 
         for (CartItem item : cartItems) {
             cartItemsPanel.add(createCartItemPanel(item));
-            totalPrice += item.getPrice() * item.getQuantity();
+            // Perbaikan di CartView.java
+            totalPrice += item.getProduct().getPrice() * item.getQuantity();
         }
 
         // Update total label if it exists
@@ -179,14 +227,29 @@ public class CartView extends JPanel {
 
         // Product Image and Name
         JPanel productPanel = new JPanel(new BorderLayout());
-        JLabel imageLabel = new JLabel("400 x 400");
-        imageLabel.setPreferredSize(new Dimension(80, 80));
-        imageLabel.setBackground(Color.LIGHT_GRAY);
-        imageLabel.setOpaque(true);
-        productPanel.add(imageLabel, BorderLayout.WEST);
+        JLabel nameLabel = new JLabel(item.getProduct().getName());
 
-        // Price
-        JLabel priceLabel = new JLabel("RP " + String.format("%,d", (int)item.getPrice()));
+        // Bisa tambahkan image jika ada
+        if (item.getProduct().getImageUrl() != null) {
+            // TODO: Implement image loading
+            JLabel imageLabel = new JLabel("400 x 400");
+            imageLabel.setPreferredSize(new Dimension(80, 80));
+            imageLabel.setBackground(Color.LIGHT_GRAY);
+            imageLabel.setOpaque(true);
+            productPanel.add(imageLabel, BorderLayout.WEST);
+        }
+        productPanel.add(nameLabel, BorderLayout.CENTER);
+
+        // Price dengan perhitungan diskon
+        double originalPrice = item.getProduct().getPrice();
+        double discount = item.getProduct().getDiscountPercentage();
+        double finalPrice = originalPrice * (1 - discount/100.0);
+
+        JLabel priceLabel = new JLabel("RP " + String.format("%,d", (int)finalPrice));
+        if (discount > 0) {
+            priceLabel.setText(String.format("<html>RP %,d<br/>-%d%%</html>",
+                    (int)finalPrice, (int)discount));
+        }
         priceLabel.setForeground(Color.RED);
 
         // Quantity
@@ -196,17 +259,23 @@ public class CartView extends JPanel {
         quantityField.setHorizontalAlignment(JTextField.CENTER);
         JButton plusButton = new JButton("+");
 
+        // Add quantity change listeners
+        minusButton.addActionListener(e -> updateQuantity(item, item.getQuantity() - 1));
+        plusButton.addActionListener(e -> updateQuantity(item, item.getQuantity() + 1));
+
         quantityPanel.add(minusButton);
         quantityPanel.add(quantityField);
         quantityPanel.add(plusButton);
 
         // Total
-        JLabel totalLabel = new JLabel("RP " + String.format("%,d", (int)(item.getPrice() * item.getQuantity())));
+        double totalItemPrice = finalPrice * item.getQuantity();
+        JLabel totalLabel = new JLabel("RP " + String.format("%,d", (int)totalItemPrice));
         totalLabel.setForeground(Color.RED);
 
         // Delete Button
         JButton deleteButton = new JButton("Hapus");
         deleteButton.setForeground(Color.BLACK);
+        deleteButton.addActionListener(e -> removeItem(item));
 
         panel.add(productPanel);
         panel.add(priceLabel);
@@ -216,6 +285,55 @@ public class CartView extends JPanel {
 
         return panel;
     }
+
+    private void updateQuantity(CartItem item, int newQuantity) {
+        if (newQuantity > 0 && newQuantity <= item.getProduct().getStock()) {
+            try {
+                // Uncomment dan implementasikan method updateQuantity di CartDAO
+                cartDAO.updateQuantity(item.getCartItemId(), newQuantity);
+                loadCartItems();
+                refreshView();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this,
+                        "Error updating quantity: " + e.getMessage(),
+                        "Database Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Invalid quantity. Must be between 1 and available stock.",
+                    "Error",
+                    JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void removeItem(CartItem item) {
+        int confirm = JOptionPane.showConfirmDialog(this,
+                "Are you sure you want to remove this item?",
+                "Confirm Remove",
+                JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                cartDAO.deleteItem(item.getCartItemId()); // Uncomment ini
+                loadCartItems();
+                refreshView();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this,
+                        "Error removing item: " + e.getMessage(),
+                        "Database Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
+    private void refreshView() {
+        removeAll();
+        createComponents();
+        revalidate();
+        repaint();
+    }
+
 
     private void createFooterPanel() {
         JPanel footerPanel = new JPanel(new BorderLayout());
@@ -235,22 +353,5 @@ public class CartView extends JPanel {
         footerPanel.add(checkoutButton, BorderLayout.EAST);
 
         add(footerPanel, BorderLayout.SOUTH);
-    }
-
-    // CartItem class to store item details
-    private class CartItem {
-        private String name;
-        private double price;
-        private int quantity;
-
-        public CartItem(String name, double price, int quantity) {
-            this.name = name;
-            this.price = price;
-            this.quantity = quantity;
-        }
-
-        public String getName() { return name; }
-        public double getPrice() { return price; }
-        public int getQuantity() { return quantity; }
     }
 }

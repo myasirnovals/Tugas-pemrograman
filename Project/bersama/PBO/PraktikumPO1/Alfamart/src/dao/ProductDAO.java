@@ -59,4 +59,34 @@ public class ProductDAO {
         }
         return products;
     }
+
+    // Tambahkan method ini ke dalam class ProductDAO
+    public Product getProductById(int productId) {
+        String query = "SELECT * FROM products WHERE product_id = ?";
+
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setInt(1, productId);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return new Product(
+                            rs.getInt("product_id"),
+                            rs.getInt("category_id"),
+                            rs.getString("name"),
+                            rs.getString("description"),
+                            rs.getDouble("price"),
+                            rs.getDouble("discount_percentage"),
+                            rs.getString("image_url"),
+                            rs.getInt("stock")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching product: " + e.getMessage());
+        }
+        return null;
+    }
+
 }
