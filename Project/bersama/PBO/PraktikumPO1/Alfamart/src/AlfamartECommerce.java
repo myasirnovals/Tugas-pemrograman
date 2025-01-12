@@ -1,7 +1,15 @@
+import database.DBConnection;
+
 import javax.swing.*;
 import java.awt.*;
+import java.sql.*;
 
 public class AlfamartECommerce extends JPanel {
+    private JPanel contentPanel;
+    private JPanel paginationPanel;
+    private int currentPage = 1;
+    private final int PRODUCTS_PER_PAGE = 10;
+
     public AlfamartECommerce() {
         setLayout(new BorderLayout());
 
@@ -58,25 +66,21 @@ public class AlfamartECommerce extends JPanel {
         mainPanel.add(navPanel, BorderLayout.NORTH);
 
         // Content Panel untuk Produk
-        JPanel contentPanel = new JPanel();
+        contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setBackground(Color.WHITE);
-
-        // Padding untuk konten
         contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Product panels
-        for (int i = 0; i < 2; i++) {
-            JPanel productPanel = createProductPanel(
-                    "Nama Produk",
-                    "Deskripsi singkat produk.",
-                    "Rp " + (i == 0 ? "20.000" : "15.000")
-            );
-            contentPanel.add(productPanel);
-            contentPanel.add(Box.createRigidArea(new Dimension(0, 10)));
-        }
+        // Tambah Panel Pagination
+        paginationPanel = new JPanel(new FlowLayout());
+        paginationPanel.setBackground(Color.WHITE);
 
-        JScrollPane scrollPane = new JScrollPane(contentPanel);
+        // Panel untuk menampung content dan pagination
+        JPanel containerPanel = new JPanel(new BorderLayout());
+        containerPanel.add(contentPanel, BorderLayout.CENTER);
+        containerPanel.add(paginationPanel, BorderLayout.SOUTH);
+
+        JScrollPane scrollPane = new JScrollPane(containerPanel);
         scrollPane.setBorder(null);
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
@@ -90,6 +94,99 @@ public class AlfamartECommerce extends JPanel {
         footerLabel.setForeground(Color.WHITE);
         footerPanel.add(footerLabel);
         add(footerPanel, BorderLayout.SOUTH);
+
+        // Load products untuk halaman pertama
+        loadProducts(currentPage);
+    }
+
+    private void loadProducts(int page) {
+        contentPanel.removeAll();
+
+        try (Connection conn = DBConnection.getConnection()) {
+            // Hitung offset
+            int offset = (page - 1) * PRODUCTS_PER_PAGE;
+
+            // Ambil produk untuk halaman saat ini
+            String query = "SELECT * FROM products LIMIT ? OFFSET ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, PRODUCTS_PER_PAGE);
+            ps.setInt(2, offset);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                JPanel productPanel = createProductPanel(
+                        rs.getString("name"),
+                        rs.getString("description"),
+                        "Rp " + String.format("%,d", rs.getInt("price"))
+                );
+                contentPanel.add(productPanel);
+                contentPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+            }
+
+            updatePaginationControls(conn);
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this,
+                    "Error loading products: " + e.getMessage(),
+                    "Database Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+
+        contentPanel.revalidate();
+        contentPanel.repaint();
+    }
+
+    private void updatePaginationControls(Connection conn) throws SQLException {
+        paginationPanel.removeAll();
+
+        // Hitung total produk
+        String countQuery = "SELECT COUNT(*) as total FROM products";
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(countQuery);
+
+        int totalProducts = 0;
+        if (rs.next()) {
+            totalProducts = rs.getInt("total");
+        }
+
+        int totalPages = (int) Math.ceil((double) totalProducts / PRODUCTS_PER_PAGE);
+
+        // Tombol Previous
+        JButton prevButton = new JButton("Previous");
+        prevButton.setEnabled(currentPage > 1);
+        prevButton.addActionListener(e -> {
+            currentPage--;
+            loadProducts(currentPage);
+        });
+
+        // Tombol Next
+        JButton nextButton = new JButton("Next");
+        nextButton.setEnabled(currentPage < totalPages);
+        nextButton.addActionListener(e -> {
+            currentPage++;
+            loadProducts(currentPage);
+        });
+
+        // Label informasi halaman
+        JLabel pageInfo = new JLabel(String.format("Page %d of %d", currentPage, totalPages));
+
+        // Styling tombol pagination
+        prevButton.setBackground(Color.RED);
+        prevButton.setForeground(Color.WHITE);
+        prevButton.setFocusPainted(false);
+        nextButton.setBackground(Color.RED);
+        nextButton.setForeground(Color.WHITE);
+        nextButton.setFocusPainted(false);
+
+        paginationPanel.add(prevButton);
+        paginationPanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        paginationPanel.add(pageInfo);
+        paginationPanel.add(Box.createRigidArea(new Dimension(10, 0)));
+        paginationPanel.add(nextButton);
+
+        paginationPanel.revalidate();
+        paginationPanel.repaint();
     }
 
     private JPanel createProductPanel(String name, String description, String price) {
