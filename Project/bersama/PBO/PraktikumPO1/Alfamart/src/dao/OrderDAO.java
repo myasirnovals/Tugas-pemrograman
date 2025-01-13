@@ -22,13 +22,14 @@ public class OrderDAO {
             connection = DBConnection.getConnection();
             connection.setAutoCommit(false); // Start transaction
 
-            // Insert order
-            String orderQuery = "INSERT INTO orders (customer_name, phone, address, total_amount) VALUES (?, ?, ?, ?)";
+            // Insert order - Perubahan query untuk menyesuaikan dengan struktur baru
+            String orderQuery = "INSERT INTO orders (customer_name, phone, payment_amount, change_amount, total_amount) VALUES (?, ?, ?, ?, ?)";
             orderStmt = connection.prepareStatement(orderQuery, Statement.RETURN_GENERATED_KEYS);
             orderStmt.setString(1, order.getCustomerName());
             orderStmt.setString(2, order.getPhone());
-            orderStmt.setString(3, order.getAddress());
-            orderStmt.setDouble(4, order.getTotalAmount());
+            orderStmt.setDouble(3, order.getPaymentAmount());    // Field baru
+            orderStmt.setDouble(4, order.getChangeAmount());     // Field baru
+            orderStmt.setDouble(5, order.getTotalAmount());
             orderStmt.executeUpdate();
 
             // Get generated order ID

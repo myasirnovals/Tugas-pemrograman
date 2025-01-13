@@ -6,6 +6,8 @@ import model.Order;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +15,10 @@ import java.util.List;
 public class CheckoutView extends JPanel {
     private JPanel cartItemsPanel;
     private JLabel totalLabel;
+    private JLabel changeLabel;
     private JTextField nameField;
     private JTextField phoneField;
-    private JTextArea addressArea;
+    private JTextField moneyField;
     private CartDAO cartDAO;
     private double totalAmount = 0.0;
     private OrderDAO orderDAO;
@@ -66,29 +69,65 @@ public class CheckoutView extends JPanel {
         gbc.insets = new Insets(5, 5, 5, 5);
 
         // Nama
-        gbc.gridx = 0; gbc.gridy = 0;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
         panel.add(new JLabel("Nama:"), gbc);
         nameField = new JTextField(20);
         gbc.gridx = 1;
         panel.add(nameField, gbc);
 
         // Nomor Telepon
-        gbc.gridx = 0; gbc.gridy = 1;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
         panel.add(new JLabel("No. Telepon:"), gbc);
         phoneField = new JTextField(20);
         gbc.gridx = 1;
         panel.add(phoneField, gbc);
 
-        // Alamat
-        gbc.gridx = 0; gbc.gridy = 2;
-        panel.add(new JLabel("Alamat:"), gbc);
-        addressArea = new JTextArea(4, 20);
-        addressArea.setLineWrap(true);
-        JScrollPane addressScroll = new JScrollPane(addressArea);
+        // Uang Dibayarkan
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        panel.add(new JLabel("Uang Dibayarkan:"), gbc);
+        moneyField = new JTextField(20);
         gbc.gridx = 1;
-        panel.add(addressScroll, gbc);
+        panel.add(moneyField, gbc);
+
+        // Label Kembalian
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 2;
+        changeLabel = new JLabel("Kembalian: Rp 0");
+        changeLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        panel.add(changeLabel, gbc);
+
+        // Tambah listener untuk moneyField
+        moneyField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                calculateChange();
+            }
+        });
 
         return panel;
+    }
+
+    private void calculateChange() {
+        try {
+            String moneyText = moneyField.getText().replaceAll("[^0-9]", "");
+            double moneyPaid = Double.parseDouble(moneyText);
+            double change = moneyPaid - totalAmount;
+
+            if (change >= 0) {
+                changeLabel.setText(String.format("Kembalian: Rp %,.0f", change));
+                changeLabel.setForeground(Color.BLACK);
+            } else {
+                changeLabel.setText(String.format("Kurang: Rp %,.0f", Math.abs(change)));
+                changeLabel.setForeground(Color.RED);
+            }
+        } catch (NumberFormatException ex) {
+            changeLabel.setText("Kembalian: Rp 0");
+            changeLabel.setForeground(Color.BLACK);
+        }
     }
 
     private JPanel createBottomPanel() {
@@ -174,36 +213,48 @@ public class CheckoutView extends JPanel {
 
     private void handleCheckout() {
         if (validateForm()) {
-            int confirm = JOptionPane.showConfirmDialog(this,
-                    "Apakah Anda yakin ingin melakukan checkout?\n" +
-                            "Total pembayaran: Rp " + String.format("%,.0f", totalAmount),
-                    "Konfirmasi Checkout",
-                    JOptionPane.YES_NO_OPTION);
+            try {
+                double moneyPaid = Double.parseDouble(moneyField.getText().replaceAll("[^0-9]", ""));
+                double change = moneyPaid - totalAmount;
 
-            if (confirm == JOptionPane.YES_OPTION) {
-                try {
+                int confirm = JOptionPane.showConfirmDialog(this,
+                        String.format("Detail Pembayaran:\n" +
+                                        "Total Belanja: Rp %,.0f\n" +
+                                        "Uang Dibayar: Rp %,.0f\n" +
+                                        "Kembalian: Rp %,.0f\n\n" +
+                                        "Lanjutkan checkout?",
+                                totalAmount, moneyPaid, change),
+                        "Konfirmasi Checkout",
+                        JOptionPane.YES_NO_OPTION);
+
+                if (confirm == JOptionPane.YES_OPTION) {
                     Order order = new Order();
                     order.setCustomerName(nameField.getText().trim());
                     order.setPhone(phoneField.getText().trim());
-                    order.setAddress(addressArea.getText().trim());
                     order.setTotalAmount(totalAmount);
+                    order.setPaymentAmount(moneyPaid);    // Tambah payment amount
+                    order.setChangeAmount(change);        // Tambah change amount
                     order.setItems(cartItems);
 
                     if (orderDAO.createOrder(order)) {
                         JOptionPane.showMessageDialog(this,
-                                "Pesanan berhasil dibuat!\nTotal: Rp " + String.format("%,.0f", totalAmount),
+                                String.format("Pesanan berhasil dibuat!\n" +
+                                                "Total: Rp %,.0f\n" +
+                                                "Dibayar: Rp %,.0f\n" +    // Tambah informasi pembayaran
+                                                "Kembalian: Rp %,.0f",
+                                        totalAmount, moneyPaid, change),
                                 "Sukses",
                                 JOptionPane.INFORMATION_MESSAGE);
 
                         resetForm();
                         navigateToCart();
                     }
-                } catch (SQLException e) {
-                    JOptionPane.showMessageDialog(this,
-                            "Error saat membuat pesanan: " + e.getMessage(),
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE);
                 }
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this,
+                        "Error saat membuat pesanan: " + e.getMessage(),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -211,7 +262,7 @@ public class CheckoutView extends JPanel {
     private void resetForm() {
         nameField.setText("");
         phoneField.setText("");
-        addressArea.setText("");
+        moneyField.setText("");
         cartItems.clear();
         loadCartItems();
     }
@@ -229,7 +280,7 @@ public class CheckoutView extends JPanel {
     private boolean validateForm() {
         String name = nameField.getText().trim();
         String phone = phoneField.getText().trim();
-        String address = addressArea.getText().trim();
+        String money = moneyField.getText().trim();
 
         if (name.isEmpty()) {
             JOptionPane.showMessageDialog(this,
@@ -258,12 +309,32 @@ public class CheckoutView extends JPanel {
             return false;
         }
 
-        if (address.isEmpty()) {
+        if (money.isEmpty()) {
             JOptionPane.showMessageDialog(this,
-                    "Alamat harus diisi!",
+                    "Jumlah pembayaran harus diisi!",
                     "Error",
                     JOptionPane.ERROR_MESSAGE);
-            addressArea.requestFocus();
+            moneyField.requestFocus();
+            return false;
+        }
+
+        try {
+            double moneyPaid = Double.parseDouble(money.replaceAll("[^0-9]", ""));
+            if (moneyPaid < totalAmount) {
+                JOptionPane.showMessageDialog(this,
+                        "Pembayaran kurang!\nTotal yang harus dibayar: Rp " +
+                                String.format("%,.0f", totalAmount),
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+                moneyField.requestFocus();
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,
+                    "Format pembayaran tidak valid!",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            moneyField.requestFocus();
             return false;
         }
 

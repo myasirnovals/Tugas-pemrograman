@@ -7,7 +7,8 @@ public class Order {
     private int orderId;
     private String customerName;
     private String phone;
-    private String address;
+    private double paymentAmount;
+    private double changeAmount;
     private double totalAmount;
     private String createdAt;
     private List<CartItem> items;
@@ -41,12 +42,20 @@ public class Order {
         this.phone = phone;
     }
 
-    public String getAddress() {
-        return address;
+    public double getPaymentAmount() {
+        return paymentAmount;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPaymentAmount(double paymentAmount) {
+        this.paymentAmount = paymentAmount;
+    }
+
+    public double getChangeAmount() {
+        return changeAmount;
+    }
+
+    public void setChangeAmount(double changeAmount) {
+        this.changeAmount = changeAmount;
     }
 
     public double getTotalAmount() {
