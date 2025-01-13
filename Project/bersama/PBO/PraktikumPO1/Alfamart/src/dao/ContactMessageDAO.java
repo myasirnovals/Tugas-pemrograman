@@ -26,7 +26,6 @@ public class ContactMessageDAO {
         }
     }
 
-    // Optional: Method untuk mendapatkan semua pesan
     public List<ContactMessage> getAllMessages() throws SQLException {
         List<ContactMessage> messages = new ArrayList<>();
         String sql = "SELECT * FROM contact_messages ORDER BY created_at DESC";

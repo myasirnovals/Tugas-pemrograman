@@ -22,7 +22,6 @@ public class OrderDAO {
             connection = DBConnection.getConnection();
             connection.setAutoCommit(false); // Start transaction
 
-            // Insert order - Perubahan query untuk menyesuaikan dengan struktur baru
             String orderQuery = "INSERT INTO orders (customer_name, phone, payment_amount, change_amount, total_amount) VALUES (?, ?, ?, ?, ?)";
             orderStmt = connection.prepareStatement(orderQuery, Statement.RETURN_GENERATED_KEYS);
             orderStmt.setString(1, order.getCustomerName());
@@ -32,14 +31,12 @@ public class OrderDAO {
             orderStmt.setDouble(5, order.getTotalAmount());
             orderStmt.executeUpdate();
 
-            // Get generated order ID
             generatedKeys = orderStmt.getGeneratedKeys();
             if (!generatedKeys.next()) {
                 throw new SQLException("Creating order failed, no ID obtained.");
             }
             int orderId = generatedKeys.getInt(1);
 
-            // Insert order items
             String itemQuery = "INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)";
             itemStmt = connection.prepareStatement(itemQuery);
 
@@ -51,7 +48,6 @@ public class OrderDAO {
                 itemStmt.executeUpdate();
             }
 
-            // Clear cart items
             String clearCartQuery = "DELETE FROM cart_items";
             Statement clearCartStmt = connection.createStatement();
             clearCartStmt.executeUpdate(clearCartQuery);

@@ -26,7 +26,6 @@ public class CartDAO {
                 int productId = rs.getInt("product_id");
                 int quantity = rs.getInt("quantity");
 
-                // Menggunakan method getProductById yang baru
                 Product product = productDAO.getProductById(productId);
 
                 if (product != null) {
@@ -62,7 +61,6 @@ public class CartDAO {
         }
     }
 
-    // Tambahkan di CartDAO.java
     public void addToCart(CartItem item) throws SQLException {
         String query = "INSERT INTO cart_items (product_id, quantity) VALUES (?, ?)";
 

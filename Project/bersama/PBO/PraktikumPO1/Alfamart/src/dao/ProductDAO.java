@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
-    // Method untuk mendapatkan total jumlah produk
     public int getTotalProducts() {
         int total = 0;
         String query = "SELECT COUNT(*) as total FROM products";
@@ -26,7 +25,6 @@ public class ProductDAO {
         return total;
     }
 
-    // Method untuk mengambil produk dengan pagination
     public List<Product> getProductsWithPagination(int page, int productsPerPage) {
         List<Product> products = new ArrayList<>();
         int offset = (page - 1) * productsPerPage;
@@ -60,7 +58,6 @@ public class ProductDAO {
         return products;
     }
 
-    // Tambahkan method ini ke dalam class ProductDAO
     public Product getProductById(int productId) {
         String query = "SELECT * FROM products WHERE product_id = ?";
 
