@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 13, 2025 at 12:27 AM
+-- Generation Time: Jan 13, 2025 at 09:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,18 +33,6 @@ CREATE TABLE `cart_items` (
   `quantity` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cart_items`
---
-
-INSERT INTO `cart_items` (`cart_item_id`, `product_id`, `quantity`, `created_at`) VALUES
-(4, 7, 3, '2025-01-12 07:23:43'),
-(5, 17, 3, '2025-01-12 07:23:45'),
-(6, 21, 1, '2025-01-12 08:40:42'),
-(7, 20, 1, '2025-01-12 19:20:46'),
-(8, 1, 1, '2025-01-12 21:09:19'),
-(9, 2, 1, '2025-01-12 23:09:26');
 
 -- --------------------------------------------------------
 
@@ -106,10 +94,18 @@ CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
   `customer_name` varchar(100) NOT NULL,
   `phone` varchar(20) NOT NULL,
-  `address` text NOT NULL,
+  `payment_amount` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `change_amount` decimal(10,2) NOT NULL DEFAULT 0.00,
   `total_amount` decimal(10,2) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `customer_name`, `phone`, `payment_amount`, `change_amount`, `total_amount`, `created_at`) VALUES
+(2, 'muhamad yasir noval', '088712345678', 100000.00, 5200.00, 94800.00, '2025-01-13 08:50:11');
 
 -- --------------------------------------------------------
 
@@ -124,6 +120,17 @@ CREATE TABLE `order_items` (
   `quantity` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`order_item_id`, `order_id`, `product_id`, `quantity`, `price`) VALUES
+(7, 2, 1, 1, 3500.00),
+(8, 2, 2, 1, 3300.00),
+(9, 2, 3, 1, 5000.00),
+(10, 2, 40, 1, 55000.00),
+(11, 2, 17, 1, 28000.00);
 
 -- --------------------------------------------------------
 
@@ -251,7 +258,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `cart_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `cart_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -269,13 +276,13 @@ ALTER TABLE `contact_messages`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `products`
