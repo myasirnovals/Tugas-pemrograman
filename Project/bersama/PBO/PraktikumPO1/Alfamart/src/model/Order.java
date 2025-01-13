@@ -17,7 +17,6 @@ public class Order {
         this.items = new ArrayList<>();
     }
 
-    // Getters and Setters
     public int getOrderId() {
         return orderId;
     }

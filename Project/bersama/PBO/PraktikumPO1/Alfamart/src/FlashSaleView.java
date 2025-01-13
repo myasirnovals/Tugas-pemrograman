@@ -9,25 +9,21 @@ public class FlashSaleView extends JPanel {
     private ArrayList<Product> products;
     private JPanel productsPanel;
     private int currentPage = 0;
-    private final int PRODUCTS_PER_PAGE = 20; // 4 kolom x 5 baris
+    private final int PRODUCTS_PER_PAGE = 20;
     private final int COLUMNS = 4;
 
     public FlashSaleView() {
         products = new ArrayList<>();
         setLayout(new BorderLayout());
 
-        // Initialize sample products
         initializeProducts();
 
-        // Buat panel utama untuk menampung semua konten
         JPanel mainContentPanel = new JPanel(new BorderLayout());
 
-        // Create main components
         createHeader();
         createCategoryTabs(mainContentPanel);
         createProductsGrid(mainContentPanel);
 
-        // Tambahkan mainContentPanel ke panel utama
         add(mainContentPanel, BorderLayout.CENTER);
     }
 
@@ -38,7 +34,6 @@ public class FlashSaleView extends JPanel {
                     "jdbc:mysql://localhost:3306/kuliah_basisdata_alfamart_ecommerce",
                     "root", "");
 
-            // Query untuk mengambil produk yang memiliki diskon
             String query = "SELECT p.*, c.name as category_name " +
                     "FROM products p " +
                     "JOIN categories c ON p.category_id = c.category_id " +
@@ -75,18 +70,15 @@ public class FlashSaleView extends JPanel {
     }
 
     private void createHeader() {
-        // Header Panel
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(Color.RED);
         headerPanel.setPreferredSize(new Dimension(800, 60));
 
-        // Logo
         JLabel logoLabel = new JLabel("ALFAMART");
         logoLabel.setForeground(Color.WHITE);
         logoLabel.setFont(new Font("Arial", Font.BOLD, 20));
         logoLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 
-        // Search Panel
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.setBackground(Color.RED);
         searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
@@ -97,7 +89,6 @@ public class FlashSaleView extends JPanel {
         searchPanel.add(searchField, BorderLayout.CENTER);
         searchPanel.add(searchButton, BorderLayout.EAST);
 
-        // Cart Button
         JButton cartButton = new JButton("🛒");
         cartButton.setBackground(Color.RED);
         cartButton.setForeground(Color.WHITE);
@@ -107,7 +98,6 @@ public class FlashSaleView extends JPanel {
         headerPanel.add(searchPanel, BorderLayout.CENTER);
         headerPanel.add(cartButton, BorderLayout.EAST);
 
-        // Navigation Panel
         JPanel navPanel = new JPanel(new GridLayout(1, 4));
         navPanel.setPreferredSize(new Dimension(800, 40));
         navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
@@ -132,7 +122,6 @@ public class FlashSaleView extends JPanel {
             navPanel.add(navButton);
         }
 
-        // Panel untuk menampung header dan navigasi
         JPanel headerWithNav = new JPanel(new BorderLayout());
         headerWithNav.add(headerPanel, BorderLayout.NORTH);
         headerWithNav.add(navPanel, BorderLayout.SOUTH);
@@ -165,12 +154,10 @@ public class FlashSaleView extends JPanel {
         JPanel mainScrollPanel = new JPanel();
         mainScrollPanel.setLayout(new BorderLayout());
 
-        // Panel untuk produk
         productsPanel = new JPanel();
-        productsPanel.setLayout(new GridLayout(5, 4, 15, 15)); // Menambah spacing antar card
+        productsPanel.setLayout(new GridLayout(5, 4, 15, 15));
         productsPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
-        // Tampilkan produk untuk halaman saat ini
         updateProductsDisplay();
 
         JScrollPane scrollPane = new JScrollPane(productsPanel);
@@ -179,18 +166,15 @@ public class FlashSaleView extends JPanel {
 
         mainScrollPanel.add(scrollPane, BorderLayout.CENTER);
 
-        // Panel untuk pagination
         JPanel paginationPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JButton prevButton = new JButton("Previous");
         JButton nextButton = new JButton("Next");
 
-        // Styling tombol
         prevButton.setBackground(Color.WHITE);
         nextButton.setBackground(Color.WHITE);
         prevButton.setFocusPainted(false);
         nextButton.setFocusPainted(false);
 
-        // Action listeners
         prevButton.addActionListener(e -> {
             if (currentPage > 0) {
                 currentPage--;
@@ -210,7 +194,6 @@ public class FlashSaleView extends JPanel {
         paginationPanel.add(prevButton);
         paginationPanel.add(nextButton);
 
-        // Update status tombol pagination
         updatePaginationButtons(prevButton, nextButton);
 
         mainScrollPanel.add(paginationPanel, BorderLayout.SOUTH);
@@ -223,12 +206,10 @@ public class FlashSaleView extends JPanel {
         int start = currentPage * PRODUCTS_PER_PAGE;
         int end = Math.min(start + PRODUCTS_PER_PAGE, products.size());
 
-        // Tambahkan produk untuk halaman saat ini
         for (int i = start; i < end; i++) {
             productsPanel.add(createProductCard(products.get(i)));
         }
 
-        // Jika jumlah produk kurang dari PRODUCTS_PER_PAGE, tambahkan panel kosong
         for (int i = end - start; i < PRODUCTS_PER_PAGE; i++) {
             JPanel emptyPanel = new JPanel();
             emptyPanel.setBackground(Color.WHITE);
@@ -253,12 +234,10 @@ public class FlashSaleView extends JPanel {
         ));
         card.setBackground(Color.WHITE);
 
-        // Panel untuk konten utama
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setBackground(Color.WHITE);
 
-        // Product Image
         JPanel imagePanel = new JPanel();
         imagePanel.setPreferredSize(new Dimension(150, 150));
         imagePanel.setMinimumSize(new Dimension(150, 150));
@@ -267,12 +246,10 @@ public class FlashSaleView extends JPanel {
         contentPanel.add(imagePanel);
         contentPanel.add(Box.createVerticalStrut(8));
 
-        // Info Panel
         JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
         infoPanel.setBackground(Color.WHITE);
 
-        // Category
         JLabel categoryLabel = new JLabel(getCategoryName(product.getCategoryId()));
         categoryLabel.setForeground(Color.GRAY);
         categoryLabel.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -280,7 +257,6 @@ public class FlashSaleView extends JPanel {
         infoPanel.add(categoryLabel);
         infoPanel.add(Box.createVerticalStrut(4));
 
-        // Product Name
         JLabel nameLabel = new JLabel("<html><body style='width: 140px'>" +
                 product.getName() + "</body></html>");
         nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
@@ -288,31 +264,27 @@ public class FlashSaleView extends JPanel {
         infoPanel.add(nameLabel);
         infoPanel.add(Box.createVerticalStrut(4));
 
-        // Price Panel
         JPanel pricePanel = new JPanel();
         pricePanel.setLayout(new BoxLayout(pricePanel, BoxLayout.Y_AXIS));
         pricePanel.setBackground(Color.WHITE);
         pricePanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        // Original Price (dicoret)
         JLabel originalPriceLabel = new JLabel("<html><strike>Rp " +
-                String.format("%,d", (int)product.getPrice()) + "</strike></html>");
+                String.format("%,d", (int) product.getPrice()) + "</strike></html>");
         originalPriceLabel.setForeground(Color.GRAY);
         originalPriceLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         pricePanel.add(originalPriceLabel);
 
-        // Discounted Price
         double discountedPrice = product.getPrice() *
                 (1 - product.getDiscountPercentage() / 100.0);
         JLabel priceLabel = new JLabel("Rp " +
-                String.format("%,d", (int)discountedPrice));
+                String.format("%,d", (int) discountedPrice));
         priceLabel.setFont(new Font("Arial", Font.BOLD, 14));
         priceLabel.setForeground(Color.RED);
         pricePanel.add(priceLabel);
 
-        // Discount Badge
         JLabel discountLabel = new JLabel("-" +
-                (int)product.getDiscountPercentage() + "%");
+                (int) product.getDiscountPercentage() + "%");
         discountLabel.setForeground(Color.RED);
         discountLabel.setFont(new Font("Arial", Font.BOLD, 12));
         pricePanel.add(discountLabel);
@@ -320,7 +292,6 @@ public class FlashSaleView extends JPanel {
         infoPanel.add(pricePanel);
         infoPanel.add(Box.createVerticalStrut(8));
 
-        // Tambah ke Keranjang Button
         JButton addToCartButton = new JButton("Tambah ke Keranjang");
         addToCartButton.setBackground(Color.RED);
         addToCartButton.setForeground(Color.WHITE);
@@ -329,10 +300,9 @@ public class FlashSaleView extends JPanel {
         addToCartButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         addToCartButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        // Tambahkan action listener untuk tombol
         addToCartButton.addActionListener(e -> {
             try {
-                addToCart(product.getProductId(), 1); // Menambahkan 1 item ke keranjang
+                addToCart(product.getProductId(), 1);
                 JOptionPane.showMessageDialog(this,
                         "Produk berhasil ditambahkan ke keranjang!",
                         "Sukses",
@@ -350,7 +320,6 @@ public class FlashSaleView extends JPanel {
         contentPanel.add(infoPanel);
         card.add(contentPanel, BorderLayout.CENTER);
 
-        // Hover effect pada card
         card.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 card.setBorder(BorderFactory.createCompoundBorder(
@@ -370,7 +339,6 @@ public class FlashSaleView extends JPanel {
         return card;
     }
 
-    // Tambahkan method untuk menangani penambahan ke keranjang
     private void addToCart(int productId, int quantity) throws SQLException {
         Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/kuliah_basisdata_alfamart_ecommerce",

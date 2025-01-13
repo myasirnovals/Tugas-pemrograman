@@ -10,7 +10,6 @@ public class Product {
     private String imageUrl;
     private int stock;
 
-    // Constructor
     public Product(int productId, int categoryId, String name, String description,
                    double price, double discountPercentage, String imageUrl, int stock) {
         this.productId = productId;
@@ -23,7 +22,6 @@ public class Product {
         this.stock = stock;
     }
 
-    // Getters and Setters
     public int getProductId() {
         return productId;
     }

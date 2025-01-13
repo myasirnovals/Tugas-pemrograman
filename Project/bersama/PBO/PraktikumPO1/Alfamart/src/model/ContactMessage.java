@@ -10,7 +10,6 @@ public class ContactMessage {
     private String message;
     private Timestamp createdAt;
 
-    // Constructor untuk membuat pesan baru
     public ContactMessage(String name, String phone, String email, String message) {
         this.name = name;
         this.phone = phone;
@@ -18,7 +17,6 @@ public class ContactMessage {
         this.message = message;
     }
 
-    // Constructor lengkap (untuk data dari database)
     public ContactMessage(int messageId, String name, String phone,
                           String email, String message, Timestamp createdAt) {
         this.messageId = messageId;
@@ -29,20 +27,43 @@ public class ContactMessage {
         this.createdAt = createdAt;
     }
 
-    // Getters and Setters
-    public int getMessageId() { return messageId; }
+    public int getMessageId() {
+        return messageId;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return name;
+    }
 
-    public String getPhone() { return phone; }
-    public void setPhone(String phone) { this.phone = phone; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getPhone() {
+        return phone;
+    }
 
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-    public Timestamp getCreatedAt() { return createdAt; }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
 }

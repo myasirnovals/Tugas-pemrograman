@@ -38,22 +38,17 @@ public class CheckoutView extends JPanel {
         confirmButton = new JButton("Konfirmasi Pesanan");
         confirmButton.addActionListener(e -> handleCheckout());
 
-        // Panel untuk form checkout
         JPanel formPanel = createFormPanel();
 
-        // Panel untuk items
         cartItemsPanel = new JPanel();
         cartItemsPanel.setLayout(new BoxLayout(cartItemsPanel, BoxLayout.Y_AXIS));
         JScrollPane scrollPane = new JScrollPane(cartItemsPanel);
         scrollPane.setPreferredSize(new Dimension(400, 300));
 
-        // Load cart items
         loadCartItems();
 
-        // Panel untuk total dan tombol
         JPanel bottomPanel = createBottomPanel();
 
-        // Menambahkan komponen ke panel utama
         add(new JLabel("Checkout", SwingConstants.CENTER), BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
         add(formPanel, BorderLayout.EAST);
@@ -68,7 +63,7 @@ public class CheckoutView extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(5, 5, 5, 5);
 
-        // Nama
+
         gbc.gridx = 0;
         gbc.gridy = 0;
         panel.add(new JLabel("Nama:"), gbc);
@@ -76,7 +71,6 @@ public class CheckoutView extends JPanel {
         gbc.gridx = 1;
         panel.add(nameField, gbc);
 
-        // Nomor Telepon
         gbc.gridx = 0;
         gbc.gridy = 1;
         panel.add(new JLabel("No. Telepon:"), gbc);
@@ -84,7 +78,6 @@ public class CheckoutView extends JPanel {
         gbc.gridx = 1;
         panel.add(phoneField, gbc);
 
-        // Uang Dibayarkan
         gbc.gridx = 0;
         gbc.gridy = 2;
         panel.add(new JLabel("Uang Dibayarkan:"), gbc);
@@ -92,7 +85,6 @@ public class CheckoutView extends JPanel {
         gbc.gridx = 1;
         panel.add(moneyField, gbc);
 
-        // Label Kembalian
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.gridwidth = 2;
@@ -100,7 +92,6 @@ public class CheckoutView extends JPanel {
         changeLabel.setFont(new Font("Arial", Font.BOLD, 14));
         panel.add(changeLabel, gbc);
 
-        // Tambah listener untuk moneyField
         moneyField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
@@ -134,24 +125,19 @@ public class CheckoutView extends JPanel {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(new EmptyBorder(10, 0, 0, 0));
 
-        // Panel kiri untuk total
         panel.add(totalLabel, BorderLayout.WEST);
 
-        // Panel kanan untuk tombol-tombol
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0));
 
-        // Tombol Refresh
         JButton refreshButton = new JButton("Refresh");
         refreshButton.addActionListener(e -> loadCartItems());
 
-        // Tombol Kembali
         JButton backButton = new JButton("Kembali");
         backButton.addActionListener(e -> navigateToCart());
 
-        // Tambahkan semua tombol ke panel tombol
-        buttonPanel.add(refreshButton);    // Tambah tombol refresh
-        buttonPanel.add(backButton);       // Tombol kembali
-        buttonPanel.add(confirmButton);    // Tombol konfirmasi
+        buttonPanel.add(refreshButton);
+        buttonPanel.add(backButton);
+        buttonPanel.add(confirmButton);
 
         panel.add(buttonPanel, BorderLayout.EAST);
 
@@ -161,11 +147,11 @@ public class CheckoutView extends JPanel {
     private void loadCartItems() {
         cartItemsPanel.removeAll();
         totalAmount = 0.0;
-        cartItems.clear(); // Tambahkan ini
+        cartItems.clear();
 
         try {
             List<CartItem> items = cartDAO.getAllCartItems();
-            cartItems.addAll(items); // Tambahkan ini
+            cartItems.addAll(items);
 
             for (CartItem item : items) {
                 JPanel itemPanel = createCartItemPanel(item);
@@ -194,14 +180,12 @@ public class CheckoutView extends JPanel {
         panel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
         panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60));
 
-        // Informasi produk
         JPanel infoPanel = new JPanel(new GridLayout(2, 1));
         infoPanel.add(new JLabel(item.getProduct().getName()));
         infoPanel.add(new JLabel(String.format("Rp %,.0f x %d",
                 item.getProduct().getPrice(),
                 item.getQuantity())));
 
-        // Total harga item
         JLabel totalItem = new JLabel(String.format("Rp %,.0f",
                 item.getProduct().getPrice() * item.getQuantity()));
 
@@ -232,15 +216,15 @@ public class CheckoutView extends JPanel {
                     order.setCustomerName(nameField.getText().trim());
                     order.setPhone(phoneField.getText().trim());
                     order.setTotalAmount(totalAmount);
-                    order.setPaymentAmount(moneyPaid);    // Tambah payment amount
-                    order.setChangeAmount(change);        // Tambah change amount
+                    order.setPaymentAmount(moneyPaid);
+                    order.setChangeAmount(change);
                     order.setItems(cartItems);
 
                     if (orderDAO.createOrder(order)) {
                         JOptionPane.showMessageDialog(this,
                                 String.format("Pesanan berhasil dibuat!\n" +
                                                 "Total: Rp %,.0f\n" +
-                                                "Dibayar: Rp %,.0f\n" +    // Tambah informasi pembayaran
+                                                "Dibayar: Rp %,.0f\n" +
                                                 "Kembalian: Rp %,.0f",
                                         totalAmount, moneyPaid, change),
                                 "Sukses",

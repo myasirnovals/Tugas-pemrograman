@@ -18,18 +18,15 @@ public class ContactForm extends JPanel {
         messageDAO = new ContactMessageDAO();
         setLayout(new BorderLayout());
 
-        // Header Panel (Red)
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(Color.RED);
         headerPanel.setPreferredSize(new Dimension(800, 60));
 
-        // Logo
         JLabel logoLabel = new JLabel("ALFAMART");
         logoLabel.setForeground(Color.WHITE);
         logoLabel.setFont(new Font("Arial", Font.BOLD, 20));
         logoLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
 
-        // Search Panel
         JPanel searchPanel = new JPanel(new BorderLayout());
         searchPanel.setBackground(Color.RED);
         searchPanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100));
@@ -40,7 +37,6 @@ public class ContactForm extends JPanel {
         searchPanel.add(searchField, BorderLayout.CENTER);
         searchPanel.add(searchButton, BorderLayout.EAST);
 
-        // Cart Button
         JButton cartButton = new JButton("🛒");
         cartButton.setBackground(Color.RED);
         cartButton.setForeground(Color.WHITE);
@@ -50,13 +46,11 @@ public class ContactForm extends JPanel {
         headerPanel.add(searchPanel, BorderLayout.CENTER);
         headerPanel.add(cartButton, BorderLayout.EAST);
 
-        // Main Content Panel
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         mainPanel.setBackground(Color.WHITE);
 
-        // Tambahkan Navigation Panel
         JPanel navPanel = new JPanel(new GridLayout(1, 4));
         navPanel.setPreferredSize(new Dimension(800, 40));
         navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
@@ -81,22 +75,18 @@ public class ContactForm extends JPanel {
             navPanel.add(navButton);
         }
 
-        // Buat panel untuk menampung header dan navigasi
         JPanel headerWithNav = new JPanel(new BorderLayout());
         headerWithNav.add(headerPanel, BorderLayout.NORTH);
         headerWithNav.add(navPanel, BorderLayout.SOUTH);
 
-        // Title
         JLabel titleLabel = new JLabel("Hubungi Kami");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-        // Form Fields
         namaField = createTextField("Nama");
         noHpField = createTextField("No Hp");
         emailField = createTextField("Email");
 
-        // Pesan TextArea
         JLabel pesanLabel = new JLabel("Pesan");
         pesanLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         pesanArea = new JTextArea();
@@ -107,7 +97,6 @@ public class ContactForm extends JPanel {
         scrollPane.setAlignmentX(Component.LEFT_ALIGNMENT);
         scrollPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, 100));
 
-        // Kirim Button
         kirimButton = new JButton("Kirim");
         kirimButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         kirimButton.setBackground(Color.RED);
@@ -115,7 +104,6 @@ public class ContactForm extends JPanel {
         kirimButton.setMaximumSize(new Dimension(100, 30));
         kirimButton.setBorderPainted(false);
 
-        // Add components to main panel
         mainPanel.add(titleLabel);
         mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
         mainPanel.add(new JLabel("Nama"));
@@ -132,12 +120,9 @@ public class ContactForm extends JPanel {
         mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
         mainPanel.add(kirimButton);
 
-        // Add panels to frame
         add(headerWithNav, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
 
-        // Add action listener for Kirim button
-        // Ganti bagian ini:
         kirimButton.addActionListener(e -> {
             if (validateInput()) {
                 try {

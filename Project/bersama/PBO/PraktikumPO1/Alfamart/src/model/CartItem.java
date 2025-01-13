@@ -2,18 +2,16 @@ package model;
 
 public class CartItem {
     private int cartItemId;
-    private Product product;  // Relasi dengan Product
+    private Product product;
     private int quantity;
     private String createdAt;
 
-    // Constructor
     public CartItem(int cartItemId, Product product, int quantity) {
         this.cartItemId = cartItemId;
         this.product = product;
         this.quantity = quantity;
     }
 
-    // Getters and Setters
     public int getCartItemId() {
         return cartItemId;
     }

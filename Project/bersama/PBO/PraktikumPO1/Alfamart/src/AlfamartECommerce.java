@@ -19,7 +19,6 @@ public class AlfamartECommerce extends JPanel {
         this.cartDAO = new CartDAO();
         setLayout(new BorderLayout());
 
-        // Header Panel
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(Color.RED);
         headerPanel.setPreferredSize(new Dimension(800, 100));
@@ -40,12 +39,10 @@ public class AlfamartECommerce extends JPanel {
         headerPanel.add(titlePanel, BorderLayout.CENTER);
         add(headerPanel, BorderLayout.NORTH);
 
-        // Navigation Panel
         JPanel navPanel = new JPanel(new GridLayout(1, 4));
         navPanel.setPreferredSize(new Dimension(800, 40));
         navPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
 
-        // Ubah bagian Navigation Panel (sekitar baris ke-31):
         String[] navItems = {"Produk", "Promosi", "Keranjang", "Hubungi Kami"};
         for (String item : navItems) {
             JButton navButton = new JButton(item);
@@ -54,7 +51,7 @@ public class AlfamartECommerce extends JPanel {
             navButton.setBorderPainted(false);
             navButton.setFocusPainted(false);
             navButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-            // Tambahkan ActionListener untuk navigasi
+
             navButton.addActionListener(e -> {
                 Component comp = this;
                 while (!(comp instanceof Main) && comp != null) {
@@ -67,21 +64,17 @@ public class AlfamartECommerce extends JPanel {
             navPanel.add(navButton);
         }
 
-        // Main Content Panel yang membungkus navPanel dan contentPanel
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.add(navPanel, BorderLayout.NORTH);
 
-        // Content Panel untuk Produk
         contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setBackground(Color.WHITE);
         contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        // Tambah Panel Pagination
         paginationPanel = new JPanel(new FlowLayout());
         paginationPanel.setBackground(Color.WHITE);
 
-        // Panel untuk menampung content dan pagination
         JPanel containerPanel = new JPanel(new BorderLayout());
         containerPanel.add(contentPanel, BorderLayout.CENTER);
         containerPanel.add(paginationPanel, BorderLayout.SOUTH);
@@ -92,7 +85,6 @@ public class AlfamartECommerce extends JPanel {
 
         add(mainPanel, BorderLayout.CENTER);
 
-        // Footer Panel
         JPanel footerPanel = new JPanel();
         footerPanel.setBackground(new Color(51, 51, 51));
         footerPanel.setPreferredSize(new Dimension(800, 30));
@@ -101,7 +93,6 @@ public class AlfamartECommerce extends JPanel {
         footerPanel.add(footerLabel);
         add(footerPanel, BorderLayout.SOUTH);
 
-        // Load products untuk halaman pertama
         loadProducts(currentPage);
     }
 
@@ -143,7 +134,6 @@ public class AlfamartECommerce extends JPanel {
     private void updatePaginationControls(Connection conn) throws SQLException {
         paginationPanel.removeAll();
 
-        // Hitung total produk
         String countQuery = "SELECT COUNT(*) as total FROM products";
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(countQuery);
@@ -155,7 +145,6 @@ public class AlfamartECommerce extends JPanel {
 
         int totalPages = (int) Math.ceil((double) totalProducts / PRODUCTS_PER_PAGE);
 
-        // Tombol Previous
         JButton prevButton = new JButton("Previous");
         prevButton.setEnabled(currentPage > 1);
         prevButton.addActionListener(e -> {
@@ -163,7 +152,6 @@ public class AlfamartECommerce extends JPanel {
             loadProducts(currentPage);
         });
 
-        // Tombol Next
         JButton nextButton = new JButton("Next");
         nextButton.setEnabled(currentPage < totalPages);
         nextButton.addActionListener(e -> {
@@ -171,10 +159,8 @@ public class AlfamartECommerce extends JPanel {
             loadProducts(currentPage);
         });
 
-        // Label informasi halaman
         JLabel pageInfo = new JLabel(String.format("Page %d of %d", currentPage, totalPages));
 
-        // Styling tombol pagination
         prevButton.setBackground(Color.RED);
         prevButton.setForeground(Color.WHITE);
         prevButton.setFocusPainted(false);
@@ -192,7 +178,6 @@ public class AlfamartECommerce extends JPanel {
         paginationPanel.repaint();
     }
 
-    // Update method createProductPanel
     private JPanel createProductPanel(int productId, String name, String description, String price, int stock) {
         JPanel panel = new JPanel(new BorderLayout(10, 0));
         panel.setMaximumSize(new Dimension(750, 100));
@@ -202,7 +187,6 @@ public class AlfamartECommerce extends JPanel {
         ));
         panel.setBackground(Color.WHITE);
 
-        // Image Panel
         JPanel imagePanel = new JPanel();
         imagePanel.setPreferredSize(new Dimension(100, 100));
         imagePanel.setBackground(Color.LIGHT_GRAY);
@@ -211,7 +195,6 @@ public class AlfamartECommerce extends JPanel {
         imagePanel.add(imageLabel);
         panel.add(imagePanel, BorderLayout.WEST);
 
-        // Info Panel
         JPanel infoPanel = new JPanel();
         infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
         infoPanel.setBackground(Color.WHITE);
@@ -225,7 +208,6 @@ public class AlfamartECommerce extends JPanel {
         JLabel priceLabel = new JLabel(price);
         priceLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
-        // Tambah label stok
         JLabel stockLabel = new JLabel("Stok: " + stock);
         stockLabel.setForeground(stock > 0 ? new Color(0, 150, 0) : Color.RED);
 
@@ -239,7 +221,6 @@ public class AlfamartECommerce extends JPanel {
 
         panel.add(infoPanel, BorderLayout.CENTER);
 
-        // Button Panel dengan implementasi baru
         JButton addButton = new JButton(stock > 0 ? "Tambah ke Keranjang" : "Stok Habis");
         addButton.setBackground(Color.RED);
         addButton.setForeground(Color.WHITE);
@@ -247,7 +228,6 @@ public class AlfamartECommerce extends JPanel {
         addButton.setEnabled(stock > 0);
         addButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        // Tambah efek hover
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 if (addButton.isEnabled()) {
@@ -291,7 +271,7 @@ public class AlfamartECommerce extends JPanel {
                                 "Produk berhasil ditambahkan ke keranjang!",
                                 "Sukses",
                                 JOptionPane.INFORMATION_MESSAGE);
-                        loadProducts(currentPage); // Refresh untuk update stok
+                        loadProducts(currentPage);
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(panel,
                                 "Error menambahkan ke keranjang: " + ex.getMessage(),
