@@ -20,6 +20,7 @@ public class Main extends JFrame {
         mainPanel.add(createFlashSalePanel(), "Promosi");
         mainPanel.add(createCartPanel(), "Keranjang");
         mainPanel.add(createContactPanel(), "Hubungi Kami");
+        mainPanel.add(new CheckoutView(), "Checkout");
 
         add(mainPanel, BorderLayout.CENTER);
     }

@@ -384,9 +384,32 @@ public class CartView extends JPanel {
         checkoutButton.setForeground(Color.WHITE);
         checkoutButton.setPreferredSize(new Dimension(120, 40));
 
+        // Tambahkan action listener
+        checkoutButton.addActionListener(e -> handleCheckout());
+
         footerPanel.add(totalLabel, BorderLayout.WEST);
         footerPanel.add(checkoutButton, BorderLayout.EAST);
-
         add(footerPanel, BorderLayout.SOUTH);
+    }
+
+    // Tambahkan method handleCheckout
+    private void handleCheckout() {
+        // Validasi keranjang tidak kosong
+        if (cartItems.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Keranjang belanja masih kosong!",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Navigasi ke CheckoutView
+        Component comp = this;
+        while (!(comp instanceof Main) && comp != null) {
+            comp = comp.getParent();
+        }
+        if (comp instanceof Main) {
+            ((Main) comp).showCard("Checkout");
+        }
     }
 }
