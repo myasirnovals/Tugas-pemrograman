@@ -106,12 +106,10 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     class="bi bi-eye"></i></a>
                                         <a href="update.php?id=<?= $p['id_pelanggan'] ?>"
                                            class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
-                                        <form action="delete.php" method="post" class="d-inline"
-                                              onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                            <input type="hidden" name="id_pelanggan" value="<?= $p['id_pelanggan'] ?>">
-                                            <button type="submit" name="delete" class="btn btn-sm btn-danger"><i
-                                                        class="bi bi-trash"></i></button>
-                                        </form>
+                                        <button type="button" onclick="confirmDelete(<?= $p['id_pelanggan'] ?>)"
+                                                class="btn btn-sm btn-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -138,3 +136,38 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
+<!-- Modal Konfirmasi Delete -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah Anda yakin ingin menghapus pelanggan ini?</p>
+                <p class="text-danger"><small>Tindakan ini akan menghapus semua data terkait seperti reservasi dan pembayaran.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <form id="deleteForm" action="delete.php" method="POST" class="d-inline">
+                    <input type="hidden" name="id_pelanggan" id="deleteId">
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script untuk modal -->
+<script>
+    function confirmDelete(id) {
+        document.getElementById('deleteId').value = id;
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        deleteModal.show();
+    }
+</script>
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
