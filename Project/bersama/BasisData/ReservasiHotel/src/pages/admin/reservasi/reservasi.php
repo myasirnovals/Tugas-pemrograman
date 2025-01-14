@@ -57,7 +57,6 @@
         <div class="col-md-9 col-lg-10 content">
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h2">Data Reservasi</h1>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addReservasiModal"><i class="bi bi-plus-circle me-2"></i>Tambah Reservasi</button>
           </div>
 
           <!-- Reservasi Table -->

@@ -1,36 +1,3 @@
-<?php
-require_once "../../config/config.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM user WHERE username = ?";
-    $stmt = $connect->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-
-        if (password_verify($password, $row['password'])) {
-            if ($row['role'] == 'admin') {
-                echo "Login berhasil sebagai Admin <a href='../admin/dashboard/dashboard.php'>Masuk ke halaman admin</a>";
-            } else {
-                echo "Login berhasil sebagai User <a href='../../index.php'>Masuk ke halaman user</a>";
-            }
-        } else {
-            echo "Password salah <a href='login.php'>Coba lagi</a>";
-        }
-    } else {
-        echo "Username tidak ditemukan <a href='login.php'>Coba lagi</a>";
-    }
-
-    $stmt->close();
-    $connect->close();
-}
-?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
