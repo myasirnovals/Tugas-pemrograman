@@ -36,54 +36,54 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pembayaran - Hotel Reservation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="pembayaran.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="pembayaran.css"/>
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
         <div class="col-md-3 col-lg-2 p-0 bg-white sidebar">
-          <div class="d-flex flex-column p-3">
-            <h2 class="fs-4 mb-4 text-center">Admin</h2>
-            <hr />
-            <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item mb-2">
-                <a href="../dashboard/dashboard.php" class="nav-link">
-                  <i class="bi bi-speedometer2 me-2"></i>
-                  Dashboard
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../pelanggan/pelanggan.php" class="nav-link">
-                  <i class="bi bi-people me-2"></i>
-                  Pelanggan
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../reservasi/reservasi.php" class="nav-link">
-                  <i class="bi bi-calendar-check me-2"></i>
-                  Reservasi
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../kamar/kamar.php" class="nav-link">
-                  <i class="bi bi-house-door me-2"></i>
-                  Kamar
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="pembayaran.php" class="nav-link active">
-                  <i class="bi bi-credit-card me-2"></i>
-                  Pembayaran
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="d-flex flex-column p-3">
+                <h2 class="fs-4 mb-4 text-center">Admin</h2>
+                <hr/>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item mb-2">
+                        <a href="../dashboard/dashboard.php" class="nav-link">
+                            <i class="bi bi-speedometer2 me-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="../pelanggan/pelanggan.php" class="nav-link">
+                            <i class="bi bi-people me-2"></i>
+                            Pelanggan
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="../reservasi/reservasi.php" class="nav-link">
+                            <i class="bi bi-calendar-check me-2"></i>
+                            Reservasi
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="../kamar/kamar.php" class="nav-link">
+                            <i class="bi bi-house-door me-2"></i>
+                            Kamar
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="pembayaran.php" class="nav-link active">
+                            <i class="bi bi-credit-card me-2"></i>
+                            Pembayaran
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- Main Content -->
@@ -163,17 +163,17 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
                                                 <?= $pembayaran['status'] ?>
                                             </span>
                                     </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-primary" title="Lihat Detail">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-warning" title="Edit"
-                                                onclick="editPembayaran('<?= $pembayaran['id_pembayaran'] ?>')">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                        <button class="btn btn-sm btn-danger" title="Hapus">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
+                                    <td class="text-center">
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-warning" title="Edit"
+                                                    onclick="editPembayaran('<?= $pembayaran['id_pembayaran'] ?>')">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" title="Hapus"
+                                                    onclick="deletePembayaran('<?= $pembayaran['id_pembayaran'] ?>')">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -200,7 +200,8 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
         </div>
         <!-- Alert Messages -->
         <?php if (isset($_GET['status']) && isset($_GET['message'])): ?>
-            <div class="alert alert-<?= $_GET['status'] === 'success' ? 'success' : 'danger' ?> alert-dismissible fade show" role="alert">
+            <div class="alert alert-<?= $_GET['status'] === 'success' ? 'success' : 'danger' ?> alert-dismissible fade show"
+                 role="alert">
                 <?= htmlspecialchars($_GET['message']) ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -209,7 +210,8 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
 </div>
 
 <!-- Modal Tambah Pembayaran -->
-<div class="modal fade" id="addPembayaranModal" tabindex="-1" aria-labelledby="addPembayaranModalLabel" aria-hidden="true">
+<div class="modal fade" id="addPembayaranModal" tabindex="-1" aria-labelledby="addPembayaranModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -270,7 +272,8 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
 </div>
 
 <!-- Modal Edit Pembayaran -->
-<div class="modal fade" id="editPembayaranModal" tabindex="-1" aria-labelledby="editPembayaranModalLabel" aria-hidden="true">
+<div class="modal fade" id="editPembayaranModal" tabindex="-1" aria-labelledby="editPembayaranModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -303,7 +306,8 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
                     </div>
                     <div class="mb-3">
                         <label for="edit_tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
-                        <input type="date" class="form-control" id="edit_tanggal_pembayaran" name="tanggal_pembayaran" required>
+                        <input type="date" class="form-control" id="edit_tanggal_pembayaran" name="tanggal_pembayaran"
+                               required>
                     </div>
                     <div class="mb-3">
                         <label for="edit_status" class="form-label">Status Pembayaran</label>
@@ -323,7 +327,39 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
 
+<!-- Modal Konfirmasi Hapus -->
+<div class="modal fade" id="deletePembayaranModal" tabindex="-1" aria-labelledby="deletePembayaranModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deletePembayaranModalLabel">Konfirmasi Hapus</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Anda yakin ingin menghapus data pembayaran ini?</p>
+                <p class="text-danger"><small>Tindakan ini tidak dapat dibatalkan dan akan mengubah status reservasi
+                        menjadi Pending.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <form action="delete.php" method="POST" class="d-inline">
+                    <input type="hidden" id="delete_id_pembayaran" name="id_pembayaran">
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
+    // Fungsi Hapus
+    function deletePembayaran(id) {
+        document.getElementById('delete_id_pembayaran').value = id;
+        new bootstrap.Modal(document.getElementById('deletePembayaranModal')).show();
+    }
+
     function editPembayaran(id) {
         // Ambil data pembayaran dengan AJAX
         fetch(`get_pembayaran.php?id=${id}`)
