@@ -106,7 +106,7 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     class="bi bi-eye"></i></a>
                                         <a href="update.php?id=<?= $p['id_pelanggan'] ?>"
                                            class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
-                                        <form action="" method="post" class="d-inline"
+                                        <form action="delete.php" method="post" class="d-inline"
                                               onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                             <input type="hidden" name="id_pelanggan" value="<?= $p['id_pelanggan'] ?>">
                                             <button type="submit" name="delete" class="btn btn-sm btn-danger"><i
