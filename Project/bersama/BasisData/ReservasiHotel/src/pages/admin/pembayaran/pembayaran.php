@@ -12,7 +12,7 @@ $query = "SELECT p.id_pembayaran, p.id_reservasi, p.tanggal_pembayaran,
           FROM pembayaran p
           JOIN metode_pembayaran mp ON p.kode_mp = mp.kode_mp
           JOIN reservasi r ON p.id_reservasi = r.id_reservasi
-          ORDER BY p.tanggal_pembayaran DESC";
+          ORDER BY p.tanggal_pembayaran ASC";
 
 $stmt = $conn->prepare($query);
 $stmt->execute();
@@ -167,7 +167,8 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
                                         <button class="btn btn-sm btn-primary" title="Lihat Detail">
                                             <i class="bi bi-eye"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-warning" title="Edit">
+                                        <button class="btn btn-sm btn-warning" title="Edit"
+                                                onclick="editPembayaran('<?= $pembayaran['id_pembayaran'] ?>')">
                                             <i class="bi bi-pencil"></i>
                                         </button>
                                         <button class="btn btn-sm btn-danger" title="Hapus">
@@ -179,12 +180,172 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
+        </div>
+        <!-- Alert Messages -->
+        <?php if (isset($_GET['status']) && isset($_GET['message'])): ?>
+            <div class="alert alert-<?= $_GET['status'] === 'success' ? 'success' : 'danger' ?> alert-dismissible fade show" role="alert">
+                <?= htmlspecialchars($_GET['message']) ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+<!-- Modal Tambah Pembayaran -->
+<div class="modal fade" id="addPembayaranModal" tabindex="-1" aria-labelledby="addPembayaranModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPembayaranModalLabel">Tambah Pembayaran Baru</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="create.php" method="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="id_reservasi" class="form-label">ID Reservasi</label>
+                        <select class="form-select" id="id_reservasi" name="id_reservasi" required>
+                            <option value="">Pilih Reservasi</option>
+                            <?php
+                            $queryReservasi = "SELECT r.id_reservasi, p.nama_pelanggan 
+                                             FROM reservasi r 
+                                             JOIN pelanggan p ON r.id_pelanggan = p.id_pelanggan 
+                                             WHERE r.status = 'Pending'";
+                            $stmtReservasi = $conn->prepare($queryReservasi);
+                            $stmtReservasi->execute();
+                            while ($row = $stmtReservasi->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<option value='" . $row['id_reservasi'] . "'>" .
+                                    $row['id_reservasi'] . " - " . $row['nama_pelanggan'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="metode_pembayaran" class="form-label">Metode Pembayaran</label>
+                        <select class="form-select" id="metode_pembayaran" name="kode_mp" required>
+                            <option value="">Pilih Metode Pembayaran</option>
+                            <?php
+                            $queryMetode = "SELECT * FROM metode_pembayaran";
+                            $stmtMetode = $conn->prepare($queryMetode);
+                            $stmtMetode->execute();
+                            while ($row = $stmtMetode->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<option value='" . $row['kode_mp'] . "'>" . $row['nama_metode'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="total_bayar" class="form-label">Total Bayar</label>
+                        <input type="number" class="form-control" id="total_bayar" name="total_bayar" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
+                        <input type="date" class="form-control" id="tanggal_pembayaran" name="tanggal_pembayaran"
+                               value="<?= date('Y-m-d') ?>" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
+<!-- Modal Edit Pembayaran -->
+<div class="modal fade" id="editPembayaranModal" tabindex="-1" aria-labelledby="editPembayaranModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editPembayaranModalLabel">Edit Pembayaran</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="update.php" method="POST">
+                <div class="modal-body">
+                    <input type="hidden" id="edit_id_pembayaran" name="id_pembayaran">
+                    <div class="mb-3">
+                        <label for="edit_id_reservasi" class="form-label">ID Reservasi</label>
+                        <input type="text" class="form-control" id="edit_id_reservasi" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_metode_pembayaran" class="form-label">Metode Pembayaran</label>
+                        <select class="form-select" id="edit_metode_pembayaran" name="kode_mp" required>
+                            <?php
+                            $queryMetode = "SELECT * FROM metode_pembayaran";
+                            $stmtMetode = $conn->prepare($queryMetode);
+                            $stmtMetode->execute();
+                            while ($row = $stmtMetode->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<option value='" . $row['kode_mp'] . "'>" . $row['nama_metode'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_total_bayar" class="form-label">Total Bayar</label>
+                        <input type="number" class="form-control" id="edit_total_bayar" name="total_bayar" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
+                        <input type="date" class="form-control" id="edit_tanggal_pembayaran" name="tanggal_pembayaran" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_status" class="form-label">Status Pembayaran</label>
+                        <select class="form-select" id="edit_status" name="status" required>
+                            <option value="Pending">Pending</option>
+                            <option value="Confirmed">Lunas</option>
+                            <option value="Cancelled">Gagal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editPembayaran(id) {
+        // Ambil data pembayaran dengan AJAX
+        fetch(`get_pembayaran.php?id=${id}`)
+            .then(response => response.json())
+            .then(data => {
+                // Isi form dengan data yang ada
+                document.getElementById('edit_id_pembayaran').value = data.id_pembayaran;
+                document.getElementById('edit_id_reservasi').value = data.id_reservasi;
+                document.getElementById('edit_metode_pembayaran').value = data.kode_mp;
+                document.getElementById('edit_total_bayar').value = data.total_bayar;
+                document.getElementById('edit_tanggal_pembayaran').value = data.tanggal_pembayaran;
+                document.getElementById('edit_status').value = data.status;
+
+                // Tampilkan modal
+                new bootstrap.Modal(document.getElementById('editPembayaranModal')).show();
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat mengambil data pembayaran');
+                console.error('Error:', error);
+            });
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

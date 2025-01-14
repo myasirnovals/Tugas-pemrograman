@@ -26,3 +26,32 @@
 .payment-card:hover {
   transform: translateY(-5px);
 }
+
+.payment-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.payment-card .card-body {
+  padding: 1.5rem;
+}
+
+.payment-card h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.1rem;
+}
