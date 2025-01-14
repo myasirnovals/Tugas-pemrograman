@@ -80,3 +80,34 @@
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.card-text {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-warning .card-title,
+.bg-warning .card-text {
+  color: #000 !important;
+}

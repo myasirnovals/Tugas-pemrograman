@@ -1,6 +1,40 @@
 <?php
 require_once '../../../config/config.php';
 
+// Mendapatkan tahun saat ini
+$tahunIni = date('Y');
+
+// Query untuk total pembayaran tahun ini
+$queryTotal = "SELECT COUNT(*) as total FROM pembayaran 
+               WHERE YEAR(tanggal_pembayaran) = :tahun";
+$stmtTotal = $conn->prepare($queryTotal);
+$stmtTotal->execute([':tahun' => $tahunIni]);
+$totalPembayaran = $stmtTotal->fetch(PDO::FETCH_ASSOC)['total'];
+
+// Query untuk pembayaran lunas
+$queryLunas = "SELECT COUNT(*) as total FROM pembayaran p
+               JOIN reservasi r ON p.id_reservasi = r.id_reservasi
+               WHERE r.status = 'Confirmed' AND YEAR(p.tanggal_pembayaran) = :tahun";
+$stmtLunas = $conn->prepare($queryLunas);
+$stmtLunas->execute([':tahun' => $tahunIni]);
+$pembayaranLunas = $stmtLunas->fetch(PDO::FETCH_ASSOC)['total'];
+
+// Query untuk pembayaran pending
+$queryPending = "SELECT COUNT(*) as total FROM pembayaran p
+                JOIN reservasi r ON p.id_reservasi = r.id_reservasi
+                WHERE r.status = 'Pending' AND YEAR(p.tanggal_pembayaran) = :tahun";
+$stmtPending = $conn->prepare($queryPending);
+$stmtPending->execute([':tahun' => $tahunIni]);
+$pembayaranPending = $stmtPending->fetch(PDO::FETCH_ASSOC)['total'];
+
+// Query untuk pembayaran gagal
+$queryGagal = "SELECT COUNT(*) as total FROM pembayaran p
+               JOIN reservasi r ON p.id_reservasi = r.id_reservasi
+               WHERE r.status = 'Cancelled' AND YEAR(p.tanggal_pembayaran) = :tahun";
+$stmtGagal = $conn->prepare($queryGagal);
+$stmtGagal->execute([':tahun' => $tahunIni]);
+$pembayaranGagal = $stmtGagal->fetch(PDO::FETCH_ASSOC)['total'];
+
 // Query untuk mengambil data pembayaran dengan join ke tabel terkait
 $query = "SELECT p.id_pembayaran, p.id_reservasi, p.tanggal_pembayaran, 
           mp.nama_metode, p.total_bayar,
@@ -98,34 +132,34 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
             <!-- Summary Cards -->
             <div class="row mb-4">
                 <div class="col-md-3">
-                    <div class="card payment-card bg-primary text-white">
+                    <div class="card bg-primary text-white">
                         <div class="card-body">
-                            <h6 class="card-title">Total Pembayaran Hari Ini</h6>
-                            <h3 class="mb-0"><?= $stats['total_hari_ini'] ?></h3>
+                            <h6 class="card-title">Total Pembayaran Tahun <?= $tahunIni ?></h6>
+                            <h2 class="card-text"><?= $totalPembayaran ?></h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card payment-card bg-success text-white">
+                    <div class="card bg-success text-white">
                         <div class="card-body">
                             <h6 class="card-title">Pembayaran Lunas</h6>
-                            <h3 class="mb-0"><?= $stats['total_lunas'] ?></h3>
+                            <h2 class="card-text"><?= $pembayaranLunas ?></h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card payment-card bg-warning text-white">
+                    <div class="card bg-warning text-white">
                         <div class="card-body">
                             <h6 class="card-title">Menunggu Pembayaran</h6>
-                            <h3 class="mb-0"><?= $stats['total_pending'] ?></h3>
+                            <h2 class="card-text"><?= $pembayaranPending ?></h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card payment-card bg-danger text-white">
+                    <div class="card bg-danger text-white">
                         <div class="card-body">
                             <h6 class="card-title">Pembayaran Gagal</h6>
-                            <h3 class="mb-0"><?= $stats['total_gagal'] ?></h3>
+                            <h2 class="card-text"><?= $pembayaranGagal ?></h2>
                         </div>
                     </div>
                 </div>
