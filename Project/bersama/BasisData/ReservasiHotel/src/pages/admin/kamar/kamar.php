@@ -1,3 +1,34 @@
+<?php
+require_once '../../../config/config.php';
+
+// Query untuk mengambil data kamar dengan JOIN ke tabel tipe_kamar
+$query = "SELECT k.*, tk.nama_tipe, tk.biaya 
+          FROM kamar k
+          JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
+          ORDER BY k.nomor_kamar ASC";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$kamar = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Fungsi untuk mengubah format status menjadi badge
+function getStatusBadge($status) {
+    switch(strtolower($status)) {
+        case 'available':
+            return '<span class="badge bg-success">Available</span>';
+        case 'occupied':
+            return '<span class="badge bg-danger">Occupied</span>';
+        case 'reserved':
+            return '<span class="badge bg-warning">Reserved</span>';
+        default:
+            return '<span class="badge bg-secondary">'.$status.'</span>';
+    }
+}
+
+// Fungsi untuk format rupiah
+function formatRupiah($angka) {
+    return 'Rp ' . number_format($angka, 0, ',', '.');
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -57,10 +88,17 @@
         <div class="col-md-9 col-lg-10 content">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1 class="h2">Data Kamar</h1>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addKamarModal"><i
-                            class="bi bi-plus-circle me-2"></i>Tambah Kamar
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addKamarModal">
+                    <i class="bi bi-plus-circle me-2"></i>Tambah Kamar
                 </button>
             </div>
+
+            <?php if (isset($_GET['status'])) { ?>
+                <div class="alert alert-<?= $_GET['status'] == 'success' ? 'success' : 'danger' ?> alert-dismissible fade show" role="alert">
+                    <?= htmlspecialchars($_GET['message']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
 
             <!-- Kamar Table -->
             <div class="card">
@@ -72,34 +110,152 @@
                                 <th>ID Kamar</th>
                                 <th>Nomor Kamar</th>
                                 <th>Tipe Kamar</th>
-                                <th>Jumlah Kamar</th>
                                 <th>Biaya per Hari</th>
                                 <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>00000</td>
-                                <td>101</td>
-                                <td>Deluxe</td>
-                                <td>20</td>
-                                <td>Rp 800.000</td>
-                                <td><span class="badge bg-success">Available</span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
-                                    <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
-                            </tr>
+                            <?php foreach ($kamar as $k) { ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($k['id_kamar']) ?></td>
+                                    <td><?= htmlspecialchars($k['nomor_kamar']) ?></td>
+                                    <td><?= htmlspecialchars($k['nama_tipe']) ?></td>
+                                    <td><?= formatRupiah($k['biaya']) ?></td>
+                                    <td><?= getStatusBadge($k['status']) ?></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary"
+                                                onclick="viewKamar(<?= $k['id_kamar'] ?>)">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-warning"
+                                                onclick="editKamar(<?= $k['id_kamar'] ?>)">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger"
+                                                onclick="confirmDelete(<?= $k['id_kamar'] ?>)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal Tambah Kamar -->
+<div class="modal fade" id="addKamarModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Kamar Baru</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form action="create.php" method="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nomor_kamar" class="form-label">Nomor Kamar</label>
+                        <input type="text" class="form-control" id="nomor_kamar" name="nomor_kamar"
+                               required maxlength="3" pattern="[0-9]{3}"
+                               placeholder="Contoh: 101">
+                        <div class="form-text">Masukkan 3 digit nomor kamar</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_tipe" class="form-label">Tipe Kamar</label>
+                        <select class="form-select" id="id_tipe" name="id_tipe" required>
+                            <option value="">Pilih Tipe Kamar</option>
+                            <?php
+                            // Query untuk mengambil data tipe kamar
+                            $query_tipe = "SELECT * FROM tipe_kamar ORDER BY nama_tipe";
+                            $stmt_tipe = $conn->prepare($query_tipe);
+                            $stmt_tipe->execute();
+                            while ($tipe = $stmt_tipe->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<option value='" . $tipe['id_tipe'] . "'>" .
+                                    htmlspecialchars($tipe['nama_tipe']) . " - " .
+                                    formatRupiah($tipe['biaya']) . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="">Pilih Status</option>
+                            <option value="Available">Available</option>
+                            <option value="Occupied">Occupied</option>
+                            <option value="Reserved">Reserved</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Konfirmasi Delete -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah Anda yakin ingin menghapus kamar ini?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                <form id="deleteForm" action="delete.php" method="POST">
+                    <input type="hidden" name="id_kamar" id="deleteId">
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script untuk handling aksi -->
+<script>
+    function viewKamar(id) {
+        window.location.href = `detail.php?id=${id}`;
+    }
+
+    function editKamar(id) {
+        window.location.href = `edit.php?id=${id}`;
+    }
+
+    function confirmDelete(id) {
+        document.getElementById('deleteId').value = id;
+        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        deleteModal.show();
+    }
+</script>
 
 <!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
