@@ -136,6 +136,7 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
+
 <!-- Modal Konfirmasi Delete -->
 <div class="modal fade" id="deleteModal" tabindex="-1">
     <div class="modal-dialog">
