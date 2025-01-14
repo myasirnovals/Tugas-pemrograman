@@ -1,12 +1,13 @@
 <?php
+$host = 'localhost';
+$dbname = 'kuliah_basisdata_reservasi_hotel';
+$username = 'root';
+$password = '';
 
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "kuliah_basisdata_reservasi_hotel";
-
-$connect = new mysqli($server, $username, $password, $database);
-
-if ($connect->connect_error) {
-    die("Koneksi gagal: " . $connect->connect_error);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Koneksi gagal: " . $e->getMessage();
 }
+?>

@@ -1,3 +1,12 @@
+<?php
+require_once '../../../config/config.php';
+
+// Query for read data
+$query = "SELECT p.id_pelanggan, p.nama_pelanggan, p.email, p.no_hp, CONCAT(a.jalan, ', ', a.desa, ', ', a.kota, ', ', a.provinsi) as alamat_lengkap FROM pelanggan as p JOIN alamat as a ON p.kode_alamat = a.kode_alamat ORDER BY p.id_pelanggan ASC";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -60,6 +69,14 @@
                 <h1 class="h2">Data Pelanggan</h1>
             </div>
 
+            <?php if (isset($_GET['status'])) { ?>
+                <div class="alert alert-<?= $_GET['status'] == 'success' ? 'success' : 'danger' ?> alert-dismissible fade show"
+                     role="alert">
+                    <?= $_GET['message'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php } ?>
+
             <!-- Pelanggan Table -->
             <div class="card">
                 <div class="card-body">
@@ -76,20 +93,48 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>2350081010</td>
-                                <td>Arya Wijaya</td>
-                                <td>arya@email.com</td>
-                                <td>08888888888</td>
-                                <td>Jl. UNJANI</td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
-                                    <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
-                            </tr>
+                            <?php foreach ($pelanggan as $p) { ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($p['id_pelanggan']) ?></td>
+                                    <td><?= htmlspecialchars($p['nama_pelanggan']) ?></td>
+                                    <td><?= htmlspecialchars($p['email']) ?></td>
+                                    <td><?= htmlspecialchars($p['no_hp']) ?></td>
+                                    <td><?= htmlspecialchars($p['alamat_lengkap']) ?></td>
+                                    <td>
+                                        <a href="detail.php?id=<?= $p['id_pelanggan'] ?>"
+                                           class="btn btn-sm btn-primary"><i
+                                                    class="bi bi-eye"></i></a>
+                                        <a href="update.php?id=<?= $p['id_pelanggan'] ?>"
+                                           class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                                        <form action="" method="post" class="d-inline"
+                                              onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                            <input type="hidden" name="id_pelanggan" value="<?= $p['id_pelanggan'] ?>">
+                                            <button type="submit" name="delete" class="btn btn-sm btn-danger"><i
+                                                        class="bi bi-trash"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- Pagination
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
