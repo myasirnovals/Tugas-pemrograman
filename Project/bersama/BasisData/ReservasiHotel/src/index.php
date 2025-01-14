@@ -1,3 +1,18 @@
+Copy
+<?php
+session_start();
+require_once "config/config.php";
+
+// Ambil data tipe kamar dari database
+$queryTipeKamar = "SELECT id_tipe, nama_tipe, biaya FROM tipe_kamar";
+$stmtTipeKamar = $conn->query($queryTipeKamar);
+$tipeKamar = $stmtTipeKamar->fetchAll(PDO::FETCH_ASSOC);
+
+// Ambil data metode pembayaran dari database
+$queryMP = "SELECT kode_mp, nama_metode FROM metode_pembayaran";
+$stmtMP = $conn->query($queryMP);
+$metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -47,42 +62,20 @@
     <div class="container">
         <h2 class="text-center mb-5">Tipe Kamar</h2>
         <div class="row g-4">
-            <!-- Standard Room -->
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card room-card h-100">
-                    <img src="assets/Tipe_Standard.png" class="card-img-top" alt="Standard Room"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Standard Room</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="text-primary fw-bold">Rp 500.000/malam</p>
-                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
+            <?php foreach ($tipeKamar as $tipe): ?>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card room-card h-100">
+                        <img src="assets/Tipe_<?= str_replace(' ', '_', $tipe['nama_tipe']) ?>.png"
+                             class="card-img-top" alt="<?= $tipe['nama_tipe'] ?>"/>
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $tipe['nama_tipe'] ?></h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-primary fw-bold">Rp <?= number_format($tipe['biaya'], 0, ',', '.') ?>/malam</p>
+                            <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Deluxe Room -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card room-card h-100">
-                    <img src="assets/Tipe_Deluxe.png" class="card-img-top" alt="Deluxe Room"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Deluxe Room</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="text-primary fw-bold">Rp 800.000/malam</p>
-                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Suite Room -->
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card room-card h-100">
-                    <img src="assets/Tipe_Suite.png" class="card-img-top" alt="Suite Room"/>
-                    <div class="card-body">
-                        <h5 class="card-title">Suite Room</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="text-primary fw-bold">Rp 1.200.000/malam</p>
-                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -91,11 +84,26 @@
 <section class="py-5 bg-light" id="reservasi">
     <div class="container">
         <h2 class="text-center mb-4">Formulir Reservasi</h2>
+
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <?= $_SESSION['success'] ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            <?php unset($_SESSION['success']); endif; ?>
+
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <?= $_SESSION['error'] ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            <?php unset($_SESSION['error']); endif; ?>
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        <form action="process_reservasi.php" method="POST">
                             <div class="mb-3">
                                 <label class="form-label" for="nama_lengkap">Nama Lengkap</label>
                                 <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" required/>
@@ -116,7 +124,8 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_in">Tanggal Check-in</label>
                                     <input type="date" class="form-control" name="tanggal_check_in"
-                                           id="tanggal_check_in" required/>
+                                           id="tanggal_check_in" required
+                                           min="<?= date('Y-m-d') ?>"/>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_out">Tanggal Check-out</label>
@@ -124,29 +133,41 @@
                                            id="tanggal_check_out" required/>
                                 </div>
                             </div>
+
                             <div class="mb-3">
                                 <label class="form-label" for="tipe_kamar">Tipe Kamar</label>
                                 <select class="form-select" name="tipe_kamar" id="tipe_kamar" required>
                                     <option value="">Pilih Tipe Kamar</option>
-                                    <option value="standard">Standard Room</option>
-                                    <option value="deluxe">Deluxe Room</option>
-                                    <option value="suite">Suite Room</option>
+                                    <?php foreach ($tipeKamar as $tipe): ?>
+                                        <option value="<?= $tipe['id_tipe'] ?>"
+                                                data-harga="<?= $tipe['biaya'] ?>">
+                                            <?= $tipe['nama_tipe'] ?> -
+                                            Rp <?= number_format($tipe['biaya'], 0, ',', '.') ?>/malam
+                                        </option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
+
                             <div class="mb-3">
                                 <label class="form-label" for="jumlah_kamar">Jumlah Kamar</label>
-                                <input type="number" class="form-control" min="1" name="jumlah_kamar" id="jumlah_kamar"
-                                       required/>
+                                <input type="number" class="form-control" min="1" max="5"
+                                       name="jumlah_kamar" id="jumlah_kamar" required/>
                             </div>
+
                             <div class="mb-3">
                                 <label class="form-label" for="metode_pembayaran">Metode Pembayaran</label>
                                 <select class="form-select" name="metode_pembayaran" id="metode_pembayaran" required>
                                     <option value="">Pilih Metode Pembayaran</option>
-                                    <option value="transfer">Transfer Bank</option>
-                                    <option value="kartu_kredit">Kartu Kredit</option>
-                                    <option value="tunai">Cash</option>
+                                    <?php foreach ($metodePembayaran as $mp): ?>
+                                        <option value="<?= $mp['kode_mp'] ?>"><?= $mp['nama_metode'] ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
+
+                            <div class="mb-3">
+                                <h5 id="total_pembayaran" class="text-primary">Total Pembayaran: Rp 0</h5>
+                            </div>
+
                             <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
                         </form>
                     </div>
@@ -186,6 +207,58 @@
     </div>
 </footer>
 
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkIn = document.getElementById('tanggal_check_in');
+        const checkOut = document.getElementById('tanggal_check_out');
+        const tipeKamar = document.getElementById('tipe_kamar');
+        const jumlahKamar = document.getElementById('jumlah_kamar');
+
+        // Set minimum date untuk check-in (hari ini)
+        const today = new Date().toISOString().split('T')[0];
+        checkIn.min = today;
+
+        // Update minimum date untuk check-out berdasarkan check-in
+        checkIn.addEventListener('change', function() {
+            const selectedDate = new Date(this.value);
+            const nextDay = new Date(selectedDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+
+            const maxDate = new Date(selectedDate);
+            maxDate.setDate(maxDate.getDate() + 30);
+
+            checkOut.min = nextDay.toISOString().split('T')[0];
+            checkOut.max = maxDate.toISOString().split('T')[0];
+
+            if (checkOut.value && (checkOut.value <= this.value || checkOut.value > maxDate.toISOString().split('T')[0])) {
+                checkOut.value = nextDay.toISOString().split('T')[0];
+            }
+            hitungTotalPembayaran();
+        });
+
+        checkOut.addEventListener('change', hitungTotalPembayaran);
+        tipeKamar.addEventListener('change', hitungTotalPembayaran);
+        jumlahKamar.addEventListener('input', hitungTotalPembayaran);
+
+        function hitungTotalPembayaran() {
+            const tipe = tipeKamar.value;
+            const jumlah = jumlahKamar.value;
+            const checkin = new Date(checkIn.value);
+            const checkout = new Date(checkOut.value);
+
+            if (tipe && jumlah && checkIn.value && checkOut.value) {
+                const diffTime = Math.abs(checkout - checkin);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                const hargaPerMalam = Number(tipeKamar.options[tipeKamar.selectedIndex].dataset.harga);
+                const total = hargaPerMalam * jumlah * diffDays;
+
+                document.getElementById('total_pembayaran').textContent =
+                    `Total Pembayaran: Rp ${total.toLocaleString('id-ID')}`;
+            }
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
