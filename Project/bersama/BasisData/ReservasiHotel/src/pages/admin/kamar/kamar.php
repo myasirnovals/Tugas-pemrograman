@@ -11,8 +11,9 @@ $stmt->execute();
 $kamar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Fungsi untuk mengubah format status menjadi badge
-function getStatusBadge($status) {
-    switch(strtolower($status)) {
+function getStatusBadge($status)
+{
+    switch (strtolower($status)) {
         case 'available':
             return '<span class="badge bg-success">Available</span>';
         case 'occupied':
@@ -20,14 +21,16 @@ function getStatusBadge($status) {
         case 'reserved':
             return '<span class="badge bg-warning">Reserved</span>';
         default:
-            return '<span class="badge bg-secondary">'.$status.'</span>';
+            return '<span class="badge bg-secondary">' . $status . '</span>';
     }
 }
 
 // Fungsi untuk format rupiah
-function formatRupiah($angka) {
+function formatRupiah($angka)
+{
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -94,7 +97,8 @@ function formatRupiah($angka) {
             </div>
 
             <?php if (isset($_GET['status'])) { ?>
-                <div class="alert alert-<?= $_GET['status'] == 'success' ? 'success' : 'danger' ?> alert-dismissible fade show" role="alert">
+                <div class="alert alert-<?= $_GET['status'] == 'success' ? 'success' : 'danger' ?> alert-dismissible fade show"
+                     role="alert">
                     <?= htmlspecialchars($_GET['message']) ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -132,8 +136,11 @@ function formatRupiah($angka) {
                                                 onclick="editKamar(<?= $k['id_kamar'] ?>)">
                                             <i class="bi bi-pencil"></i>
                                         </button>
-                                        <button class="btn btn-sm btn-danger"
-                                                onclick="confirmDelete(<?= $k['id_kamar'] ?>)">
+                                        <button type="button"
+                                                class="btn btn-sm btn-danger"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal"
+                                                onclick="setDeleteId(<?= $k['id_kamar'] ?>, '<?= htmlspecialchars($k['nomor_kamar']) ?>')">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </td>
@@ -227,7 +234,8 @@ function formatRupiah($angka) {
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <p>Apakah Anda yakin ingin menghapus kamar ini?</p>
+                <p>Anda yakin ingin menghapus kamar nomor <strong id="deleteRoomNumber"></strong>?</p>
+                <p class="text-danger"><small>Tindakan ini tidak dapat dibatalkan.</small></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -240,6 +248,7 @@ function formatRupiah($angka) {
     </div>
 </div>
 
+
 <!-- Script untuk handling aksi -->
 <script>
     function viewKamar(id) {
@@ -250,11 +259,21 @@ function formatRupiah($angka) {
         window.location.href = `edit.php?id=${id}`;
     }
 
-    function confirmDelete(id) {
+    function setDeleteId(id, roomNumber) {
         document.getElementById('deleteId').value = id;
-        var deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
-        deleteModal.show();
+        document.getElementById('deleteRoomNumber').textContent = roomNumber;
     }
+
+    // Auto close alert after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const alerts = document.querySelectorAll('.alert');
+        alerts.forEach(function (alert) {
+            setTimeout(function () {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            }, 5000);
+        });
+    });
 </script>
 
 <!-- Bootstrap Bundle JS -->
