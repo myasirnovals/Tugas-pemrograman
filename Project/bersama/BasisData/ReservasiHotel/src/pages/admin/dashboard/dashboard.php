@@ -1,3 +1,40 @@
+<?php
+// Koneksi database (pastikan sudah ada)
+require_once "../../../config/config.php";
+
+// 1. Query untuk Total Pelanggan
+$queryPelanggan = "SELECT COUNT(*) as total FROM pelanggan";
+$stmtPelanggan = $conn->query($queryPelanggan);
+$totalPelanggan = $stmtPelanggan->fetch(PDO::FETCH_ASSOC)['total'];
+
+// 2. Query untuk Reservasi Aktif (status Confirmed)
+$queryReservasiAktif = "SELECT COUNT(*) as total FROM reservasi 
+                        WHERE status = 'Confirmed'";
+$stmtReservasiAktif = $conn->query($queryReservasiAktif);
+$totalReservasiAktif = $stmtReservasiAktif->fetch(PDO::FETCH_ASSOC)['total'];
+
+// 3. Query untuk Kamar Tersedia (status Available)
+$queryKamarTersedia = "SELECT COUNT(*) as total FROM kamar 
+                       WHERE status = 'Available'";
+$stmtKamarTersedia = $conn->query($queryKamarTersedia);
+$totalKamarTersedia = $stmtKamarTersedia->fetch(PDO::FETCH_ASSOC)['total'];
+
+// 4. Query untuk Pending Payment (status Pending)
+$queryPendingPayment = "SELECT COUNT(*) as total FROM reservasi 
+                        WHERE status = 'Pending'";
+$stmtPendingPayment = $conn->query($queryPendingPayment);
+$totalPendingPayment = $stmtPendingPayment->fetch(PDO::FETCH_ASSOC)['total'];
+
+// 5. Query untuk Reservasi Terbaru
+$queryReservasiTerbaru = "SELECT r.id_reservasi, p.nama_pelanggan, 
+                          r.tanggal_checkin, r.tanggal_checkout, r.status
+                          FROM reservasi r
+                          JOIN pelanggan p ON r.id_pelanggan = p.id_pelanggan
+                          ORDER BY r.tanggal_reservasi DESC
+                          LIMIT 5";
+$stmtReservasiTerbaru = $conn->query($queryReservasiTerbaru);
+$reservasiTerbaru = $stmtReservasiTerbaru->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -61,35 +98,37 @@
                     <h1 class="h2 mb-4">Dashboard</h1>
                 </div>
                 <!-- Stat Cards -->
-                <div class="col-md-3 mb-4">
-                    <div class="card bg-primary text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Total Pelanggan</h5>
-                            <h2 class="mb-0">7</h2>
+                <div class="row mb-4">
+                    <div class="col-md-3 mb-4">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Pelanggan</h5>
+                                <h2 class="mb-0"><?= $totalPelanggan ?></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card bg-success text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Reservasi Aktif</h5>
-                            <h2 class="mb-0">7</h2>
+                    <div class="col-md-3 mb-4">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Reservasi Aktif</h5>
+                                <h2 class="mb-0"><?= $totalReservasiAktif ?></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card bg-info text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Kamar Tersedia</h5>
-                            <h2 class="mb-0">7</h2>
+                    <div class="col-md-3 mb-4">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Kamar Tersedia</h5>
+                                <h2 class="mb-0"><?= $totalKamarTersedia ?></h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="card bg-warning text-white">
-                        <div class="card-body">
-                            <h5 class="card-title">Pending Payment</h5>
-                            <h2 class="mb-0">7</h2>
+                    <div class="col-md-3 mb-4">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Payment</h5>
+                                <h2 class="mb-0"><?= $totalPendingPayment ?></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,39 +149,44 @@
                                 <th>Check-in</th>
                                 <th>Check-out</th>
                                 <th>Status</th>
-                                <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>00000</td>
-                                <td>Arya</td>
-                                <td>2024-12-26</td>
-                                <td>2024-12-26</td>
-                                <td><span class="badge bg-success">Confirmed</span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
-                                    <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>00000</td>
-                                <td>Yasir</td>
-                                <td>2024-12-26</td>
-                                <td>2024-12-26</td>
-                                <td><span class="badge bg-warning">Pending</span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary"><i class="bi bi-eye"></i></button>
-                                    <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
-                                    <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
-                                </td>
-                            </tr>
+                            <?php foreach ($reservasiTerbaru as $reservasi): ?>
+                                <tr>
+                                    <td><?= $reservasi['id_reservasi'] ?></td>
+                                    <td><?= $reservasi['nama_pelanggan'] ?></td>
+                                    <td><?= $reservasi['tanggal_checkin'] ?></td>
+                                    <td><?= $reservasi['tanggal_checkout'] ?></td>
+                                    <td>
+                            <span class="badge bg-<?= getStatusBadgeClass($reservasi['status']) ?>">
+                                <?= $reservasi['status'] ?>
+                            </span>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+            <?php
+            // Fungsi helper untuk menentukan warna badge status
+            function getStatusBadgeClass($status)
+            {
+                switch ($status) {
+                    case 'Confirmed':
+                        return 'success';
+                    case 'Pending':
+                        return 'warning';
+                    case 'Cancelled':
+                        return 'danger';
+                    default:
+                        return 'secondary';
+                }
+            }
+
+            ?>
         </div>
     </div>
 </div>
