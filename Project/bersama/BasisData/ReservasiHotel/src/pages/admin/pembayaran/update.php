@@ -3,10 +3,8 @@ require_once '../../../config/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        // Mulai transaksi
         $conn->beginTransaction();
 
-        // Update data pembayaran
         $query = "UPDATE pembayaran 
                  SET kode_mp = :kode_mp,
                      total_bayar = :total_bayar,
@@ -21,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':id_pembayaran' => $_POST['id_pembayaran']
         ]);
 
-        // Update status reservasi
         $queryReservasi = "UPDATE reservasi r 
                           JOIN pembayaran p ON r.id_reservasi = p.id_reservasi
                           SET r.status = :status 
@@ -33,13 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':id_pembayaran' => $_POST['id_pembayaran']
         ]);
 
-        // Commit transaksi
         $conn->commit();
 
         header('Location: pembayaran.php?status=success&message=Data pembayaran berhasil diupdate');
         exit;
     } catch (PDOException $e) {
-        // Rollback jika terjadi error
         $conn->rollBack();
         header('Location: pembayaran.php?status=error&message=' . urlencode($e->getMessage()));
         exit;

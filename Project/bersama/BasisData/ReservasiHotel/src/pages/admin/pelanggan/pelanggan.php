@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Query for read data
 $query = "SELECT p.id_pelanggan, p.nama_pelanggan, p.email, p.no_hp, CONCAT(a.jalan, ', ', a.desa, ', ', a.kota, ', ', a.provinsi) as alamat_lengkap FROM pelanggan as p JOIN alamat as a ON p.kode_alamat = a.kode_alamat ORDER BY p.id_pelanggan ASC";
 $stmt = $conn->prepare($query);
 $stmt->execute();

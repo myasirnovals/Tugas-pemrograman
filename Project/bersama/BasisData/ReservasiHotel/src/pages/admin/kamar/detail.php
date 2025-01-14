@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Validasi ID kamar
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header('Location: kamar.php?status=error&message=ID Kamar tidak valid');
     exit;
@@ -10,7 +9,6 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 $id_kamar = trim($_GET['id']);
 
 try {
-    // Query untuk mengambil detail kamar dengan join ke tipe_kamar dan fasilitas
     $query = "SELECT k.*, tk.nama_tipe, tk.biaya, f.nama_fasilitas 
               FROM kamar k
               JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
@@ -30,12 +28,10 @@ try {
     exit;
 }
 
-// Fungsi untuk format rupiah
 function formatRupiah($angka) {
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
 
-// Fungsi untuk mengubah format status menjadi badge
 function getStatusBadge($status) {
     switch(strtolower($status)) {
         case 'available':

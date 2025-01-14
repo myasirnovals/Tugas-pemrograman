@@ -8,7 +8,6 @@ if (!isset($_GET['id'])) {
 
 $id_reservasi = $_GET['id'];
 
-// Ambil data reservasi
 $query = "SELECT r.*, p.nama_pelanggan 
           FROM reservasi r 
           JOIN pelanggan p ON r.id_pelanggan = p.id_pelanggan 
@@ -22,7 +21,6 @@ if (!$reservasi) {
     exit;
 }
 
-// Proses form update jika ada POST request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $query = "UPDATE reservasi SET 

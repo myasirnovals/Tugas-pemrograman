@@ -2,30 +2,25 @@
 // Koneksi database (pastikan sudah ada)
 require_once "../../../config/config.php";
 
-// 1. Query untuk Total Pelanggan
 $queryPelanggan = "SELECT COUNT(*) as total FROM pelanggan";
 $stmtPelanggan = $conn->query($queryPelanggan);
 $totalPelanggan = $stmtPelanggan->fetch(PDO::FETCH_ASSOC)['total'];
 
-// 2. Query untuk Reservasi Aktif (status Confirmed)
 $queryReservasiAktif = "SELECT COUNT(*) as total FROM reservasi 
                         WHERE status = 'Confirmed'";
 $stmtReservasiAktif = $conn->query($queryReservasiAktif);
 $totalReservasiAktif = $stmtReservasiAktif->fetch(PDO::FETCH_ASSOC)['total'];
 
-// 3. Query untuk Kamar Tersedia (status Available)
 $queryKamarTersedia = "SELECT COUNT(*) as total FROM kamar 
                        WHERE status = 'Available'";
 $stmtKamarTersedia = $conn->query($queryKamarTersedia);
 $totalKamarTersedia = $stmtKamarTersedia->fetch(PDO::FETCH_ASSOC)['total'];
 
-// 4. Query untuk Pending Payment (status Pending)
 $queryPendingPayment = "SELECT COUNT(*) as total FROM reservasi 
                         WHERE status = 'Pending'";
 $stmtPendingPayment = $conn->query($queryPendingPayment);
 $totalPendingPayment = $stmtPendingPayment->fetch(PDO::FETCH_ASSOC)['total'];
 
-// 5. Query untuk Reservasi Terbaru
 $queryReservasiTerbaru = "SELECT r.id_reservasi, p.nama_pelanggan, 
                           r.tanggal_checkin, r.tanggal_checkout, r.status
                           FROM reservasi r
@@ -171,7 +166,6 @@ $reservasiTerbaru = $stmtReservasiTerbaru->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>
             <?php
-            // Fungsi helper untuk menentukan warna badge status
             function getStatusBadgeClass($status)
             {
                 switch ($status) {

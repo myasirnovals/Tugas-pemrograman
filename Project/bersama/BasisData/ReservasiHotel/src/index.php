@@ -3,12 +3,10 @@ Copy
 session_start();
 require_once "config/config.php";
 
-// Ambil data tipe kamar dari database
 $queryTipeKamar = "SELECT id_tipe, nama_tipe, biaya FROM tipe_kamar";
 $stmtTipeKamar = $conn->query($queryTipeKamar);
 $tipeKamar = $stmtTipeKamar->fetchAll(PDO::FETCH_ASSOC);
 
-// Ambil data metode pembayaran dari database
 $queryMP = "SELECT kode_mp, nama_metode FROM metode_pembayaran";
 $stmtMP = $conn->query($queryMP);
 $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
@@ -215,11 +213,9 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
         const tipeKamar = document.getElementById('tipe_kamar');
         const jumlahKamar = document.getElementById('jumlah_kamar');
 
-        // Set minimum date untuk check-in (hari ini)
         const today = new Date().toISOString().split('T')[0];
         checkIn.min = today;
-
-        // Update minimum date untuk check-out berdasarkan check-in
+        
         checkIn.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
             const nextDay = new Date(selectedDate);

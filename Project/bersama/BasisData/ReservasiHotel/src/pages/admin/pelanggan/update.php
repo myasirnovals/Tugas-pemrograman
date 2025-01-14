@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Cek apakah ada parameter id
 if (!isset($_GET['id'])) {
     header('Location: pelanggan.php?status=error&message=ID Pelanggan tidak ditemukan');
     exit;
@@ -9,7 +8,6 @@ if (!isset($_GET['id'])) {
 
 $id_pelanggan = $_GET['id'];
 
-// Query untuk mengambil data pelanggan yang akan diupdate
 $query_pelanggan = "SELECT p.*, a.* 
                     FROM pelanggan p 
                     JOIN alamat a ON p.kode_alamat = a.kode_alamat 
@@ -23,12 +21,10 @@ if (!$pelanggan) {
     exit;
 }
 
-// Proses update data
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $conn->beginTransaction();
 
-        // Update data alamat
         $query_alamat = "UPDATE alamat SET 
                         jalan = :jalan,
                         desa = :desa,
@@ -49,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'kode_alamat' => $pelanggan['kode_alamat']
         ]);
 
-        // Update data pelanggan
         $query_update = "UPDATE pelanggan SET 
                         nama_pelanggan = :nama,
                         email = :email,
@@ -225,7 +220,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Form validation
     (function () {
         'use strict'
         var forms = document.querySelectorAll('.needs-validation')

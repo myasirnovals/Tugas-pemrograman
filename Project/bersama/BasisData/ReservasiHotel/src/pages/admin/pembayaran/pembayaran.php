@@ -1,17 +1,14 @@
 <?php
 require_once '../../../config/config.php';
 
-// Mendapatkan tahun saat ini
 $tahunIni = date('Y');
 
-// Query untuk total pembayaran tahun ini
 $queryTotal = "SELECT COUNT(*) as total FROM pembayaran 
                WHERE YEAR(tanggal_pembayaran) = :tahun";
 $stmtTotal = $conn->prepare($queryTotal);
 $stmtTotal->execute([':tahun' => $tahunIni]);
 $totalPembayaran = $stmtTotal->fetch(PDO::FETCH_ASSOC)['total'];
 
-// Query untuk pembayaran lunas
 $queryLunas = "SELECT COUNT(*) as total FROM pembayaran p
                JOIN reservasi r ON p.id_reservasi = r.id_reservasi
                WHERE r.status = 'Confirmed' AND YEAR(p.tanggal_pembayaran) = :tahun";
@@ -19,7 +16,6 @@ $stmtLunas = $conn->prepare($queryLunas);
 $stmtLunas->execute([':tahun' => $tahunIni]);
 $pembayaranLunas = $stmtLunas->fetch(PDO::FETCH_ASSOC)['total'];
 
-// Query untuk pembayaran pending
 $queryPending = "SELECT COUNT(*) as total FROM pembayaran p
                 JOIN reservasi r ON p.id_reservasi = r.id_reservasi
                 WHERE r.status = 'Pending' AND YEAR(p.tanggal_pembayaran) = :tahun";
@@ -27,7 +23,6 @@ $stmtPending = $conn->prepare($queryPending);
 $stmtPending->execute([':tahun' => $tahunIni]);
 $pembayaranPending = $stmtPending->fetch(PDO::FETCH_ASSOC)['total'];
 
-// Query untuk pembayaran gagal
 $queryGagal = "SELECT COUNT(*) as total FROM pembayaran p
                JOIN reservasi r ON p.id_reservasi = r.id_reservasi
                WHERE r.status = 'Cancelled' AND YEAR(p.tanggal_pembayaran) = :tahun";
@@ -35,7 +30,6 @@ $stmtGagal = $conn->prepare($queryGagal);
 $stmtGagal->execute([':tahun' => $tahunIni]);
 $pembayaranGagal = $stmtGagal->fetch(PDO::FETCH_ASSOC)['total'];
 
-// Query untuk mengambil data pembayaran dengan join ke tabel terkait
 $query = "SELECT p.id_pembayaran, p.id_reservasi, p.tanggal_pembayaran, 
           mp.nama_metode, p.total_bayar,
           CASE 
@@ -52,7 +46,6 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $pembayarans = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Query untuk mendapatkan statistik
 $queryStats = "SELECT 
     COUNT(*) as total_hari_ini,
     SUM(CASE WHEN r.status = 'Confirmed' THEN 1 ELSE 0 END) as total_lunas,
@@ -388,7 +381,6 @@ $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
 
 
 <script>
-    // Fungsi Hapus
     function deletePembayaran(id) {
         document.getElementById('delete_id_pembayaran').value = id;
         new bootstrap.Modal(document.getElementById('deletePembayaranModal')).show();

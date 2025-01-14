@@ -10,7 +10,6 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 try {
     $id_kamar = $_GET['id'];
 
-    // Query untuk mengambil data kamar yang akan diedit
     $query = "SELECT k.*, tk.nama_tipe, tk.biaya 
               FROM kamar k
               JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
@@ -24,7 +23,6 @@ try {
         throw new Exception('Data kamar tidak ditemukan');
     }
 
-    // Query untuk mengambil semua tipe kamar
     $query_tipe = "SELECT * FROM tipe_kamar ORDER BY nama_tipe";
     $stmt_tipe = $conn->prepare($query_tipe);
     $stmt_tipe->execute();
@@ -35,7 +33,6 @@ try {
     exit;
 }
 
-// Fungsi untuk format rupiah
 function formatRupiah($angka) {
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
@@ -164,7 +161,6 @@ function formatRupiah($angka) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Validasi form sebelum submit
     document.getElementById('editForm').onsubmit = function(e) {
         const nomorKamar = document.getElementById('nomor_kamar').value;
         const idTipe = document.getElementById('id_tipe').value;

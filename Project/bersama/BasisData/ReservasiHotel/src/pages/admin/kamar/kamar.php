@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Query untuk mengambil data kamar dengan JOIN ke tabel tipe_kamar
 $query = "SELECT k.*, tk.nama_tipe, tk.biaya 
           FROM kamar k
           JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
@@ -10,7 +9,6 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $kamar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fungsi untuk mengubah format status menjadi badge
 function getStatusBadge($status)
 {
     switch (strtolower($status)) {
@@ -25,7 +23,6 @@ function getStatusBadge($status)
     }
 }
 
-// Fungsi untuk format rupiah
 function formatRupiah($angka)
 {
     return 'Rp ' . number_format($angka, 0, ',', '.');
@@ -264,7 +261,6 @@ function formatRupiah($angka)
         document.getElementById('deleteRoomNumber').textContent = roomNumber;
     }
 
-    // Auto close alert after 5 seconds
     document.addEventListener('DOMContentLoaded', function () {
         const alerts = document.querySelectorAll('.alert');
         alerts.forEach(function (alert) {

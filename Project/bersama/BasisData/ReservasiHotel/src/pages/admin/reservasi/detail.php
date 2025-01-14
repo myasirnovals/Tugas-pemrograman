@@ -8,7 +8,6 @@ if (!isset($_GET['id'])) {
 
 $id_reservasi = $_GET['id'];
 
-// Query untuk mengambil detail reservasi dengan JOIN ke beberapa tabel terkait
 $query = "SELECT 
             r.id_reservasi,
             r.tanggal_reservasi,

@@ -8,7 +8,6 @@ if (!isset($_GET['id'])) {
 
 $id_pelanggan = $_GET['id'];
 
-// Query untuk data pelanggan dan alamat
 $query_pelanggan = "SELECT p.*, 
                            CONCAT(a.jalan, ', ', a.desa, ', ', a.kota, ', ', a.provinsi, ' ', a.kode_pos) as alamat_lengkap,
                            a.negara
@@ -16,7 +15,6 @@ $query_pelanggan = "SELECT p.*,
                     JOIN alamat a ON p.kode_alamat = a.kode_alamat 
                     WHERE p.id_pelanggan = :id";
 
-// Query untuk data reservasi, kamar, dan pembayaran
 $query_reservasi = "SELECT r.*, 
                            k.nomor_kamar, k.status as status_kamar,
                            tk.nama_tipe, tk.biaya,

@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Query untuk membaca data reservasi dengan JOIN ke tabel pelanggan
 $query = "SELECT r.*, p.nama_pelanggan 
           FROM reservasi as r 
           JOIN pelanggan as p ON r.id_pelanggan = p.id_pelanggan 
@@ -10,7 +9,6 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 $reservasi = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fungsi untuk mengubah format status menjadi badge
 function getStatusBadge($status)
 {
     switch (strtolower($status)) {
