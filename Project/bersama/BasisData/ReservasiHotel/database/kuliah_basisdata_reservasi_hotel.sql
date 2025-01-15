@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2025 at 08:43 AM
+-- Generation Time: Jan 16, 2025 at 12:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -51,7 +51,8 @@ INSERT INTO `alamat` (`kode_alamat`, `jalan`, `desa`, `kota`, `provinsi`, `negar
                                                                                                     ('A007', 'Jl. Diponegoro No. 12', 'Tegalsari', 'Surabaya', 'Jawa Timur', 'Indonesia', 60264),
                                                                                                     ('A008', 'Jl. Veteran No. 88', 'Banjarsari', 'Solo', 'Jawa Tengah', 'Indonesia', 57131),
                                                                                                     ('A009', 'Jl. Ahmad Yani No. 55', 'Wonokromo', 'Surabaya', 'Jawa Timur', 'Indonesia', 60243),
-                                                                                                    ('A010', 'Jl. Pahlawan No. 23', 'Semarang Selatan', 'Semarang', 'Jawa Tengah', 'Indonesia', 50241);
+                                                                                                    ('A010', 'Jl. Pahlawan No. 23', 'Semarang Selatan', 'Semarang', 'Jawa Tengah', 'Indonesia', 50241),
+                                                                                                    ('A011', 'Jl Banyuwangi', 'Sugama', 'Amagus', 'Amagus', NULL, 40561);
 
 -- --------------------------------------------------------
 
@@ -148,24 +149,25 @@ CREATE TABLE `pelanggan` (
                              `nama_pelanggan` varchar(100) NOT NULL,
                              `kode_alamat` varchar(10) NOT NULL,
                              `no_hp` varchar(13) NOT NULL,
-                             `email` varchar(100) NOT NULL
+                             `email` varchar(100) NOT NULL,
+                             `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `kode_alamat`, `no_hp`, `email`) VALUES
-                                                                                                (1, 'Budi Santoso', 'A001', '081234567890', 'budi@email.com'),
-                                                                                                (2, 'Ani Wijaya', 'A002', '082345678901', 'ani@email.com'),
-                                                                                                (3, 'Citra Dewi', 'A003', '083456789012', 'citra@email.com'),
-                                                                                                (4, 'Dedi Kurniawan', 'A004', '084567890123', 'dedi@email.com'),
-                                                                                                (5, 'Eva Susanti', 'A005', '085678901234', 'eva@email.com'),
-                                                                                                (6, 'Fajar Pratama', 'A006', '086789012345', 'fajar@email.com'),
-                                                                                                (7, 'Gita Putri', 'A007', '087890123456', 'gita@email.com'),
-                                                                                                (8, 'Hadi Nugroho', 'A008', '088901234567', 'hadi@email.com'),
-                                                                                                (9, 'Indah Sari', 'A009', '089012345678', 'indah@email.com'),
-                                                                                                (10, 'Joko Widodo', 'A010', '081123456789', 'joko@email.com');
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `kode_alamat`, `no_hp`, `email`, `user_id`) VALUES
+                                                                                                           (1, 'Budi Santoso', 'A001', '081234567890', 'budi@email.com', 2),
+                                                                                                           (2, 'Ani Wijaya', 'A002', '082345678901', 'ani@email.com', 3),
+                                                                                                           (3, 'Citra Dewi', 'A003', '083456789012', 'citra@email.com', 4),
+                                                                                                           (4, 'Dedi Kurniawan', 'A004', '084567890123', 'dedi@email.com', 5),
+                                                                                                           (5, 'Eva Susanti', 'A005', '085678901234', 'eva@email.com', 6),
+                                                                                                           (6, 'Fajar Pratama', 'A006', '086789012345', 'fajar@email.com', 7),
+                                                                                                           (7, 'Gita Putri', 'A007', '087890123456', 'gita@email.com', 8),
+                                                                                                           (8, 'Hadi Nugroho', 'A008', '088901234567', 'hadi@email.com', 9),
+                                                                                                           (9, 'Indah Sari', 'A009', '089012345678', 'indah@email.com', 10),
+                                                                                                           (10, 'Joko Widodo', 'A010', '081123456789', 'joko@email.com', 11);
 
 -- --------------------------------------------------------
 
@@ -285,7 +287,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`, `created_at`) VALUES
                                                                              (7, 'customer6', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
                                                                              (8, 'customer7', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
                                                                              (9, 'customer8', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
-                                                                             (10, 'customer9', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10');
+                                                                             (10, 'customer9', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
+                                                                             (11, 'customer10', '$2y$10$dCWwnpLqtQzNVG/aiZ6fJ.9Q5Hyu1v75v5/wZyFxcQxJyTdQWsNoK', 'customer', '2025-01-15 23:05:45');
 
 --
 -- Indexes for dumped tables
@@ -322,7 +325,8 @@ ALTER TABLE `metode_pembayaran`
 --
 ALTER TABLE `pelanggan`
     ADD PRIMARY KEY (`id_pelanggan`),
-  ADD KEY `alamat_pelanggan` (`kode_alamat`);
+  ADD KEY `alamat_pelanggan` (`kode_alamat`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `pembayaran`
@@ -379,7 +383,7 @@ ALTER TABLE `metode_pembayaran`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-    MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+    MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
@@ -403,7 +407,7 @@ ALTER TABLE `tipe_kamar`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
@@ -420,7 +424,8 @@ ALTER TABLE `kamar`
 -- Constraints for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-    ADD CONSTRAINT `alamat_pelanggan` FOREIGN KEY (`kode_alamat`) REFERENCES `alamat` (`kode_alamat`) ON UPDATE CASCADE;
+    ADD CONSTRAINT `alamat_pelanggan` FOREIGN KEY (`kode_alamat`) REFERENCES `alamat` (`kode_alamat`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `pelanggan_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `pembayaran`
