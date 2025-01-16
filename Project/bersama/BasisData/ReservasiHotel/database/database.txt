@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2025 at 01:44 AM
+-- Generation Time: Jan 16, 2025 at 02:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `alamat` (
   `desa` varchar(50) DEFAULT NULL,
   `kota` varchar(50) DEFAULT NULL,
   `provinsi` varchar(50) DEFAULT NULL,
-  `negara` varchar(50) DEFAULT NULL,
+  `negara` varchar(50) DEFAULT 'Indonesia',
   `kode_pos` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -52,7 +52,8 @@ INSERT INTO `alamat` (`kode_alamat`, `jalan`, `desa`, `kota`, `provinsi`, `negar
 ('A008', 'Jl. Veteran No. 88', 'Banjarsari', 'Solo', 'Jawa Tengah', 'Indonesia', 57131),
 ('A009', 'Jl. Ahmad Yani No. 55', 'Wonokromo', 'Surabaya', 'Jawa Timur', 'Indonesia', 60243),
 ('A010', 'Jl. Pahlawan No. 23', 'Semarang Selatan', 'Semarang', 'Jawa Tengah', 'Indonesia', 50241),
-('A011', 'Jl Banyuwangi', 'Sugama', 'Amagus', 'Amagus', NULL, 40561);
+('A011', 'Jl Banyuwangi', 'Sugama', 'Amagus', 'Amagus', 'Indonesia', 40561),
+('A759', 'Jl Banyuwangi', 'Sugama', 'Amagus', 'Amagus', 'Indonesia', 40561);
 
 -- --------------------------------------------------------
 
@@ -104,12 +105,13 @@ INSERT INTO `kamar` (`id_kamar`, `id_reservasi`, `id_tipe`, `nomor_kamar`, `stat
 (12, 2, 2, '201', 'Occupied'),
 (13, 3, 3, '301', 'Reserved'),
 (14, 4, 4, '401', 'Occupied'),
-(15, 5, 5, '501', 'Available'),
+(15, 12, 5, '501', 'Reserved'),
 (16, 6, 6, '601', 'Occupied'),
 (17, 7, 7, '701', 'Reserved'),
 (18, 8, 8, '801', 'Occupied'),
 (19, 9, 9, '901', 'Occupied'),
-(20, 10, 10, '102', 'Reserved');
+(20, 10, 10, '102', 'Reserved'),
+(21, 12, 5, '747', 'Reserved');
 
 -- --------------------------------------------------------
 
@@ -168,7 +170,8 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `kode_alamat`, `no_hp
 (8, 'Hadi Nugroho', 'A008', '088901234567', 'hadi@email.com', 9),
 (9, 'Indah Sari', 'A009', '089012345678', 'indah@email.com', 10),
 (10, 'Joko Widodo', 'A010', '081123456789', 'joko@email.com', 11),
-(11, 'Admin', 'A001', '7777888999', 'admin@admin.com', 1);
+(11, 'Admin', 'A001', '7777888999', 'admin@admin.com', 1),
+(13, 'Agus Coplock', 'A759', '123443213241', 'customer9@example.com', 10);
 
 -- --------------------------------------------------------
 
@@ -198,7 +201,8 @@ INSERT INTO `pembayaran` (`id_pembayaran`, `id_reservasi`, `kode_mp`, `total_bay
 (7, 7, 7, 5000000, '2024-01-16'),
 (8, 8, 8, 600000, '2024-01-17'),
 (9, 9, 9, 450000, '2024-01-18'),
-(10, 10, 10, 800000, '2024-01-19');
+(10, 10, 10, 800000, '2024-01-19'),
+(11, 12, 6, 56000000, '2025-01-16');
 
 -- --------------------------------------------------------
 
@@ -230,7 +234,8 @@ INSERT INTO `reservasi` (`id_reservasi`, `id_pelanggan`, `nama_pemesan`, `tangga
 (7, 7, 'Lariv', '2024-01-16', '2024-01-21', '2024-01-23', 'Pending'),
 (8, 8, 'Siti', '2024-01-17', '2024-01-22', '2024-01-24', 'Confirmed'),
 (9, 9, 'Situ', '2024-01-18', '2024-01-23', '2024-01-25', 'Confirmed'),
-(10, 10, 'Sata', '2024-01-19', '2024-01-24', '2024-01-26', 'Pending');
+(10, 10, 'Sata', '2024-01-19', '2024-01-24', '2024-01-26', 'Pending'),
+(12, 13, 'Agus Coplock', '2025-01-16', '2025-01-17', '2025-01-31', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -373,7 +378,7 @@ ALTER TABLE `fasilitas`
 -- AUTO_INCREMENT for table `kamar`
 --
 ALTER TABLE `kamar`
-  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `metode_pembayaran`
@@ -385,19 +390,19 @@ ALTER TABLE `metode_pembayaran`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `reservasi`
 --
 ALTER TABLE `reservasi`
-  MODIFY `id_reservasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_reservasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tipe_kamar`
