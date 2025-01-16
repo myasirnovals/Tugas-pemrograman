@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2025 at 01:08 AM
+-- Generation Time: Jan 16, 2025 at 01:44 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -209,6 +209,7 @@ INSERT INTO `pembayaran` (`id_pembayaran`, `id_reservasi`, `kode_mp`, `total_bay
 CREATE TABLE `reservasi` (
   `id_reservasi` int(11) NOT NULL,
   `id_pelanggan` int(11) NOT NULL,
+  `nama_pemesan` varchar(100) DEFAULT NULL,
   `tanggal_reservasi` date NOT NULL DEFAULT current_timestamp(),
   `tanggal_checkin` date NOT NULL DEFAULT current_timestamp(),
   `tanggal_checkout` date NOT NULL DEFAULT current_timestamp(),
@@ -219,17 +220,17 @@ CREATE TABLE `reservasi` (
 -- Dumping data for table `reservasi`
 --
 
-INSERT INTO `reservasi` (`id_reservasi`, `id_pelanggan`, `tanggal_reservasi`, `tanggal_checkin`, `tanggal_checkout`, `status`) VALUES
-(1, 1, '2024-01-10', '2024-01-15', '2024-01-17', 'Confirmed'),
-(2, 2, '2024-01-11', '2024-01-16', '2024-01-18', 'Confirmed'),
-(3, 3, '2024-01-12', '2024-01-17', '2024-01-19', 'Pending'),
-(4, 4, '2024-01-13', '2024-01-18', '2024-01-20', 'Confirmed'),
-(5, 5, '2024-01-14', '2024-01-19', '2024-01-21', 'Cancelled'),
-(6, 6, '2024-01-15', '2024-01-20', '2024-01-22', 'Confirmed'),
-(7, 7, '2024-01-16', '2024-01-21', '2024-01-23', 'Pending'),
-(8, 8, '2024-01-17', '2024-01-22', '2024-01-24', 'Confirmed'),
-(9, 9, '2024-01-18', '2024-01-23', '2024-01-25', 'Confirmed'),
-(10, 10, '2024-01-19', '2024-01-24', '2024-01-26', 'Pending');
+INSERT INTO `reservasi` (`id_reservasi`, `id_pelanggan`, `nama_pemesan`, `tanggal_reservasi`, `tanggal_checkin`, `tanggal_checkout`, `status`) VALUES
+(1, 1, 'Joko Morro', '2024-01-10', '2024-01-15', '2024-01-17', 'Confirmed'),
+(2, 2, 'A Gus', '2024-01-11', '2024-01-16', '2024-01-18', 'Confirmed'),
+(3, 3, 'Derek', '2024-01-12', '2024-01-17', '2024-01-19', 'Pending'),
+(4, 4, 'Budi', '2024-01-13', '2024-01-18', '2024-01-20', 'Confirmed'),
+(5, 5, 'Nugrahas', '2024-01-14', '2024-01-19', '2024-01-21', 'Cancelled'),
+(6, 6, 'Am Agus', '2024-01-15', '2024-01-20', '2024-01-22', 'Confirmed'),
+(7, 7, 'Lariv', '2024-01-16', '2024-01-21', '2024-01-23', 'Pending'),
+(8, 8, 'Siti', '2024-01-17', '2024-01-22', '2024-01-24', 'Confirmed'),
+(9, 9, 'Situ', '2024-01-18', '2024-01-23', '2024-01-25', 'Confirmed'),
+(10, 10, 'Sata', '2024-01-19', '2024-01-24', '2024-01-26', 'Pending');
 
 -- --------------------------------------------------------
 
