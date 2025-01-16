@@ -79,7 +79,7 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
             <!-- Standard Room -->
             <div class="col-md-4" data-aos="fade-up">
                 <div class="card room-card h-100">
-                    <img src="assets/Tipe_Standard.png" class="card-img-top" alt="Standard Room" />
+                    <img src="assets/Tipe_Standard.png" class="card-img-top" alt="Standard Room"/>
                     <div class="card-body">
                         <h5 class="card-title">Standard Room</h5>
                         <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -91,7 +91,7 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
             <!-- Deluxe Room -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card room-card h-100">
-                    <img src="assets/Tipe_Deluxe.png" class="card-img-top" alt="Deluxe Room" />
+                    <img src="assets/Tipe_Deluxe.png" class="card-img-top" alt="Deluxe Room"/>
                     <div class="card-body">
                         <h5 class="card-title">Deluxe Room</h5>
                         <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -103,7 +103,7 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
             <!-- Suite Room -->
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card room-card h-100">
-                    <img src="assets/Tipe_Suite.png" class="card-img-top" alt="Suite Room" />
+                    <img src="assets/Tipe_Suite.png" class="card-img-top" alt="Suite Room"/>
                     <div class="card-body">
                         <h5 class="card-title">Suite Room</h5>
                         <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -139,101 +139,116 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <form action="process_reservasi.php" method="POST">
-                            <!-- Data Pemesan -->
-                            <h5 class="mb-3">Data Pemesan</h5>
-                            <div class="mb-3">
-                                <label class="form-label" for="nama_pemesan">Nama Pemesan</label>
-                                <input type="text" class="form-control" name="nama_pemesan" id="nama_pemesan" required/>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="email">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" required/>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="no_telepon">No. Telepon</label>
-                                <input type="tel" class="form-control" name="no_telepon" id="no_telepon" required/>
-                            </div>
-
-                            <!-- Data Alamat -->
-                            <h5 class="mb-3">Data Alamat</h5>
-                            <div class="mb-3">
-                                <label class="form-label" for="jalan">Alamat Jalan</label>
-                                <input type="text" class="form-control" name="jalan" id="jalan" required/>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="desa">Desa/Kelurahan</label>
-                                    <input type="text" class="form-control" name="desa" id="desa" required/>
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                            <form action="process_reservasi.php" method="POST">
+                                <!-- Data Pemesan -->
+                                <h5 class="mb-3">Data Pemesan</h5>
+                                <div class="mb-3">
+                                    <label class="form-label" for="nama_pemesan">Nama Pemesan</label>
+                                    <input type="text" class="form-control" name="nama_pemesan" id="nama_pemesan"
+                                           required/>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="kota">Kota/Kabupaten</label>
-                                    <input type="text" class="form-control" name="kota" id="kota" required/>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" required/>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="no_telepon">No. Telepon</label>
+                                    <input type="tel" class="form-control" name="no_telepon" id="no_telepon" required/>
+                                </div>
+
+                                <!-- Data Alamat -->
+                                <h5 class="mb-3">Data Alamat</h5>
+                                <div class="mb-3">
+                                    <label class="form-label" for="jalan">Alamat Jalan</label>
+                                    <input type="text" class="form-control" name="jalan" id="jalan" required/>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="desa">Desa/Kelurahan</label>
+                                        <input type="text" class="form-control" name="desa" id="desa" required/>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="kota">Kota/Kabupaten</label>
+                                        <input type="text" class="form-control" name="kota" id="kota" required/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="provinsi">Provinsi</label>
+                                        <input type="text" class="form-control" name="provinsi" id="provinsi" required/>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="kode_pos">Kode Pos</label>
+                                        <input type="text" class="form-control" name="kode_pos" id="kode_pos"
+                                               pattern="[0-9]{5}" maxlength="5" required/>
+                                    </div>
+                                </div>
+
+                                <!-- Data Reservasi -->
+                                <h5 class="mb-3">Data Reservasi</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="tanggal_check_in">Tanggal Check-in</label>
+                                        <input type="date" class="form-control" name="tanggal_check_in"
+                                               id="tanggal_check_in" required min="<?= date('Y-m-d') ?>"/>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="tanggal_check_out">Tanggal Check-out</label>
+                                        <input type="date" class="form-control" name="tanggal_check_out"
+                                               id="tanggal_check_out" required/>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="tipe_kamar">Tipe Kamar</label>
+                                    <select class="form-select" name="tipe_kamar" id="tipe_kamar" required>
+                                        <option value="">Pilih Tipe Kamar</option>
+                                        <?php foreach ($tipeKamar as $tipe): ?>
+                                            <option value="<?= $tipe['id_tipe'] ?>"
+                                                    data-harga="<?= $tipe['biaya'] ?>">
+                                                <?= $tipe['nama_tipe'] ?> -
+                                                Rp <?= number_format($tipe['biaya'], 0, ',', '.') ?>/malam
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="jumlah_kamar">Jumlah Kamar</label>
+                                    <input type="number" class="form-control" min="1" max="5"
+                                           name="jumlah_kamar" id="jumlah_kamar" required/>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="metode_pembayaran">Metode Pembayaran</label>
+                                    <select class="form-select" name="metode_pembayaran" id="metode_pembayaran"
+                                            required>
+                                        <option value="">Pilih Metode Pembayaran</option>
+                                        <?php foreach ($metodePembayaran as $mp): ?>
+                                            <option value="<?= $mp['kode_mp'] ?>"><?= $mp['nama_metode'] ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h5 id="total_pembayaran" class="text-primary">Total Pembayaran: Rp 0</h5>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
+                            </form>
+                        <?php else: ?>
+                            <div class="text-center py-5">
+                                <i class="bi bi-lock-fill text-warning" style="font-size: 3rem;"></i>
+                                <h4 class="mt-3">Login Diperlukan</h4>
+                                <p class="text-muted">Silakan login terlebih dahulu untuk melakukan reservasi</p>
+                                <div class="mt-4">
+                                    <a href="pages/login/login.php" class="btn btn-primary me-2">Login</a>
+                                    <a href="pages/registrasi/registrasi.php"
+                                       class="btn btn-outline-primary">Register</a>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="provinsi">Provinsi</label>
-                                    <input type="text" class="form-control" name="provinsi" id="provinsi" required/>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="kode_pos">Kode Pos</label>
-                                    <input type="text" class="form-control" name="kode_pos" id="kode_pos"
-                                           pattern="[0-9]{5}" maxlength="5" required/>
-                                </div>
-                            </div>
-
-                            <!-- Data Reservasi -->
-                            <h5 class="mb-3">Data Reservasi</h5>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="tanggal_check_in">Tanggal Check-in</label>
-                                    <input type="date" class="form-control" name="tanggal_check_in"
-                                           id="tanggal_check_in" required min="<?= date('Y-m-d') ?>"/>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="tanggal_check_out">Tanggal Check-out</label>
-                                    <input type="date" class="form-control" name="tanggal_check_out"
-                                           id="tanggal_check_out" required/>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label" for="tipe_kamar">Tipe Kamar</label>
-                                <select class="form-select" name="tipe_kamar" id="tipe_kamar" required>
-                                    <option value="">Pilih Tipe Kamar</option>
-                                    <?php foreach ($tipeKamar as $tipe): ?>
-                                        <option value="<?= $tipe['id_tipe'] ?>"
-                                                data-harga="<?= $tipe['biaya'] ?>">
-                                            <?= $tipe['nama_tipe'] ?> -
-                                            Rp <?= number_format($tipe['biaya'], 0, ',', '.') ?>/malam
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label" for="jumlah_kamar">Jumlah Kamar</label>
-                                <input type="number" class="form-control" min="1" max="5"
-                                       name="jumlah_kamar" id="jumlah_kamar" required/>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label" for="metode_pembayaran">Metode Pembayaran</label>
-                                <select class="form-select" name="metode_pembayaran" id="metode_pembayaran" required>
-                                    <option value="">Pilih Metode Pembayaran</option>
-                                    <?php foreach ($metodePembayaran as $mp): ?>
-                                        <option value="<?= $mp['kode_mp'] ?>"><?= $mp['nama_metode'] ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <h5 id="total_pembayaran" class="text-primary">Total Pembayaran: Rp 0</h5>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary w-100">Pesan Sekarang</button>
-                        </form>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

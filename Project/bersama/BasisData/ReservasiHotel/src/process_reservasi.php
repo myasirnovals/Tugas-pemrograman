@@ -2,6 +2,13 @@
 session_start();
 require_once "config/config.php";
 
+// Cek apakah user sudah login
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = "Anda harus login terlebih dahulu untuk melakukan reservasi!";
+    header("Location: index.php#reservasi");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $conn->beginTransaction();
