@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once '../../../config/config.php';
 
 $query = "SELECT k.*, tk.nama_tipe, tk.biaya 

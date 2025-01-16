@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once '../../../config/config.php';
 
 $query = "SELECT p.id_pelanggan, p.nama_pelanggan, p.email, p.no_hp, 

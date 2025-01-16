@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once "../../../config/config.php";
 
 $queryPelanggan = "SELECT COUNT(*) as total 
