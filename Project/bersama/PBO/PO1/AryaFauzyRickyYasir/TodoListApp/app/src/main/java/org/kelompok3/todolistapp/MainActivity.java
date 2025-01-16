@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
                 tasksList = activeTasks;
             }
 
-            // Pastikan tasksList tidak null
             if (tasksList == null) {
                 tasksList = new ArrayList<>();
             }
@@ -279,16 +278,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Di MainActivity.java, tambahkan fungsi ini:
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void sortTasksByStatus() {
         tasksList.sort((task1, task2) -> {
-            // Definisikan prioritas status
             Map<String, Integer> statusPriority = new HashMap<>();
-            statusPriority.put("Active", 1);    // Aktif
-            statusPriority.put("Delayed", 2);   // Tunda
-            statusPriority.put("Done", 3);      // Selesai
-            statusPriority.put("None", 4);      // Tidak Ada
+            statusPriority.put("Active", 1);
+            statusPriority.put("Delayed", 2);
+            statusPriority.put("Done", 3);
+            statusPriority.put("None", 4);
 
             String status1 = task1.getStatus();
             String status2 = task2.getStatus();

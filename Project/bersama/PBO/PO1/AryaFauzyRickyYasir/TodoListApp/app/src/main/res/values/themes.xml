@@ -1,17 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.ToDoApp" parent="Theme.Material3.DayNight.NoActionBar">
-    <!-- Primary brand color -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color -->
         <item name="colorSecondary">@color/cerulean</item>
         <item name="colorSecondaryVariant">@color/cerulean</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item>
         <item name="colorAccent">@color/cerulean</item>

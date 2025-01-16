@@ -39,21 +39,16 @@ public class TaskEditor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_editor);
 
-        // Initialize views
         initializeViews();
 
-        // Initialize database
         database = new Database(this);
         dateFormatter = DateTimeFormatter.ofPattern("E dd, LLL yyyy", Locale.UK);
 
-        // Get intent extras
         mode = getIntent().getStringExtra("mode");
         currentDate = getIntent().getStringExtra("date");
 
-        // Setup due date picker
         setupDueDatePicker();
 
-        // Setup based on mode
         if (mode.equals("edit")) {
             taskId = getIntent().getIntExtra("taskId", -1);
             loadTaskData();
@@ -62,7 +57,6 @@ public class TaskEditor extends AppCompatActivity {
             deleteButton.setVisibility(View.GONE);
         }
 
-        // Setup button listeners
         setupButtonListeners();
     }
 
@@ -85,11 +79,9 @@ public class TaskEditor extends AppCompatActivity {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     TaskEditor.this,
                     (view, year, month, dayOfMonth) -> {
-                        // Membuat LocalDate untuk tanggal yang dipilih
                         LocalDate selectedDate = LocalDate.of(year, month + 1, dayOfMonth);
                         LocalDate today = LocalDate.now();
 
-                        // Validasi tanggal
                         if (selectedDate.isBefore(today)) {
                             Toast.makeText(TaskEditor.this,
                                     "Cannot select past dates",
@@ -97,7 +89,6 @@ public class TaskEditor extends AppCompatActivity {
                             return;
                         }
 
-                        // Jika valid, set tanggal
                         selectedDueDate = selectedDate;
                         dueDateText.setText(selectedDueDate.format(dateFormatter));
                     },
@@ -106,7 +97,6 @@ public class TaskEditor extends AppCompatActivity {
                     calendar.get(Calendar.DAY_OF_MONTH)
             );
 
-            // Set tanggal minimal ke hari ini
             datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
 
             datePickerDialog.show();
@@ -169,9 +159,8 @@ public class TaskEditor extends AppCompatActivity {
         task.setDescription(descriptionEdit.getText().toString().trim());
         task.setDueDate(selectedDueDate);
 
-        // Pastikan status selalu diset
         int selectedId = statusGroup.getCheckedRadioButtonId();
-        String status = "None"; // Default status
+        String status = "None";
         if (selectedId == R.id.active) {
             status = "Active";
         } else if (selectedId == R.id.done) {
