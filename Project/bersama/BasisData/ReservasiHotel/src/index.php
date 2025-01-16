@@ -46,13 +46,6 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
                             <?php echo htmlspecialchars($_SESSION['username']); ?>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <?php if ($_SESSION['role'] == 'admin'): ?>
-                                <li>
-                                    <a class="dropdown-item" href="pages/admin/dashboard/dashboard.php">
-                                        <i class="bi bi-speedometer2"></i> Dashboard
-                                    </a>
-                                </li>
-                            <?php endif; ?>
                             <li>
                                 <a class="dropdown-item text-danger" href="pages/login/logout.php">
                                     <i class="bi bi-box-arrow-right"></i> Logout
@@ -83,20 +76,42 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
     <div class="container">
         <h2 class="text-center mb-5">Tipe Kamar</h2>
         <div class="row g-4">
-            <?php foreach ($tipeKamar as $tipe): ?>
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="card room-card h-100">
-                        <img src="assets/Tipe_<?= str_replace(' ', '_', $tipe['nama_tipe']) ?>.png"
-                             class="card-img-top" alt="<?= $tipe['nama_tipe'] ?>"/>
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $tipe['nama_tipe'] ?></h5>
-                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="text-primary fw-bold">Rp <?= number_format($tipe['biaya'], 0, ',', '.') ?>/malam</p>
-                            <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
+            <!-- Standard Room -->
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card room-card h-100">
+                    <img src="assets/Tipe_Standard.png" class="card-img-top" alt="Standard Room" />
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Room</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="text-primary fw-bold">Rp 500.000/malam</p>
+                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
+            <!-- Deluxe Room -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card room-card h-100">
+                    <img src="assets/Tipe_Deluxe.png" class="card-img-top" alt="Deluxe Room" />
+                    <div class="card-body">
+                        <h5 class="card-title">Deluxe Room</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="text-primary fw-bold">Rp 800.000/malam</p>
+                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Suite Room -->
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card room-card h-100">
+                    <img src="assets/Tipe_Suite.png" class="card-img-top" alt="Suite Room" />
+                    <div class="card-body">
+                        <h5 class="card-title">Suite Room</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="text-primary fw-bold">Rp 1.200.000/malam</p>
+                        <a href="#reservasi" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -230,7 +245,7 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
 
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const checkIn = document.getElementById('tanggal_check_in');
         const checkOut = document.getElementById('tanggal_check_out');
         const tipeKamar = document.getElementById('tipe_kamar');
@@ -238,8 +253,8 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
 
         const today = new Date().toISOString().split('T')[0];
         checkIn.min = today;
-        
-        checkIn.addEventListener('change', function() {
+
+        checkIn.addEventListener('change', function () {
             const selectedDate = new Date(this.value);
             const nextDay = new Date(selectedDate);
             nextDay.setDate(nextDay.getDate() + 1);
