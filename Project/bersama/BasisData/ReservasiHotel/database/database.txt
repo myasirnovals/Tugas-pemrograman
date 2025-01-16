@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2025 at 12:14 AM
+-- Generation Time: Jan 16, 2025 at 01:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -167,7 +167,8 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `kode_alamat`, `no_hp
 (7, 'Gita Putri', 'A007', '087890123456', 'gita@email.com', 8),
 (8, 'Hadi Nugroho', 'A008', '088901234567', 'hadi@email.com', 9),
 (9, 'Indah Sari', 'A009', '089012345678', 'indah@email.com', 10),
-(10, 'Joko Widodo', 'A010', '081123456789', 'joko@email.com', 11);
+(10, 'Joko Widodo', 'A010', '081123456789', 'joko@email.com', 11),
+(11, 'Admin', 'A001', '7777888999', 'admin@admin.com', 1);
 
 -- --------------------------------------------------------
 
@@ -278,7 +279,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `created_at`) VALUES
-(1, 'admin1', '$2y$10$abcdefghijk123456789', 'admin', '2025-01-14 07:32:10'),
+(1, 'admin1', '$2y$10$qPCFhBH/rzQWXTenxvTBlOJjdO3vDyDFCMLJDyYELySVM6.yizYky', 'admin', '2025-01-14 07:32:10'),
 (2, 'customer1', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
 (3, 'customer2', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
 (4, 'customer3', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
@@ -287,7 +288,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`, `created_at`) VALUES
 (7, 'customer6', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
 (8, 'customer7', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
 (9, 'customer8', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
-(10, 'customer9', '$2y$10$abcdefghijk123456789', 'customer', '2025-01-14 07:32:10'),
+(10, 'customer9', '$2y$10$Bka4OCS7fHzQTf6mqSZm8uhf14tY7eRVEVtIDrNYN77.NIlaeDY4K', 'customer', '2025-01-14 07:32:10'),
 (11, 'customer10', '$2y$10$dCWwnpLqtQzNVG/aiZ6fJ.9Q5Hyu1v75v5/wZyFxcQxJyTdQWsNoK', 'customer', '2025-01-15 23:05:45');
 
 --
