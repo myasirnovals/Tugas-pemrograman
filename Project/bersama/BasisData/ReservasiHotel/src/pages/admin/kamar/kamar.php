@@ -3,7 +3,7 @@ require_once '../../../config/config.php';
 
 $query = "SELECT k.*, tk.nama_tipe, tk.biaya 
           FROM kamar k
-          JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
+          LEFT JOIN tipe_kamar tk ON k.id_tipe = tk.id_tipe
           ORDER BY k.nomor_kamar ASC";
 $stmt = $conn->prepare($query);
 $stmt->execute();

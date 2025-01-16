@@ -32,14 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $conn->beginTransaction();
 
-        $default_reservasi = 1;
-
-        $query = "INSERT INTO kamar (id_reservasi, id_tipe, nomor_kamar, status) 
-                 VALUES (:id_reservasi, :id_tipe, :nomor_kamar, :status)";
+        $query = "INSERT INTO kamar (id_tipe, nomor_kamar, status) 
+                 VALUES (:id_tipe, :nomor_kamar, :status)";
 
         $stmt = $conn->prepare($query);
         $stmt->execute([
-            'id_reservasi' => $default_reservasi,
             'id_tipe' => $id_tipe,
             'nomor_kamar' => $nomor_kamar,
             'status' => $status
