@@ -2,7 +2,11 @@
 // Koneksi database (pastikan sudah ada)
 require_once "../../../config/config.php";
 
-$queryPelanggan = "SELECT COUNT(*) as total FROM pelanggan";
+// Modifikasi query untuk total pelanggan (exclude admin)
+$queryPelanggan = "SELECT COUNT(*) as total 
+                   FROM pelanggan p
+                   JOIN users u ON p.user_id = u.id 
+                   WHERE u.role != 'admin'";
 $stmtPelanggan = $conn->query($queryPelanggan);
 $totalPelanggan = $stmtPelanggan->fetch(PDO::FETCH_ASSOC)['total'];
 

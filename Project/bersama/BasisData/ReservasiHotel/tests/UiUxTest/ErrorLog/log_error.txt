@@ -1,0 +1,19 @@
+H:\Documents\Tugas-pemrograman\Project\bersama\BasisData\ReservasiHotel\tests\UiUxTest\.venv\Scripts\python.exe "D:/Program Files/JetBrains/PyCharm 2024.2.4/plugins/python-ce/helpers/pycharm/_jb_unittest_runner.py" --path H:\Documents\Tugas-pemrograman\Project\bersama\BasisData\ReservasiHotel\tests\UiUxTest\registrasi_test.py
+Testing started at 9:37 ...
+Launching unittests with arguments python -m unittest H:\Documents\Tugas-pemrograman\Project\bersama\BasisData\ReservasiHotel\tests\UiUxTest\registrasi_test.py in H:\Documents\Tugas-pemrograman\Project\bersama\BasisData\ReservasiHotel\tests\UiUxTest
+
+
+
+Ran 5 tests in 66.711s
+
+FAILED (failures=1)
+
+Failure
+Traceback (most recent call last):
+  File "H:\Documents\Tugas-pemrograman\Project\bersama\BasisData\ReservasiHotel\tests\UiUxTest\registrasi_test.py", line 89, in test_successful_registration
+    self.assertIn("login.php", driver.current_url)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'login.php' not found in 'http://localhost/ReservasiHotel/src/pages/registrasi/registrasi.php'
+
+
+Process finished with exit code 1
