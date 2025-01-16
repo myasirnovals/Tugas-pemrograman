@@ -1,8 +1,6 @@
 <?php
-// Koneksi database (pastikan sudah ada)
 require_once "../../../config/config.php";
 
-// Modifikasi query untuk total pelanggan (exclude admin)
 $queryPelanggan = "SELECT COUNT(*) as total 
                    FROM pelanggan p
                    JOIN users u ON p.user_id = u.id 

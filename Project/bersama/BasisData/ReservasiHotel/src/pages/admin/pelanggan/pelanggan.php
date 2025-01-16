@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Modifikasi query untuk mengecualikan admin
 $query = "SELECT p.id_pelanggan, p.nama_pelanggan, p.email, p.no_hp, 
           CONCAT(a.jalan, ', ', a.desa, ', ', a.kota, ', ', a.provinsi) as alamat_lengkap 
           FROM pelanggan as p 
@@ -105,7 +104,7 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($pelanggan as $p) { ?>
+                            <?php foreach ($pelanggan as $p) : ?>
                                 <tr>
                                     <td><?= htmlspecialchars($p['id_pelanggan']) ?></td>
                                     <td><?= htmlspecialchars($p['nama_pelanggan']) ?></td>
@@ -124,7 +123,7 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         </button>
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -159,7 +158,8 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <div class="modal-body">
                 <p>Apakah Anda yakin ingin menghapus pelanggan ini?</p>
-                <p class="text-danger"><small>Tindakan ini akan menghapus semua data terkait seperti reservasi dan pembayaran.</small></p>
+                <p class="text-danger"><small>Tindakan ini akan menghapus semua data terkait seperti reservasi dan
+                        pembayaran.</small></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -172,7 +172,6 @@ $pelanggan = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<!-- Script untuk modal -->
 <script>
     function confirmDelete(id) {
         document.getElementById('deleteId').value = id;

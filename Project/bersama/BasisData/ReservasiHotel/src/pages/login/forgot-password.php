@@ -6,7 +6,6 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
 
-    // Cek username dan email di database
     $stmt = $conn->prepare("SELECT p.*, u.id as user_id 
                            FROM pelanggan p 
                            JOIN users u ON p.user_id = u.id 

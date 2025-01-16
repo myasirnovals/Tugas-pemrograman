@@ -68,7 +68,7 @@
             <!-- Ricky  -->
             <div class="col-md-4">
                 <div class="card team-card text-center h-100">
-                    <img src="../../assets/arya.jpg" class="team-img" alt="Ricky Gunaldo"/>
+                    <img src="../../assets/ricky.jpg" class="team-img" alt="Ricky Gunaldo"/>
                     <div class="card-body">
                         <h5 class="card-title">Ricky Gunaldo</h5>
                         <p class="card-text text-muted">Database Administrator</p>
@@ -87,7 +87,7 @@
             <!--  Yasir  -->
             <div class="col-md-4">
                 <div class="card team-card text-center h-100">
-                    <img src="../../assets/arya.jpg" class="team-img" alt="Muhamad Yasir Noval"/>
+                    <img src="../../assets/YasirPhoto.jpg" class="team-img" alt="Muhamad Yasir Noval"/>
                     <div class="card-body">
                         <h5 class="card-title">Muhamad Yasir Noval</h5>
                         <p class="card-text text-muted">Backend Engineer</p>

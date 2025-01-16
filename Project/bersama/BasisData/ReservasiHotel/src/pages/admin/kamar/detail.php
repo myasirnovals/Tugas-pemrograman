@@ -28,12 +28,14 @@ try {
     exit;
 }
 
-function formatRupiah($angka) {
+function formatRupiah($angka)
+{
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
 
-function getStatusBadge($status) {
-    switch(strtolower($status)) {
+function getStatusBadge($status)
+{
+    switch (strtolower($status)) {
         case 'available':
             return '<span class="badge bg-success">Available</span>';
         case 'occupied':
@@ -41,9 +43,10 @@ function getStatusBadge($status) {
         case 'reserved':
             return '<span class="badge bg-warning">Reserved</span>';
         default:
-            return '<span class="badge bg-secondary">'.$status.'</span>';
+            return '<span class="badge bg-secondary">' . $status . '</span>';
     }
 }
+
 ?>
 
 <!DOCTYPE html>

@@ -67,7 +67,7 @@ if (!$detail) {
         <div class="col-md-3 col-lg-2 p-0 bg-white sidebar">
             <div class="d-flex flex-column p-3">
                 <h2 class="fs-4 mb-4 text-center">Admin</h2>
-                <hr />
+                <hr/>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item mb-2">
                         <a href="../dashboard/dashboard.php" class="nav-link">

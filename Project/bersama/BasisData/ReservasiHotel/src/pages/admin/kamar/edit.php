@@ -1,7 +1,6 @@
 <?php
 require_once '../../../config/config.php';
 
-// Cek apakah ada ID kamar
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header('Location: kamar.php?status=error&message=ID Kamar tidak valid');
     exit;
@@ -33,9 +32,11 @@ try {
     exit;
 }
 
-function formatRupiah($angka) {
+function formatRupiah($angka)
+{
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -166,7 +167,7 @@ function formatRupiah($angka) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    document.getElementById('editForm').onsubmit = function(e) {
+    document.getElementById('editForm').onsubmit = function (e) {
         const nomorKamar = document.getElementById('nomor_kamar').value;
         const idTipe = document.getElementById('id_tipe').value;
         const status = document.getElementById('status').value;

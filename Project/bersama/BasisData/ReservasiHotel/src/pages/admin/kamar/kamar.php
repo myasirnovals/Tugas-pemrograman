@@ -195,7 +195,6 @@ function formatRupiah($angka)
                         <select class="form-select" id="id_tipe" name="id_tipe" required>
                             <option value="">Pilih Tipe Kamar</option>
                             <?php
-                            // Query untuk mengambil data tipe kamar
                             $query_tipe = "SELECT * FROM tipe_kamar ORDER BY nama_tipe";
                             $stmt_tipe = $conn->prepare($query_tipe);
                             $stmt_tipe->execute();
@@ -250,8 +249,6 @@ function formatRupiah($angka)
     </div>
 </div>
 
-
-<!-- Script untuk handling aksi -->
 <script>
     function viewKamar(id) {
         window.location.href = `detail.php?id=${id}`;

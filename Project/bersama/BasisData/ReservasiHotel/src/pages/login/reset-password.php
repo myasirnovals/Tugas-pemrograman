@@ -2,7 +2,6 @@
 session_start();
 require_once '../../config/config.php';
 
-// Cek jika user belum melalui halaman lupa password
 if (!isset($_SESSION['reset_user_id'])) {
     header("Location: forgot-password.php");
     exit();
@@ -21,11 +20,10 @@ if (isset($_POST['submit'])) {
             $stmt = $conn->prepare("UPDATE users SET password = ? WHERE id = ?");
             $stmt->execute([$hashed_password, $user_id]);
 
-            // Hapus session reset
             unset($_SESSION['reset_user_id']);
 
             $success = "Password berhasil diubah! Silakan login kembali.";
-            header("refresh:2;url=login.php"); // Redirect ke login setelah 2 detik
+            header("refresh:2;url=login.php");
         } catch(PDOException $e) {
             $error = "Terjadi kesalahan! Silakan coba lagi.";
         }

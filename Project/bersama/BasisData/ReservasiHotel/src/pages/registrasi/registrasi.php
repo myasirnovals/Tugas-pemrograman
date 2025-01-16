@@ -7,11 +7,9 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // Data pelanggan
     $nama_pelanggan = $_POST['nama_pelanggan'];
     $no_hp = $_POST['no_hp'];
 
-    // Data alamat
     $jalan = $_POST['jalan'];
     $desa = $_POST['desa'];
     $kota = $_POST['kota'];
@@ -24,31 +22,26 @@ if (isset($_POST['submit'])) {
         try {
             $conn->beginTransaction();
 
-            // 1. Cek username
             $stmt = $conn->prepare("SELECT id FROM users WHERE username = ?");
             $stmt->execute([$username]);
 
             if ($stmt->rowCount() > 0) {
                 $error = "Username sudah digunakan!";
             } else {
-                // 2. Insert user
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = $conn->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, 'customer')");
                 $stmt->execute([$username, $hashed_password]);
                 $user_id = $conn->lastInsertId();
 
-                // 3. Generate kode alamat
                 $stmt = $conn->prepare("SELECT MAX(CAST(SUBSTRING(kode_alamat, 2) AS UNSIGNED)) as max_id FROM alamat");
                 $stmt->execute();
                 $result = $stmt->fetch();
                 $next_id = $result['max_id'] + 1;
                 $kode_alamat = 'A' . str_pad($next_id, 3, '0', STR_PAD_LEFT);
 
-                // 4. Insert alamat
                 $stmt = $conn->prepare("INSERT INTO alamat (kode_alamat, jalan, desa, kota, provinsi, kode_pos) VALUES (?, ?, ?, ?, ?, ?)");
                 $stmt->execute([$kode_alamat, $jalan, $desa, $kota, $provinsi, $kode_pos]);
 
-                // 5. Insert pelanggan
                 $stmt = $conn->prepare("INSERT INTO pelanggan (nama_pelanggan, kode_alamat, no_hp, email, user_id) VALUES (?, ?, ?, ?, ?)");
                 $stmt->execute([$nama_pelanggan, $kode_alamat, $no_hp, $email, $user_id]);
 

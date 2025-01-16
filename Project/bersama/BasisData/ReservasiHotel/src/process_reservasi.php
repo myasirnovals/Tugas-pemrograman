@@ -2,7 +2,6 @@
 session_start();
 require_once "config/config.php";
 
-// Cek apakah user sudah login
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['error'] = "Anda harus login terlebih dahulu untuk melakukan reservasi!";
     header("Location: index.php#reservasi");
@@ -13,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $conn->beginTransaction();
 
-        // Validasi input dasar
         $required_fields = [
             'nama_pemesan', 'email', 'no_telepon',
             'jalan', 'desa', 'kota', 'provinsi', 'kode_pos',
@@ -27,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        // Validasi tanggal
         $checkin = new DateTime($_POST['tanggal_check_in']);
         $checkout = new DateTime($_POST['tanggal_check_out']);
         $today = new DateTime();
@@ -41,12 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Maksimal menginap adalah 30 hari!");
         }
 
-        // 1. Insert Alamat
         $queryAlamat = "INSERT INTO alamat (kode_alamat, jalan, desa, kota, provinsi, kode_pos) 
                        VALUES (:kode_alamat, :jalan, :desa, :kota, :provinsi, :kode_pos)";
         $stmtAlamat = $conn->prepare($queryAlamat);
 
-        // Generate kode alamat unik
         do {
             $kodeAlamat = 'A' . str_pad(rand(1, 999), 3, '0', STR_PAD_LEFT);
             $check = $conn->query("SELECT kode_alamat FROM alamat WHERE kode_alamat = '$kodeAlamat'")->fetch();
@@ -61,7 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':kode_pos' => $_POST['kode_pos']
         ]);
 
-        // 2. Insert Pelanggan
         $queryPelanggan = "INSERT INTO pelanggan (nama_pelanggan, kode_alamat, no_hp, email, user_id) 
                           VALUES (:nama, :kode_alamat, :no_hp, :email, :user_id)";
         $stmtPelanggan = $conn->prepare($queryPelanggan);
@@ -75,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $idPelanggan = $conn->lastInsertId();
 
-        // 3. Insert Reservasi
         $queryReservasi = "INSERT INTO reservasi (id_pelanggan, nama_pemesan, tanggal_reservasi, 
                           tanggal_checkin, tanggal_checkout, status) 
                           VALUES (:id_pelanggan, :nama_pemesan, CURRENT_DATE, :checkin, :checkout, 'Pending')";
@@ -89,7 +82,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $idReservasi = $conn->lastInsertId();
 
-        // 4. Cek Ketersediaan Kamar
         $queryCheckKamar = "SELECT COUNT(*) as available FROM kamar 
                            WHERE id_tipe = :id_tipe AND status = 'Available'";
         $stmtCheckKamar = $conn->prepare($queryCheckKamar);
@@ -100,7 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Maaf, kamar tidak tersedia untuk jumlah yang diminta!");
         }
 
-        // 5. Update Status Kamar
         $queryUpdateKamar = "UPDATE kamar SET status = 'Reserved', id_reservasi = :id_reservasi 
                             WHERE id_tipe = :id_tipe AND status = 'Available' 
                             LIMIT :jumlah_kamar";
@@ -110,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateKamar->bindValue(':jumlah_kamar', $_POST['jumlah_kamar'], PDO::PARAM_INT);
         $stmtUpdateKamar->execute();
 
-        // 6. Hitung Total Pembayaran
         $queryHarga = "SELECT biaya FROM tipe_kamar WHERE id_tipe = :id_tipe";
         $stmtHarga = $conn->prepare($queryHarga);
         $stmtHarga->execute([':id_tipe' => $_POST['tipe_kamar']]);
@@ -119,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $totalHari = $interval->days;
         $totalBayar = $hargaPerMalam * $_POST['jumlah_kamar'] * $totalHari;
 
-        // 7. Insert Pembayaran
         $queryPembayaran = "INSERT INTO pembayaran (id_reservasi, kode_mp, total_bayar) 
                            VALUES (:id_reservasi, :kode_mp, :total_bayar)";
         $stmtPembayaran = $conn->prepare($queryPembayaran);
