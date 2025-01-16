@@ -98,6 +98,11 @@ function getStatusBadge($status) {
                         </a>
                     </li>
                 </ul>
+                <hr/>
+                <a href="../../login/logout.php" class="btn btn-danger">
+                    <i class="bi bi-box-arrow-right me-2"></i>
+                    Logout
+                </a>
             </div>
         </div>
 

@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         }
 
         if ($user['role'] == 'admin') {
-            header("Location: ../admin/dashboard.php");
+            header("Location: ../admin/dashboard/dashboard.php");
         } else {
             header("Location: ../../index.php");
         }

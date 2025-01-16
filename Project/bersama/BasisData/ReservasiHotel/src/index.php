@@ -37,9 +37,33 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
                     <a class="nav-link" href="pages/aboutUs/aboutUs.php">About Us</a>
                 </li>
             </ul>
-            <div class="d-flex">
-                <a href="pages/login/login.php" class="btn btn-outline-primary me-2">Login</a>
-                <a href="pages/registrasi/registrasi.php" class="btn btn-primary">Register</a>
+            <div class="d-flex align-items-center">
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button"
+                                id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            <?php echo htmlspecialchars($_SESSION['username']); ?>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <?php if ($_SESSION['role'] == 'admin'): ?>
+                                <li>
+                                    <a class="dropdown-item" href="pages/admin/dashboard/dashboard.php">
+                                        <i class="bi bi-speedometer2"></i> Dashboard
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <li>
+                                <a class="dropdown-item text-danger" href="pages/login/logout.php">
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                <?php else: ?>
+                    <a href="pages/login/login.php" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="pages/registrasi/registrasi.php" class="btn btn-primary">Register</a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

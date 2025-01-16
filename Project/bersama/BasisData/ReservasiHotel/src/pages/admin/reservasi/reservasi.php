@@ -40,44 +40,49 @@ function getStatusBadge($status)
     <div class="container-fluid">
       <div class="row">
         <!-- Sidebar -->
-        <div class="col-md-3 col-lg-2 p-0 bg-white sidebar">
-          <div class="d-flex flex-column p-3">
-            <h2 class="fs-4 mb-4 text-center">Admin</h2>
-            <hr />
-            <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item mb-2">
-                <a href="../dashboard/dashboard.php" class="nav-link">
-                  <i class="bi bi-speedometer2 me-2"></i>
-                  Dashboard
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../pelanggan/pelanggan.php" class="nav-link">
-                  <i class="bi bi-people me-2"></i>
-                  Pelanggan
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="reservasi.php" class="nav-link active">
-                  <i class="bi bi-calendar-check me-2"></i>
-                  Reservasi
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../kamar/kamar.php" class="nav-link">
-                  <i class="bi bi-house-door me-2"></i>
-                  Kamar
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="../pembayaran/pembayaran.php" class="nav-link">
-                  <i class="bi bi-credit-card me-2"></i>
-                  Pembayaran
-                </a>
-              </li>
-            </ul>
+          <div class="col-md-3 col-lg-2 p-0 bg-white sidebar">
+              <div class="d-flex flex-column p-3">
+                  <h2 class="fs-4 mb-4 text-center">Admin</h2>
+                  <hr/>
+                  <ul class="nav nav-pills flex-column mb-auto">
+                      <li class="nav-item mb-2">
+                          <a href="../dashboard/dashboard.php" class="nav-link">
+                              <i class="bi bi-speedometer2 me-2"></i>
+                              Dashboard
+                          </a>
+                      </li>
+                      <li class="nav-item mb-2">
+                          <a href="../pelanggan/pelanggan.php" class="nav-link">
+                              <i class="bi bi-people me-2"></i>
+                              Pelanggan
+                          </a>
+                      </li>
+                      <li class="nav-item mb-2">
+                          <a href="reservasi.php" class="nav-link active">
+                              <i class="bi bi-calendar-check me-2"></i>
+                              Reservasi
+                          </a>
+                      </li>
+                      <li class="nav-item mb-2">
+                          <a href="../kamar/kamar.php" class="nav-link">
+                              <i class="bi bi-house-door me-2"></i>
+                              Kamar
+                          </a>
+                      </li>
+                      <li class="nav-item mb-2">
+                          <a href="../pembayaran/pembayaran.php" class="nav-link">
+                              <i class="bi bi-credit-card me-2"></i>
+                              Pembayaran
+                          </a>
+                      </li>
+                  </ul>
+                  <hr/>
+                  <a href="../../login/logout.php" class="btn btn-danger">
+                      <i class="bi bi-box-arrow-right me-2"></i>
+                      Logout
+                  </a>
+              </div>
           </div>
-        </div>
 
         <!-- Main Content -->
         <div class="col-md-9 col-lg-10 content">
