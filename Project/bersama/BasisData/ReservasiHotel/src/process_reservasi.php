@@ -6,14 +6,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $conn->beginTransaction();
 
-        if (empty($_POST['nama_lengkap']) || empty($_POST['email']) ||
-            empty($_POST['no_telepon']) || empty($_POST['alamat']) ||
-            empty($_POST['tanggal_check_in']) || empty($_POST['tanggal_check_out']) ||
-            empty($_POST['tipe_kamar']) || empty($_POST['jumlah_kamar']) ||
-            empty($_POST['metode_pembayaran'])) {
-            throw new Exception("Semua field harus diisi!");
+        // Validasi input dasar
+        $required_fields = [
+            'nama_pemesan', 'email', 'no_telepon',
+            'jalan', 'desa', 'kota', 'provinsi', 'kode_pos',
+            'tanggal_check_in', 'tanggal_check_out',
+            'tipe_kamar', 'jumlah_kamar', 'metode_pembayaran'
+        ];
+
+        foreach ($required_fields as $field) {
+            if (empty($_POST[$field])) {
+                throw new Exception("Field {$field} harus diisi!");
+            }
         }
 
+        // Validasi tanggal
         $checkin = new DateTime($_POST['tanggal_check_in']);
         $checkout = new DateTime($_POST['tanggal_check_out']);
         $today = new DateTime();
@@ -27,41 +34,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Maksimal menginap adalah 30 hari!");
         }
 
-        $queryAlamat = "INSERT INTO alamat (kode_alamat, jalan) VALUES (:kode_alamat, :jalan)";
+        // 1. Insert Alamat
+        $queryAlamat = "INSERT INTO alamat (kode_alamat, jalan, desa, kota, provinsi, kode_pos) 
+                       VALUES (:kode_alamat, :jalan, :desa, :kota, :provinsi, :kode_pos)";
         $stmtAlamat = $conn->prepare($queryAlamat);
 
-        $kodeAlamat = 'A' . str_pad(rand(1, 999), 3, '0', STR_PAD_LEFT);
+        // Generate kode alamat unik
+        do {
+            $kodeAlamat = 'A' . str_pad(rand(1, 999), 3, '0', STR_PAD_LEFT);
+            $check = $conn->query("SELECT kode_alamat FROM alamat WHERE kode_alamat = '$kodeAlamat'")->fetch();
+        } while ($check);
+
         $stmtAlamat->execute([
             ':kode_alamat' => $kodeAlamat,
-            ':jalan' => $_POST['alamat']
+            ':jalan' => $_POST['jalan'],
+            ':desa' => $_POST['desa'],
+            ':kota' => $_POST['kota'],
+            ':provinsi' => $_POST['provinsi'],
+            ':kode_pos' => $_POST['kode_pos']
         ]);
 
-        $queryPelanggan = "INSERT INTO pelanggan (nama_pelanggan, kode_alamat, no_hp, email) 
-                          VALUES (:nama, :kode_alamat, :no_hp, :email)";
+        // 2. Insert Pelanggan
+        $queryPelanggan = "INSERT INTO pelanggan (nama_pelanggan, kode_alamat, no_hp, email, user_id) 
+                          VALUES (:nama, :kode_alamat, :no_hp, :email, :user_id)";
         $stmtPelanggan = $conn->prepare($queryPelanggan);
         $stmtPelanggan->execute([
-            ':nama' => $_POST['nama_lengkap'],
+            ':nama' => $_POST['nama_pemesan'],
             ':kode_alamat' => $kodeAlamat,
             ':no_hp' => $_POST['no_telepon'],
-            ':email' => $_POST['email']
+            ':email' => $_POST['email'],
+            ':user_id' => isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null
         ]);
 
         $idPelanggan = $conn->lastInsertId();
 
-        $queryReservasi = "INSERT INTO reservasi (id_pelanggan, tanggal_checkin, tanggal_checkout, status) 
-                          VALUES (:id_pelanggan, :checkin, :checkout, 'Pending')";
+        // 3. Insert Reservasi
+        $queryReservasi = "INSERT INTO reservasi (id_pelanggan, nama_pemesan, tanggal_reservasi, 
+                          tanggal_checkin, tanggal_checkout, status) 
+                          VALUES (:id_pelanggan, :nama_pemesan, CURRENT_DATE, :checkin, :checkout, 'Pending')";
         $stmtReservasi = $conn->prepare($queryReservasi);
         $stmtReservasi->execute([
             ':id_pelanggan' => $idPelanggan,
+            ':nama_pemesan' => $_POST['nama_pemesan'],
             ':checkin' => $_POST['tanggal_check_in'],
             ':checkout' => $_POST['tanggal_check_out']
         ]);
 
         $idReservasi = $conn->lastInsertId();
 
+        // 4. Cek Ketersediaan Kamar
         $queryCheckKamar = "SELECT COUNT(*) as available FROM kamar 
-                           WHERE id_tipe = :id_tipe 
-                           AND status = 'Available'";
+                           WHERE id_tipe = :id_tipe AND status = 'Available'";
         $stmtCheckKamar = $conn->prepare($queryCheckKamar);
         $stmtCheckKamar->execute([':id_tipe' => $_POST['tipe_kamar']]);
         $available = $stmtCheckKamar->fetch(PDO::FETCH_ASSOC)['available'];
@@ -70,6 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Maaf, kamar tidak tersedia untuk jumlah yang diminta!");
         }
 
+        // 5. Update Status Kamar
         $queryUpdateKamar = "UPDATE kamar SET status = 'Reserved', id_reservasi = :id_reservasi 
                             WHERE id_tipe = :id_tipe AND status = 'Available' 
                             LIMIT :jumlah_kamar";
@@ -79,6 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtUpdateKamar->bindValue(':jumlah_kamar', $_POST['jumlah_kamar'], PDO::PARAM_INT);
         $stmtUpdateKamar->execute();
 
+        // 6. Hitung Total Pembayaran
         $queryHarga = "SELECT biaya FROM tipe_kamar WHERE id_tipe = :id_tipe";
         $stmtHarga = $conn->prepare($queryHarga);
         $stmtHarga->execute([':id_tipe' => $_POST['tipe_kamar']]);
@@ -87,6 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $totalHari = $interval->days;
         $totalBayar = $hargaPerMalam * $_POST['jumlah_kamar'] * $totalHari;
 
+        // 7. Insert Pembayaran
         $queryPembayaran = "INSERT INTO pembayaran (id_reservasi, kode_mp, total_bayar) 
                            VALUES (:id_reservasi, :kode_mp, :total_bayar)";
         $stmtPembayaran = $conn->prepare($queryPembayaran);
@@ -108,11 +134,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
-
-function validateInput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-?>

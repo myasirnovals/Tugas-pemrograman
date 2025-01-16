@@ -140,9 +140,11 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
                 <div class="card">
                     <div class="card-body">
                         <form action="process_reservasi.php" method="POST">
+                            <!-- Data Pemesan -->
+                            <h5 class="mb-3">Data Pemesan</h5>
                             <div class="mb-3">
-                                <label class="form-label" for="nama_lengkap">Nama Lengkap</label>
-                                <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" required/>
+                                <label class="form-label" for="nama_pemesan">Nama Pemesan</label>
+                                <input type="text" class="form-control" name="nama_pemesan" id="nama_pemesan" required/>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="email">Email</label>
@@ -152,16 +154,42 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
                                 <label class="form-label" for="no_telepon">No. Telepon</label>
                                 <input type="tel" class="form-control" name="no_telepon" id="no_telepon" required/>
                             </div>
+
+                            <!-- Data Alamat -->
+                            <h5 class="mb-3">Data Alamat</h5>
                             <div class="mb-3">
-                                <label class="form-label" for="alamat">Alamat</label>
-                                <textarea class="form-control" rows="3" name="alamat" id="alamat" required></textarea>
+                                <label class="form-label" for="jalan">Alamat Jalan</label>
+                                <input type="text" class="form-control" name="jalan" id="jalan" required/>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="desa">Desa/Kelurahan</label>
+                                    <input type="text" class="form-control" name="desa" id="desa" required/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="kota">Kota/Kabupaten</label>
+                                    <input type="text" class="form-control" name="kota" id="kota" required/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="provinsi">Provinsi</label>
+                                    <input type="text" class="form-control" name="provinsi" id="provinsi" required/>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="kode_pos">Kode Pos</label>
+                                    <input type="text" class="form-control" name="kode_pos" id="kode_pos"
+                                           pattern="[0-9]{5}" maxlength="5" required/>
+                                </div>
+                            </div>
+
+                            <!-- Data Reservasi -->
+                            <h5 class="mb-3">Data Reservasi</h5>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_in">Tanggal Check-in</label>
                                     <input type="date" class="form-control" name="tanggal_check_in"
-                                           id="tanggal_check_in" required
-                                           min="<?= date('Y-m-d') ?>"/>
+                                           id="tanggal_check_in" required min="<?= date('Y-m-d') ?>"/>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="tanggal_check_out">Tanggal Check-out</label>
@@ -243,7 +271,6 @@ $metodePembayaran = $stmtMP->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </footer>
 
-</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const checkIn = document.getElementById('tanggal_check_in');
