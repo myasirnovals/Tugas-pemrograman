@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../../../index.php");
+    exit();
+}
+
 require_once '../../../config/config.php';
 
 $query = "SELECT p.id_pelanggan, p.nama_pelanggan, p.email, p.no_hp, 

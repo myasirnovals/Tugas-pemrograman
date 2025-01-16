@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../../../index.php");
+    exit();
+}
+
 require_once '../../../config/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id_pembayaran'])) {

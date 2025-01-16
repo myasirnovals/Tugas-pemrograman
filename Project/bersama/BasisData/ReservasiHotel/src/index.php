@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (isset($_SESSION['role']) == 'admin') {
+    header("Location: pages/admin/dashboard/dashboard.php");
+    exit();
+}
+
 require_once "config/config.php";
 
 $queryTipeKamar = "SELECT id_tipe, nama_tipe, biaya FROM tipe_kamar";
