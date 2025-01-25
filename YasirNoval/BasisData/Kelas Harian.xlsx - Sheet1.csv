@@ -1,0 +1,50 @@
+,,
+Hari,Kelas,jam
+Senin,Java: Pemula sampai Mahir (Dasar-dasar pemrograman),06.00 - 08.00
+,PHP: Pemula sampai Mahir (Dasar pengembangan web),08.00 - 10.00
+,Git: Pemula sampai Mahir (Pengelolaan versi kode),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,HTML dan CSS (Dasar desain web),13.00 - 15.00
+,Bootstrap CSS: Pemula sampai Mahir (Desain responsif),15.00 - 17.00
+,,
+Selasa,JavaScript: Pemula sampai Mahir (Interaktivitas web),06.00 - 08.00
+,VueJS (Framework frontend dasar),08.00 - 10.00
+,ReactJS (Framework frontend modern),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,NodeJS (Dasar backend dengan JavaScript),13.00 - 15.00
+,Laravel: Pemula sampai Mahir (Framework backend berbasis PHP),15.00 - 17.00
+,,
+Rabu,MySQL: Pemula sampai Mahir (Database relasional),06.00 - 08.00
+,MongoDB: Pemula sampai Mahir (Database NoSQL),08.00 - 10.00
+,Redis: Pemula sampai Mahir (Database in-memory),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,Spring Boot: Pemula sampai Mahir (Framework backend berbasis Java),13.00 - 15.00
+,Android (Dasar pengembangan aplikasi mobile),15.00 - 17.00
+,,
+Kamis,Kotlin: Pemula sampai Mahir (Bahasa untuk pengembangan Android),06.00 - 08.00
+,Dart: Pemula sampai Mahir (Bahasa untuk Flutter),08.00 - 10.00
+,Docker: Pemula sampai Mahir (Containerisasi aplikasi),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,Kafka: Pemula sampai Mahir (Pemrosesan data real-time),13.00 - 15.00
+,RabbitMQ: Pemula sampai Mahir (Message broker untuk komunikasi antar aplikasi),15.00 - 17.00
+,,
+Jumat,Spring Boot Design Patterns: Pemula sampai Mahir (Pola desain untuk aplikasi Java),06.00 - 08.00
+,Elasticsearch: Pemula sampai Mahir (Pencarian cepat dan analitik data),08.00 - 10.00
+,NestJS (Framework backend berbasis NodeJS),10.00 - 11.30
+,Istirahat,11.30 - 13.00
+,Jenkins: Pemula sampai Mahir (Otomasi pengembangan perangkat lunak),13.00 - 15.00
+,K6 Performance Testing (Pengujian performa aplikasi),15.00 - 17.00
+,,
+Sabtu,"Latihan Membuat Proyek Sederhana (Frontend: HTML, CSS, dan JavaScript)",06.00 - 08.00
+,Latihan Membuat API Sederhana (Backend: NodeJS atau Laravel),08.00 - 10.00
+,Latihan Database (MySQL dan MongoDB),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,Latihan Membuat Aplikasi Android (Kotlin/Java),13.00 - 15.00
+,Latihan Docker dan Deployment,15.00 - 17.00
+,,
+Minggu,Review Materi Mingguan (Dasar-dasar pemrograman dan frontend),06.00 - 08.00
+,Review Backend dan Database,08.00 - 10.00
+,Review Mobile Development (Android dan Flutter),10.00 - 12.00
+,Istirahat,12.00 - 13.00
+,"Review Framework (Spring Boot, Laravel, ReactJS)",13.00 - 15.00
+,Diskusi dan Persiapan untuk Minggu Berikutnya,15.00 - 17.00
