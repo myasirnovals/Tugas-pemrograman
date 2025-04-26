@@ -1,19 +1,10 @@
-"C:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan1\ADTJam -B C:\Users\aibnu\OneDrive\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan1\ADTJam\cmake-build-debug
-CMake Deprecation Warning:
-  Support for "Extra Generators" like
-
-    CodeBlocks
-
-  is deprecated and will be removed from a future version of CMake.  IDEs may
-  use the cmake-file-api(7) to view CMake-generated project build trees.
-
-
+"D:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S H:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan1\ADTJam -B H:\Documents\Tugas-pemrograman\YasirNoval\strukturData\pertemuan1\ADTJam\cmake-build-debug
 -- The C compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/JetBrains/CLion 2024.1.2/bin/mingw/bin/gcc.exe - skipped
+-- Check for working C compiler: D:/Program Files/JetBrains/CLion 2024.2.3/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Configuring done (22.0s)
+-- Configuring done (6.5s)
 -- Generating done (0.1s)
--- Build files have been written to: C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug
+-- Build files have been written to: H:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug

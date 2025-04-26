@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/main.c" "CMakeFiles/ADTLine.dir/main.c.obj" "gcc" "CMakeFiles/ADTLine.dir/main.c.obj.d"
+  "H:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan2/ADTLine/main.c" "CMakeFiles/ADTLine.dir/main.c.obj" "gcc" "CMakeFiles/ADTLine.dir/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

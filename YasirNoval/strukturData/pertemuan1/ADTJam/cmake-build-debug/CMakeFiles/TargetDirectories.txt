@@ -1,3 +1,3 @@
-C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/ADTJam.dir
-C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/aibnu/OneDrive/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+H:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/ADTJam.dir
+H:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/edit_cache.dir
+H:/Documents/Tugas-pemrograman/YasirNoval/strukturData/pertemuan1/ADTJam/cmake-build-debug/CMakeFiles/rebuild_cache.dir
